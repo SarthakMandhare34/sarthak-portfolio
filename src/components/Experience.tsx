@@ -71,8 +71,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenCertificate }) => 
             </span>
           </h2>
           <div className="experience-meta-banner">
-            <span className="meta-badge">Concurrent Programs</span>
-            <span className="meta-period">IBM SkillsBuild &amp; Lenovo LEAP · Virtual Internships (June — July 2026)</span>
+            <span className="meta-period">IBM SkillsBuild &amp; Lenovo LEAP (June — July 2026)</span>
           </div>
         </header>
 
