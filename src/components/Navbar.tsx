@@ -84,7 +84,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={(e) => handleLinkClick(e, 'hero')}
             aria-label={PERSONAL_INFO.name}
           >
-            <span className="logo-text">{PERSONAL_INFO.shortName}</span>
+            <span className="logo-text">
+              <span className="logo-full-name">{PERSONAL_INFO.shortName}</span>
+              <span className="logo-short-name">Sarthak</span>
+            </span>
           </a>
 
           {/* Desktop Navigation Menu */}
@@ -179,9 +182,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               aria-controls="mobile-menu-drawer"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
             >
-              <span className="hamburger-box">
-                <span className={`hamburger-inner ${mobileMenuOpen ? 'is-open' : ''}`} />
-              </span>
+              <span className="hamburger-line" aria-hidden="true" />
+              <span className="hamburger-line" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -233,6 +235,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               Glass
             </button>
+          </div>
+        </div>
+
+        {/* Mobile Theme Switcher inside Drawer */}
+        <div className="mobile-drawer-theme-select">
+          <span className="mobile-drawer-label">Theme Appearance:</span>
+          <div className="mobile-drawer-theme-row">
+            <ThemeSlider showLabels={true} />
           </div>
         </div>
 
