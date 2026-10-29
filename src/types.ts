@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface Project {
   id: string;
   name: string;
@@ -46,4 +48,10 @@ export interface Certification {
   date: string;
   certificateId: string;
   pdfUrl: string;
+}
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements extends React.JSX.IntrinsicElements {}
+  }
 }
