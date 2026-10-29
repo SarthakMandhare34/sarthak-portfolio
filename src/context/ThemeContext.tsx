@@ -22,15 +22,15 @@ export interface ColorThemeDefinition {
 export const COLOR_THEMES: Record<ColorTheme, ColorThemeDefinition> = {
   'terracotta-sand': {
     id: 'terracotta-sand',
-    name: 'Warm Terracotta & Sand',
-    tagline: 'Warm Earthy Editorial',
-    description: 'Rich terracotta, toasted amber, warm sand canvas, and espresso typography.',
+    name: 'Mahogany & Forest Green',
+    tagline: 'Warm Luxurious Editorial',
+    description: 'Deep warm mahogany, natural forest green, warm cream canvas, and espresso typography.',
     preview: {
-      primary: '#B84E2A',
-      secondary: '#4A6D3B',
-      accent: '#D97736',
+      primary: '#6B3A2A',
+      secondary: '#2D5A3D',
+      accent: '#D28A6E',
       surface: '#FFFFFF',
-      bg: '#FAF8F5'
+      bg: '#FAF7F2'
     }
   }
 };

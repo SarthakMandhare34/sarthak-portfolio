@@ -5,9 +5,9 @@ import assert from 'node:assert/strict';
 
 const COLOR_THEMES = {
   'terracotta-sand': {
-    name: 'Warm Terracotta & Sand',
-    lightPrimary: '#B84E2A',
-    darkPrimary: '#E88554'
+    name: 'Mahogany & Forest Green',
+    lightPrimary: '#6B3A2A',
+    darkPrimary: '#D28A6E'
   }
 };
 
