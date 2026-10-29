@@ -1210,12 +1210,11 @@ button {
   margin-right: var(--space-28);
 }
 
-.nav-logo .logo-full-name {
-  display: inline;
-}
-
-.nav-logo .logo-short-name {
-  display: none;
+.nav-logo .logo-text {
+  font-family: var(--font-heading);
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
 }
 
 .nav-logo:hover {
@@ -4627,17 +4626,26 @@ dialog.resume-modal::backdrop {
   }
 
   .nav-container {
-    padding: 0 12px;
+    padding: 0 10px;
     gap: 8px;
     justify-content: space-between;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .nav-container-glass {
-    padding: 0 12px;
+    padding: 0 10px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .nav-container-solid {
-    padding: 0 12px;
+    padding: 0 10px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .nav-menu {
@@ -4646,11 +4654,10 @@ dialog.resume-modal::backdrop {
 
   .nav-logo {
     margin-right: 0 !important;
-    font-size: clamp(0.92rem, 3.6vw, 1.15rem);
+    font-size: clamp(0.95rem, 3.8vw, 1.18rem);
     min-width: 0;
-    flex-shrink: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .mobile-nav-controls {
@@ -4658,6 +4665,7 @@ dialog.resume-modal::backdrop {
     align-items: center;
     gap: 6px;
     flex-shrink: 0;
+    margin-left: auto;
   }
 
   .mobile-mode-switcher {
@@ -4666,6 +4674,7 @@ dialog.resume-modal::backdrop {
     padding: 2px;
     gap: 2px;
     border-radius: 9999px;
+    flex-shrink: 0;
   }
 
   .mobile-mode-pill {
@@ -4677,6 +4686,7 @@ dialog.resume-modal::backdrop {
   .mobile-slider-wrapper {
     display: inline-flex;
     align-items: center;
+    flex-shrink: 0;
   }
 
   .mobile-slider-wrapper .theme-slider-track {
@@ -4690,6 +4700,10 @@ dialog.resume-modal::backdrop {
     height: 18px;
   }
 
+  [data-theme="dark"] .mobile-slider-wrapper .theme-slider-thumb {
+    transform: translateX(24px) !important;
+  }
+
   .mobile-slider-wrapper .theme-slider-icon {
     width: 10px;
     height: 10px;
@@ -4697,6 +4711,9 @@ dialog.resume-modal::backdrop {
 
   .nav-hamburger {
     display: flex !important;
+    flex-shrink: 0 !important;
+    align-items: center;
+    justify-content: center;
   }
 
   .about-grid,
@@ -4853,14 +4870,6 @@ dialog.resume-modal::backdrop {
     padding: 0 8px;
   }
 
-  .nav-logo .logo-full-name {
-    display: none !important;
-  }
-
-  .nav-logo .logo-short-name {
-    display: inline !important;
-  }
-
   .mobile-mode-pill {
     font-size: 0.66rem;
     padding: 2.5px 6px;
@@ -4876,10 +4885,15 @@ dialog.resume-modal::backdrop {
     height: 16px;
   }
 
+  [data-theme="dark"] .mobile-slider-wrapper .theme-slider-thumb {
+    transform: translateX(22px) !important;
+  }
+
   .nav-hamburger {
     width: 34px;
     height: 34px;
     padding: 5px;
+    flex-shrink: 0 !important;
   }
 
   .chapter,
@@ -5010,12 +5024,7 @@ dialog.resume-modal::backdrop {
     gap: 4px;
   }
 
-  .nav-logo .logo-full-name {
-    display: none;
-  }
-
-  .nav-logo .logo-short-name {
-    display: inline;
+  .nav-logo {
     font-size: 0.95rem;
   }
 
@@ -5035,6 +5044,10 @@ dialog.resume-modal::backdrop {
     height: 14px;
   }
 
+  [data-theme="dark"] .mobile-slider-wrapper .theme-slider-thumb {
+    transform: translateX(20px) !important;
+  }
+
   .mobile-slider-wrapper .theme-slider-icon {
     display: none;
   }
@@ -5043,6 +5056,7 @@ dialog.resume-modal::backdrop {
     width: 30px;
     height: 30px;
     padding: 4px;
+    flex-shrink: 0 !important;
   }
 
   .hamburger-line {

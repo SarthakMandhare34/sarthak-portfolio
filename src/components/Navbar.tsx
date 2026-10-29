@@ -30,6 +30,21 @@ export const Navbar: React.FC<NavbarProps> = ({
   const trackRef = useRef<HTMLDivElement>(null);
   const indicatorRef = useRef<HTMLSpanElement>(null);
 
+  const [isMobileNav, setIsMobileNav] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth <= 960;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileNav(window.innerWidth <= 960);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Position indicator according to activeSection
   useEffect(() => {
     if (!trackRef.current || !indicatorRef.current) return;
@@ -85,8 +100,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             aria-label={PERSONAL_INFO.name}
           >
             <span className="logo-text">
-              <span className="logo-full-name">{PERSONAL_INFO.shortName}</span>
-              <span className="logo-short-name">Sarthak</span>
+              {isMobileNav ? 'Sarthak' : PERSONAL_INFO.shortName}
             </span>
           </a>
 
