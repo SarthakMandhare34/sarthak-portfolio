@@ -89,9 +89,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       if (saved) {
         const parsed = JSON.parse(saved);
         const validDesignMode: DesignMode =
-          parsed.designMode === 'liquid-glass'
-            ? 'liquid-glass'
-            : 'timeless';
+          'timeless';
         const validTheme: Theme = parsed.theme === 'dark' ? 'dark' : 'light';
         const validFontSize: FontSizeScale = ['default', 'medium', 'large'].includes(
           parsed.fontSize
@@ -105,7 +103,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
           designMode: validDesignMode,
           fontSize: validFontSize,
           reducedMotion: Boolean(parsed.reducedMotion),
-          glassMode: validDesignMode === 'liquid-glass'
+          glassMode: false
         };
       }
     } catch {
@@ -168,7 +166,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const toggleDesignMode = () => {
     setSettings((prev) => {
       const nextMode: DesignMode =
-        prev.designMode === 'timeless' ? 'liquid-glass' : 'timeless';
+        'timeless';
       return {
         ...prev,
         designMode: nextMode,
@@ -178,7 +176,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   const setGlassMode = (glass: boolean) => {
-    setDesignMode(glass ? 'liquid-glass' : 'timeless');
+    setDesignMode('timeless');
   };
 
   const setFontSize = (fontSize: FontSizeScale) => {

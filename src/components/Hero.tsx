@@ -115,7 +115,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onNavigate }) => {
                     height="320"
                     loading="eager"
                   />
-                  <div className="hero-portrait-glare" aria-hidden="true" />
                 </div>
               </div>
             </motion.div>

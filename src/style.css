@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    PORTFOLIO DESIGN SYSTEM â€” DUAL EXPERIENCE
    Modes: 
      1. Timeless Solid (Refined editorial craftsmanship, tactile solid cards, crisp borders)
@@ -91,7 +91,7 @@
   --duration-panel: 220ms;
 
   /* Subtle Neumorphic Tactile Tokens */
-  --neuro-shadow-light: rgba(255, 255, 255, 0.95);
+  --neuro-shadow-light: rgba(0, 0, 0, 0.04);
   --neuro-shadow-dark: rgba(185, 170, 150, 0.22);
   --neuro-raised: 6px 6px 18px var(--neuro-shadow-dark), -5px -5px 16px var(--neuro-shadow-light);
   --neuro-raised-sm: 3px 3px 10px var(--neuro-shadow-dark), -2px -2px 8px var(--neuro-shadow-light);
@@ -245,43 +245,13 @@
    specular reflection borders, multi-stop backdrop blurs, black occlusion
    shadows, and organic ambient light backdrops that shine through the glass.
    -------------------------------------------------------------------------- */
-[data-glass="true"] body::before {
-  content: '';
-  position: fixed;
-  top: -8vw;
-  left: -8vw;
-  width: 48vw;
-  height: 48vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(168, 70, 38, 0.12) 0%, rgba(224, 170, 108, 0.05) 50%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(64px);
-  animation: glass-orb-drift 18s ease-in-out infinite alternate;
-}
+[data-glass="true"] body::before { display: none !important; content: none !important; }
 
-[data-glass="true"] body::after {
-  content: '';
-  position: fixed;
-  bottom: 8vh;
-  right: -6vw;
-  width: 52vw;
-  height: 52vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(45, 107, 72, 0.12) 0%, rgba(143, 187, 158, 0.05) 50%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(64px);
-  animation: glass-orb-drift-reverse 22s ease-in-out infinite alternate;
-}
+[data-glass="true"] body::after { display: none !important; content: none !important; }
 
-[data-theme="dark"][data-glass="true"] body::before {
-  background: radial-gradient(circle, rgba(245, 200, 87, 0.10) 0%, rgba(224, 170, 108, 0.03) 50%, transparent 70%);
-}
+[data-theme="dark"][data-glass="true"] body::before { display: none !important; content: none !important; }
 
-[data-theme="dark"][data-glass="true"] body::after {
-  background: radial-gradient(circle, rgba(143, 187, 158, 0.09) 0%, rgba(91, 122, 72, 0.03) 50%, transparent 70%);
-}
+[data-theme="dark"][data-glass="true"] body::after { display: none !important; content: none !important; }
 
 @keyframes glass-orb-drift {
   0% { transform: translate(0, 0) scale(1); }
@@ -302,42 +272,14 @@
 
 /* Timeless Solid Mode: Clean paper/canvas, no ambient orbs */
 [data-design-mode="timeless"] body::before,
-[data-design-mode="timeless"] body::after {
-  display: none !important;
-}
+[data-design-mode="timeless"] body::after { display: none !important; content: none !important; }
 
 /* Liquid Glass Ambient Mesh Lighting (Drifting caustics through frosted layers) */
 [data-design-mode="liquid-glass"] body::before,
-[data-glass="true"] body::before {
-  content: '';
-  position: fixed;
-  top: -10vw;
-  left: -10vw;
-  width: 52vw;
-  height: 52vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--teal-subtle) 0%, rgba(224, 170, 108, 0.08) 50%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(72px);
-  animation: glass-orb-drift 20s ease-in-out infinite alternate;
-}
+[data-glass="true"] body::before { display: none !important; content: none !important; }
 
 [data-design-mode="liquid-glass"] body::after,
-[data-glass="true"] body::after {
-  content: '';
-  position: fixed;
-  bottom: 5vh;
-  right: -8vw;
-  width: 56vw;
-  height: 56vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--amber-subtle) 0%, rgba(143, 187, 158, 0.08) 50%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(72px);
-  animation: glass-orb-drift-reverse 24s ease-in-out infinite alternate;
-}
+[data-glass="true"] body::after { display: none !important; content: none !important; }
 
 /* NAVIGATION: Timeless Solid Mode (Structured, solid, anchored top bar) */
 .site-nav-header.nav-mode-solid {
@@ -1797,18 +1739,7 @@ button {
   transform: scale(1.03);
 }
 
-.hero-portrait-glare {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.3) 0%,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(245, 200, 87, 0.06) 100%
-  );
-  border-radius: 14px;
-}
+.hero-portrait-glare { display: none !important; }
 
 .hero-portrait-footer {
   margin-top: 12px;
@@ -5380,14 +5311,14 @@ dialog.resume-modal::backdrop {
   background-color: var(--teal) !important;
   color: #FFFFFF !important;
   border: 1px solid var(--teal) !important;
-  box-shadow: 3px 3px 10px rgba(212, 147, 44, 0.3), -2px -2px 8px rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 4px 14px rgba(212, 147, 44, 0.3) !important;
   transition: all var(--duration-hover) var(--ease-standard) !important;
 }
 
 .neuro-btn-primary:hover {
   background-color: var(--teal-hover) !important;
   transform: translateY(-2px);
-  box-shadow: 5px 5px 14px rgba(212, 147, 44, 0.4), -3px -3px 10px rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 6px 18px rgba(212, 147, 44, 0.4) !important;
 }
 
 .neuro-btn-primary:active {
@@ -5399,14 +5330,14 @@ dialog.resume-modal::backdrop {
   background-color: var(--amber) !important;
   color: #FFFFFF !important;
   border: 1px solid var(--amber) !important;
-  box-shadow: 3px 3px 10px rgba(45, 107, 72, 0.28), -2px -2px 8px rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 4px 14px rgba(45, 107, 72, 0.28) !important;
   transition: all var(--duration-hover) var(--ease-standard) !important;
 }
 
 .neuro-btn-secondary:hover {
   background-color: var(--amber-hover) !important;
   transform: translateY(-2px);
-  box-shadow: 5px 5px 14px rgba(45, 107, 72, 0.38), -3px -3px 10px rgba(255, 255, 255, 0.7) !important;
+  box-shadow: 0 6px 18px rgba(45, 107, 72, 0.38) !important;
 }
 
 .neuro-btn-secondary:active {
