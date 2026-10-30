@@ -1,20 +1,22 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-// Test pure logic: single cohesive color theme, design modes, text formatting, and validation
+// Test pure portfolio logic: single cohesive color theme, solid mode, text formatting, and validation
 
 const COLOR_THEMES = {
   'terracotta-sand': {
     name: 'Gold & Green',
     lightPrimary: '#D4932C',
-    darkPrimary: '#F5C857'
+    lightSecondary: '#2D6B48',
+    darkPrimary: '#F5C857',
+    darkSecondary: '#8FBB9E'
   }
 };
 
 function resolveSettings(raw) {
   const theme = raw?.theme === 'dark' ? 'dark' : 'light';
   const colorTheme = 'terracotta-sand';
-  const designMode = raw?.designMode === 'liquid-glass' ? 'liquid-glass' : 'timeless';
+  const designMode = 'timeless';
   const fontSize = ['default', 'medium', 'large'].includes(raw?.fontSize) ? raw.fontSize : 'default';
   const reducedMotion = Boolean(raw?.reducedMotion);
 
@@ -24,7 +26,7 @@ function resolveSettings(raw) {
     designMode,
     fontSize,
     reducedMotion,
-    glassMode: designMode === 'liquid-glass'
+    glassMode: false
   };
 }
 
@@ -52,40 +54,25 @@ test('resolveSettings defaults fallback cleanly with empty input', () => {
   assert.equal(settings.reducedMotion, false);
 });
 
-test('resolveSettings accepts liquid-glass and sets glassMode synchronization', () => {
-  const settings = resolveSettings({ designMode: 'liquid-glass', theme: 'dark' });
-  assert.equal(settings.designMode, 'liquid-glass');
-  assert.equal(settings.glassMode, true);
-  assert.equal(settings.colorTheme, 'terracotta-sand');
-  assert.equal(settings.theme, 'dark');
-});
+test('resolveSettings enforces pure solid timeless mode across themes', () => {
+  const lightSettings = resolveSettings({ theme: 'light' });
+  assert.equal(lightSettings.designMode, 'timeless');
+  assert.equal(lightSettings.glassMode, false);
 
-test('Bidirectional style toggle switches forward and reverse seamlessly', () => {
-  // Initial solid (classic flat) mode
-  let state = resolveSettings({ designMode: 'timeless' });
-  assert.equal(state.designMode, 'timeless');
-  assert.equal(state.glassMode, false);
-
-  // Toggle forward to liquid-glass
-  const nextMode = state.designMode === 'timeless' ? 'liquid-glass' : 'timeless';
-  state = resolveSettings({ ...state, designMode: nextMode });
-  assert.equal(state.designMode, 'liquid-glass');
-  assert.equal(state.glassMode, true);
-
-  // Toggle reverse back to timeless (classic flat)
-  const reverseMode = state.designMode === 'timeless' ? 'liquid-glass' : 'timeless';
-  state = resolveSettings({ ...state, designMode: reverseMode });
-  assert.equal(state.designMode, 'timeless');
-  assert.equal(state.glassMode, false);
+  const darkSettings = resolveSettings({ theme: 'dark' });
+  assert.equal(darkSettings.designMode, 'timeless');
+  assert.equal(darkSettings.glassMode, false);
+  assert.equal(darkSettings.theme, 'dark');
 });
 
 test('Email validator passes valid email and rejects invalid format', () => {
   assert.ok(isValidEmail('sarthakmandhare34@gmail.com'));
   assert.equal(isValidEmail('invalid-email'), false);
+  assert.equal(isValidEmail('@nodomain.com'), false);
 });
 
 test('Phone formatting handles international notation correctly', () => {
-  assert.equal(formatPhoneNumber('+91 9326397599'), '+91 9326397599');
+  assert.equal(formatPhoneNumber('+91 93263 97599'), '+91 93263 97599');
 });
 
 test('Removed labels are absent from data and business logic structures', () => {
@@ -96,7 +83,8 @@ test('Removed labels are absent from data and business logic structures', () => 
     'Open for Opportunities',
     'Classic',
     'Nordic Sage',
-    'Full-Stack & AI Systems · Mumbai, India'
+    'Full-Stack & AI Systems · Mumbai, India',
+    'Concurrent Programs'
   ];
   const combinedDataString = JSON.stringify(COLOR_THEMES);
   for (const phrase of forbidden) {
