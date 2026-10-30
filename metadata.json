@@ -1,8 +1,12 @@
 {
-  "name": "Sarthak Mandhare — Full-Stack Developer Portfolio",
-  "description": "Portfolio of Sarthak Mangesh Mandhare — frontend-leaning full-stack developer specialising in React, TypeScript, Node.js, and Gemini AI. Based in Mumbai, India.",
-  "capabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ],
-  "permissions": []
+  "name": "Sarthak Mandhare — Developer Portfolio",
+  "description": "Personal portfolio of Sarthak Mangesh Mandhare — frontend-focused full-stack developer specialising in React, TypeScript, and Gemini AI workflows. Based in Mumbai, India.",
+  "author": "Sarthak Mangesh Mandhare",
+  "technologies": [
+    "React 19",
+    "TypeScript",
+    "Vite",
+    "Framer Motion",
+    "Gemini AI"
+  ]
 }

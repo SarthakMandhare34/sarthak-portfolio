@@ -2,6 +2,9 @@
   "name": "sarthak-portfolio",
   "private": true,
   "version": "1.0.0",
+  "description": "Personal developer portfolio of Sarthak Mangesh Mandhare built with React 19, TypeScript, and Vite.",
+  "author": "Sarthak Mangesh Mandhare <sarthakmandhare34@gmail.com>",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 3000",
