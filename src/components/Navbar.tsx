@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { useSettings } from '../context/ThemeContext';
 import { ThemeSlider } from './ThemeSlider';
 
 interface NavbarProps {
@@ -25,7 +24,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   onNavigate,
   onOpenResume
 }) => {
-  const { designMode, setDesignMode } = useSettings();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const trackRef = useRef<HTMLDivElement>(null);
   const indicatorRef = useRef<HTMLSpanElement>(null);
@@ -62,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     } else {
       indicatorRef.current.style.opacity = '0';
     }
-  }, [activeSection, designMode]);
+  }, [activeSection]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -82,17 +80,13 @@ export const Navbar: React.FC<NavbarProps> = ({
     setMobileMenuOpen(false);
   };
 
-  const isGlass = designMode === 'liquid-glass';
-
   return (
     <>
       <header
-        className={`site-nav-header ${isScrolled ? 'is-scrolled' : ''} ${
-          isGlass ? 'nav-mode-glass' : 'nav-mode-solid'
-        }`}
+        className={`site-nav-header ${isScrolled ? 'is-scrolled' : ''} nav-mode-solid`}
         id="site-header"
       >
-        <div className={`nav-container ${isGlass ? 'nav-container-glass' : 'nav-container-solid'}`}>
+        <div className="nav-container nav-container-solid">
           <a
             href="#hero"
             className="nav-logo"
@@ -123,28 +117,6 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* Desktop Controls Group */}
             <div className="nav-controls-group">
-              {/* Title Bar Design Mode Switcher (Timeless Solid vs Liquid Glass) */}
-              <div className="nav-mode-switcher" role="group" aria-label="Design experience switcher">
-                <button
-                  type="button"
-                  className={`nav-mode-pill ${designMode === 'timeless' ? 'is-active' : ''}`}
-                  onClick={() => setDesignMode('timeless')}
-                  title="Switch to Solid mode"
-                  aria-pressed={designMode === 'timeless'}
-                >
-                  Solid
-                </button>
-                <button
-                  type="button"
-                  className={`nav-mode-pill ${designMode === 'liquid-glass' ? 'is-active' : ''}`}
-                  onClick={() => setDesignMode('liquid-glass')}
-                  title="Switch to Glass mode"
-                  aria-pressed={designMode === 'liquid-glass'}
-                >
-                  Glass
-                </button>
-              </div>
-
               <button
                 type="button"
                 className="nav-resume-btn js-open-resume"
@@ -164,25 +136,6 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Mobile Navigation Controls */}
           <div className="mobile-nav-controls">
-            <div className="mobile-mode-switcher" role="group" aria-label="Design mode switcher">
-              <button
-                type="button"
-                className={`mobile-mode-pill ${designMode === 'timeless' ? 'is-active' : ''}`}
-                onClick={() => setDesignMode('timeless')}
-                title="Solid mode"
-              >
-                Solid
-              </button>
-              <button
-                type="button"
-                className={`mobile-mode-pill ${designMode === 'liquid-glass' ? 'is-active' : ''}`}
-                onClick={() => setDesignMode('liquid-glass')}
-                title="Glass mode"
-              >
-                Glass
-              </button>
-            </div>
-
             <div className="mobile-slider-wrapper">
               <ThemeSlider />
             </div>
@@ -203,7 +156,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       </header>
 
-      {/* Mobile Drawer (Rendered as fixed overlay, completely separate from page flow) */}
+      {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div
           className="mobile-drawer-backdrop"
@@ -213,9 +166,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       )}
 
       <div
-        className={`mobile-drawer-panel ${mobileMenuOpen ? 'is-open' : ''} ${
-          isGlass ? 'drawer-glass' : 'drawer-solid'
-        }`}
+        className={`mobile-drawer-panel ${mobileMenuOpen ? 'is-open' : ''} drawer-solid`}
         id="mobile-menu-drawer"
         aria-hidden={!mobileMenuOpen}
       >
@@ -229,27 +180,6 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             ✕
           </button>
-        </div>
-
-        {/* Mobile Experience Switcher inside Drawer */}
-        <div className="mobile-drawer-mode-select">
-          <span className="mobile-drawer-label">Design Experience:</span>
-          <div className="mobile-drawer-mode-pills">
-            <button
-              type="button"
-              className={`drawer-mode-btn ${designMode === 'timeless' ? 'is-active' : ''}`}
-              onClick={() => setDesignMode('timeless')}
-            >
-              Solid
-            </button>
-            <button
-              type="button"
-              className={`drawer-mode-btn ${designMode === 'liquid-glass' ? 'is-active' : ''}`}
-              onClick={() => setDesignMode('liquid-glass')}
-            >
-              Glass
-            </button>
-          </div>
         </div>
 
         {/* Mobile Theme Switcher inside Drawer */}

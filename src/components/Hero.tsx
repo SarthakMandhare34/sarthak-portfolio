@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { useSettings } from '../context/ThemeContext';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -12,12 +11,10 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenResume, onNavigate }) => {
   const shouldReduceMotion = useReducedMotion();
-  const { designMode } = useSettings();
-  const isGlass = designMode === 'liquid-glass';
 
   return (
     <section
-      className={`chapter chapter-hero ${isGlass ? 'hero-glass' : 'bg-paper'}`}
+      className="chapter chapter-hero bg-paper"
       id="hero"
       data-chapter="hero"
     >
@@ -28,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onNavigate }) => {
         viewport={{ once: false, amount: 0.15 }}
         transition={{ duration: 0.8, ease: EASE }}
       >
-        <div className={`hero-block ${isGlass ? 'hero-block-glass' : 'hero-block-solid'}`}>
+        <div className="hero-block hero-block-solid">
           <div className="hero-grid-layout">
             <div className="hero-intro-column">
               <motion.h1
@@ -66,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onNavigate }) => {
               >
                 <button
                   type="button"
-                  className="hero-link hero-link-primary js-open-resume"
+                  className="hero-link hero-link-primary neuro-btn-primary js-open-resume"
                   id="hero-resume-btn"
                   onClick={onOpenResume}
                 >
@@ -74,7 +71,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onNavigate }) => {
                 </button>
                 <a
                   href="#projects"
-                  className="hero-link hero-link-secondary"
+                  className="hero-link hero-link-secondary neuro-btn-secondary"
                   onClick={(e) => {
                     e.preventDefault();
                     onNavigate('projects');
@@ -86,7 +83,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onNavigate }) => {
                   href={PERSONAL_INFO.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hero-link"
+                  className="hero-link neuro-btn-soft"
                 >
                   GitHub ↗
                 </a>
@@ -94,21 +91,21 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onNavigate }) => {
                   href={PERSONAL_INFO.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hero-link"
+                  className="hero-link neuro-btn-soft"
                 >
                   LinkedIn ↗
                 </a>
               </motion.div>
             </div>
 
-            {/* Right Column: Hero Portrait Card */}
+            {/* Right Column: Hero Portrait with Clean Frame and Subtle Tactile Shadow */}
             <motion.div
               className="hero-portrait-column"
               initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.85, delay: 0.25, ease: EASE }}
             >
-              <div className={`hero-portrait-card ${isGlass ? 'portrait-glass' : 'portrait-solid'}`}>
+              <div className="hero-portrait-card portrait-solid neuro-card">
                 <div className="hero-portrait-frame">
                   <img
                     src="/sarthak-mandhare.jpg"

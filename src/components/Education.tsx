@@ -3,7 +3,6 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { PERSONAL_INFO, CERTIFICATIONS } from '../data/portfolioData';
 import { Certification } from '../types';
 import { useAnimatedCounter } from '../hooks/useAnimatedCounter';
-import { useSettings } from '../context/ThemeContext';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -15,8 +14,6 @@ export const Education: React.FC<EducationProps> = ({ onOpenCertificate }) => {
   const [isVisible, setIsVisible] = useState(false);
   const colRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
-  const { designMode } = useSettings();
-  const isGlass = designMode === 'liquid-glass';
 
   useEffect(() => {
     const el = colRef.current;
@@ -44,7 +41,7 @@ export const Education: React.FC<EducationProps> = ({ onOpenCertificate }) => {
 
   return (
     <motion.section
-      className={`chapter chapter-education ${isGlass ? 'education-glass' : 'bg-paper'}`}
+      className="chapter chapter-education bg-paper"
       id="education"
       data-chapter="education"
       initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 32 }}
@@ -65,7 +62,7 @@ export const Education: React.FC<EducationProps> = ({ onOpenCertificate }) => {
         <div className="education-grid">
           {/* Left Column: Academic Degree & Honors Card */}
           <motion.div
-            className={`education-degree-card ${isGlass ? 'degree-glass' : 'degree-solid'}`}
+            className="education-degree-card degree-solid neuro-card"
             ref={colRef}
             initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -89,7 +86,7 @@ export const Education: React.FC<EducationProps> = ({ onOpenCertificate }) => {
             <div className="degree-overview">
               <div className="degree-spec-row">
                 <span className="degree-spec-label">Program Structure</span>
-                <span className="degree-spec-value">Autonomous 3-Year Degree</span>
+                <span className="degree-spec-value">Autonomous 3–Year Degree</span>
               </div>
               <div className="degree-spec-row">
                 <span className="degree-spec-label">University Affiliation</span>
@@ -97,7 +94,7 @@ export const Education: React.FC<EducationProps> = ({ onOpenCertificate }) => {
               </div>
             </div>
 
-            <div className={`cgpa-box ${isGlass ? 'cgpa-glass' : 'cgpa-solid'}`}>
+            <div className="cgpa-box cgpa-solid">
               <div className="cgpa-meta">
                 <span className="cgpa-label">Cumulative GPA</span>
               </div>
@@ -110,7 +107,7 @@ export const Education: React.FC<EducationProps> = ({ onOpenCertificate }) => {
 
           {/* Right Column: Program Certifications Card */}
           <motion.div
-            className={`education-cert-card ${isGlass ? 'cert-card-glass' : 'cert-card-solid'}`}
+            className="education-cert-card cert-card-solid neuro-card"
             initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
@@ -118,62 +115,39 @@ export const Education: React.FC<EducationProps> = ({ onOpenCertificate }) => {
           >
             <div className="cert-card-header">
               <h3 className="cert-col-title">Program Certifications</h3>
-              <span className="cert-count-badge">2 Verified Credentials</span>
+              <span className="cert-count-badge">2 Issued</span>
             </div>
 
             <div className="cert-entries">
-              {CERTIFICATIONS.map((cert, idx) => {
-                const isIbm = idx === 0;
-                return (
-                  <div key={cert.certificateId} className={`cert-item ${isIbm ? 'cert-ibm' : 'cert-lenovo'} ${isGlass ? 'cert-glass' : 'cert-solid'}`}>
-                    <div className="cert-item-top">
-                      <span className={`cert-badge ${isIbm ? 'badge-primary' : 'badge-secondary'}`}>
-                        {cert.title}
-                      </span>
-                      <span className="cert-date-text">{cert.date}</span>
-                    </div>
-
-                    <h4 className="cert-name">{cert.program}</h4>
-                    <p className="cert-authority">{cert.authority}</p>
-
-                    <div className="cert-action-row">
-                      <span className="cert-id-badge">
-                        ID: <code className="cert-id-code">{cert.certificateId}</code>
-                      </span>
-                      <button
-                        type="button"
-                        className="cert-view-btn"
-                        onClick={() => onOpenCertificate(cert)}
-                      >
-                        View Certificate ↗
-                      </button>
-                    </div>
+              {CERTIFICATIONS.map((cert, cIdx) => (
+                <div
+                  key={cert.certificateId}
+                  className={`cert-item ${cIdx === 0 ? 'cert-ibm' : 'cert-lenovo'}`}
+                >
+                  <div className="cert-item-top">
+                    <span className={`cert-badge ${cIdx === 0 ? 'badge-terracotta' : 'badge-olive'}`}>
+                      {cIdx === 0 ? 'IBM SkillsBuild' : 'Lenovo LEAP'}
+                    </span>
+                    <span className="cert-date-text">{cert.date}</span>
                   </div>
-                );
-              })}
+
+                  <h4 className="cert-name">{cert.title} — {cert.program}</h4>
+                  <p className="cert-authority">{cert.authority}</p>
+
+                  <div className="cert-action-row">
+                    <span className="cert-id-badge">ID: {cert.certificateId}</span>
+                    <button
+                      type="button"
+                      className="timeline-action-btn neuro-action-btn"
+                      onClick={() => onOpenCertificate(cert)}
+                    >
+                      View Certificate ↗
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
           </motion.div>
-        </div>
-
-        {/* Structured Languages & Communication Bar */}
-        <div className="education-languages-row">
-          <div className={`languages-bar ${isGlass ? 'languages-glass' : 'languages-solid'}`}>
-            <span className="languages-label">Languages &amp; Fluency:</span>
-            <div className="language-chips">
-              <span className="lang-chip lang-chip-en">
-                <strong className="lang-name">English</strong>
-                <span className="lang-level">Professional Fluent</span>
-              </span>
-              <span className="lang-chip lang-chip-hi">
-                <strong className="lang-name">Hindi</strong>
-                <span className="lang-level">Fluent</span>
-              </span>
-              <span className="lang-chip lang-chip-mr">
-                <strong className="lang-name">Marathi</strong>
-                <span className="lang-level">Native</span>
-              </span>
-            </div>
-          </div>
         </div>
       </div>
     </motion.section>

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PORTFOLIO DESIGN SYSTEM — DUAL EXPERIENCE
+   PORTFOLIO DESIGN SYSTEM â€” DUAL EXPERIENCE
    Modes: 
      1. Timeless Solid (Refined editorial craftsmanship, tactile solid cards, crisp borders)
      2. Liquid Glass (Refractive glassmorphism, floating capsule dock, specular glares)
@@ -10,17 +10,17 @@
    ========================================================================== */
 
 :root {
-  /* ── Eye-Friendly Rust & Olive Palette (Warm Earth) ── */
-  --bg:           #FAF8F3;   /* page background — warm off-white canvas         */
+  /* â”€â”€ Eye-Friendly Rust & Olive Palette (Warm Earth) â”€â”€ */
+  --bg:           #FAF8F3;   /* page background â€” warm off-white canvas         */
   --surface:      #FFFFFF;   /* clean card surface                              */
-  --ink:          #1E2621;   /* primary text — deep earthy espresso brown       */
-  --ink-mid:      #5E524A;   /* secondary text, captions — medium brown         */
-  --ink-faint:    #8E7F75;   /* muted labels, footnotes — taupe                 */
-  --teal:         #D4932C;   /* primary accent — deep rust                      */
+  --ink:          #1E2621;   /* primary text â€” deep earthy espresso brown       */
+  --ink-mid:      #5E524A;   /* secondary text, captions â€” medium brown         */
+  --ink-faint:    #8E7F75;   /* muted labels, footnotes â€” taupe                 */
+  --teal:         #D4932C;   /* primary accent â€” deep rust                      */
   --teal-hover:   #BA7F24;   /* rust darkened for hover                         */
   --glacier:      #E4DDD0;   /* warm sand border & divider                      */
   --glacier-tint: #F3EFE6;   /* warm beige panel fill for alternating sections  */
-  --amber:        #2D6B48;   /* secondary accent — olive green                  */
+  --amber:        #2D6B48;   /* secondary accent â€” olive green                  */
   --amber-hover:  #225337;   /* olive darkened for hover                        */
   --deep-navy:    #111A14;   /* rich dark espresso for Skills & Contact         */
   --border:       #E4DDD0;   /* all 1px dividers and borders                    */
@@ -42,6 +42,15 @@
   --forest:       var(--teal);
   --signal:       var(--amber);
   --coral:        var(--teal-hover);
+
+  /* Subtle Neumorphic Tactile Tokens (Dark Mode) */
+  --neuro-shadow-light: rgba(45, 60, 50, 0.14);
+  --neuro-shadow-dark: rgba(0, 0, 0, 0.65);
+  --neuro-raised: 6px 6px 20px var(--neuro-shadow-dark), -3px -3px 12px var(--neuro-shadow-light);
+  --neuro-raised-sm: 3px 3px 10px var(--neuro-shadow-dark), -2px -2px 8px var(--neuro-shadow-light);
+  --neuro-raised-hover: 9px 9px 26px var(--neuro-shadow-dark), -4px -4px 16px var(--neuro-shadow-light);
+  --neuro-inset: inset 2px 2px 8px rgba(0, 0, 0, 0.65), inset -1px -1px 6px rgba(255, 255, 255, 0.03);
+  --neuro-pressed: inset 2px 2px 5px rgba(0, 0, 0, 0.85), inset -1px -1px 3px rgba(255, 255, 255, 0.02);
 
   /* Typography Tokens */
   --font-heading: 'Newsreader', Georgia, 'Times New Roman', serif;
@@ -80,6 +89,15 @@
   --ease-text-rise: cubic-bezier(0.2, 0.7, 0.2, 1);
   --duration-hover: 160ms;
   --duration-panel: 220ms;
+
+  /* Subtle Neumorphic Tactile Tokens */
+  --neuro-shadow-light: rgba(255, 255, 255, 0.95);
+  --neuro-shadow-dark: rgba(185, 170, 150, 0.22);
+  --neuro-raised: 6px 6px 18px var(--neuro-shadow-dark), -5px -5px 16px var(--neuro-shadow-light);
+  --neuro-raised-sm: 3px 3px 10px var(--neuro-shadow-dark), -2px -2px 8px var(--neuro-shadow-light);
+  --neuro-raised-hover: 9px 9px 24px var(--neuro-shadow-dark), -7px -7px 20px var(--neuro-shadow-light);
+  --neuro-inset: inset 2px 2px 6px rgba(0, 0, 0, 0.06), inset -2px -2px 6px rgba(255, 255, 255, 0.85);
+  --neuro-pressed: inset 2px 2px 5px rgba(0, 0, 0, 0.12), inset -1px -1px 4px rgba(255, 255, 255, 0.7);
 }
 
 /* --------------------------------------------------------------------------
@@ -92,11 +110,11 @@
   --ink:          #F4F8F5;   /* cream primary text                              */
   --ink-mid:      #C6D2CA;   /* warm taupe secondary text                       */
   --ink-faint:    #8A988F;   /* muted taupe footnote text                       */
-  --teal:         #F5C857;   /* primary accent — warm rust-orange               */
+  --teal:         #F5C857;   /* primary accent â€” warm rust-orange               */
   --teal-hover:   #F8D57A;   /* lighter rust-orange for hover                   */
   --glacier:      #25352B;   /* muted earthy border                             */
   --glacier-tint: #16201A;   /* dark warm brown panel fills                     */
-  --amber:        #8FBB9E;   /* secondary accent — light olive green            */
+  --amber:        #8FBB9E;   /* secondary accent â€” light olive green            */
   --amber-hover:  #A6CEB3;   /* light olive hover                               */
   --deep-navy:    #0A0E0C;   /* deep espresso for dark sections                 */
   --border:       #25352B;   /* earthy brown borders                            */
@@ -116,6 +134,15 @@
   --forest:       var(--teal);
   --signal:       var(--amber);
   --coral:        var(--teal-hover);
+
+  /* Subtle Neumorphic Tactile Tokens (Dark Mode) */
+  --neuro-shadow-light: rgba(45, 60, 50, 0.14);
+  --neuro-shadow-dark: rgba(0, 0, 0, 0.65);
+  --neuro-raised: 6px 6px 20px var(--neuro-shadow-dark), -3px -3px 12px var(--neuro-shadow-light);
+  --neuro-raised-sm: 3px 3px 10px var(--neuro-shadow-dark), -2px -2px 8px var(--neuro-shadow-light);
+  --neuro-raised-hover: 9px 9px 26px var(--neuro-shadow-dark), -4px -4px 16px var(--neuro-shadow-light);
+  --neuro-inset: inset 2px 2px 8px rgba(0, 0, 0, 0.65), inset -1px -1px 6px rgba(255, 255, 255, 0.03);
+  --neuro-pressed: inset 2px 2px 5px rgba(0, 0, 0, 0.85), inset -1px -1px 3px rgba(255, 255, 255, 0.02);
 }
 
 /* --------------------------------------------------------------------------
@@ -1151,7 +1178,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   General Content Scroll Reveal — Animates Every Time
+   General Content Scroll Reveal â€” Animates Every Time
    -------------------------------------------------------------------------- */
 .reveal {
   opacity: 0;
@@ -5150,4 +5177,274 @@ dialog.resume-modal::backdrop {
     transform: none !important;
     transition: none !important;
   }
+}
+
+/* ==========================================================================
+   PURE SOLID EXPERIENCE & SWISS PRECISION (Tactile Depth & High Contrast)
+   ========================================================================== */
+
+/* 1. Completely Hide Mode Switchers (Pure Solid Mode Only) */
+.nav-mode-switcher,
+.mobile-mode-switcher,
+.mobile-drawer-mode-select {
+  display: none !important;
+}
+
+/* Ensure Nav Bar is Anchored Solid Top Bar */
+.site-nav-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  max-width: 100% !important;
+  border-radius: 0 !important;
+  background-color: var(--bg) !important;
+  border-bottom: 1px solid var(--border) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="dark"] .site-nav-header {
+  background-color: var(--bg) !important;
+  border-bottom: 1px solid var(--border) !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 2. High-Contrast Text Visibility Across All Modes */
+.display-heading,
+.hero-title,
+.section-title {
+  color: var(--ink) !important;
+}
+
+.hero-identity {
+  color: var(--ink) !important;
+  font-weight: 700;
+}
+
+.hero-role {
+  color: var(--ink-mid) !important;
+  font-weight: 500;
+}
+
+.hero-location {
+  color: var(--ink-faint) !important;
+  font-weight: 500;
+}
+
+.about-column-story p {
+  color: var(--ink) !important;
+  line-height: 1.7;
+}
+
+.strengths-title {
+  color: var(--ink) !important;
+}
+
+.strength-entry p {
+  color: var(--ink) !important;
+  line-height: 1.6;
+}
+
+.strength-entry strong {
+  color: var(--teal) !important;
+}
+
+[data-theme="dark"] .strength-entry strong {
+  color: var(--teal-hover) !important;
+}
+
+.timeline-role {
+  color: var(--ink) !important;
+}
+
+.timeline-company {
+  color: var(--ink-mid) !important;
+}
+
+.timeline-duration {
+  color: var(--ink-faint) !important;
+}
+
+.timeline-project-name {
+  color: var(--ink) !important;
+}
+
+.timeline-bullets li {
+  color: var(--ink) !important;
+  line-height: 1.6;
+}
+
+.project-heading {
+  color: var(--ink) !important;
+}
+
+.project-description {
+  color: var(--ink) !important;
+  line-height: 1.6;
+}
+
+.project-bullet-list li {
+  color: var(--ink) !important;
+  line-height: 1.6;
+}
+
+.tech-pills-label {
+  color: var(--ink-mid) !important;
+  font-weight: 700;
+}
+
+.tech-pill {
+  color: var(--ink) !important;
+  background-color: var(--glacier-tint) !important;
+  border: 1px solid var(--border) !important;
+}
+
+[data-theme="dark"] .tech-pill {
+  color: var(--ink) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+.institution-name {
+  color: var(--ink) !important;
+}
+
+.degree-title {
+  color: var(--teal) !important;
+}
+
+.graduation-year {
+  color: var(--ink-mid) !important;
+}
+
+.degree-spec-label {
+  color: var(--ink-faint) !important;
+}
+
+.degree-spec-value {
+  color: var(--ink) !important;
+}
+
+.cgpa-label {
+  color: var(--ink-mid) !important;
+}
+
+.cgpa-val {
+  color: var(--teal) !important;
+}
+
+.cgpa-max {
+  color: var(--ink-mid) !important;
+}
+
+.cert-col-title {
+  color: var(--ink) !important;
+}
+
+.cert-name {
+  color: var(--ink) !important;
+}
+
+.cert-authority {
+  color: var(--ink-mid) !important;
+}
+
+.contact-card-title {
+  color: var(--ink) !important;
+}
+
+.contact-main-value {
+  color: var(--teal) !important;
+}
+
+.contact-card-desc {
+  color: var(--ink-mid) !important;
+  line-height: 1.6;
+}
+
+/* 3. Subtle Neumorphic Tactile Surfaces */
+.neuro-card {
+  box-shadow: var(--neuro-raised) !important;
+  transition: transform var(--duration-hover) var(--ease-standard),
+              box-shadow var(--duration-hover) var(--ease-standard);
+}
+
+.neuro-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neuro-raised-hover) !important;
+}
+
+.neuro-btn-primary {
+  background-color: var(--teal) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--teal) !important;
+  box-shadow: 3px 3px 10px rgba(212, 147, 44, 0.3), -2px -2px 8px rgba(255, 255, 255, 0.6) !important;
+  transition: all var(--duration-hover) var(--ease-standard) !important;
+}
+
+.neuro-btn-primary:hover {
+  background-color: var(--teal-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 14px rgba(212, 147, 44, 0.4), -3px -3px 10px rgba(255, 255, 255, 0.7) !important;
+}
+
+.neuro-btn-primary:active {
+  transform: translateY(1px) !important;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.35) !important;
+}
+
+.neuro-btn-secondary {
+  background-color: var(--amber) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--amber) !important;
+  box-shadow: 3px 3px 10px rgba(45, 107, 72, 0.28), -2px -2px 8px rgba(255, 255, 255, 0.6) !important;
+  transition: all var(--duration-hover) var(--ease-standard) !important;
+}
+
+.neuro-btn-secondary:hover {
+  background-color: var(--amber-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 14px rgba(45, 107, 72, 0.38), -3px -3px 10px rgba(255, 255, 255, 0.7) !important;
+}
+
+.neuro-btn-secondary:active {
+  transform: translateY(1px) !important;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.35) !important;
+}
+
+.neuro-btn-soft {
+  background-color: transparent !important;
+  color: var(--ink) !important;
+  border: 1.5px solid var(--border) !important;
+  box-shadow: var(--neuro-raised-sm) !important;
+  transition: all var(--duration-hover) var(--ease-standard) !important;
+}
+
+.neuro-btn-soft:hover {
+  background-color: var(--glacier-tint) !important;
+  border-color: var(--border-strong) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--neuro-raised) !important;
+}
+
+.neuro-btn-soft:active {
+  transform: translateY(1px) !important;
+  box-shadow: var(--neuro-pressed) !important;
+}
+
+.neuro-action-btn {
+  box-shadow: var(--neuro-raised-sm) !important;
+  transition: all var(--duration-hover) var(--ease-standard) !important;
+}
+
+.neuro-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neuro-raised) !important;
+}
+
+.neuro-action-btn:active {
+  transform: translateY(1px) !important;
+  box-shadow: var(--neuro-pressed) !important;
 }

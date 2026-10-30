@@ -1,13 +1,10 @@
 import React from 'react';
 import { motion, useReducedMotion, Variants } from 'framer-motion';
-import { useSettings } from '../context/ThemeContext';
 
 const STANDARD_EASE = [0.16, 1, 0.3, 1] as const;
 
 export const About: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
-  const { designMode } = useSettings();
-  const isGlass = designMode === 'liquid-glass';
 
   const containerVariants: Variants = {
     hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 32 },
@@ -33,7 +30,7 @@ export const About: React.FC = () => {
 
   return (
     <motion.section
-      className={`chapter chapter-about ${isGlass ? 'about-glass' : 'bg-fern'}`}
+      className="chapter chapter-about bg-fern"
       id="about"
       data-chapter="about"
       initial="hidden"
@@ -55,7 +52,7 @@ export const About: React.FC = () => {
           {/* Left Column: Plain First-Person Prose */}
           <motion.div className="about-column-story" variants={itemVariants}>
             <p>
-              I am a computer science student at Keraleeya Samajam's Model College in Dombivli,
+              I am a computer science student at Keraleeya Samajam&apos;s Model College in Dombivli,
               graduating in 2027. My work focuses on building full-stack applications where modern
               machine learning interfaces feel natural, responsive, and grounded in practical
               needs.
@@ -73,12 +70,13 @@ export const About: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Right Column: Current Capabilities */}
+          {/* Right Column: Current Capabilities with Clean Tactile Card */}
           <motion.div
-            className={`about-column-strengths ${isGlass ? 'strengths-glass' : 'strengths-solid'}`}
+            className="about-column-strengths strengths-solid neuro-card"
             variants={itemVariants}
           >
             <h3 className="strengths-title">What I am currently good at</h3>
+            
             <div className="strengths-list">
               <div className="strength-entry">
                 <p>
@@ -87,6 +85,7 @@ export const About: React.FC = () => {
                   perform well on any screen.
                 </p>
               </div>
+
               <div className="strength-entry">
                 <p>
                   <strong>Integrating the Gemini API into real workflows.</strong> Designing
@@ -94,6 +93,7 @@ export const About: React.FC = () => {
                   when an API call times out or returns unexpected output.
                 </p>
               </div>
+
               <div className="strength-entry">
                 <p>
                   <strong>Architecting typed backend services.</strong> Building Express, tRPC, and

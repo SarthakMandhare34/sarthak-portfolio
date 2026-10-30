@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { useSettings } from '../context/ThemeContext';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -13,8 +12,6 @@ interface ContactProps {
 export const Contact: React.FC<ContactProps> = ({ onCopy, onOpenResume }) => {
   const [copiedItem, setCopiedItem] = useState<string | null>(null);
   const shouldReduceMotion = useReducedMotion();
-  const { designMode } = useSettings();
-  const isGlass = designMode === 'liquid-glass';
 
   const handleCopy = (text: string, label: string) => {
     onCopy(text, label);
@@ -24,12 +21,9 @@ export const Contact: React.FC<ContactProps> = ({ onCopy, onOpenResume }) => {
     }, 2000);
   };
 
-  const cardStyleClass = isGlass ? 'contact-card-glass' : 'contact-card-solid';
-  const dockStyleClass = isGlass ? 'dock-glass' : 'dock-solid';
-
   return (
     <motion.section
-      className={`chapter chapter-contact ${isGlass ? 'contact-glass' : 'bg-paper'}`}
+      className="chapter chapter-contact bg-paper"
       id="contact"
       data-chapter="contact"
       initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 32 }}
@@ -47,10 +41,10 @@ export const Contact: React.FC<ContactProps> = ({ onCopy, onOpenResume }) => {
           </h2>
         </header>
 
-        {/* Symmetrical Two-Card Architecture matching Education & Experience */}
+        {/* Symmetrical Two-Card Architecture with Tactile Neumorphic Relief */}
         <div className="contact-grid">
           {/* Card 1: Direct Email Channel */}
-          <div className={`contact-card ${cardStyleClass}`}>
+          <div className="contact-card contact-card-solid neuro-card">
             <div className="contact-card-header">
               <span className="contact-type-badge">Primary Channel</span>
               <span className="contact-status-badge">⚡ Response within 24h</span>
@@ -73,13 +67,13 @@ export const Contact: React.FC<ContactProps> = ({ onCopy, onOpenResume }) => {
             <div className="contact-card-actions">
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="contact-btn contact-btn-primary"
+                className="contact-btn contact-btn-primary neuro-action-btn"
               >
                 Send Email ↗
               </a>
               <button
                 type="button"
-                className={`contact-btn contact-btn-secondary ${copiedItem === 'email' ? 'is-copied' : ''}`}
+                className={`contact-btn contact-btn-secondary neuro-action-btn ${copiedItem === 'email' ? 'is-copied' : ''}`}
                 onClick={() => handleCopy(PERSONAL_INFO.email, 'email')}
                 aria-label="Copy email address"
               >
@@ -104,7 +98,7 @@ export const Contact: React.FC<ContactProps> = ({ onCopy, onOpenResume }) => {
           </div>
 
           {/* Card 2: Mobile & WhatsApp Channel */}
-          <div className={`contact-card ${cardStyleClass}`}>
+          <div className="contact-card contact-card-solid neuro-card">
             <div className="contact-card-header">
               <span className="contact-type-badge">Direct Line</span>
               <span className="contact-status-badge">📍 Dombivli, Mumbai</span>
@@ -127,13 +121,13 @@ export const Contact: React.FC<ContactProps> = ({ onCopy, onOpenResume }) => {
             <div className="contact-card-actions">
               <a
                 href={`tel:${PERSONAL_INFO.phone}`}
-                className="contact-btn contact-btn-primary"
+                className="contact-btn contact-btn-primary neuro-action-btn"
               >
                 Call Direct ↗
               </a>
               <button
                 type="button"
-                className={`contact-btn contact-btn-secondary ${copiedItem === 'phone' ? 'is-copied' : ''}`}
+                className={`contact-btn contact-btn-secondary neuro-action-btn ${copiedItem === 'phone' ? 'is-copied' : ''}`}
                 onClick={() => handleCopy(PERSONAL_INFO.phone, 'phone')}
                 aria-label="Copy phone number"
               >
@@ -158,9 +152,9 @@ export const Contact: React.FC<ContactProps> = ({ onCopy, onOpenResume }) => {
           </div>
         </div>
 
-        {/* Structured Bottom Dock matching Languages Bar from Education */}
+        {/* Structured Bottom Dock matching Solid Mode */}
         <div className="contact-bottom-row">
-          <div className={`contact-resume-dock ${dockStyleClass}`}>
+          <div className="contact-resume-dock dock-solid neuro-card">
             <div className="resume-dock-meta">
               <span className="resume-dock-label">Curriculum Vitae:</span>
               <span className="resume-dock-file">Sarthak_Mandhare_Resume.pdf</span>
@@ -172,7 +166,7 @@ export const Contact: React.FC<ContactProps> = ({ onCopy, onOpenResume }) => {
               <div className="dock-actions-group">
                 <button
                   type="button"
-                  className="dock-action-btn dock-btn-preview js-open-resume"
+                  className="dock-action-btn dock-btn-preview neuro-action-btn js-open-resume"
                   onClick={onOpenResume}
                 >
                   Preview CV ↗
@@ -180,7 +174,7 @@ export const Contact: React.FC<ContactProps> = ({ onCopy, onOpenResume }) => {
                 <a
                   href={PERSONAL_INFO.resumePdf}
                   download="Sarthak_Mandhare_Resume.pdf"
-                  className="dock-action-btn dock-btn-download"
+                  className="dock-action-btn dock-btn-download neuro-action-btn"
                 >
                   Download PDF ↓
                 </a>

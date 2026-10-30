@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { EXPERIENCES, CERTIFICATIONS } from '../data/portfolioData';
 import { Certification } from '../types';
-import { useSettings } from '../context/ThemeContext';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -14,8 +13,6 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenCertificate }) => 
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
-  const { designMode } = useSettings();
-  const isGlass = designMode === 'liquid-glass';
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -42,19 +39,18 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenCertificate }) => 
     updateTrackBounds();
     window.addEventListener('resize', updateTrackBounds, { passive: true });
 
-    // Re-check after images/fonts settle
     const timer = setTimeout(updateTrackBounds, 300);
 
     return () => {
       window.removeEventListener('resize', updateTrackBounds);
       clearTimeout(timer);
     };
-  }, [designMode]);
+  }, []);
 
   return (
     <motion.section
       ref={sectionRef}
-      className={`chapter chapter-experience ${isGlass ? 'is-glass-chapter' : 'bg-paper'}`}
+      className="chapter chapter-experience bg-paper"
       id="experience"
       data-chapter="experience"
       initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 32 }}
@@ -75,7 +71,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenCertificate }) => 
           </div>
         </header>
 
-        {/* Vertical Timeline Spine */}
+        {/* Vertical Timeline Spine with Tactile Neumorphic Nodes */}
         <div className="timeline-wrap" id="timeline-wrap">
           <div className="timeline-line-track" id="timeline-track" ref={trackRef} aria-hidden="true" />
 
@@ -87,9 +83,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenCertificate }) => 
               return (
                 <motion.article
                   key={exp.id}
-                  className={`timeline-entry ${
-                    isFirst ? 'entry-ibm' : 'entry-lenovo'
-                  } ${isGlass ? 'entry-glass' : 'entry-solid'}`}
+                  className={`timeline-entry ${isFirst ? 'entry-ibm' : 'entry-lenovo'} entry-solid`}
                   id={`timeline-entry-${idx + 1}`}
                   initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +91,8 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenCertificate }) => 
                   transition={{ duration: 0.6, delay: idx * 0.15, ease: EASE }}
                 >
                   <div className="timeline-dot" aria-hidden="true" />
-                  <div className="timeline-content">
+                  
+                  <div className="timeline-content timeline-solid neuro-card">
                     <div className="timeline-header">
                       <div className="timeline-role-row">
                         <h3 className="timeline-role">{exp.role}</h3>
@@ -135,7 +130,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenCertificate }) => 
                         href={exp.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="timeline-action-btn timeline-btn-github"
+                        className="timeline-action-btn timeline-btn-github neuro-action-btn"
                       >
                         GitHub ↗
                       </a>
@@ -144,7 +139,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenCertificate }) => 
                           href={exp.liveDemoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="timeline-action-btn timeline-btn-demo"
+                          className="timeline-action-btn timeline-btn-demo neuro-action-btn"
                         >
                           Live Demo ↗
                         </a>
@@ -152,7 +147,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenCertificate }) => 
                       {matchingCert && (
                         <button
                           type="button"
-                          className="timeline-action-btn timeline-btn-cert"
+                          className="timeline-action-btn timeline-btn-cert neuro-action-btn"
                           onClick={() => onOpenCertificate(matchingCert)}
                         >
                           View Certificate ({exp.certificateId}) ↗

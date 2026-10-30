@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { PROJECTS } from '../data/portfolioData';
 import { useAnimatedCounter } from '../hooks/useAnimatedCounter';
-import { useSettings } from '../context/ThemeContext';
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
@@ -45,8 +44,6 @@ export const Projects: React.FC = () => {
   const controlsRef = useRef<HTMLDivElement>(null);
   const underlineRef = useRef<HTMLSpanElement>(null);
   const shouldReduceMotion = useReducedMotion();
-  const { designMode } = useSettings();
-  const isGlass = designMode === 'liquid-glass';
 
   // Position sliding underline
   useEffect(() => {
@@ -59,11 +56,11 @@ export const Projects: React.FC = () => {
       underlineRef.current.style.left = `${btnRect.left - controlsRect.left}px`;
       underlineRef.current.style.width = `${btnRect.width}px`;
     }
-  }, [activeTab, designMode]);
+  }, [activeTab]);
 
   return (
     <motion.section
-      className={`chapter chapter-projects ${isGlass ? 'projects-glass' : 'bg-fern'}`}
+      className="chapter chapter-projects bg-fern"
       id="projects"
       data-chapter="projects"
       initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 32 }}
@@ -82,7 +79,7 @@ export const Projects: React.FC = () => {
         </header>
 
         {/* Accessible Project Tab Bar */}
-        <div className={`projects-tab-container ${isGlass ? 'tabs-glass' : 'tabs-solid'}`} id="projects-tab-container">
+        <div className="projects-tab-container tabs-solid" id="projects-tab-container">
           <div
             className="tab-controls"
             id="tab-controls"
@@ -125,7 +122,7 @@ export const Projects: React.FC = () => {
                 animate={isActive ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className={`project-card ${isGlass ? 'card-glass' : 'card-solid'}`}>
+                <div className="project-card card-solid neuro-card">
                   <div className="panel-inner">
                     <div className="project-summary-col">
                       <div className="project-status-row">
@@ -156,7 +153,7 @@ export const Projects: React.FC = () => {
                       </div>
 
                       {/* Animated Statistics Strip */}
-                      <div className={`project-stats-strip ${isGlass ? 'stats-strip-glass' : 'stats-strip-solid'}`}>
+                      <div className="project-stats-strip stats-strip-solid">
                         {proj.stats.map((st, idx) => (
                           <StatCounterItem
                             key={idx}
@@ -176,7 +173,7 @@ export const Projects: React.FC = () => {
                           href={proj.liveDemoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="action-btn action-btn-primary"
+                          className="action-btn action-btn-primary neuro-action-btn"
                         >
                           Visit Live App ↗
                         </a>
@@ -184,7 +181,7 @@ export const Projects: React.FC = () => {
                           href={proj.repoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="action-btn action-btn-secondary"
+                          className="action-btn action-btn-secondary neuro-action-btn"
                         >
                           Frontend Repo ↗
                         </a>
@@ -193,7 +190,7 @@ export const Projects: React.FC = () => {
                             href={proj.backendRepoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="action-btn action-btn-secondary"
+                            className="action-btn action-btn-secondary neuro-action-btn"
                           >
                             Backend Repo ↗
                           </a>
