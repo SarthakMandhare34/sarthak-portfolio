@@ -74,35 +74,36 @@ export const About: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Right Column: Current Capabilities with Clean Tactile Card */}
+          {/* Right Column: Areas of Focus with Clean Tactile Card */}
           <motion.div
             className="about-column-strengths strengths-solid neuro-card"
             variants={itemVariants}
           >
-            <h3 className="strengths-title">What I am currently good at</h3>
+            <h3 className="strengths-title">Areas of Focus</h3>
             
             <div className="strengths-list">
               <div className="strength-entry">
                 <p>
-                  <strong>Building accessible React and TypeScript interfaces.</strong> Writing clean
-                  component trees, predictable state boundaries, and responsive layouts that
-                  perform well on any screen.
+                  <strong>Building responsive React and TypeScript interfaces.</strong> Developing
+                  reusable components, managing component state, and creating responsive layouts
+                  that adapt to different screen sizes.
                 </p>
               </div>
 
               <div className="strength-entry">
                 <p>
-                  <strong>Integrating the Gemini API into real workflows.</strong> Designing
-                  structured prompts, testing against failure edge cases, and building fallbacks
-                  when an API call times out or returns unexpected output.
+                  <strong>Integrating Gemini API into application workflows.</strong> Writing
+                  structured prompts, testing AI responses against edge cases, and handling API
+                  failures with fallback behavior.
                 </p>
               </div>
 
               <div className="strength-entry">
                 <p>
-                  <strong>Architecting typed backend services.</strong> Building Express, tRPC, and
-                  REST routes backed by relational MySQL schemas or MongoDB collections, with
-                  automated test coverage.
+                  <strong>Working with backend services and databases.</strong> Integrating
+                  frontend applications with Node.js and Express APIs, working with MySQL and
+                  MongoDB, and using tools such as Drizzle ORM and tRPC. Testing integrated features
+                  and fixing issues across application workflows.
                 </p>
               </div>
             </div>
