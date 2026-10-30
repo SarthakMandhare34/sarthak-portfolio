@@ -182,7 +182,7 @@ export const Projects: React.FC = () => {
                           rel="noopener noreferrer"
                           className="action-btn action-btn-secondary neuro-action-btn"
                         >
-                          Frontend Repo ↗
+                          {proj.backendRepoUrl ? 'Frontend Repo ↗' : 'GitHub Repo ↗'}
                         </a>
                         {proj.backendRepoUrl && (
                           <a
