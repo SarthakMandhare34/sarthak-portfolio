@@ -70,7 +70,6 @@ export const Projects: React.FC = () => {
     >
       <div className="chapter-bound">
         <header className="section-head">
-          <div className="section-eyebrow">03 / Selected Works</div>
           <h2 className="section-title">
             <span className="text-line-wrapper">
               <span className="text-line">Projects</span>

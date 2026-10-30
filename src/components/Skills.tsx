@@ -41,9 +41,6 @@ export const Skills: React.FC = () => {
     >
       <div className="chapter-bound">
         <header className="section-head">
-          <div className="section-eyebrow text-paper" style={{ opacity: 0.75 }}>
-            04 / Competencies
-          </div>
           <h2 className="section-title text-paper">
             <span className="text-line-wrapper">
               <span className="text-line">Skills</span>

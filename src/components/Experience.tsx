@@ -60,7 +60,6 @@ export const Experience: React.FC<ExperienceProps> = ({ onOpenCertificate }) => 
     >
       <div className="chapter-bound">
         <header className="section-head">
-          <div className="section-eyebrow">02 / Experience</div>
           <h2 className="section-title">
             <span className="text-line-wrapper">
               <span className="text-line">Virtual Internships</span>

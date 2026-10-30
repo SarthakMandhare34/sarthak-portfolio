@@ -40,7 +40,6 @@ export const About: React.FC = () => {
     >
       <div className="chapter-bound">
         <header className="section-head">
-          <div className="section-eyebrow">01 / Profile</div>
           <h2 className="section-title">
             <span className="text-line-wrapper">
               <span className="text-line">About</span>

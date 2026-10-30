@@ -33,7 +33,6 @@ export const Contact: React.FC<ContactProps> = ({ onCopy, onOpenResume }) => {
     >
       <div className="chapter-bound">
         <header className="section-head">
-          <div className="section-eyebrow">06 / Contact</div>
           <h2 className="section-title">
             <span className="text-line-wrapper">
               <span className="text-line">Get in Touch</span>

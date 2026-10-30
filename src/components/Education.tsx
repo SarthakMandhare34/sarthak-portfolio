@@ -51,7 +51,6 @@ export const Education: React.FC<EducationProps> = ({ onOpenCertificate }) => {
     >
       <div className="chapter-bound">
         <header className="section-head">
-          <div className="section-eyebrow">05 / Background</div>
           <h2 className="section-title">
             <span className="text-line-wrapper">
               <span className="text-line">Education</span>
