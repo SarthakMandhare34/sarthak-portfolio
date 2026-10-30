@@ -41,7 +41,7 @@ export interface AppSettings {
   designMode: DesignMode;
   fontSize: FontSizeScale;
   reducedMotion: boolean;
-  glassMode: boolean; // synchronized with designMode === 'liquid-glass'
+  glassMode: boolean;
 }
 
 export interface SettingsContextType {
@@ -88,8 +88,6 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const saved = localStorage.getItem(SETTINGS_STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        const validDesignMode: DesignMode =
-          'timeless';
         const validTheme: Theme = parsed.theme === 'dark' ? 'dark' : 'light';
         const validFontSize: FontSizeScale = ['default', 'medium', 'large'].includes(
           parsed.fontSize
@@ -100,7 +98,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         return {
           theme: validTheme,
           colorTheme: 'terracotta-sand',
-          designMode: validDesignMode,
+          designMode: 'timeless',
           fontSize: validFontSize,
           reducedMotion: Boolean(parsed.reducedMotion),
           glassMode: false
@@ -128,8 +126,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     const root = document.documentElement;
     root.setAttribute('data-theme', settings.theme);
     root.setAttribute('data-color-theme', 'terracotta-sand');
-    root.setAttribute('data-design-mode', settings.designMode);
-    root.setAttribute('data-glass', settings.designMode === 'liquid-glass' ? 'true' : 'false');
+    root.setAttribute('data-design-mode', 'timeless');
+    root.setAttribute('data-glass', 'false');
     root.setAttribute('data-font-size', settings.fontSize);
     root.setAttribute('data-reduced-motion', settings.reducedMotion ? 'true' : 'false');
 
@@ -155,27 +153,23 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setSettings((prev) => ({ ...prev, colorTheme: 'terracotta-sand' }));
   };
 
-  const setDesignMode = (designMode: DesignMode) => {
+  const setDesignMode = (_designMode: DesignMode) => {
     setSettings((prev) => ({
       ...prev,
-      designMode,
-      glassMode: designMode === 'liquid-glass'
+      designMode: 'timeless',
+      glassMode: false
     }));
   };
 
   const toggleDesignMode = () => {
-    setSettings((prev) => {
-      const nextMode: DesignMode =
-        'timeless';
-      return {
-        ...prev,
-        designMode: nextMode,
-        glassMode: nextMode === 'liquid-glass'
-      };
-    });
+    setSettings((prev) => ({
+      ...prev,
+      designMode: 'timeless',
+      glassMode: false
+    }));
   };
 
-  const setGlassMode = (glass: boolean) => {
+  const setGlassMode = (_glass: boolean) => {
     setDesignMode('timeless');
   };
 
@@ -201,10 +195,10 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         settings,
         theme: settings.theme,
         colorTheme: settings.colorTheme,
-        designMode: settings.designMode,
+        designMode: 'timeless',
         fontSize: settings.fontSize,
         reducedMotion: settings.reducedMotion,
-        glassMode: settings.designMode === 'liquid-glass',
+        glassMode: false,
         isSettingsOpen,
         toggleTheme,
         setTheme,
