@@ -51,21 +51,26 @@ export const About: React.FC = () => {
           {/* Left Column: Plain First-Person Prose */}
           <motion.div className="about-column-story" variants={itemVariants}>
             <p>
-              I am a computer science student at Keraleeya Samajam&apos;s Model College in Dombivli,
-              graduating in 2027. My work focuses on building full-stack applications where modern
-              machine learning interfaces feel natural, responsive, and grounded in practical
-              needs.
+              I&apos;m a Computer Science student at Keraleeya Samajam&apos;s Model College (Autonomous) in
+              Dombivli, expected to graduate in 2027. I develop web applications with a focus on
+              frontend development, responsive interfaces, and integrating AI-powered features into
+              practical workflows.
             </p>
             <p>
-              I care about seeing projects through from initial schema design to production
-              deployment. Over the past year, I have shipped two deployed applications and completed
-              two virtual internships integrating Gemini models into clinical triage and classroom
-              pre-grading.
+              My projects include <strong>LifeLink</strong>, a deployed healthcare prototype featuring
+              AI-guided symptom triage, doctor discovery, and appointment booking, and{' '}
+              <strong>KnowThySelf</strong>, a deployed MBTI personality assessment and recommendation
+              platform. I have also completed two virtual internships, contributing to{' '}
+              <strong>LuminaHub</strong>, an educational diagnostic pre-grader, and{' '}
+              <strong>HeatSafe AI</strong>, a climate heat-safety platform. Both projects involved
+              integrating and testing Gemini-powered features.
             </p>
             <p>
-              I work comfortably in English, Hindi, and Marathi. Whether refining component state
-              flow or writing database migrations, I value simplicity, steady architectural
-              decisions, and reliable software.
+              I value clear interfaces, maintainable code, careful testing, and reliable deployment.
+              I aim to build software that is practical, easy to use, and dependable.
+            </p>
+            <p className="about-languages-note">
+              <strong>Spoken Languages:</strong> English · Hindi · Marathi
             </p>
           </motion.div>
 

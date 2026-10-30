@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    PORTFOLIO DESIGN SYSTEM â€” DUAL EXPERIENCE
    Modes: 
      1. Timeless Solid (Refined editorial craftsmanship, tactile solid cards, crisp borders)
@@ -5378,4 +5378,17 @@ dialog.resume-modal::backdrop {
 .neuro-action-btn:active {
   transform: translateY(1px) !important;
   box-shadow: var(--neuro-pressed) !important;
+}
+
+
+.about-column-story p.about-languages-note {
+  text-align: left !important;
+  margin-top: var(--space-24) !important;
+  margin-bottom: 0 !important;
+  font-size: 0.95rem;
+  color: var(--ink-mid) !important;
+}
+
+.about-column-story p.about-languages-note strong {
+  color: var(--ink) !important;
 }
