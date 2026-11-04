@@ -111,7 +111,7 @@ export function MobileBottomNav() {
             onClick={(e) => handleTabClick(e, tab)}
             className={`flex flex-col items-center justify-center flex-1 py-1.5 transition-all duration-200 select-none cursor-pointer min-h-[44px] rounded-xl mx-0.5 ${
               isActive
-                ? 'text-[var(--accent)] font-semibold bg-[var(--accent-soft)] shadow-inner'
+                ? 'text-[var(--accent)] font-semibold tactile-chip'
                 : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] active:scale-95'
             }`}
           >

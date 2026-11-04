@@ -140,7 +140,7 @@ export function Navbar({ onResumeClick }: NavbarProps) {
       {/* ──────────────── TOP VIEWPORT SCROLL PROGRESS BAR ──────────────── */}
       <div className="fixed top-0 left-0 w-full h-[3px] z-50 pointer-events-none bg-[var(--border)]/20">
         <div
-          className="h-full bg-[var(--accent)] transition-all duration-150 ease-out shadow-[0_0_10px_var(--accent)]"
+          className="h-full bg-gradient-to-r from-[var(--accent)] to-[var(--decorative)] transition-all duration-150 ease-out shadow-[0_0_10px_var(--decorative)]"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -170,7 +170,7 @@ export function Navbar({ onResumeClick }: NavbarProps) {
           {/* RIGHT: Desktop Nav links, Theme Toggle, Resume Button */}
           <div className="flex items-center gap-2.5 sm:gap-4 md:gap-5">
             {/* Desktop Nav Links (Hidden below 768px) */}
-            <nav className="hidden md:flex items-center gap-1 text-[13.5px] font-inter p-1 rounded-xl bg-[var(--bg-inset)]/60 border border-[var(--border)]">
+            <nav className="hidden md:flex items-center gap-1 text-[13.5px] font-inter p-1 rounded-xl tactile-inset">
               {NAV_LINKS.map((link) => {
                 const isActive = activeSection === link.href;
                 return (
@@ -180,8 +180,8 @@ export function Navbar({ onResumeClick }: NavbarProps) {
                     onClick={(e) => scrollToSection(e, link.href)}
                     className={`nav-anim-item opacity-0 px-3 py-1 rounded-lg transition-all duration-200 ${
                       isActive
-                        ? 'text-[var(--accent)] font-semibold bg-[var(--bg-elevated)] shadow-sm'
-                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/50 font-medium'
+                        ? 'text-[var(--accent)] font-semibold tactile-chip'
+                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40 font-medium'
                     }`}
                   >
                     {link.label}

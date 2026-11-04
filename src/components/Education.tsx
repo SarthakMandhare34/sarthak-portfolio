@@ -227,7 +227,7 @@ export function Education() {
       {/* ──────────────── CLEAN POPUP MODAL FOR CERTIFICATE PREVIEW (NO INLINE CLUTTER) ──────────────── */}
       {modalCert && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-fade-in">
-          <div className="relative w-full max-w-2xl bg-[var(--bg-elevated)] border border-[var(--border)] rounded-2xl shadow-2xl p-5 sm:p-6 space-y-4">
+          <div className="relative w-full max-w-2xl neumorphic-card p-5 sm:p-6 space-y-4">
             <div className="flex items-center justify-between border-b border-[var(--border)] pb-3">
               <div className="flex items-center gap-2 text-xs font-mono-code text-[var(--accent)]">
                 <Award className="w-4 h-4" />
@@ -242,7 +242,7 @@ export function Education() {
               </button>
             </div>
 
-            <div className="h-72 sm:h-96 w-full rounded-xl overflow-hidden bg-black/40 border border-[var(--border)]">
+            <div className="h-72 sm:h-96 w-full rounded-xl overflow-hidden tactile-inset">
               <object
                 data={`${modalCert.pdfUrl}#toolbar=0`}
                 type="application/pdf"

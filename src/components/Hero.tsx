@@ -91,7 +91,7 @@ export function Hero({ onResumeClick }: HeroProps) {
       <div
         className="absolute top-1/4 right-1/4 w-[480px] h-[480px] rounded-full pointer-events-none opacity-40 dark:opacity-25 blur-[120px]"
         style={{
-          background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, var(--accent) 0%, var(--decorative-soft) 40%, transparent 70%)',
         }}
       />
 
@@ -104,7 +104,7 @@ export function Hero({ onResumeClick }: HeroProps) {
             
             {/* Availability Indicator */}
             <div className="scroll-reveal scroll-scale-up mb-3 sm:mb-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full tactile-status-badge w-fit">
-              <span className="w-2 h-2 rounded-full bg-[var(--success)] shrink-0 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[var(--decorative)] shrink-0 animate-pulse shadow-[0_0_8px_var(--decorative)]" />
               <span className="font-mono-code text-[11px] sm:text-xs text-[var(--text-secondary)] font-medium">
                 Available for engineering roles
               </span>
@@ -117,7 +117,7 @@ export function Hero({ onResumeClick }: HeroProps) {
               </p>
               <h1 className="font-display font-bold text-[clamp(28px,4.5vw,48px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
                 Sarthak Mangesh Mandhare
-                <span className="text-[var(--accent)]">.</span>
+                <span className="text-[var(--decorative)]">.</span>
               </h1>
             </div>
 
@@ -201,7 +201,7 @@ export function Hero({ onResumeClick }: HeroProps) {
             <div className="scroll-reveal scroll-rotate-right hero-scroll-parallax stagger-2 w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[420px]">
               
               {/* macOS Window Bezel Container */}
-              <div className="neumorphic-card p-3 sm:p-4 rounded-3xl border border-[var(--border)] bg-[var(--bg-elevated)] shadow-xl relative">
+              <div className="neumorphic-card p-3 sm:p-4 rounded-3xl relative">
                 
                 {/* macOS Title Bar with Traffic Lights */}
                 <div className="flex items-center justify-between pb-3 px-1 border-b border-[var(--border)] select-none">
@@ -210,14 +210,14 @@ export function Hero({ onResumeClick }: HeroProps) {
                     <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] inline-block shadow-xs" />
                     <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] inline-block shadow-xs" />
                   </div>
-                  <div className="px-2.5 py-0.5 rounded-md bg-[var(--bg-inset)] text-[10px] font-mono-code text-[var(--text-dim)] truncate">
+                  <div className="px-2.5 py-0.5 rounded-md tactile-inset text-[10px] font-mono-code text-[var(--accent)] truncate">
                     sarthak-mandhare.dev
                   </div>
                   <div className="w-8" />
                 </div>
 
                 {/* Profile Portrait Image Frame */}
-                <div className="relative mt-3 rounded-2xl overflow-hidden aspect-[4/4.6] bg-[var(--bg-inset)] border border-[var(--border)]">
+                <div className="relative mt-3 rounded-2xl overflow-hidden aspect-[4/4.6] tactile-display-frame">
                   <img
                     ref={photoImageRef}
                     src="/images/sarthak.jpg"

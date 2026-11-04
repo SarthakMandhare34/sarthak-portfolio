@@ -219,12 +219,12 @@ export function Projects() {
 
         {/* ──────────────── CATEGORY FILTER BAR (macOS SEGMENTED CONTROL) ──────────────── */}
         <div className="scroll-reveal scroll-slide-down stagger-1 mb-7 sm:mb-10 flex items-center border-b border-[var(--border)] pb-4">
-          <div className="p-1 rounded-2xl bg-[var(--bg-inset)]/70 border border-[var(--border)] inline-flex flex-wrap gap-1">
+          <div className="p-1 rounded-2xl tactile-inset inline-flex flex-wrap gap-1">
             <button
               onClick={() => handleFilterChange('all')}
               className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
                 activeFilter === 'all'
-                  ? 'bg-[var(--bg-elevated)] text-[var(--accent)] font-semibold shadow-xs'
+                  ? 'tactile-chip text-[var(--accent)] font-semibold'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
               }`}
             >
@@ -234,7 +234,7 @@ export function Projects() {
               onClick={() => handleFilterChange('academic')}
               className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
                 activeFilter === 'academic'
-                  ? 'bg-[var(--bg-elevated)] text-[var(--accent)] font-semibold shadow-xs'
+                  ? 'tactile-chip text-[var(--accent)] font-semibold'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
               }`}
             >
@@ -244,7 +244,7 @@ export function Projects() {
               onClick={() => handleFilterChange('internship')}
               className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
                 activeFilter === 'internship'
-                  ? 'bg-[var(--bg-elevated)] text-[var(--accent)] font-semibold shadow-xs'
+                  ? 'tactile-chip text-[var(--accent)] font-semibold'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
               }`}
             >
@@ -276,7 +276,7 @@ export function Projects() {
                     onClick={() => toggleProject(project.id)}
                     title={isExpanded ? 'Click to hide details' : 'Click to view details in place'}
                   >
-                    <div className="relative rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--bg-surface)] shadow-md group-hover:border-[var(--accent)]/60 transition-all">
+                    <div className="tactile-display-frame overflow-hidden group-hover:border-[var(--accent)]/60 transition-all">
                       {/* Browser Chrome Top Bar */}
                       <div className="flex items-center justify-between px-3 py-2 bg-[var(--bg-inset)] border-b border-[var(--border)] select-none">
                         <div className="flex items-center gap-1.5">
@@ -285,7 +285,7 @@ export function Projects() {
                           <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
                         </div>
                         <div className="px-2.5 py-0.5 rounded-md bg-[var(--bg-elevated)] border border-[var(--border)] text-[10px] font-mono-code text-[var(--accent)] truncate max-w-[200px] flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[var(--success)] animate-pulse shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[var(--decorative)] animate-pulse shrink-0 shadow-[0_0_6px_var(--decorative)]" />
                           <span className="truncate">
                             {project.id === 'lifelink'
                               ? 'lifelink.onrender.com'
@@ -309,7 +309,7 @@ export function Projects() {
                           className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                         />
                         {project.internshipBadge && (
-                          <div className="absolute bottom-2.5 left-2.5 z-10 bg-black/80 border border-[var(--accent)] rounded-md px-2.5 py-0.5 font-mono-code text-[10px] font-bold text-[var(--accent)] backdrop-blur-md">
+                          <div className="absolute bottom-2.5 left-2.5 z-10 bg-black/85 border border-[var(--decorative)] rounded-md px-2.5 py-0.5 font-mono-code text-[10px] font-bold text-[var(--decorative)] backdrop-blur-md shadow-sm">
                             {project.internshipBadge}
                           </div>
                         )}
