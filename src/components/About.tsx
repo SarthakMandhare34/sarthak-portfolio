@@ -68,7 +68,6 @@ export function About() {
               easing: 'easeOutCubic',
             });
           } else {
-            // Smooth exit reset for continuous bi-directional scroll animation
             anime.remove([sectionEl, header, cards, focusCards]);
             anime({
               targets: [sectionEl, header, cards, focusCards],
@@ -98,30 +97,40 @@ export function About() {
         {/* ──────────────── SECTION HEADER ──────────────── */}
         <div className="about-header mb-7 sm:mb-10 max-w-3xl opacity-0">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
-            <span>About Me</span>
+            <span>About</span>
           </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
-            Sarthak Mandhare
+            Background &amp; Approach
           </h2>
           <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed">
-            Full-Stack Software Developer based in Dombivli, Mumbai.
+            Full-Stack Software Developer focused on clean component architecture, backend integration, and practical AI solutions.
           </p>
         </div>
 
-        {/* ──────────────── DUAL-COLUMN GRID: NARRATIVE + PROFILE SNAPSHOT ──────────────── */}
+        {/* ──────────────── DUAL-COLUMN GRID: A. NARRATIVE + B. SNAPSHOT ──────────────── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 items-stretch">
           
-          {/* Main Bio Container (7 cols) */}
-          <div className="about-anim-card opacity-0 neumorphic-card p-4 sm:p-7 md:p-8 space-y-5 lg:col-span-7 flex flex-col justify-between border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+          {/* ────── A. PROFESSIONAL INTRODUCTION (7 cols) ────── */}
+          <div className="about-anim-card opacity-0 neumorphic-card p-5 sm:p-7 md:p-8 space-y-5 lg:col-span-7 flex flex-col justify-between border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
             <div className="space-y-4 font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] leading-relaxed">
+              <h3 className="font-space font-bold text-lg sm:text-xl text-[var(--text-primary)]">
+                Professional Introduction
+              </h3>
+              
               <p>
-                I am a frontend-leaning full-stack developer who builds AI-integrated web applications with React, TypeScript, and Node.js. Currently completing my <strong className="text-[var(--text-primary)] font-semibold">Bachelor of Science in Computer Science</strong> at <strong className="text-[var(--text-primary)] font-semibold">Keraleeya Samajam&apos;s Model College (Autonomous)</strong> in Dombivli (Current Semester: 6th, Current CGPA: 6.95/10, Expected Graduation: 2027).
+                My foundation in Computer Science began through coursework in algorithms, data structures, and database management at <strong className="text-[var(--text-primary)] font-semibold">Keraleeya Samajam&apos;s Model College (Autonomous)</strong>. This academic base quickly grew into a hands-on drive to build end-to-end web applications that solve real operational problems.
               </p>
+              
               <p>
-                I have shipped two production-deployed projects: <strong className="text-[var(--text-primary)] font-semibold">LifeLink</strong>, a smart healthcare assistance platform on Render with AI symptom guidance and clinic booking across 19 Mumbai railway stations, and <strong className="text-[var(--text-primary)] font-semibold">KnowThySelf</strong>, an MBTI personality assessment and recommendation platform on Vercel. In addition, I completed two AI-focused virtual internships with <strong className="text-[var(--text-primary)] font-semibold">IBM SkillsBuild</strong> and <strong className="text-[var(--text-primary)] font-semibold">Lenovo LEAP</strong>, engineering diagnostic pre-grading and climate heat-safety platforms powered by the Gemini API.
+                In full-stack engineering, I bridge responsive frontend interfaces built with <strong className="text-[var(--text-primary)] font-semibold">React</strong> and <strong className="text-[var(--text-primary)] font-semibold">TypeScript</strong> to structured <strong className="text-[var(--text-primary)] font-semibold">Node.js/Express</strong> services and relational data models in <strong className="text-[var(--text-primary)] font-semibold">MySQL with Drizzle ORM</strong>. I treat state management, accessibility, and type safety as core design requirements, not afterthoughts.
               </p>
+              
               <p>
-                I prioritise clean component architecture, reliable REST APIs, database modeling with Drizzle ORM, rigorous automated testing, and dependable cloud deployments to deliver fast, intuitive, and practical digital products.
+                My experience integrating generative AI centers on practical API integration with the <strong className="text-[var(--text-primary)] font-semibold">Gemini API</strong>. Rather than relying on open-ended generation, I design structured prompts, implement emergency edge-case guards, and write deterministic fallback mechanisms so applications remain reliable even during network disruptions or API timeouts.
+              </p>
+
+              <p>
+                My approach to problem-solving is deliberate and verification-driven: break down requirements into testable units, write automated test cases to guard against regressions, and iteratively improve performance and user experience.
               </p>
             </div>
 
@@ -145,60 +154,90 @@ export function About() {
             </div>
           </div>
 
-          {/* Developer Snapshot Card (5 cols) */}
-          <div className="about-anim-card opacity-0 neumorphic-card p-4 sm:p-7 md:p-8 lg:col-span-5 flex flex-col justify-between space-y-5 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+          {/* ────── B. DEVELOPER SNAPSHOT (5 cols) ────── */}
+          <div className="about-anim-card opacity-0 neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-5 flex flex-col justify-between space-y-5 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
             <div>
               <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
                 <h3 className="font-display font-bold text-lg sm:text-xl text-[var(--text-primary)]">
                   Developer Snapshot
                 </h3>
                 <span className="tactile-chip px-2.5 py-0.5 font-mono-code text-xs text-[var(--accent)] font-semibold shrink-0">
-                  Semester 6 · CGPA 6.95
+                  Sem 6 · CGPA 6.95
                 </span>
               </div>
 
               <div className="space-y-3.5 text-xs sm:text-sm font-inter">
-                <div className="flex items-start gap-3 p-3 rounded-xl tactile-inset">
+                {/* Degree & College */}
+                <div className="flex items-start gap-3 p-3.5 rounded-xl tactile-inset">
                   <GraduationCap className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
                   <div className="min-w-0 flex-1">
                     <span className="text-[var(--text-dim)] font-mono-code text-[11px] block uppercase">
-                      Degree &amp; College
+                      Degree
                     </span>
-                    <span className="text-[var(--text-primary)] font-medium block">
+                    <span className="text-[var(--text-primary)] font-semibold block">
                       Bachelor of Science in Computer Science
                     </span>
                     <p className="text-[var(--text-secondary)] text-xs mt-0.5">
-                      Keraleeya Samajam&apos;s Model College (Autonomous) · 2027
+                      Keraleeya Samajam&apos;s Model College (Autonomous)
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3 rounded-xl tactile-inset">
+                {/* Academic Standing */}
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-3 rounded-xl tactile-inset">
+                    <span className="text-[var(--text-dim)] font-mono-code text-[10px] block uppercase">
+                      Current Semester
+                    </span>
+                    <span className="text-[var(--text-primary)] font-mono-code font-bold text-sm sm:text-base mt-0.5 block">
+                      6th Semester
+                    </span>
+                    <span className="text-[10px] text-[var(--text-secondary)] block">
+                      Expected Grad: 2027
+                    </span>
+                  </div>
+
+                  <div className="p-3 rounded-xl tactile-inset">
+                    <span className="text-[var(--text-dim)] font-mono-code text-[10px] block uppercase">
+                      Verified CGPA
+                    </span>
+                    <span className="text-[var(--accent)] font-mono-code font-bold text-sm sm:text-base mt-0.5 block">
+                      6.95 <span className="text-xs text-[var(--text-dim)] font-normal">/ 10</span>
+                    </span>
+                    <span className="text-[10px] text-[var(--text-secondary)] block">
+                      Official Transcript
+                    </span>
+                  </div>
+                </div>
+
+                {/* Location */}
+                <div className="flex items-start gap-3 p-3.5 rounded-xl tactile-inset">
                   <MapPin className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
                   <div className="min-w-0 flex-1">
                     <span className="text-[var(--text-dim)] font-mono-code text-[11px] block uppercase">
                       Location
                     </span>
-                    <span className="text-[var(--text-primary)] font-medium block">
+                    <span className="text-[var(--text-primary)] font-semibold block">
                       Dombivli, Mumbai, Maharashtra, India
                     </span>
                     <p className="text-[var(--text-secondary)] text-xs mt-0.5">
-                      Available for on-site, hybrid, and remote technical roles
+                      Open for on-site, hybrid, and remote software engineering roles
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3 rounded-xl tactile-inset">
+                {/* Internship Experience */}
+                <div className="flex items-start gap-3 p-3.5 rounded-xl tactile-inset">
                   <ShieldCheck className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
                   <div className="min-w-0 flex-1">
                     <span className="text-[var(--text-dim)] font-mono-code text-[11px] block uppercase">
-                      Virtual Internships (AICTE)
+                      Virtual Internship Experience
                     </span>
-                    <span className="text-[var(--text-primary)] font-medium block">
-                      IBM SkillsBuild &amp; Lenovo LEAP
+                    <span className="text-[var(--text-primary)] font-semibold block">
+                      Lenovo LEAP &amp; IBM SkillsBuild
                     </span>
                     <p className="text-[var(--text-secondary)] text-xs mt-0.5">
-                      IDs: BHIBMAC04046 &amp; 6302092
+                      2 AICTE-approved virtual internships with verified certificate credentials
                     </p>
                   </div>
                 </div>
@@ -257,11 +296,11 @@ export function About() {
                   AI Integration &amp; Prompts
                 </h4>
                 <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
-                  Integrating Google Gemini API into web applications. Crafting structured prompts, evaluating edge cases in Google AI Studio, and engineering reliable fallback mechanisms.
+                  Integrating Google Gemini API into web applications. Crafting structured prompts, evaluating edge cases, and engineering reliable fallback mechanisms.
                 </p>
               </div>
               <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--accent)] font-semibold">
-                Gemini API · Prompt Engineering · Google AI Studio
+                Gemini API · Prompt Engineering · LLM Integration
               </div>
             </div>
 
@@ -275,11 +314,11 @@ export function About() {
                   Backend &amp; Databases
                 </h4>
                 <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
-                  Engineering backend services and REST APIs with Node.js and Express. Modeling application data in MySQL and MongoDB with Drizzle ORM, backed by unit and integration testing.
+                  Writing REST APIs with Node.js and Express. Designing database schemas with MySQL and MongoDB, using Drizzle ORM for type-safe database queries.
                 </p>
               </div>
               <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--accent)] font-semibold">
-                Node.js · Express.js · MySQL · MongoDB · Drizzle ORM
+                Node.js · Express · MySQL · Drizzle ORM
               </div>
             </div>
           </div>

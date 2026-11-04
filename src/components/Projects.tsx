@@ -72,7 +72,7 @@ const ALL_PROJECTS: ProjectDetailData[] = [
       'Built a platform that reviews student submissions, flags conceptual misunderstandings, and generates follow-up practice questions, using React, TypeScript, Node.js, Express, and the Gemini API.',
       'Implemented diagnostic grading, concept-mastery analysis, and adaptive hints so feedback changes based on where a student is stuck, rather than showing the same response to everyone.',
       'Built a teacher-facing analytics view so instructors can see which concepts a class is struggling with, not just individual scores.',
-      'Tested the integrated AI features in Google AI Studio before merging them into the main UI.',
+      'Tested and evaluated the integrated AI features with test fixtures and structured prompts before merging them into the main UI.',
     ],
     stack: ['React', 'TypeScript', 'Node.js', 'Express', 'Gemini API'],
     imageSrc: '/images/projects/luminahub.png',
@@ -252,10 +252,10 @@ export function Projects() {
         {/* ──────────────── SECTION HEADER ──────────────── */}
         <div className="project-header mb-7 sm:mb-10 max-w-3xl opacity-0">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
-            <span>Portfolio</span>
+            <span>Academic &amp; Virtual Internships</span>
           </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
-            Projects &amp; Virtual Internships
+            Academic Projects &amp; Virtual Internships
           </h2>
           <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed">
             Academic software prototypes and AICTE virtual internship capstones with live deployments, source repositories, and verified certificate credentials.

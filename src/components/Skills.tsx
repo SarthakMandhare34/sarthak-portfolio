@@ -21,19 +21,19 @@ interface SkillCategory {
 const SKILL_CATEGORIES: SkillCategory[] = [
   {
     id: 'languages',
-    title: 'Languages',
+    title: 'Programming Languages',
     icon: Code2,
     skills: ['TypeScript', 'JavaScript', 'Python', 'SQL'],
   },
   {
     id: 'frontend',
-    title: 'Frontend',
+    title: 'Frontend Development',
     icon: Layout,
     skills: ['React.js', 'HTML5', 'CSS3', 'Responsive Design', 'UI/UX'],
   },
   {
     id: 'backend',
-    title: 'Backend',
+    title: 'Backend Development',
     icon: Server,
     skills: ['Node.js', 'Express.js', 'REST APIs'],
   },
@@ -45,9 +45,9 @@ const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     id: 'ai',
-    title: 'AI',
+    title: 'AI Integration',
     icon: Sparkles,
-    skills: ['Google Gemini API', 'Prompt Engineering', 'AI Integration', 'Google AI Studio'],
+    skills: ['Google Gemini API', 'Prompt Engineering', 'AI Integration', 'LLM Workflows'],
   },
   {
     id: 'testing',

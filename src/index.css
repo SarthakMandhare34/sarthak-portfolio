@@ -298,49 +298,6 @@ html[data-theme="light"] .tactile-status-badge {
 }
 
 
-/* ──────────────── BACKGROUND TEXTURE & WATERMARK UTILITIES ──────────────── */
-.bg-code-texture {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.bg-code-texture-inner {
-  position: absolute;
-  inset: 0;
-  background-image: url('/assets/aistudio/image_0e3918de.png');
-  background-repeat: repeat-y;
-  background-position: top center;
-  background-size: 1100px auto;
-  opacity: 0.15;
-  filter: grayscale(100%) contrast(1.15) brightness(0.9);
-  mix-blend-mode: screen;
-}
-
-html[data-theme="light"] .bg-code-texture-inner {
-  opacity: 0.11;
-  filter: grayscale(100%) contrast(1.25) brightness(0.7);
-  mix-blend-mode: multiply;
-}
-
-.bg-portrait-watermark {
-  position: absolute;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.bg-portrait-watermark img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
-  filter: contrast(1.08) brightness(1.1) saturate(1.02);
-}
-
-
 /* ──────────────── EXACT TACTILE NEUMORPHIC BUTTON SYSTEM ──────────────── */
 .button {
   all: unset;
