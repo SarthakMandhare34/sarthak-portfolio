@@ -96,14 +96,13 @@ export function Experience() {
 
         {/* 2 Separate Organized Experience Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
-          {EXPERIENCES.map((exp, idx) => {
-            const animClass = idx === 0 ? 'scroll-rotate-left' : 'scroll-rotate-right stagger-1';
-
-            return (
-              <div
-                key={exp.id}
-                className={`exp-card scroll-reveal ${animClass} neumorphic-card p-5 sm:p-7 md:p-8 rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] flex flex-col justify-between space-y-6`}
-              >
+          {EXPERIENCES.map((exp, idx) => (
+            <div
+              key={exp.id}
+              className={`exp-card scroll-reveal ${
+                idx === 0 ? 'scroll-rotate-left' : 'scroll-rotate-right stagger-1'
+              } neumorphic-card p-5 sm:p-7 md:p-8 rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] flex flex-col justify-between space-y-6`}
+            >
                 {/* Header: Company & Program */}
                 <div>
                   <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
@@ -212,8 +211,7 @@ export function Experience() {
                 </div>
 
               </div>
-            );
-          })}
+          ))}
         </div>
 
       </div>

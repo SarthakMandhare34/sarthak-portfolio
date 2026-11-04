@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown, Download, MapPin, Github, Linkedin } from 'lucide-react';
+import { ArrowDown, MapPin, Github, Linkedin } from 'lucide-react';
 import { TactileButton } from './TactileButton';
 
 interface HeroProps {
-  onResumeClick: () => void;
+  onResumeClick?: () => void;
 }
 
 export function Hero({ onResumeClick }: HeroProps) {
@@ -131,22 +131,12 @@ export function Hero({ onResumeClick }: HeroProps) {
               </p>
             </div>
 
-            {/* Existing Call-To-Action Buttons (Preserved Exact Components) */}
+            {/* Call-To-Action Button */}
             <div className="scroll-reveal scroll-slide-up stagger-4 mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3 w-full sm:w-auto">
-              <TactileButton
-                onClick={onResumeClick}
-                variant="primary"
-                size="md"
-                className="w-full sm:w-auto"
-              >
-                <span>View Resume PDF</span>
-                <Download className="w-4 h-4 inline-block" />
-              </TactileButton>
-
               <TactileButton
                 href="#projects"
                 onClick={(e) => handleSmoothScroll(e, '#projects')}
-                variant="secondary"
+                variant="primary"
                 size="md"
                 className="w-full sm:w-auto"
               >
