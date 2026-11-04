@@ -89,55 +89,75 @@
   font-family: var(--font-mono);
 }
 
+/* ──────────────── TEXT JUSTIFICATION SYSTEM ──────────────── */
+.text-justified {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-spacing: -0.01em;
+}
+
+@media (max-width: 640px) {
+  .text-justified {
+    text-align: justify;
+    text-justify: inter-character;
+  }
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Clean Neumorphism & Soft Tactile Depth for Cards */
+/* ──────────────── CLEAN AUTHENTIC NEUMORPHISM (SOFT UI) ──────────────── */
 .neumorphic-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: 1.5rem;
   box-shadow:
-    0 0.15em 0.35em rgba(0, 0, 0, 0.4),
-    8px 8px 24px rgba(0, 0, 0, 0.5),
-    -4px -4px 14px rgba(255, 255, 255, 0.03),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.15),
-    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.4);
+    -6px -6px 18px rgba(108, 207, 246, 0.07),
+    -2px -2px 6px rgba(255, 255, 255, 0.04),
+    8px 8px 24px rgba(0, 0, 0, 0.85),
+    4px 4px 10px rgba(0, 0, 0, 0.9),
+    inset 1px 1px 1.5px rgba(108, 207, 246, 0.12),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.6);
   transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 html[data-theme="light"] .neumorphic-card {
-  background: #FFFFFF;
-  border: 1px solid #BFDBFE;
+  background: #EFF6FF;
+  border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow:
-    0 0.12em 0.3em rgba(37, 99, 235, 0.08),
-    6px 6px 20px rgba(37, 99, 235, 0.09),
-    -6px -6px 20px rgba(255, 255, 255, 0.95),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 1),
-    inset 0 -1px 2px 0 rgba(37, 99, 235, 0.06);
+    -8px -8px 20px rgba(255, 255, 255, 0.95),
+    -3px -3px 8px rgba(255, 255, 255, 1),
+    8px 8px 22px rgba(160, 185, 218, 0.55),
+    3px 3px 8px rgba(160, 185, 218, 0.35),
+    inset 1px 1px 1px rgba(255, 255, 255, 1),
+    inset -1px -1px 2px rgba(160, 185, 218, 0.15);
 }
 
 .neumorphic-card:hover {
   transform: translateY(-2px);
   border-color: var(--border-active);
   box-shadow:
-    0 0.25em 0.5em rgba(0, 0, 0, 0.45),
-    12px 14px 32px rgba(0, 0, 0, 0.6),
-    -6px -6px 18px rgba(255, 255, 255, 0.05),
-    inset 0 1px 2px 0 rgba(255, 255, 255, 0.22),
-    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.4);
+    -8px -8px 22px rgba(108, 207, 246, 0.12),
+    -3px -3px 8px rgba(255, 255, 255, 0.06),
+    12px 14px 30px rgba(0, 0, 0, 0.9),
+    inset 1px 1px 2px rgba(108, 207, 246, 0.18),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.6);
 }
 
 html[data-theme="light"] .neumorphic-card:hover {
   border-color: var(--accent);
   box-shadow:
-    0 0.2em 0.4em rgba(37, 99, 235, 0.12),
-    10px 12px 26px rgba(37, 99, 235, 0.15),
-    -8px -8px 22px rgba(255, 255, 255, 1),
-    inset 0 1px 2px 0 rgba(255, 255, 255, 1),
-    inset 0 -1px 2px 0 rgba(37, 99, 235, 0.08);
+    -11px -11px 24px rgba(255, 255, 255, 1),
+    -4px -4px 10px rgba(255, 255, 255, 1),
+    12px 14px 28px rgba(160, 185, 218, 0.65),
+    4px 4px 10px rgba(160, 185, 218, 0.4),
+    inset 1px 1px 1px rgba(255, 255, 255, 1),
+    inset -1px -1px 2px rgba(160, 185, 218, 0.2);
 }
 
 /* Tactile Neumorphic Pill Badges */
@@ -145,115 +165,117 @@ html[data-theme="light"] .neumorphic-card:hover {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.25),
-    inset 0 1px 1px rgba(255, 255, 255, 0.15),
-    inset 0 -1px 1px rgba(0, 0, 0, 0.3);
+    -3px -3px 7px rgba(108, 207, 246, 0.06),
+    3px 3px 8px rgba(0, 0, 0, 0.5),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.15),
+    inset -1px -1px 1px rgba(0, 0, 0, 0.4);
   transition: all 200ms ease;
 }
 
 html[data-theme="light"] .neumorphic-pill {
-  background: #F1F6FD;
-  border: 1px solid #BFDBFE;
+  background: #EFF6FF;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow:
-    0 1px 2px rgba(37, 99, 235, 0.08),
-    inset 0 1px 1px rgba(255, 255, 255, 0.95),
-    inset 0 -1px 1px rgba(37, 99, 235, 0.08);
+    -4px -4px 9px rgba(255, 255, 255, 0.95),
+    4px 4px 9px rgba(160, 185, 218, 0.5),
+    inset 1px 1px 1px rgba(255, 255, 255, 1),
+    inset -1px -1px 1px rgba(160, 185, 218, 0.12);
 }
 
 .neumorphic-pill:hover {
   border-color: var(--accent);
   color: var(--accent);
   box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.35),
-    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    -5px -5px 11px rgba(108, 207, 246, 0.1),
+    5px 5px 12px rgba(0, 0, 0, 0.65),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.2);
 }
 
 html[data-theme="light"] .neumorphic-pill:hover {
   border-color: var(--accent);
   box-shadow:
-    0 2px 4px rgba(37, 99, 235, 0.15),
-    inset 0 1px 1px rgba(255, 255, 255, 1);
+    -5px -5px 11px rgba(255, 255, 255, 1),
+    5px 5px 12px rgba(160, 185, 218, 0.6),
+    inset 1px 1px 1px rgba(255, 255, 255, 1);
 }
 
 /* ──────────────── ADVANCED TACTILE PHYSICAL UTILITIES ──────────────── */
 
 /* Recessed tactile socket for stats, metric gauges, and info containers */
 .tactile-inset {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
+  background: #001214;
+  border: 1px solid rgba(108, 207, 246, 0.12);
   box-shadow:
-    inset 0 2px 4px 0 rgba(0, 0, 0, 0.5),
-    inset 0 1px 2px 0 rgba(0, 0, 0, 0.6),
-    inset 0 -1px 1px 0 rgba(255, 255, 255, 0.05),
-    0 1px 1px 0 rgba(255, 255, 255, 0.03);
+    inset 4px 4px 10px rgba(0, 0, 0, 0.8),
+    inset -3px -3px 8px rgba(108, 207, 246, 0.05),
+    0 1px 1px rgba(255, 255, 255, 0.03);
   transition: all 200ms ease;
 }
 
 html[data-theme="light"] .tactile-inset {
-  background: #F1F6FD;
-  border: 1px solid #BFDBFE;
+  background: #EAF2FD;
+  border: 1px solid rgba(191, 219, 254, 0.65);
   box-shadow:
-    inset 0 2px 4px 0 rgba(37, 99, 235, 0.1),
-    inset 0 1px 2px 0 rgba(37, 99, 235, 0.14),
-    inset 0 -1px 1px 0 rgba(255, 255, 255, 0.9),
-    0 1px 1px 0 rgba(255, 255, 255, 0.8);
+    inset 4px 4px 8px rgba(160, 185, 218, 0.6),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.95),
+    0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 /* Molded tactile micro-chip for tech stacks, skills, and tags */
 .tactile-chip {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
+  background: #02181B;
+  border: 1px solid rgba(108, 207, 246, 0.18);
   border-radius: 0.5rem;
   box-shadow:
-    0 1px 2px 0 rgba(0, 0, 0, 0.3),
-    inset 0 1px 0.5px 0 rgba(255, 255, 255, 0.18),
-    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.35);
+    -2px -2px 6px rgba(108, 207, 246, 0.06),
+    3px 3px 7px rgba(0, 0, 0, 0.55),
+    inset 0.5px 0.5px 0.5px rgba(108, 207, 246, 0.12);
   transition: all 180ms ease;
   user-select: none;
 }
 
 html[data-theme="light"] .tactile-chip {
-  background: #FFFFFF;
-  border: 1px solid #BFDBFE;
+  background: #EFF6FF;
+  border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow:
-    0 1px 2px 0 rgba(37, 99, 235, 0.08),
-    inset 0 1px 0.5px 0 rgba(255, 255, 255, 1),
-    inset 0 -1px 1px 0 rgba(37, 99, 235, 0.08);
+    -3px -3px 6px rgba(255, 255, 255, 0.95),
+    3px 3px 6px rgba(160, 185, 218, 0.45),
+    inset 0.5px 0.5px 0.5px rgba(255, 255, 255, 1);
 }
 
 .tactile-chip:hover {
   transform: translateY(-1px);
   border-color: var(--accent);
   box-shadow:
-    0 2px 5px 0 rgba(0, 0, 0, 0.4),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+    -2.5px -2.5px 7px rgba(108, 207, 246, 0.12),
+    4px 4px 10px rgba(0, 0, 0, 0.7);
 }
 
 html[data-theme="light"] .tactile-chip:hover {
   border-color: var(--accent);
   box-shadow:
-    0 2px 6px 0 rgba(37, 99, 235, 0.16),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 1);
+    -4px -4px 9px rgba(255, 255, 255, 1),
+    4px 4px 9px rgba(160, 185, 218, 0.6);
 }
 
 /* Machined tactile socket for icons & monogram tokens */
 .tactile-icon-socket {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
+  background: #02171A;
+  border: 1px solid rgba(108, 207, 246, 0.2);
   box-shadow:
-    0 2px 6px 0 rgba(0, 0, 0, 0.35),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 -1px 1.5px 0 rgba(0, 0, 0, 0.4);
+    -2.5px -2.5px 7px rgba(108, 207, 246, 0.08),
+    4px 4px 10px rgba(0, 0, 0, 0.65),
+    inset 1px 1px 1px rgba(108, 207, 246, 0.12);
   transition: all 200ms ease;
 }
 
 html[data-theme="light"] .tactile-icon-socket {
-  background: #FFFFFF;
-  border: 1px solid #BFDBFE;
+  background: #EFF6FF;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow:
-    0 2px 5px 0 rgba(37, 99, 235, 0.09),
-    inset 0 1px 1px 0 rgba(255, 255, 255, 1),
-    inset 0 -1px 1.5px 0 rgba(37, 99, 235, 0.1);
+    -4px -4px 9px rgba(255, 255, 255, 0.95),
+    4px 4px 9px rgba(160, 185, 218, 0.5),
+    inset 1px 1px 1px rgba(255, 255, 255, 1);
 }
 
 /* Precision display frame bezel for screenshots and previews */
@@ -263,38 +285,40 @@ html[data-theme="light"] .tactile-icon-socket {
   border-radius: 1.25rem;
   padding: 0.3rem;
   box-shadow:
-    0 4px 16px 0 rgba(0, 0, 0, 0.45),
+    -4px -4px 12px rgba(108, 207, 246, 0.05),
+    6px 6px 18px rgba(0, 0, 0, 0.65),
     inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.15),
     inset 0 -2px 3px 0 rgba(0, 0, 0, 0.55);
 }
 
 html[data-theme="light"] .tactile-display-frame {
-  background: #FFFFFF;
-  border: 1px solid #BFDBFE;
+  background: #EFF6FF;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow:
-    0 4px 14px 0 rgba(37, 99, 235, 0.12),
+    -6px -6px 16px rgba(255, 255, 255, 0.95),
+    6px 6px 16px rgba(160, 185, 218, 0.45),
     inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
-    inset 0 -2px 3px 0 rgba(37, 99, 235, 0.1);
+    inset 0 -2px 3px 0 rgba(160, 185, 218, 0.15);
 }
 
 /* Status badge pill */
 .tactile-status-badge {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
+  background: #04252A;
+  border: 1px solid rgba(108, 207, 246, 0.2);
   border-radius: 9999px;
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.25),
-    inset 0 1px 1px rgba(255, 255, 255, 0.2),
-    inset 0 -1px 1px rgba(0, 0, 0, 0.25);
+    -2px -2px 6px rgba(108, 207, 246, 0.06),
+    3px 3px 8px rgba(0, 0, 0, 0.5),
+    inset 0.5px 0.5px 1px rgba(255, 255, 255, 0.2);
 }
 
 html[data-theme="light"] .tactile-status-badge {
   background: #EFF6FF;
-  border: 1px solid #BFDBFE;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow:
-    0 1px 3px rgba(37, 99, 235, 0.08),
-    inset 0 1px 1px rgba(255, 255, 255, 1),
-    inset 0 -1px 1px rgba(37, 99, 235, 0.08);
+    -3px -3px 8px rgba(255, 255, 255, 0.95),
+    3px 3px 8px rgba(160, 185, 218, 0.4),
+    inset 0.5px 0.5px 1px rgba(255, 255, 255, 1);
 }
 
 
@@ -459,6 +483,40 @@ html[data-theme="light"] .tactile-status-badge {
   transform: scale(0.975);
 }
 
+html[data-theme="light"] .button {
+  background-color: #EFF6FF;
+  box-shadow:
+    -3px -3px 8px rgba(255, 255, 255, 0.95),
+    4px 4px 10px rgba(160, 185, 218, 0.55);
+}
+
+html[data-theme="light"] .button .button-inner {
+  background-image: linear-gradient(135deg, #FFFFFF, #E2EDFA);
+  box-shadow:
+    0 0 0 1px rgba(191, 219, 254, 0.8) inset,
+    inset 2px 2px 4px rgba(255, 255, 255, 1),
+    inset -2px -2px 4px rgba(160, 185, 218, 0.25);
+}
+
+html[data-theme="light"] .button .button-inner span {
+  color: #0F172A;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+}
+
+html[data-theme="light"] .button:hover .button-inner {
+  background-image: linear-gradient(135deg, #FFFFFF, #D5E5FA);
+  box-shadow:
+    0 0 0 1px rgba(37, 99, 235, 0.5) inset,
+    inset 2px 2px 5px rgba(255, 255, 255, 1),
+    inset -2px -2px 5px rgba(160, 185, 218, 0.35);
+}
+
+html[data-theme="light"] .button:active .button-inner {
+  box-shadow:
+    inset 3px 3px 6px rgba(160, 185, 218, 0.7),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.95);
+}
+
 /* Secondary tactile button variant */
 .button.button-secondary {
   background-color: rgba(0, 16, 17, 0.85);
@@ -510,59 +568,53 @@ html[data-theme="light"] .button.button-secondary .button-inner span {
 
 /* Neumorphic tactile button utility */
 .neumorphic-btn {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
+  background: #04252A;
+  border: 1px solid rgba(108, 207, 246, 0.22);
   border-radius: 0.875rem;
   box-shadow:
-    0 0.05em 0.1em rgba(0, 0, 0, 0.4),
-    3px 3px 10px rgba(0, 0, 0, 0.35),
-    -2px -2px 8px rgba(255, 255, 255, 0.04),
-    inset 0 1px 1px rgba(255, 255, 255, 0.15),
-    inset 0 -1px 1px rgba(0, 0, 0, 0.3);
-  transition: all 200ms ease;
+    -3px -3px 8px rgba(108, 207, 246, 0.08),
+    4px 4px 12px rgba(0, 0, 0, 0.75),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.12);
+  transition: all 180ms ease;
+  user-select: none;
 }
 
 html[data-theme="light"] .neumorphic-btn {
-  background: #FFFFFF;
-  border: 1px solid #BFDBFE;
+  background: #EFF6FF;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   box-shadow:
-    0 0.05em 0.1em rgba(37, 99, 235, 0.06),
-    3px 3px 8px rgba(37, 99, 235, 0.08),
-    -3px -3px 8px rgba(255, 255, 255, 0.95),
-    inset 0 1px 1px rgba(255, 255, 255, 1),
-    inset 0 -1px 1px rgba(37, 99, 235, 0.08);
+    -4px -4px 10px rgba(255, 255, 255, 0.95),
+    4px 4px 10px rgba(160, 185, 218, 0.5),
+    inset 1px 1px 1px rgba(255, 255, 255, 1);
 }
 
 .neumorphic-btn:hover {
   border-color: var(--accent);
   transform: translateY(-1px);
   box-shadow:
-    0 0.1em 0.2em rgba(0, 0, 0, 0.45),
-    5px 5px 14px rgba(0, 0, 0, 0.45),
-    -3px -3px 10px rgba(255, 255, 255, 0.06),
-    inset 0 1px 1px rgba(255, 255, 255, 0.22);
+    -4px -4px 12px rgba(108, 207, 246, 0.15),
+    6px 6px 16px rgba(0, 0, 0, 0.85);
 }
 
 html[data-theme="light"] .neumorphic-btn:hover {
   border-color: var(--accent);
   box-shadow:
-    0 0.08em 0.18em rgba(37, 99, 235, 0.12),
-    4px 4px 12px rgba(37, 99, 235, 0.14),
-    -4px -4px 12px rgba(255, 255, 255, 1),
-    inset 0 1px 1px rgba(255, 255, 255, 1);
+    -6px -6px 14px rgba(255, 255, 255, 1),
+    6px 6px 14px rgba(160, 185, 218, 0.65);
 }
 
 .neumorphic-btn:active {
-  transform: translateY(0.5px);
+  transform: translateY(1px);
   box-shadow:
-    inset 0 1.5px 3px rgba(0, 0, 0, 0.5),
-    inset 0 -0.5px 1px rgba(255, 255, 255, 0.1);
+    inset 3px 3px 8px rgba(0, 0, 0, 0.85),
+    inset -2px -2px 6px rgba(108, 207, 246, 0.1);
 }
 
 html[data-theme="light"] .neumorphic-btn:active {
+  transform: translateY(1px);
   box-shadow:
-    inset 0 1.5px 3px rgba(37, 99, 235, 0.2),
-    inset 0 -0.5px 1px rgba(255, 255, 255, 0.8);
+    inset 3px 3px 7px rgba(160, 185, 218, 0.65),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.95);
 }
 
 /* Smooth fade-in for inline project details and modal content */

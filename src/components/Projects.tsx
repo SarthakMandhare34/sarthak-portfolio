@@ -160,7 +160,27 @@ export function Projects() {
   });
 
   const toggleProject = (id: string) => {
-    setExpandedProjectId((prev) => (prev === id ? null : id));
+    setExpandedProjectId((prev) => {
+      const next = prev === id ? null : id;
+      if (next) {
+        setTimeout(() => {
+          const cardEl = document.getElementById(`project-${id}`);
+          if (cardEl) {
+            const rect = cardEl.getBoundingClientRect();
+            if (rect.top < 70 || rect.top > window.innerHeight - 250) {
+              const navHeight = 68;
+              const elementPosition = cardEl.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+              });
+            }
+          }
+        }, 60);
+      }
+      return next;
+    });
   };
 
   // Snappy Anime.js scroll animation
@@ -255,7 +275,7 @@ export function Projects() {
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
             Academic Projects &amp; Virtual Internships
           </h2>
-          <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed">
+          <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
             Software prototypes and AICTE virtual internship capstones. Click details on any project to expand its architecture and problem breakdown right in place.
           </p>
         </div>
@@ -394,7 +414,7 @@ export function Projects() {
                         {project.subtitle}
                       </p>
 
-                      <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mt-2.5">
+                      <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mt-2.5 text-justified">
                         {project.description}
                       </p>
 
@@ -549,7 +569,7 @@ export function Projects() {
                       <span className="font-mono-code text-[11px] text-[var(--accent)] uppercase font-semibold block">
                         Problem &amp; Practical Solution
                       </span>
-                      <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
+                      <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
                         {project.problemStatement}
                       </p>
                     </div>
@@ -566,7 +586,7 @@ export function Projects() {
                             className="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed"
                           >
                             <CheckCircle2 className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
-                            <span>{point}</span>
+                            <span className="text-justified">{point}</span>
                           </li>
                         ))}
                       </ul>

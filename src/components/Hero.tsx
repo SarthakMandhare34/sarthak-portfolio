@@ -168,10 +168,10 @@ export function Hero({ onResumeClick }: HeroProps) {
 
             {/* Short Introduction & Supporting Statement */}
             <div className="hero-tagline opacity-0 mt-4 sm:mt-5 font-inter text-[14px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] leading-relaxed space-y-2 max-w-xl">
-              <p className="font-medium text-[var(--text-primary)]">
+              <p className="font-medium text-[var(--text-primary)] text-justified">
                 &ldquo;I build practical web applications with a focus on frontend experiences, backend functionality and AI integration.&rdquo;
               </p>
-              <p className="text-xs sm:text-sm text-[var(--text-secondary)]">
+              <p className="text-xs sm:text-sm text-[var(--text-secondary)] text-justified">
                 Developed and deployed web applications and completed two AI-focused virtual internships involving educational and climate-safety solutions.
               </p>
             </div>

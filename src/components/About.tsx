@@ -102,7 +102,7 @@ export function About() {
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
             Background &amp; Approach
           </h2>
-          <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed">
+          <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
             Full-Stack Software Developer focused on clean component architecture, backend integration, and practical AI solutions.
           </p>
         </div>
@@ -117,19 +117,19 @@ export function About() {
                 Professional Introduction
               </h3>
               
-              <p>
+              <p className="text-justified">
                 My foundation in Computer Science began through coursework in algorithms, data structures, and database management at <strong className="text-[var(--text-primary)] font-semibold">Keraleeya Samajam&apos;s Model College (Autonomous)</strong>. This academic base quickly grew into a hands-on drive to build end-to-end web applications that solve real operational problems.
               </p>
               
-              <p>
+              <p className="text-justified">
                 In full-stack engineering, I bridge responsive frontend interfaces built with <strong className="text-[var(--text-primary)] font-semibold">React</strong> and <strong className="text-[var(--text-primary)] font-semibold">TypeScript</strong> to structured <strong className="text-[var(--text-primary)] font-semibold">Node.js/Express</strong> services and relational data models in <strong className="text-[var(--text-primary)] font-semibold">MySQL with Drizzle ORM</strong>. I treat state management, accessibility, and type safety as core design requirements, not afterthoughts.
               </p>
               
-              <p>
+              <p className="text-justified">
                 My experience integrating generative AI centers on practical API integration with the <strong className="text-[var(--text-primary)] font-semibold">Gemini API</strong>. Rather than relying on open-ended generation, I design structured prompts, implement emergency edge-case guards, and write deterministic fallback mechanisms so applications remain reliable even during network disruptions or API timeouts.
               </p>
 
-              <p>
+              <p className="text-justified">
                 My approach to problem-solving is deliberate and verification-driven: break down requirements into testable units, write automated test cases to guard against regressions, and iteratively improve performance and user experience.
               </p>
             </div>
@@ -177,7 +177,7 @@ export function About() {
                     <span className="text-[var(--text-primary)] font-semibold block">
                       Bachelor of Science in Computer Science
                     </span>
-                    <p className="text-[var(--text-secondary)] text-xs mt-0.5">
+                    <p className="text-[var(--text-secondary)] text-xs mt-0.5 text-justified">
                       Keraleeya Samajam&apos;s Model College (Autonomous)
                     </p>
                   </div>
@@ -220,7 +220,7 @@ export function About() {
                     <span className="text-[var(--text-primary)] font-semibold block">
                       Dombivli, Mumbai, Maharashtra, India
                     </span>
-                    <p className="text-[var(--text-secondary)] text-xs mt-0.5">
+                    <p className="text-[var(--text-secondary)] text-xs mt-0.5 text-justified">
                       Open for on-site, hybrid, and remote software engineering roles
                     </p>
                   </div>
@@ -236,7 +236,7 @@ export function About() {
                     <span className="text-[var(--text-primary)] font-semibold block">
                       Lenovo LEAP &amp; IBM SkillsBuild
                     </span>
-                    <p className="text-[var(--text-secondary)] text-xs mt-0.5">
+                    <p className="text-[var(--text-secondary)] text-xs mt-0.5 text-justified">
                       2 AICTE-approved virtual internships with verified certificate credentials
                     </p>
                   </div>
@@ -277,7 +277,7 @@ export function About() {
                 <h4 className="font-space font-bold text-base text-[var(--text-primary)] mb-2">
                   Frontend Development
                 </h4>
-                <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
                   Building responsive React and TypeScript interfaces. Developing modular components, managing UI state, and creating clean layouts that adapt seamlessly across all screen sizes.
                 </p>
               </div>
@@ -295,7 +295,7 @@ export function About() {
                 <h4 className="font-space font-bold text-base text-[var(--text-primary)] mb-2">
                   AI Integration &amp; Prompts
                 </h4>
-                <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
                   Integrating Google Gemini API into web applications. Crafting structured prompts, evaluating edge cases, and engineering reliable fallback mechanisms.
                 </p>
               </div>
@@ -313,7 +313,7 @@ export function About() {
                 <h4 className="font-space font-bold text-base text-[var(--text-primary)] mb-2">
                   Backend &amp; Databases
                 </h4>
-                <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
                   Writing REST APIs with Node.js and Express. Designing database schemas with MySQL and MongoDB, using Drizzle ORM for type-safe database queries.
                 </p>
               </div>

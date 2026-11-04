@@ -116,7 +116,7 @@ export function Contact({ onResumeClick }: ContactProps) {
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
             Get in Touch
           </h2>
-          <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed">
+          <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
             Open for full-stack engineering opportunities, AI systems development, and architectural discussions.
           </p>
         </div>
@@ -144,7 +144,7 @@ export function Contact({ onResumeClick }: ContactProps) {
                 sarthakmandhare34@gmail.com
               </a>
 
-              <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-3 leading-relaxed">
+              <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-3 leading-relaxed text-justified">
                 For full-stack engineering opportunities, AI systems development, and architectural discussions.
               </p>
             </div>
@@ -192,7 +192,7 @@ export function Contact({ onResumeClick }: ContactProps) {
                 +91 93263 97599
               </a>
 
-              <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-3 leading-relaxed">
+              <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-3 leading-relaxed text-justified">
                 Available for direct calls, WhatsApp communication, and coordinating hybrid or remote technical roles.
               </p>
             </div>
@@ -231,7 +231,7 @@ export function Contact({ onResumeClick }: ContactProps) {
             <h3 className="font-display font-bold text-lg sm:text-xl text-[var(--text-primary)]">
               Sarthak Mangesh Mandhare · Resume
             </h3>
-            <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-0.5">
+            <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-0.5 text-justified">
               Clickable certificates, detailed academic coursework, and production project links.
             </p>
           </div>
