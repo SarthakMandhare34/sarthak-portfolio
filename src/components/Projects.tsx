@@ -270,13 +270,13 @@ export function Projects() {
         {/* ──────────────── SECTION HEADER ──────────────── */}
         <div className="project-header mb-7 sm:mb-10 max-w-3xl opacity-0">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
-            <span>Academic &amp; Virtual Internships</span>
+            <span>Projects</span>
           </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
-            Academic Projects &amp; Virtual Internships
+            Projects &amp; Virtual Internships
           </h2>
           <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
-            Software prototypes and AICTE virtual internship capstones. Click details on any project to expand its architecture and problem breakdown right in place.
+            Web applications and AICTE virtual internships I&apos;ve built. Click &ldquo;Details&rdquo; on any project to see its architecture and how it works.
           </p>
         </div>
 

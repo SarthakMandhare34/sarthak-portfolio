@@ -139,13 +139,13 @@ export function Education() {
         {/* ──────────────── SECTION HEADER ──────────────── */}
         <div className="edu-header mb-8 sm:mb-10 max-w-3xl opacity-0">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
-            <span>Academics &amp; Credentials</span>
+            <span>Education</span>
           </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
             Education &amp; Certifications
           </h2>
           <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
-            Higher education degree details and verified AICTE virtual internship certifications.
+            My college degree and verified AICTE virtual internship certificates.
           </p>
         </div>
 

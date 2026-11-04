@@ -1,373 +1,368 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sarthak Mangesh Mandhare — Full-Stack Software Developer</title>
-    <meta name="description" content="Portfolio of Sarthak Mangesh Mandhare, a full-stack software developer building AI-integrated web applications with React, TypeScript, and Node.js." />
-    <meta property="og:title" content="Sarthak Mangesh Mandhare — Full-Stack Software Developer" />
-    <meta property="og:description" content="Portfolio of Sarthak Mangesh Mandhare, a full-stack software developer building AI-integrated web applications with React, TypeScript, and Node.js." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Early theme init script to prevent any white/dark theme flicker -->
-    <script>
-      (function() {
-        try {
-          var saved = localStorage.getItem('portfolio-theme');
-          if (saved === 'light' || saved === 'dark') {
-            document.documentElement.setAttribute('data-theme', saved);
-            if (saved === 'dark') {
-              document.documentElement.classList.add('dark');
-            } else {
-              document.documentElement.classList.remove('dark');
-            }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarthak Mangesh Mandhare — Full-Stack Software Developer</title>
+  <meta name="description"
+    content="Portfolio of Sarthak Mangesh Mandhare, a full-stack software developer building AI-integrated web applications with React, TypeScript, and Node.js." />
+  <meta property="og:title" content="Sarthak Mangesh Mandhare — Full-Stack Software Developer" />
+  <meta property="og:description"
+    content="Portfolio of Sarthak Mangesh Mandhare, a full-stack software developer building AI-integrated web applications with React, TypeScript, and Node.js." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Early theme init script to prevent any white/dark theme flicker -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('portfolio-theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+          if (saved === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
           }
-        } catch (e) {}
-      })();
-    </script>
+        }
+      } catch (e) { }
+    })();
+  </script>
 
-    <!-- Critical Preloader Styles (Renders immediately on slow networks) -->
-    <style>
-      .preloader-overlay {
-        position: fixed;
-        inset: 0;
-        z-index: 999999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #001011;
-        transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), visibility 400ms cubic-bezier(0.16, 1, 0.3, 1);
-        pointer-events: all;
-        overflow: hidden;
-      }
+  <!-- Critical Preloader Styles (Renders immediately on slow networks) -->
+  <style>
+    .preloader-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #001011;
+      transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), visibility 400ms cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: all;
+      overflow: hidden;
+    }
 
-      html[data-theme="light"] .preloader-overlay {
-        background-color: #DBEAFE;
-      }
+    html[data-theme="light"] .preloader-overlay {
+      background-color: #DBEAFE;
+    }
 
-      .preloader-overlay.fade-out {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-      }
+    .preloader-overlay.fade-out {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
 
-      .loader {
-        --main-size: clamp(1.6rem, 3.8vw, 2.8rem);
-        --text-color: #ffffff;
-        --shine-color: rgba(108, 207, 246, 0.5);
-        --shadow-color: #76B9D6;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        user-select: none;
-        position: relative;
-        font-size: var(--main-size);
-        font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
-        font-weight: 900;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-        color: var(--text-color);
-        width: 100%;
-        max-width: min(92vw, 680px);
-        height: 3.2em;
-        filter: drop-shadow(0 0 0.08em var(--shine-color));
-      }
+    .loader {
+      --main-size: clamp(1.6rem, 3.8vw, 2.8rem);
+      --text-color: #ffffff;
+      --shine-color: rgba(108, 207, 246, 0.5);
+      --shadow-color: #76B9D6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      position: relative;
+      font-size: var(--main-size);
+      font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--text-color);
+      width: 100%;
+      max-width: min(92vw, 680px);
+      height: 3.2em;
+      filter: drop-shadow(0 0 0.08em var(--shine-color));
+    }
 
-      html[data-theme="light"] .loader {
-        --text-color: #0F172A;
-        --shine-color: rgba(37, 99, 235, 0.4);
-        --shadow-color: #93C5FD;
-      }
+    html[data-theme="light"] .loader {
+      --text-color: #0F172A;
+      --shine-color: rgba(37, 99, 235, 0.4);
+      --shadow-color: #93C5FD;
+    }
 
-      .loader .text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        font-size: 1em;
-      }
+    .loader .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      font-size: 1em;
+    }
 
-      .loader .text:nth-child(1) {
-        clip-path: polygon(0% 0%, 11.11% 0%, 11.11% 100%, 0% 100%);
-        transform: scale(0.78);
-        opacity: 0.6;
-      }
+    .loader .text:nth-child(1) {
+      clip-path: polygon(0% 0%, 11.11% 0%, 11.11% 100%, 0% 100%);
+      transform: scale(0.78);
+      opacity: 0.6;
+    }
 
-      .loader .text:nth-child(2) {
-        clip-path: polygon(11.11% 0%, 22.22% 0%, 22.22% 100%, 11.11% 100%);
-        transform: scale(0.83);
-        opacity: 0.7;
-      }
+    .loader .text:nth-child(2) {
+      clip-path: polygon(11.11% 0%, 22.22% 0%, 22.22% 100%, 11.11% 100%);
+      transform: scale(0.83);
+      opacity: 0.7;
+    }
 
-      .loader .text:nth-child(3) {
-        clip-path: polygon(22.22% 0%, 33.33% 0%, 33.33% 100%, 22.22% 100%);
-        transform: scale(0.88);
-        opacity: 0.8;
-      }
+    .loader .text:nth-child(3) {
+      clip-path: polygon(22.22% 0%, 33.33% 0%, 33.33% 100%, 22.22% 100%);
+      transform: scale(0.88);
+      opacity: 0.8;
+    }
 
-      .loader .text:nth-child(4) {
-        clip-path: polygon(33.33% 0%, 44.44% 0%, 44.44% 100%, 33.33% 100%);
-        transform: scale(0.94);
-        opacity: 0.9;
-      }
+    .loader .text:nth-child(4) {
+      clip-path: polygon(33.33% 0%, 44.44% 0%, 44.44% 100%, 33.33% 100%);
+      transform: scale(0.94);
+      opacity: 0.9;
+    }
 
-      .loader .text:nth-child(5) {
-        clip-path: polygon(44.44% 0%, 55.55% 0%, 55.55% 100%, 44.44% 100%);
-        transform: scale(1);
-        opacity: 1;
-      }
+    .loader .text:nth-child(5) {
+      clip-path: polygon(44.44% 0%, 55.55% 0%, 55.55% 100%, 44.44% 100%);
+      transform: scale(1);
+      opacity: 1;
+    }
 
-      .loader .text:nth-child(6) {
-        clip-path: polygon(55.55% 0%, 66.66% 0%, 66.66% 100%, 55.55% 100%);
-        transform: scale(0.94);
-        opacity: 0.9;
-      }
+    .loader .text:nth-child(6) {
+      clip-path: polygon(55.55% 0%, 66.66% 0%, 66.66% 100%, 55.55% 100%);
+      transform: scale(0.94);
+      opacity: 0.9;
+    }
 
-      .loader .text:nth-child(7) {
-        clip-path: polygon(66.66% 0%, 77.77% 0%, 77.77% 100%, 66.66% 100%);
-        transform: scale(0.88);
-        opacity: 0.8;
-      }
+    .loader .text:nth-child(7) {
+      clip-path: polygon(66.66% 0%, 77.77% 0%, 77.77% 100%, 66.66% 100%);
+      transform: scale(0.88);
+      opacity: 0.8;
+    }
 
-      .loader .text:nth-child(8) {
-        clip-path: polygon(77.77% 0%, 88.88% 0%, 88.88% 100%, 77.77% 100%);
-        transform: scale(0.83);
-        opacity: 0.7;
-      }
+    .loader .text:nth-child(8) {
+      clip-path: polygon(77.77% 0%, 88.88% 0%, 88.88% 100%, 77.77% 100%);
+      transform: scale(0.83);
+      opacity: 0.7;
+    }
 
-      .loader .text:nth-child(9) {
-        clip-path: polygon(88.88% 0%, 100% 0%, 100% 100%, 88.88% 100%);
-        transform: scale(0.78);
-        opacity: 0.6;
-      }
+    .loader .text:nth-child(9) {
+      clip-path: polygon(88.88% 0%, 100% 0%, 100% 100%, 88.88% 100%);
+      transform: scale(0.78);
+      opacity: 0.6;
+    }
 
-      .loader .text span {
-        animation:
-          scrolling 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite,
-          shadow 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite;
-      }
+    .loader .text span {
+      animation:
+        scrolling 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite,
+        shadow 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite;
+    }
 
-      .loader .text:nth-child(1) span {
-        background: linear-gradient(
-          to right,
+    .loader .text:nth-child(1) span {
+      background: linear-gradient(to right,
           var(--text-color) 4%,
-          var(--shadow-color) 7%
-        );
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+          var(--shadow-color) 7%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-      .loader .text:nth-child(2) span {
-        background: linear-gradient(
-          to right,
+    .loader .text:nth-child(2) span {
+      background: linear-gradient(to right,
           var(--text-color) 9%,
-          var(--shadow-color) 13%
-        );
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+          var(--shadow-color) 13%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-      .loader .text:nth-child(3) span {
-        background: linear-gradient(
-          to right,
+    .loader .text:nth-child(3) span {
+      background: linear-gradient(to right,
           var(--text-color) 15%,
-          var(--shadow-color) 18%
-        );
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+          var(--shadow-color) 18%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-      .loader .text:nth-child(4) span {
-        background: linear-gradient(
-          to right,
+    .loader .text:nth-child(4) span {
+      background: linear-gradient(to right,
           var(--text-color) 20%,
-          var(--shadow-color) 23%
-        );
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+          var(--shadow-color) 23%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-      .loader .text:nth-child(6) span {
-        background: linear-gradient(
-          to right,
+    .loader .text:nth-child(6) span {
+      background: linear-gradient(to right,
           var(--shadow-color) 29%,
-          var(--text-color) 32%
-        );
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+          var(--text-color) 32%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-      .loader .text:nth-child(7) span {
-        background: linear-gradient(
-          to right,
+    .loader .text:nth-child(7) span {
+      background: linear-gradient(to right,
           var(--shadow-color) 34%,
-          var(--text-color) 37%
-        );
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+          var(--text-color) 37%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-      .loader .text:nth-child(8) span {
-        background: linear-gradient(
-          to right,
+    .loader .text:nth-child(8) span {
+      background: linear-gradient(to right,
           var(--shadow-color) 39%,
-          var(--text-color) 42%
-        );
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+          var(--text-color) 42%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-      .loader .text:nth-child(9) span {
-        background: linear-gradient(
-          to right,
+    .loader .text:nth-child(9) span {
+      background: linear-gradient(to right,
           var(--shadow-color) 45%,
-          var(--text-color) 48%
-        );
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+          var(--text-color) 48%);
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-      .loader .line {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        height: 0.06em;
-        width: clamp(90px, 18vw, 160px);
-        margin-top: 2em;
-        border-radius: 0.05em;
-      }
+    .loader .line {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      height: 0.06em;
+      width: clamp(90px, 18vw, 160px);
+      margin-top: 2em;
+      border-radius: 0.05em;
+    }
 
-      .loader .line::before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: var(--text-color);
-        opacity: 0.3;
-      }
+    .loader .line::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: var(--text-color);
+      opacity: 0.3;
+    }
 
-      .loader .line::after {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: var(--text-color);
-        border-radius: 0.05em;
+    .loader .line::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: var(--text-color);
+      border-radius: 0.05em;
+      transform: translateX(-90%);
+      animation: wobble 2s cubic-bezier(0.5, 0.8, 0.5, 0.2) infinite;
+    }
+
+    @keyframes wobble {
+      0% {
         transform: translateX(-90%);
-        animation: wobble 2s cubic-bezier(0.5, 0.8, 0.5, 0.2) infinite;
       }
 
-      @keyframes wobble {
-        0% {
-          transform: translateX(-90%);
-        }
-        50% {
-          transform: translateX(90%);
-        }
-        100% {
-          transform: translateX(-90%);
-        }
+      50% {
+        transform: translateX(90%);
       }
 
-      @keyframes scrolling {
-        0% {
-          transform: translateX(-100%);
-        }
-        100% {
-          transform: translateX(100%);
-        }
+      100% {
+        transform: translateX(-90%);
+      }
+    }
+
+    @keyframes scrolling {
+      0% {
+        transform: translateX(-100%);
       }
 
-      @keyframes shadow {
-        0% {
-          background-position: -98% 0;
-        }
-        100% {
-          background-position: 102% 0;
-        }
+      100% {
+        transform: translateX(100%);
       }
-    </style>
-  </head>
-  <body class="bg-[var(--bg-base)] text-[var(--text-primary)] antialiased selection:bg-[var(--accent-soft)] selection:text-[var(--accent)] min-h-screen">
-    
-    <!-- ──────────────── IMMEDIATE PRELOADER FOR INITIAL / SLOW NETWORK LOADING ──────────────── -->
-    <div id="app-preloader" class="preloader-overlay" aria-label="Loading Sarthak Portfolio">
-      <div class="loader">
-        <div class="text"><span>Sarthak Portfolio</span></div>
-        <div class="text"><span>Sarthak Portfolio</span></div>
-        <div class="text"><span>Sarthak Portfolio</span></div>
-        <div class="text"><span>Sarthak Portfolio</span></div>
-        <div class="text"><span>Sarthak Portfolio</span></div>
-        <div class="text"><span>Sarthak Portfolio</span></div>
-        <div class="text"><span>Sarthak Portfolio</span></div>
-        <div class="text"><span>Sarthak Portfolio</span></div>
-        <div class="text"><span>Sarthak Portfolio</span></div>
-        <div class="line"></div>
-      </div>
+    }
+
+    @keyframes shadow {
+      0% {
+        background-position: -98% 0;
+      }
+
+      100% {
+        background-position: 102% 0;
+      }
+    }
+  </style>
+</head>
+
+<body
+  class="bg-[var(--bg-base)] text-[var(--text-primary)] antialiased selection:bg-[var(--accent-soft)] selection:text-[var(--accent)] min-h-screen">
+
+  <!-- ──────────────── IMMEDIATE PRELOADER FOR INITIAL / SLOW NETWORK LOADING ──────────────── -->
+  <div id="app-preloader" class="preloader-overlay" aria-label="Loading Sarthak Portfolio">
+    <div class="loader">
+      <div class="text"><span>Sarthak Portfolio</span></div>
+      <div class="text"><span>Sarthak Portfolio</span></div>
+      <div class="text"><span>Sarthak Portfolio</span></div>
+      <div class="text"><span>Sarthak Portfolio</span></div>
+      <div class="text"><span>Sarthak Portfolio</span></div>
+      <div class="text"><span>Sarthak Portfolio</span></div>
+      <div class="text"><span>Sarthak Portfolio</span></div>
+      <div class="text"><span>Sarthak Portfolio</span></div>
+      <div class="text"><span>Sarthak Portfolio</span></div>
+      <div class="line"></div>
     </div>
+  </div>
 
-    <!-- Preloader Management Script (Natural dismissal once app and assets are ready) -->
-    <script>
-      (function() {
-        var dismissed = false;
+  <!-- Preloader Management Script (Natural dismissal once app and assets are ready) -->
+  <script>
+    (function () {
+      var dismissed = false;
 
-        function dismiss() {
-          if (dismissed) return;
-          var preloader = document.getElementById('app-preloader');
-          if (!preloader) return;
+      function dismiss() {
+        if (dismissed) return;
+        var preloader = document.getElementById('app-preloader');
+        if (!preloader) return;
 
-          dismissed = true;
-          preloader.classList.add('fade-out');
-          setTimeout(function() {
-            if (preloader.parentNode) {
-              preloader.parentNode.removeChild(preloader);
-            }
-          }, 450);
-        }
+        dismissed = true;
+        preloader.classList.add('fade-out');
+        setTimeout(function () {
+          if (preloader.parentNode) {
+            preloader.parentNode.removeChild(preloader);
+          }
+        }, 450);
+      }
 
-        window.__dismissPreloader = dismiss;
+      window.__dismissPreloader = dismiss;
 
-        if (document.readyState === 'complete') {
-          dismiss();
-        } else {
-          window.addEventListener('load', dismiss);
-        }
+      if (document.readyState === 'complete') {
+        dismiss();
+      } else {
+        window.addEventListener('load', dismiss);
+      }
 
-        // Guaranteed safety timeout (3s) so stalled network requests never permanently block the user
-        setTimeout(dismiss, 3000);
-      })();
-    </script>
+      // Guaranteed safety timeout (3s) so stalled network requests never permanently block the user
+      setTimeout(dismiss, 3000);
+    })();
+  </script>
 
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
-

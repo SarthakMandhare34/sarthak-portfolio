@@ -117,7 +117,7 @@ export function Contact({ onResumeClick }: ContactProps) {
             Get in Touch
           </h2>
           <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
-            Open for full-stack engineering opportunities, AI systems development, and architectural discussions.
+            Feel free to reach out for developer roles, project inquiries, or to connect.
           </p>
         </div>
 
@@ -145,7 +145,7 @@ export function Contact({ onResumeClick }: ContactProps) {
               </a>
 
               <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-3 leading-relaxed text-justified">
-                For full-stack engineering opportunities, AI systems development, and architectural discussions.
+                Best way to reach me for full-stack engineering roles and project opportunities.
               </p>
             </div>
 
@@ -193,7 +193,7 @@ export function Contact({ onResumeClick }: ContactProps) {
               </a>
 
               <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-3 leading-relaxed text-justified">
-                Available for direct calls, WhatsApp communication, and coordinating hybrid or remote technical roles.
+                Available for phone calls, WhatsApp messages, and role discussions.
               </p>
             </div>
 
@@ -232,7 +232,7 @@ export function Contact({ onResumeClick }: ContactProps) {
               Sarthak Mangesh Mandhare · Resume
             </h3>
             <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-0.5 text-justified">
-              Clickable certificates, detailed academic coursework, and production project links.
+              View or download my resume with verified internship certificates and project links.
             </p>
           </div>
 

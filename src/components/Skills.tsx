@@ -145,13 +145,13 @@ export function Skills() {
         {/* ──────────────── SECTION HEADER ──────────────── */}
         <div className="skills-header mb-7 sm:mb-10 max-w-3xl opacity-0">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
-            <span>Capabilities</span>
+            <span>Skills</span>
           </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
-            Skills
+            Skills &amp; Technologies
           </h2>
           <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
-            Technologies, libraries, and tools I use to build full-stack web applications.
+            Technologies and tools I use to build full-stack web applications.
           </p>
         </div>
 

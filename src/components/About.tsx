@@ -100,37 +100,37 @@ export function About() {
             <span>About</span>
           </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
-            Background &amp; Approach
+            About Me
           </h2>
           <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
-            Full-Stack Software Developer focused on clean component architecture, backend integration, and practical AI solutions.
+            A quick look at my background, skills, and how I build software.
           </p>
         </div>
 
         {/* ──────────────── DUAL-COLUMN GRID: A. NARRATIVE + B. SNAPSHOT ──────────────── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 items-stretch">
           
-          {/* ────── A. PROFESSIONAL INTRODUCTION (7 cols) ────── */}
+          {/* ────── A. WHO I AM (7 cols) ────── */}
           <div className="about-anim-card opacity-0 neumorphic-card p-5 sm:p-7 md:p-8 space-y-5 lg:col-span-7 flex flex-col justify-between border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
             <div className="space-y-4 font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] leading-relaxed">
               <h3 className="font-space font-bold text-lg sm:text-xl text-[var(--text-primary)]">
-                Professional Introduction
+                Who I Am
               </h3>
               
               <p className="text-justified">
-                My foundation in Computer Science began through coursework in algorithms, data structures, and database management at <strong className="text-[var(--text-primary)] font-semibold">Keraleeya Samajam&apos;s Model College (Autonomous)</strong>. This academic base quickly grew into a hands-on drive to build end-to-end web applications that solve real operational problems.
+                I am currently a Computer Science student at <strong className="text-[var(--text-primary)] font-semibold">Keraleeya Samajam&apos;s Model College (Autonomous)</strong> in Dombivli, Mumbai (graduating in 2027). I enjoy taking ideas and turning them into real, working web applications that people can easily use.
               </p>
               
               <p className="text-justified">
-                In full-stack engineering, I bridge responsive frontend interfaces built with <strong className="text-[var(--text-primary)] font-semibold">React</strong> and <strong className="text-[var(--text-primary)] font-semibold">TypeScript</strong> to structured <strong className="text-[var(--text-primary)] font-semibold">Node.js/Express</strong> services and relational data models in <strong className="text-[var(--text-primary)] font-semibold">MySQL with Drizzle ORM</strong>. I treat state management, accessibility, and type safety as core design requirements, not afterthoughts.
+                For frontend development, I build clean and responsive user interfaces with <strong className="text-[var(--text-primary)] font-semibold">React</strong> and <strong className="text-[var(--text-primary)] font-semibold">TypeScript</strong>. For the backend, I create reliable APIs with <strong className="text-[var(--text-primary)] font-semibold">Node.js</strong> and <strong className="text-[var(--text-primary)] font-semibold">Express</strong>, paired with databases like <strong className="text-[var(--text-primary)] font-semibold">MySQL</strong> and <strong className="text-[var(--text-primary)] font-semibold">MongoDB</strong> using <strong className="text-[var(--text-primary)] font-semibold">Drizzle ORM</strong>.
               </p>
               
               <p className="text-justified">
-                My experience integrating generative AI centers on practical API integration with the <strong className="text-[var(--text-primary)] font-semibold">Gemini API</strong>. Rather than relying on open-ended generation, I design structured prompts, implement emergency edge-case guards, and write deterministic fallback mechanisms so applications remain reliable even during network disruptions or API timeouts.
+                I also have practical experience integrating AI with the <strong className="text-[var(--text-primary)] font-semibold">Google Gemini API</strong>. I write structured prompts and add clear fallback rules so the application continues working smoothly even when an AI service is slow or unavailable.
               </p>
 
               <p className="text-justified">
-                My approach to problem-solving is deliberate and verification-driven: break down requirements into testable units, write automated test cases to guard against regressions, and iteratively improve performance and user experience.
+                My approach is simple: write clean, maintainable code, test thoroughly, and build software that works reliably in the real world.
               </p>
             </div>
 
@@ -154,12 +154,12 @@ export function About() {
             </div>
           </div>
 
-          {/* ────── B. DEVELOPER SNAPSHOT (5 cols) ────── */}
+          {/* ────── B. QUICK INFO (5 cols) ────── */}
           <div className="about-anim-card opacity-0 neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-5 flex flex-col justify-between space-y-5 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
             <div>
               <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
                 <h3 className="font-display font-bold text-lg sm:text-xl text-[var(--text-primary)]">
-                  Developer Snapshot
+                  Quick Info
                 </h3>
                 <span className="tactile-chip px-2.5 py-0.5 font-mono-code text-xs text-[var(--accent)] font-semibold shrink-0">
                   Sem 6 · CGPA 6.95
@@ -199,13 +199,13 @@ export function About() {
 
                   <div className="p-3 rounded-xl tactile-inset">
                     <span className="text-[var(--text-dim)] font-mono-code text-[10px] block uppercase">
-                      Verified CGPA
+                      Current CGPA
                     </span>
                     <span className="text-[var(--accent)] font-mono-code font-bold text-sm sm:text-base mt-0.5 block">
                       6.95 <span className="text-xs text-[var(--text-dim)] font-normal">/ 10</span>
                     </span>
                     <span className="text-[10px] text-[var(--text-secondary)] block">
-                      Official Transcript
+                      Verified Grade
                     </span>
                   </div>
                 </div>
@@ -221,7 +221,7 @@ export function About() {
                       Dombivli, Mumbai, Maharashtra, India
                     </span>
                     <p className="text-[var(--text-secondary)] text-xs mt-0.5 text-justified">
-                      Open for on-site, hybrid, and remote software engineering roles
+                      Open to on-site, hybrid, and remote developer roles
                     </p>
                   </div>
                 </div>
@@ -231,13 +231,13 @@ export function About() {
                   <ShieldCheck className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
                   <div className="min-w-0 flex-1">
                     <span className="text-[var(--text-dim)] font-mono-code text-[11px] block uppercase">
-                      Virtual Internship Experience
+                      Virtual Internships
                     </span>
                     <span className="text-[var(--text-primary)] font-semibold block">
                       Lenovo LEAP &amp; IBM SkillsBuild
                     </span>
                     <p className="text-[var(--text-secondary)] text-xs mt-0.5 text-justified">
-                      2 AICTE-approved virtual internships with verified certificate credentials
+                      Two 6-week AICTE virtual internships with verified certificates
                     </p>
                   </div>
                 </div>
@@ -263,7 +263,7 @@ export function About() {
         <div className="mt-12 sm:mt-14">
           <div className="about-header opacity-0 mb-6 flex items-center justify-between">
             <h3 className="font-space font-bold text-xl sm:text-2xl text-[var(--text-primary)] tracking-tight">
-              Areas of Focus
+              What I Do
             </h3>
           </div>
 
@@ -278,11 +278,11 @@ export function About() {
                   Frontend Development
                 </h4>
                 <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
-                  Building responsive React and TypeScript interfaces. Developing modular components, managing UI state, and creating clean layouts that adapt seamlessly across all screen sizes.
+                  Building responsive, clean web interfaces with React and TypeScript. I care about intuitive navigation, fast load times, and layouts that look great on phones and desktops.
                 </p>
               </div>
               <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--accent)] font-semibold">
-                React.js · TypeScript · Responsive Design · UI/UX
+                React.js · TypeScript · Tailwind CSS
               </div>
             </div>
 
@@ -293,14 +293,14 @@ export function About() {
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <h4 className="font-space font-bold text-base text-[var(--text-primary)] mb-2">
-                  AI Integration &amp; Prompts
+                  AI Integration
                 </h4>
                 <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
-                  Integrating Google Gemini API into web applications. Crafting structured prompts, evaluating edge cases, and engineering reliable fallback mechanisms.
+                  Connecting the Google Gemini API to web apps. I write structured prompts, test tricky inputs, and build smart fallbacks so features stay dependable.
                 </p>
               </div>
               <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--accent)] font-semibold">
-                Gemini API · Prompt Engineering · LLM Integration
+                Gemini API · Prompt Engineering · Workflows
               </div>
             </div>
 
@@ -314,11 +314,11 @@ export function About() {
                   Backend &amp; Databases
                 </h4>
                 <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
-                  Writing REST APIs with Node.js and Express. Designing database schemas with MySQL and MongoDB, using Drizzle ORM for type-safe database queries.
+                  Writing REST APIs with Node.js and Express, and setting up clean database schemas with MySQL, MongoDB, and Drizzle ORM.
                 </p>
               </div>
               <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--accent)] font-semibold">
-                Node.js · Express · MySQL · Drizzle ORM
+                Node.js · Express · MySQL · MongoDB
               </div>
             </div>
           </div>
