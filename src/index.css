@@ -123,6 +123,8 @@
 .text-justified {
   text-align: justify;
   text-justify: inter-word;
+  text-align-last: left;
+  -moz-text-align-last: left;
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -135,10 +137,13 @@
   .text-justified {
     text-align: justify;
     text-justify: inter-word;
+    text-align-last: left;
+    -moz-text-align-last: left;
     hyphens: auto;
     -webkit-hyphens: auto;
     overflow-wrap: break-word;
     word-break: normal;
+    line-height: 1.6;
   }
 }
 
@@ -1015,14 +1020,14 @@ html[data-theme="light"] .neumorphic-btn:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #0B0F14;
+  background-color: #191970;
   transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), visibility 400ms cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: all;
   overflow: hidden;
 }
 
 html[data-theme="light"] .preloader-overlay {
-  background-color: #EDF2F7;
+  background-color: #DBF2FC;
 }
 
 .preloader-overlay.fade-out {
@@ -1034,8 +1039,8 @@ html[data-theme="light"] .preloader-overlay {
 .loader {
   --main-size: clamp(1.6rem, 3.8vw, 2.8rem);
   --text-color: #ffffff;
-  --shine-color: rgba(56, 189, 248, 0.5);
-  --shadow-color: #38BDF8;
+  --shine-color: rgba(251, 86, 7, 0.5);
+  --shadow-color: #FB5607;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1055,9 +1060,9 @@ html[data-theme="light"] .preloader-overlay {
 }
 
 html[data-theme="light"] .loader {
-  --text-color: #0F172A;
-  --shine-color: rgba(37, 99, 235, 0.4);
-  --shadow-color: #93C5FD;
+  --text-color: #061B2E;
+  --shine-color: rgba(0, 163, 255, 0.4);
+  --shadow-color: #00A3FF;
 }
 
 .loader .text {

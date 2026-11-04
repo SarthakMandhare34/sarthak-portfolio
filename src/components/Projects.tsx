@@ -218,11 +218,11 @@ export function Projects() {
         </div>
 
         {/* ──────────────── CATEGORY FILTER BAR (macOS SEGMENTED CONTROL) ──────────────── */}
-        <div className="scroll-reveal scroll-slide-down stagger-1 mb-7 sm:mb-10 flex items-center border-b border-[var(--border)] pb-4">
-          <div className="p-1 rounded-2xl tactile-inset inline-flex flex-wrap gap-1">
+        <div className="scroll-reveal scroll-slide-down stagger-1 mb-7 sm:mb-10 flex items-center border-b border-[var(--border)] pb-4 overflow-x-auto no-scrollbar">
+          <div className="p-1 rounded-2xl tactile-inset flex flex-nowrap sm:flex-wrap gap-1 min-w-max">
             <button
               onClick={() => handleFilterChange('all')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
+              className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
                 activeFilter === 'all'
                   ? 'tactile-chip text-[var(--accent)] font-semibold'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
@@ -232,7 +232,7 @@ export function Projects() {
             </button>
             <button
               onClick={() => handleFilterChange('academic')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
+              className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
                 activeFilter === 'academic'
                   ? 'tactile-chip text-[var(--accent)] font-semibold'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
@@ -242,7 +242,7 @@ export function Projects() {
             </button>
             <button
               onClick={() => handleFilterChange('internship')}
-              className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
+              className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
                 activeFilter === 'internship'
                   ? 'tactile-chip text-[var(--accent)] font-semibold'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'

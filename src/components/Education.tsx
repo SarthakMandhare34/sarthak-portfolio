@@ -171,8 +171,12 @@ export function Education() {
                     {cert.title}
                   </h4>
 
-                  <p className="text-xs font-inter text-[var(--text-secondary)]">
+                  <p className="text-xs font-inter text-[var(--text-secondary)] text-justified">
                     {cert.organization}
+                  </p>
+
+                  <p className="text-xs font-inter text-[var(--text-secondary)] text-justified leading-relaxed pt-1">
+                    {cert.description}
                   </p>
 
                   <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono-code border-t border-[var(--border)]">

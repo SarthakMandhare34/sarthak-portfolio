@@ -100,29 +100,18 @@ export function Hero({ onResumeClick }: HeroProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
           {/* ────── LEFT COLUMN: IDENTITY & ACTIONS (7 cols) ────── */}
-          <div className="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1">
+          <div className="lg:col-span-7 flex flex-col justify-center order-1 lg:order-1">
             
-            {/* Availability Indicator */}
-            <div className="scroll-reveal scroll-scale-up mb-3 sm:mb-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full tactile-status-badge w-fit">
-              <span className="w-2 h-2 rounded-full bg-[var(--decorative)] shrink-0 animate-pulse shadow-[0_0_8px_var(--decorative)]" />
-              <span className="font-mono-code text-[11px] sm:text-xs text-[var(--text-secondary)] font-medium">
-                Available for engineering roles
-              </span>
-            </div>
-
-            {/* Clear & Prominent Introduction */}
-            <div className="scroll-reveal scroll-slide-left stagger-1 space-y-1">
-              <p className="font-display font-medium text-lg sm:text-xl md:text-2xl text-[var(--accent)] tracking-tight">
-                Hi, I&apos;m Sarthak.
-              </p>
-              <h1 className="font-display font-bold text-[clamp(28px,4.5vw,48px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
-                Sarthak Mangesh Mandhare
+            {/* Clear & Prominent Introduction (Single cohesive heading) */}
+            <div className="scroll-reveal scroll-slide-left stagger-1">
+              <h1 className="font-display font-bold text-[clamp(28px,5.5vw,48px)] text-[var(--text-primary)] leading-[1.15] tracking-tight">
+                Hi, I&apos;m <span className="text-[var(--accent)]">Sarthak M. Mandhare</span>
                 <span className="text-[var(--decorative)]">.</span>
               </h1>
             </div>
 
             {/* Professional Role & Location */}
-            <div className="scroll-reveal scroll-slide-left stagger-2 mt-2.5 sm:mt-3 space-y-1">
+            <div className="scroll-reveal scroll-slide-left stagger-2 mt-3 space-y-1">
               <p className="font-inter text-base sm:text-lg md:text-xl font-semibold text-[var(--text-primary)] tracking-tight">
                 Full-Stack Software Developer
               </p>
@@ -133,7 +122,7 @@ export function Hero({ onResumeClick }: HeroProps) {
             </div>
 
             {/* Short Supporting Statement */}
-            <div className="scroll-reveal scroll-slide-left stagger-3 mt-4 sm:mt-5 font-inter text-sm sm:text-[15px] md:text-base text-[var(--text-secondary)] leading-relaxed space-y-2 max-w-xl">
+            <div className="scroll-reveal scroll-slide-left stagger-3 mt-4 sm:mt-5 font-inter text-sm sm:text-[15px] md:text-base text-[var(--text-secondary)] leading-relaxed space-y-2.5 max-w-xl">
               <p className="font-medium text-[var(--text-primary)] text-justified">
                 &ldquo;I build practical web applications with a focus on frontend experiences, backend functionality and AI integration.&rdquo;
               </p>
@@ -197,8 +186,8 @@ export function Hero({ onResumeClick }: HeroProps) {
           </div>
 
           {/* ────── RIGHT COLUMN: REFINED macOS FLOATING PORTRAIT (5 cols) ────── */}
-          <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
-            <div className="scroll-reveal scroll-rotate-right hero-scroll-parallax stagger-2 w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[420px]">
+          <div className="lg:col-span-5 flex justify-center order-2 lg:order-2">
+            <div className="scroll-reveal scroll-rotate-right hero-scroll-parallax stagger-2 w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[390px] mx-auto">
               
               {/* macOS Window Bezel Container */}
               <div className="neumorphic-card p-3 sm:p-4 rounded-3xl relative">
@@ -216,19 +205,19 @@ export function Hero({ onResumeClick }: HeroProps) {
                   <div className="w-8" />
                 </div>
 
-                {/* Profile Portrait Image Frame */}
-                <div className="relative mt-3 rounded-2xl overflow-hidden aspect-[4/4.6] tactile-display-frame">
+                {/* Profile Portrait Image Frame (Perfect 1:1 Framing for Sarthak Photo) */}
+                <div className="relative mt-3 rounded-2xl overflow-hidden aspect-square tactile-display-frame">
                   <img
                     ref={photoImageRef}
                     src="/images/sarthak.jpg"
-                    alt="Sarthak Mangesh Mandhare"
-                    className="w-full h-full object-cover object-[center_16%] will-change-transform"
+                    alt="Sarthak M. Mandhare"
+                    className="w-full h-full object-cover object-[center_18%] will-change-transform"
                     style={{
                       filter: 'contrast(1.03) brightness(1.03) saturate(1.02)',
                     }}
                   />
                   {/* Subtle inner gradient shadow at bottom of image */}
-                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
+                  <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
                 </div>
 
                 {/* Floating Status Footer inside Card */}
