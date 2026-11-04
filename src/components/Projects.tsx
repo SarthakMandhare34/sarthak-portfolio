@@ -129,7 +129,22 @@ export const Projects: React.FC = () => {
                         <span className="project-status-item">{proj.deploymentPlatform}</span>
                       </div>
 
+
+                      {/* Project Preview Placeholder (macOS window style) */}
+                      <div className="project-preview-placeholder" aria-hidden="true">
+                        <div className="preview-window-dots">
+                          <span className="dot dot-red"></span>
+                          <span className="dot dot-yellow"></span>
+                          <span className="dot dot-green"></span>
+                        </div>
+                        <div className="preview-content">
+                          <span className="preview-icon">🖼️</span>
+                          <span className="preview-text">Project Preview</span>
+                        </div>
+                      </div>
+
                       <h3 className="project-heading">
+
                         {proj.name} &mdash; {proj.subtitle}
                       </h3>
 

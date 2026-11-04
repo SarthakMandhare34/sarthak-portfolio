@@ -34,11 +34,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onNavigate }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1, ease: EASE }}
               >
-                <span className="text-line-wrapper">
-                  <span className="text-line">I build AI-powered web apps</span>
-                </span>{' '}
-                <span className="text-line-wrapper">
-                  <span className="text-line">that people can actually use.</span>
+                                <span className="text-line-wrapper">
+                  <span className="text-line">Hi, I'm Sarthak.</span>
                 </span>
               </motion.h1>
 
@@ -50,8 +47,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onNavigate }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
               >
-                <p className="hero-identity">{PERSONAL_INFO.name}</p>
-                <p className="hero-role">{PERSONAL_INFO.role}</p>
+                                <p className="hero-identity">{PERSONAL_INFO.name}</p>
+                <p className="hero-role" style={{ fontSize: '1.1rem', color: 'var(--ink)' }}>
+                  I build practical web applications with a focus on frontend experiences, backend functionality and AI integration.
+                </p>
                 <p className="hero-location">{PERSONAL_INFO.location}</p>
               </motion.div>
 
