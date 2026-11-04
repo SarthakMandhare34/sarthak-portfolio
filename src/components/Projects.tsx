@@ -6,16 +6,11 @@ import {
   Stethoscope,
   TestTube2,
   Award,
-  X,
-  Check,
-  Copy,
-  Printer,
   Layers,
-  Cpu,
-  Database,
+  Sparkles,
 } from 'lucide-react';
 import anime from 'animejs';
-import { ProjectDetailData } from './ProjectDetailModal';
+import { ProjectDetailData, ProjectDetailModal } from './ProjectDetailModal';
 import { TactileButton } from './TactileButton';
 
 const ALL_PROJECTS: ProjectDetailData[] = [
@@ -26,7 +21,7 @@ const ALL_PROJECTS: ProjectDetailData[] = [
     statusBadge: 'Deployed on Render',
     subtitle: 'LifeLink — Smart Healthcare Assistance Platform',
     description:
-      'A healthcare prototype with symptom checking, doctor search, appointment booking, digital prescriptions, and an Emergency Health Passport, working mainly on the React/TypeScript frontend and wiring it to the backend and AI layer. Powered by Gemini Flash guidance with built-in emergency checks, age-based rules, and safe fallback responses when AI calls fail.',
+      'A healthcare prototype with symptom checking, doctor search across 19 Mumbai railway stations, appointment booking, digital prescriptions, and an Emergency Health Passport. Powered by Gemini Flash guidance with built-in emergency checks, age-based rules, and safe fallback responses.',
     problemStatement:
       'Scattered clinic directories and missing medical records delay patient care. LifeLink brings doctor discovery across 19 Mumbai railway hubs, symptom checking, and appointment management into one dependable portal.',
     architectureHighlights: [
@@ -45,8 +40,6 @@ const ALL_PROJECTS: ProjectDetailData[] = [
       'MySQL',
       'Drizzle ORM',
       'Gemini AI',
-      'tRPC',
-      'SSE',
       'Render',
     ],
     imageSrc: '/images/projects/lifelink.png',
@@ -57,7 +50,7 @@ const ALL_PROJECTS: ProjectDetailData[] = [
   {
     id: 'luminahub',
     name: 'LuminaHub',
-    type: 'AICTE Virtual Internship Project · IBM SkillsBuild',
+    type: 'AICTE Virtual Internship · IBM SkillsBuild',
     statusBadge: 'ID: BHIBMAC04046',
     internshipBadge: 'IBM SkillsBuild, AICTE',
     certificateId: 'BHIBMAC04046',
@@ -84,16 +77,16 @@ const ALL_PROJECTS: ProjectDetailData[] = [
     name: 'KnowThySelf',
     type: 'Group Project · Frontend Contribution',
     statusBadge: 'Deployed on Vercel',
-    subtitle: 'KnowThySelf — MBTI Personality Assessment & Recommendation Platform',
+    subtitle: 'KnowThySelf — MBTI Personality Assessment Platform',
     description:
       'A five-page MBTI personality assessment and recommendation platform featuring a dynamic questionnaire flow, real-time trait scoring with percentage calculations, and a tailored results dashboard.',
     problemStatement:
-      'Standard online personality quizzes often present rigid interfaces without actionable growth insights. KnowThySelf delivers an interactive, responsive questionnaire with glassmorphism layouts, live trait score breakdowns, and personalized recommendations.',
+      'Standard online personality quizzes often present rigid interfaces without actionable growth insights. KnowThySelf delivers an interactive, responsive questionnaire with live trait score breakdowns and personalized recommendations.',
     architectureHighlights: [
       'Built all five frontend pages (home, login, test, dashboard, recommendations) for a personality assessment platform.',
       'Built the questionnaire flow: slide-based cards, transitions between questions, and trait scoring with percentage calculations.',
       'Built the results dashboard, including visual trait bars and written personality insights.',
-      'Designed the interface with glassmorphism and bento-grid layouts, responsive across screen sizes, with dark/light mode and an interactive HTML5 Canvas particle background.',
+      'Designed the interface with responsive glassmorphism and bento-grid layouts with an interactive HTML5 Canvas background.',
       'Connected the frontend to the backend for personality results and recommendations.',
     ],
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'Express', 'MongoDB'],
@@ -105,13 +98,13 @@ const ALL_PROJECTS: ProjectDetailData[] = [
   {
     id: 'heatsafe',
     name: 'HeatSafe AI',
-    type: 'AICTE Virtual Internship Project · Lenovo LEAP',
+    type: 'AICTE Virtual Internship · Lenovo LEAP',
     statusBadge: 'ID: 6302092',
     internshipBadge: 'Lenovo LEAP, AICTE',
     certificateId: '6302092',
     certificateOrg: 'Lenovo LEAP NextGen Scholar Program, AICTE',
     certificatePdfUrl: '/certificates/Lenovo_LEAP_Certificate_6302092.pdf',
-    subtitle: 'HeatSafe AI — Climate Heatwave Safety & Preparedness Platform',
+    subtitle: 'HeatSafe AI — Climate Heatwave Safety Platform',
     description:
       'An extreme-heat safety application created for the Lenovo LEAP NextGen Scholar Program covering heat-risk assessment, hydration planning, AI symptom checking, and emergency guidance.',
     problemStatement:
@@ -132,24 +125,8 @@ type FilterCategory = 'all' | 'academic' | 'internship';
 
 export function Projects() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [expandedProjectId, setExpandedProjectId] = useState<string | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectDetailData | null>(null);
   const [activeFilter, setActiveFilter] = useState<FilterCategory>('all');
-  const [copiedId, setCopiedId] = useState(false);
-
-  const toggleProjectDetails = (projectId: string) => {
-    setExpandedProjectId((prev) => {
-      const next = prev === projectId ? null : projectId;
-      if (next) {
-        setTimeout(() => {
-          const el = document.getElementById(`details-${projectId}`);
-          if (el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }
-        }, 100);
-      }
-      return next;
-    });
-  };
 
   const filteredProjects = ALL_PROJECTS.filter((p) => {
     if (activeFilter === 'academic') return p.type.includes('Academic') || p.type.includes('Group Project');
@@ -157,13 +134,13 @@ export function Projects() {
     return true;
   });
 
-  // Butter-smooth 60fps/120fps Anime.js bi-directional scroll animation
+  // Snappy Anime.js scroll animation
   useEffect(() => {
     const sectionEl = sectionRef.current;
     if (!sectionEl) return;
 
     const headers = sectionEl.querySelectorAll('.project-header');
-    const cards = sectionEl.querySelectorAll('.case-study-card');
+    const cards = sectionEl.querySelectorAll('.project-grid-card');
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -171,7 +148,6 @@ export function Projects() {
           if (entry.isIntersecting) {
             anime.remove([sectionEl, headers, cards]);
 
-            // Animate section container
             anime({
               targets: sectionEl,
               opacity: [0, 1],
@@ -198,7 +174,6 @@ export function Projects() {
               easing: 'easeOutCubic',
             });
           } else {
-            // Smooth exit reset for continuous bi-directional scroll animation
             anime.remove([sectionEl, headers, cards]);
             anime({
               targets: [sectionEl, headers, cards],
@@ -219,11 +194,10 @@ export function Projects() {
 
   const handleFilterChange = (cat: FilterCategory) => {
     setActiveFilter(cat);
-    setExpandedProjectId(null);
     setTimeout(() => {
-      anime.remove('.case-study-card');
+      anime.remove('.project-grid-card');
       anime({
-        targets: '.case-study-card',
+        targets: '.project-grid-card',
         opacity: [0, 1],
         translateY: [10, 0],
         delay: anime.stagger(35),
@@ -233,17 +207,11 @@ export function Projects() {
     }, 20);
   };
 
-  const handleCopyCertId = (id: string) => {
-    navigator.clipboard.writeText(id);
-    setCopiedId(true);
-    setTimeout(() => setCopiedId(false), 2000);
-  };
-
   return (
     <section
       id="work"
       ref={sectionRef}
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative opacity-0"
+      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-26 transition-colors duration-450 border-t border-[var(--border)] relative opacity-0"
     >
       <div id="projects" className="absolute -top-16 left-0 w-0 h-0 pointer-events-none" />
 
@@ -258,7 +226,7 @@ export function Projects() {
             Academic Projects &amp; Virtual Internships
           </h2>
           <p className="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed">
-            Academic software prototypes and AICTE virtual internship capstones with live deployments, source repositories, and verified certificate credentials.
+            Production web applications and AICTE virtual internship capstones showcased in desktop &amp; laptop mockup frames.
           </p>
         </div>
 
@@ -296,348 +264,221 @@ export function Projects() {
           </button>
         </div>
 
-        {/* ──────────────── PROJECT SHOWCASE CARDS ──────────────── */}
-        <div className="space-y-7 sm:space-y-12 md:space-y-16">
-          {filteredProjects.map((project, index) => {
-            const isEven = index % 2 === 1;
-            const isExpanded = expandedProjectId === project.id;
-
-            return (
-              <article
-                key={project.id}
-                className={`case-study-card neumorphic-card group relative p-4 sm:p-7 md:p-9 transition-all duration-300 opacity-0 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl ${
-                  isExpanded ? 'ring-2 ring-[var(--accent)]/50 shadow-2xl' : ''
-                }`}
-              >
+        {/* ──────────────── 2-COLUMN DESKTOP & LAPTOP SHOWCASE GRID (2x2) ──────────────── */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+          {filteredProjects.map((project) => (
+            <article
+              key={project.id}
+              className="project-grid-card neumorphic-card group relative p-5 sm:p-6 lg:p-7 transition-all duration-300 opacity-0 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl flex flex-col justify-between space-y-5 hover:border-[var(--accent)]/50 hover:shadow-xl"
+            >
+              <div className="space-y-4">
+                {/* ────── REALISTIC DESKTOP / LAPTOP BROWSER WINDOW MOCKUP ────── */}
                 <div
-                  className={`grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-start ${
-                    isEven ? 'lg:grid-flow-dense' : ''
-                  }`}
+                  className="relative rounded-xl overflow-hidden border border-[var(--border)] bg-[#0d1527] shadow-md cursor-pointer group/mockup"
+                  onClick={() => setSelectedProject(project)}
+                  title="Click to view full architecture & details"
                 >
-                  {/* Visual Preview Frame */}
-                  <div
-                    className={`tactile-display-frame cursor-pointer lg:col-span-6 w-full ${
-                      isEven ? 'lg:col-start-7' : ''
-                    }`}
-                    onClick={() => toggleProjectDetails(project.id)}
-                    title={isExpanded ? 'Click to hide details' : 'Click to view details in-place'}
-                  >
-                    <div className="relative rounded-[0.95rem] overflow-hidden aspect-[16/10] bg-[var(--bg-surface)]">
-                      <img
-                        src={project.imageSrc}
-                        alt={`${project.name} preview`}
-                        className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.02]"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none';
-                        }}
-                      />
+                  {/* Laptop / Browser Chrome Header Bar */}
+                  <div className="flex items-center justify-between px-3 py-2 bg-[#172339] border-b border-white/10 select-none">
+                    {/* Mac Traffic Light Control Dots */}
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] border border-[#E0443E]" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] border border-[#DEA123]" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F] border border-[#1AAB29]" />
+                    </div>
 
-                      {/* Adaptive Status & Internship Badges Container */}
-                      <div className="absolute top-3 left-3 right-3 z-10 flex flex-wrap items-center gap-2 pointer-events-none">
-                        <div className="tactile-status-badge px-2.5 py-1 text-[10px] sm:text-[11px] font-mono-code text-[var(--text-secondary)] backdrop-blur-md flex items-center gap-1.5">
-                          <span className="w-2 h-2 rounded-full bg-[var(--success)] shrink-0" />
-                          <span className="truncate">{project.statusBadge}</span>
-                        </div>
+                    {/* Desktop Address Bar Pill */}
+                    <div className="px-2.5 py-0.5 rounded-md bg-black/40 border border-white/5 text-[10px] font-mono-code text-[var(--accent)] truncate max-w-[180px] sm:max-w-[220px] flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--success)] animate-pulse shrink-0" />
+                      <span className="truncate">
+                        {project.id === 'lifelink'
+                          ? 'lifelink.onrender.com'
+                          : project.id === 'luminahub'
+                          ? 'lumina-hub.onrender.com'
+                          : project.id === 'knowthyself'
+                          ? 'knowthyself.vercel.app'
+                          : 'heatsafe-ai.app'}
+                      </span>
+                    </div>
 
-                        {project.internshipBadge && (
-                          <div className="bg-[var(--accent-soft)] border border-[var(--accent)] rounded-lg px-2.5 py-0.5 font-mono-code text-[10px] sm:text-[11px] font-bold text-[var(--accent)] backdrop-blur-md shadow-xs">
-                            {project.internshipBadge}
-                          </div>
-                        )}
-                      </div>
+                    {/* Status Pill */}
+                    <div className="text-[10px] font-mono-code text-white/70 truncate max-w-[100px] sm:max-w-none">
+                      {project.statusBadge}
                     </div>
                   </div>
 
-                  {/* Narrative Column */}
-                  <div
-                    className={`flex flex-col justify-between space-y-4 lg:col-span-6 min-w-0 ${
-                      isEven ? 'lg:col-start-1 lg:row-start-1' : ''
-                    }`}
-                  >
-                    <div>
-                      <span className="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold block">
-                        {project.type}
-                      </span>
+                  {/* Laptop Display Screen (16:10 Aspect Ratio) */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-[#070d19]">
+                    <img
+                      src={project.imageSrc}
+                      alt={`${project.name} preview`}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover/mockup:scale-[1.03]"
+                      onError={(e) => {
+                        // Safe fallback without disappearing
+                        e.currentTarget.onerror = null;
+                      }}
+                    />
 
-                      <h3 className="font-space font-bold text-xl sm:text-2xl md:text-3xl text-[var(--text-primary)] tracking-tight mt-1 break-words">
-                        {project.name}
-                      </h3>
-                      <p className="font-inter text-xs sm:text-sm font-semibold text-[var(--text-primary)] mt-1">
-                        {project.subtitle}
-                      </p>
-
-                      <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mt-3">
-                        {project.description}
-                      </p>
-
-                      {/* Specific Key Stat Callouts for LifeLink */}
-                      {project.id === 'lifelink' && (
-                        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-2">
-                          <div className="p-3 rounded-xl tactile-inset">
-                            <div className="flex items-center gap-1.5 font-mono-code text-lg font-bold text-[var(--accent)]">
-                              <Stethoscope className="w-4 h-4 text-[var(--accent)]" />
-                              <span>52</span>
-                            </div>
-                            <span className="text-[11px] font-inter text-[var(--text-secondary)] font-medium block mt-0.5">
-                              Simulated Doctors
-                            </span>
-                            <span className="text-[10px] text-[var(--text-dim)] block">
-                              Across 19 Mumbai railway stations
-                            </span>
-                          </div>
-
-                          <div className="p-3 rounded-xl tactile-inset">
-                            <div className="flex items-center gap-1.5 font-mono-code text-lg font-bold text-[var(--accent)]">
-                              <TestTube2 className="w-4 h-4 text-[var(--accent)]" />
-                              <span>247</span>
-                            </div>
-                            <span className="text-[11px] font-inter text-[var(--text-secondary)] font-medium block mt-0.5">
-                              Automated Tests
-                            </span>
-                            <span className="text-[10px] text-[var(--text-dim)] block">
-                              Across 33 files (1 skipped)
-                            </span>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Certificate Trigger Button for Virtual Internships */}
-                      {project.certificateId && (
-                        <div className="mt-4 p-3 rounded-xl tactile-inset flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3 text-xs font-mono-code">
-                          <div className="flex items-center gap-1.5 text-[var(--accent)] font-semibold">
-                            <Award className="w-4 h-4 text-[var(--accent)] shrink-0" />
-                            <span className="break-all sm:break-normal">AICTE Certificate ({project.certificateId})</span>
-                          </div>
-                          {project.certificatePdfUrl ? (
-                            <a
-                              href={project.certificatePdfUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="px-3 py-1.5 rounded-lg bg-[var(--accent-soft)] border border-[var(--accent)] text-[var(--accent)] font-bold hover:bg-[var(--accent)] hover:text-[#001011] transition-all cursor-pointer w-full sm:w-auto text-center inline-flex items-center justify-center gap-1"
-                            >
-                              <span>View Certificate PDF ({project.certificateId}) ↗</span>
-                            </a>
-                          ) : (
-                            <span className="text-[var(--text-dim)]">Verified Credential</span>
-                          )}
-                        </div>
-                      )}
-
-                      {/* Stack Chips */}
-                      <div className="mt-4 pt-3 border-t border-[var(--border)] flex flex-wrap gap-1.5">
-                        {project.stack.map((tech) => (
-                          <span
-                            key={tech}
-                            className="tactile-chip px-2 py-0.5 font-mono-code text-[11px] text-[var(--accent)]"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                    {/* Internship Badge Pill if applicable */}
+                    {project.internshipBadge && (
+                      <div className="absolute bottom-2.5 left-2.5 z-10 bg-black/75 border border-[var(--accent)] rounded-md px-2.5 py-0.5 font-mono-code text-[10px] font-bold text-[var(--accent)] backdrop-blur-md shadow-xs">
+                        {project.internshipBadge}
                       </div>
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="pt-4 border-t border-[var(--border)] flex flex-wrap items-center gap-2 sm:gap-2.5">
-                      <TactileButton
-                        onClick={() => toggleProjectDetails(project.id)}
-                        variant={isExpanded ? 'primary' : 'secondary'}
-                        size="sm"
-                        title={isExpanded ? 'Collapse project details' : 'Expand full project details'}
-                      >
-                        <span>{isExpanded ? 'Hide Details' : 'Details'}</span>
-                        <ArrowUpRight
-                          className={`w-3.5 h-3.5 transition-transform duration-300 ${
-                            isExpanded ? 'rotate-90' : ''
-                          }`}
-                        />
-                      </TactileButton>
-
-                      {project.liveHref && (
-                        <TactileButton
-                          href={project.liveHref}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          variant="primary"
-                          size="sm"
-                        >
-                          <span>{project.type.includes('Virtual Internship') ? 'Live Demo' : 'Visit Live App'}</span>
-                          <ExternalLink className="w-3.5 h-3.5" />
-                        </TactileButton>
-                      )}
-
-                      <TactileButton
-                        href={project.githubHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        variant="secondary"
-                        size="sm"
-                      >
-                        <Github className="w-3.5 h-3.5" />
-                        <span>{project.backendGithubHref ? 'Frontend Repo' : 'GitHub'}</span>
-                      </TactileButton>
-
-                      {project.backendGithubHref && (
-                        <TactileButton
-                          href={project.backendGithubHref}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          variant="secondary"
-                          size="sm"
-                        >
-                          <Github className="w-3.5 h-3.5" />
-                          <span>Backend Repo</span>
-                        </TactileButton>
-                      )}
-                    </div>
+                    )}
                   </div>
                 </div>
 
-                {/* ──────────────── INLINE EXPANDABLE DETAILS PANEL (OPENS DIRECTLY IN PROJECT'S OWN SPACE) ──────────────── */}
-                {isExpanded && (
-                  <div
-                    id={`details-${project.id}`}
-                    className="mt-6 pt-6 border-t border-[var(--border)] space-y-5 animate-fade-in"
-                  >
-                    {/* Header Bar */}
-                    <div className="flex items-start justify-between gap-4 pb-3 border-b border-[var(--border)]">
-                      <div>
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="font-mono-code text-[11px] text-[var(--accent)] tracking-[0.08em] uppercase font-semibold">
-                            In-Depth Architecture &amp; Implementation
-                          </span>
-                          {project.internshipBadge && (
-                            <span className="bg-[var(--accent-soft)] border border-[var(--accent)] rounded-md px-2 py-0.5 font-mono-code text-[10px] font-bold text-[var(--accent)]">
-                              {project.internshipBadge}
-                            </span>
-                          )}
-                        </div>
-                        <h4 className="font-space font-bold text-lg sm:text-2xl text-[var(--text-primary)]">
-                          {project.name} · Complete Project Details
-                        </h4>
-                      </div>
+                {/* ────── CONTENT & DESCRIPTION ────── */}
+                <div>
+                  <div className="flex items-center justify-between text-xs font-mono-code mb-1">
+                    <span className="text-[var(--accent)] uppercase font-semibold">
+                      {project.type}
+                    </span>
+                  </div>
 
-                      <button
-                        onClick={() => toggleProjectDetails(project.id)}
-                        className="px-3 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-xs font-mono-code transition-colors cursor-pointer flex items-center gap-1.5 shrink-0"
-                        title="Close details"
-                      >
-                        <span>Close Details</span>
-                        <X className="w-3.5 h-3.5" />
-                      </button>
+                  <h3 className="font-space font-bold text-xl sm:text-2xl text-[var(--text-primary)] tracking-tight">
+                    {project.name}
+                  </h3>
+                  <p className="font-inter text-xs font-semibold text-[var(--text-secondary)] mt-0.5">
+                    {project.subtitle}
+                  </p>
+
+                  <p className="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mt-2.5 line-clamp-3">
+                    {project.description}
+                  </p>
+                </div>
+
+                {/* Specific Callouts for LifeLink */}
+                {project.id === 'lifelink' && (
+                  <div className="grid grid-cols-2 gap-2.5 pt-1">
+                    <div className="p-2.5 rounded-xl tactile-inset">
+                      <div className="flex items-center gap-1.5 font-mono-code text-base font-bold text-[var(--accent)]">
+                        <Stethoscope className="w-3.5 h-3.5 text-[var(--accent)]" />
+                        <span>52</span>
+                      </div>
+                      <span className="text-[10px] font-inter text-[var(--text-secondary)] block truncate">
+                        Simulated Doctors (19 Stations)
+                      </span>
                     </div>
 
-                    {/* AICTE Certificate Callout if Virtual Internship */}
-                    {project.certificateId && (
-                      <div className="p-3.5 sm:p-4 rounded-xl tactile-inset flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono-code">
-                        <div>
-                          <span className="text-[var(--accent)] font-semibold flex items-center gap-1.5 mb-1">
-                            <Award className="w-4 h-4 text-[var(--accent)] shrink-0" />
-                            <span>Verified AICTE Virtual Internship Certificate</span>
-                          </span>
-                          <p className="text-[var(--text-secondary)] font-inter">
-                            Issued by {project.certificateOrg || 'AICTE & BharatCares'} · ID: <strong className="text-[var(--text-primary)] break-all">{project.certificateId}</strong>
-                          </p>
-                        </div>
-                        <div className="flex flex-wrap items-center gap-2 shrink-0">
-                          <button
-                            onClick={() => handleCopyCertId(project.certificateId!)}
-                            className="px-2.5 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors cursor-pointer flex items-center gap-1 text-xs"
-                          >
-                            {copiedId ? <Check className="w-3.5 h-3.5 text-[var(--success)]" /> : <Copy className="w-3.5 h-3.5" />}
-                            <span>{copiedId ? 'Copied' : 'Copy ID'}</span>
-                          </button>
-                          {project.certificatePdfUrl && (
-                            <a
-                              href={project.certificatePdfUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="px-3 py-1.5 rounded-lg bg-[var(--accent-soft)] border border-[var(--accent)] text-[var(--accent)] font-bold hover:bg-[var(--accent)] hover:text-[#001011] transition-all cursor-pointer inline-flex items-center gap-1 text-xs"
-                            >
-                              <Award className="w-3.5 h-3.5" />
-                              <span>Open Certificate PDF ↗</span>
-                            </a>
-                          )}
-                        </div>
+                    <div className="p-2.5 rounded-xl tactile-inset">
+                      <div className="flex items-center gap-1.5 font-mono-code text-base font-bold text-[var(--accent)]">
+                        <TestTube2 className="w-3.5 h-3.5 text-[var(--accent)]" />
+                        <span>247</span>
                       </div>
-                    )}
-
-                    {/* Dual-Column Details Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 text-xs sm:text-sm font-inter">
-                      {/* Left Column: Overview & Problem/Solution (5 cols) */}
-                      <div className="lg:col-span-5 space-y-4">
-                        <div className="p-4 sm:p-5 rounded-xl tactile-inset space-y-2">
-                          <h5 className="font-mono-code text-xs font-semibold uppercase tracking-wider text-[var(--accent)] flex items-center gap-1.5">
-                            <Layers className="w-3.5 h-3.5" />
-                            Overview
-                          </h5>
-                          <p className="text-[var(--text-secondary)] leading-relaxed">
-                            {project.description}
-                          </p>
-                        </div>
-
-                        <div className="p-4 sm:p-5 rounded-xl tactile-inset space-y-2">
-                          <h5 className="font-mono-code text-xs font-semibold uppercase tracking-wider text-[var(--accent)] flex items-center gap-1.5">
-                            <Cpu className="w-3.5 h-3.5" />
-                            Problem &amp; Solution
-                          </h5>
-                          <p className="text-[var(--text-secondary)] leading-relaxed">
-                            {project.problemStatement}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Right Column: Key Features & Architecture Implementation (7 cols) */}
-                      <div className="lg:col-span-7 p-4 sm:p-5 rounded-xl tactile-inset space-y-4 flex flex-col justify-between">
-                        <div>
-                          <h5 className="font-mono-code text-xs font-semibold uppercase tracking-wider text-[var(--accent)] flex items-center gap-1.5 mb-2.5">
-                            <Database className="w-3.5 h-3.5" />
-                            Key Features &amp; Implementation (Resume Verified)
-                          </h5>
-                          <ul className="space-y-2.5 text-[var(--text-secondary)] leading-relaxed">
-                            {project.architectureHighlights.map((highlight, idx) => (
-                              <li key={idx} className="flex items-start gap-2.5">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0 mt-2" />
-                                <span>{highlight}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        {/* Tech Stack Chips in details */}
-                        <div className="pt-3 border-t border-[var(--border)]">
-                          <span className="font-mono-code text-[11px] text-[var(--text-dim)] uppercase block mb-1.5">
-                            Technologies Used
-                          </span>
-                          <div className="flex flex-wrap gap-1.5">
-                            {project.stack.map((tech) => (
-                              <span
-                                key={tech}
-                                className="tactile-chip px-2 py-0.5 font-mono-code text-[11px] text-[var(--accent)]"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Bottom Collapse Button */}
-                    <div className="pt-2 flex justify-end">
-                      <button
-                        onClick={() => toggleProjectDetails(project.id)}
-                        className="px-3.5 py-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-xs font-mono-code transition-colors cursor-pointer flex items-center gap-1.5"
-                      >
-                        <span>Hide Details ↑</span>
-                      </button>
+                      <span className="text-[10px] font-inter text-[var(--text-secondary)] block truncate">
+                        Automated Tests (33 Files)
+                      </span>
                     </div>
                   </div>
                 )}
-              </article>
-            );
-          })}
+
+                {/* Certificate Access Strip for Virtual Internships */}
+                {project.certificateId && project.certificatePdfUrl && (
+                  <div className="p-2.5 rounded-xl tactile-inset flex items-center justify-between text-xs font-mono-code">
+                    <div className="flex items-center gap-1.5 text-[var(--accent)] font-semibold truncate">
+                      <Award className="w-3.5 h-3.5 shrink-0" />
+                      <span className="truncate">AICTE Credential: {project.certificateId}</span>
+                    </div>
+                    <a
+                      href={project.certificatePdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[var(--accent)] hover:underline inline-flex items-center gap-1 font-bold shrink-0 ml-2"
+                    >
+                      <span>PDF ↗</span>
+                    </a>
+                  </div>
+                )}
+
+                {/* Stack Chips */}
+                <div className="pt-2 flex flex-wrap gap-1.5">
+                  {project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="tactile-chip px-2 py-0.5 font-mono-code text-[10px] sm:text-[11px] text-[var(--accent)]"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Action Buttons Row */}
+              <div className="pt-3.5 border-t border-[var(--border)] flex flex-wrap items-center gap-2">
+                <TactileButton
+                  onClick={() => setSelectedProject(project)}
+                  variant="secondary"
+                  size="sm"
+                  title="View full architecture and testing details"
+                >
+                  <span>Details</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </TactileButton>
+
+                {project.liveHref && (
+                  <TactileButton
+                    href={project.liveHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="primary"
+                    size="sm"
+                  >
+                    <span>Visit App</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </TactileButton>
+                )}
+
+                {project.githubHref && (
+                  <TactileButton
+                    href={project.githubHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="secondary"
+                    size="sm"
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    <span>GitHub</span>
+                  </TactileButton>
+                )}
+
+                {project.backendGithubHref && (
+                  <TactileButton
+                    href={project.backendGithubHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="secondary"
+                    size="sm"
+                  >
+                    <Github className="w-3.5 h-3.5" />
+                    <span>Backend</span>
+                  </TactileButton>
+                )}
+
+                {project.certificatePdfUrl && (
+                  <TactileButton
+                    href={project.certificatePdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="secondary"
+                    size="sm"
+                  >
+                    <Award className="w-3.5 h-3.5" />
+                    <span>Certificate</span>
+                  </TactileButton>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
+
       </div>
+
+      {/* ──────────────── COMPREHENSIVE PROJECT DETAIL MODAL ──────────────── */}
+      <ProjectDetailModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
 }
