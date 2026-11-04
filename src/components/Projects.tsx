@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {
   ExternalLink,
   Github,
@@ -13,7 +13,6 @@ import {
   Layers,
   Cpu,
 } from 'lucide-react';
-import anime from 'animejs';
 import { TactileButton } from './TactileButton';
 
 export interface ProjectData {
@@ -27,6 +26,7 @@ export interface ProjectData {
   certificatePdfUrl?: string;
   subtitle: string;
   description: string;
+  myContribution: string;
   problemStatement: string;
   architectureHighlights: string[];
   stack: string[];
@@ -44,7 +44,9 @@ const ALL_PROJECTS: ProjectData[] = [
     statusBadge: 'Deployed on Render',
     subtitle: 'LifeLink — Smart Healthcare Assistance Platform',
     description:
-      'A healthcare prototype with symptom checking, doctor search across 19 Mumbai railway stations, appointment booking, digital prescriptions, and an Emergency Health Passport, working mainly on the React/TypeScript frontend and wiring it to the backend and AI layer. Powered by Gemini Flash guidance with built-in emergency checks, age-based rules, and safe fallback responses when AI calls fail.',
+      'A healthcare prototype connecting patients with medical specialists. Features include AI-guided symptom triage, doctor discovery across 19 Mumbai railway stations, appointment booking, digital prescriptions, and an Emergency Health Passport. Powered by Gemini Flash guidance with built-in emergency checks, age-based rules, and safe fallback responses.',
+    myContribution:
+      'Primary contribution: Lead frontend architecture and UI development in React and TypeScript, integration with backend endpoints, Drizzle ORM data modeling in MySQL, Gemini Flash AI implementation with safety fallbacks, and comprehensive test suite (247 tests across 33 files).',
     problemStatement:
       'Scattered clinic directories and missing medical records delay patient care. LifeLink brings doctor discovery across 19 Mumbai railway hubs, symptom checking, and appointment management into one dependable portal.',
     architectureHighlights: [
@@ -83,7 +85,9 @@ const ALL_PROJECTS: ProjectData[] = [
     certificatePdfUrl: '/certificates/IBM_SkillsBuild_Certificate_BHIBMAC04046.pdf',
     subtitle: 'LuminaHub — Educational Diagnostic Pre-Grader',
     description:
-      'An educational intelligence platform built during the IBM SkillsBuild virtual internship that reviews student homework submissions, flags conceptual misunderstandings, and generates adaptive follow-up practice questions.',
+      'An educational diagnostic platform developed during the IBM SkillsBuild virtual internship that reviews student homework submissions, identifies conceptual misunderstandings, and generates adaptive follow-up practice exercises.',
+    myContribution:
+      'Internship contribution: Built the complete diagnostic grading interface with React and TypeScript, structured prompt evaluation for Gemini API, teacher analytics dashboard for class-wide learning gaps, and adaptive feedback loops.',
     problemStatement:
       'Standard homework grading shows a total score without identifying where a student got confused. LuminaHub analyzes reasoning steps and alerts instructors to class-wide learning gaps.',
     architectureHighlights: [
@@ -105,6 +109,8 @@ const ALL_PROJECTS: ProjectData[] = [
     subtitle: 'KnowThySelf — MBTI Personality Assessment Platform',
     description:
       'A five-page MBTI personality assessment and recommendation platform featuring a dynamic questionnaire flow, real-time trait scoring with percentage calculations, and a tailored results dashboard.',
+    myContribution:
+      'Collaborative frontend contribution: Built all five user-facing pages (home, login, questionnaire, dashboard, recommendations), smooth card slide transitions, real-time trait score math, and HTML5 Canvas interactive background.',
     problemStatement:
       'Standard online personality quizzes often present rigid interfaces without actionable growth insights. KnowThySelf delivers an interactive, responsive questionnaire with live trait score breakdowns and personalized recommendations.',
     architectureHighlights: [
@@ -132,6 +138,8 @@ const ALL_PROJECTS: ProjectData[] = [
     subtitle: 'HeatSafe AI — Climate Heatwave Safety Platform',
     description:
       'An extreme-heat safety application created for the Lenovo LEAP NextGen Scholar Program covering heat-risk assessment, hydration planning, AI symptom checking, and emergency guidance. Codebase and Gemini prompt engineering templates are available on GitHub.',
+    myContribution:
+      'Internship contribution: Built the responsive React and TypeScript frontend with Vite and Tailwind CSS, engineered structured prompt workflows for Google Gemini API, tested edge cases for conflicting symptoms, and integrated safety checklists.',
     problemStatement:
       'Severe summer heatwaves cause heatstroke and dehydration. HeatSafe AI turns local weather metrics into daily safety plans and early warning indicators for vulnerable groups.',
     architectureHighlights: [
@@ -140,7 +148,7 @@ const ALL_PROJECTS: ProjectData[] = [
       'Integrated the AI-assisted components into the existing interface and fixed issues found during testing.',
     ],
     stack: ['React', 'TypeScript', 'Vite', 'Gemini API', 'Tailwind CSS'],
-    imageSrc: '',
+    imageSrc: '/images/projects/heatsafe.png',
     liveHref: null,
     githubHref: 'https://github.com/SarthakMandhare34/Heat-safe',
   },
@@ -149,7 +157,6 @@ const ALL_PROJECTS: ProjectData[] = [
 type FilterCategory = 'all' | 'academic' | 'internship';
 
 export function Projects() {
-  const sectionRef = useRef<HTMLElement>(null);
   const [expandedProjectId, setExpandedProjectId] = useState<string | null>(null);
   const [activeFilter, setActiveFilter] = useState<FilterCategory>('all');
 
@@ -183,92 +190,22 @@ export function Projects() {
     });
   };
 
-  // Snappy Anime.js scroll animation
-  useEffect(() => {
-    const sectionEl = sectionRef.current;
-    if (!sectionEl) return;
-
-    const headers = sectionEl.querySelectorAll('.project-header');
-    const cards = sectionEl.querySelectorAll('.project-showcase-card');
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            anime.remove([sectionEl, headers, cards]);
-
-            anime({
-              targets: sectionEl,
-              opacity: [0, 1],
-              translateY: [10, 0],
-              duration: 360,
-              easing: 'cubicBezier(0.16, 1, 0.3, 1)',
-            });
-
-            anime({
-              targets: headers,
-              opacity: [0, 1],
-              translateY: [10, 0],
-              duration: 340,
-              easing: 'easeOutCubic',
-              delay: 30,
-            });
-
-            anime({
-              targets: cards,
-              opacity: [0, 1],
-              translateY: [12, 0],
-              delay: anime.stagger(40, { start: 60 }),
-              duration: 350,
-              easing: 'easeOutCubic',
-            });
-          } else {
-            anime.remove([sectionEl, headers, cards]);
-            anime({
-              targets: [sectionEl, headers, cards],
-              opacity: 0,
-              translateY: 8,
-              duration: 200,
-              easing: 'easeInQuad',
-            });
-          }
-        });
-      },
-      { threshold: 0.06, rootMargin: '0px 0px -30px 0px' }
-    );
-
-    observer.observe(sectionEl);
-    return () => observer.disconnect();
-  }, []);
-
   const handleFilterChange = (cat: FilterCategory) => {
     setActiveFilter(cat);
     setExpandedProjectId(null);
-    setTimeout(() => {
-      anime.remove('.project-showcase-card');
-      anime({
-        targets: '.project-showcase-card',
-        opacity: [0, 1],
-        translateY: [10, 0],
-        delay: anime.stagger(35),
-        duration: 320,
-        easing: 'easeOutCubic',
-      });
-    }, 20);
   };
 
   return (
     <section
       id="work"
-      ref={sectionRef}
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-26 transition-colors duration-450 border-t border-[var(--border)] relative opacity-0"
+      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-26 transition-colors duration-450 border-t border-[var(--border)] relative"
     >
       <div id="projects" className="absolute -top-16 left-0 w-0 h-0 pointer-events-none" />
 
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ──────────────── SECTION HEADER ──────────────── */}
-        <div className="project-header mb-7 sm:mb-10 max-w-3xl opacity-0">
+        <div className="scroll-reveal scroll-blur-clear mb-7 sm:mb-10 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
             <span>Projects</span>
           </div>
@@ -280,71 +217,74 @@ export function Projects() {
           </p>
         </div>
 
-        {/* ──────────────── CATEGORY FILTER BAR ──────────────── */}
-        <div className="project-header opacity-0 mb-7 sm:mb-10 flex flex-wrap items-center gap-2 sm:gap-3 border-b border-[var(--border)] pb-4">
-          <button
-            onClick={() => handleFilterChange('all')}
-            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
-              activeFilter === 'all'
-                ? 'neumorphic-btn !bg-[var(--accent)] !text-[#001011] font-bold shadow-sm'
-                : 'neumorphic-btn text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-            }`}
-          >
-            All Projects ({ALL_PROJECTS.length})
-          </button>
-          <button
-            onClick={() => handleFilterChange('academic')}
-            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
-              activeFilter === 'academic'
-                ? 'neumorphic-btn !bg-[var(--accent)] !text-[#001011] font-bold shadow-sm'
-                : 'neumorphic-btn text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-            }`}
-          >
-            Major Academic Projects
-          </button>
-          <button
-            onClick={() => handleFilterChange('internship')}
-            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
-              activeFilter === 'internship'
-                ? 'neumorphic-btn !bg-[var(--accent)] !text-[#001011] font-bold shadow-sm'
-                : 'neumorphic-btn text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-            }`}
-          >
-            Virtual Internships (IBM &amp; Lenovo)
-          </button>
+        {/* ──────────────── CATEGORY FILTER BAR (macOS SEGMENTED CONTROL) ──────────────── */}
+        <div className="scroll-reveal scroll-slide-down stagger-1 mb-7 sm:mb-10 flex items-center border-b border-[var(--border)] pb-4">
+          <div className="p-1 rounded-2xl bg-[var(--bg-inset)]/70 border border-[var(--border)] inline-flex flex-wrap gap-1">
+            <button
+              onClick={() => handleFilterChange('all')}
+              className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
+                activeFilter === 'all'
+                  ? 'bg-[var(--bg-elevated)] text-[var(--accent)] font-semibold shadow-xs'
+                  : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
+              }`}
+            >
+              All Projects ({ALL_PROJECTS.length})
+            </button>
+            <button
+              onClick={() => handleFilterChange('academic')}
+              className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
+                activeFilter === 'academic'
+                  ? 'bg-[var(--bg-elevated)] text-[var(--accent)] font-semibold shadow-xs'
+                  : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
+              }`}
+            >
+              Major Academic Projects
+            </button>
+            <button
+              onClick={() => handleFilterChange('internship')}
+              className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
+                activeFilter === 'internship'
+                  ? 'bg-[var(--bg-elevated)] text-[var(--accent)] font-semibold shadow-xs'
+                  : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
+              }`}
+            >
+              Virtual Internships (IBM &amp; Lenovo)
+            </button>
+          </div>
         </div>
 
         {/* ──────────────── 4 DISTINCT SHOWCASE CARDS (EXPANDS IN ITS OWN SPACE) ──────────────── */}
         <div className="space-y-6 sm:space-y-8">
-          {filteredProjects.map((project) => {
+          {filteredProjects.map((project, idx) => {
             const isExpanded = expandedProjectId === project.id;
+            const animClass = idx % 2 === 0 ? 'scroll-slide-left' : 'scroll-slide-right';
 
             return (
               <article
                 key={project.id}
                 id={`project-${project.id}`}
-                className={`project-showcase-card neumorphic-card group relative p-5 sm:p-7 md:p-8 transition-all duration-300 opacity-0 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl ${
+                className={`project-showcase-card scroll-reveal ${animClass} neumorphic-card group relative p-5 sm:p-7 md:p-8 transition-all duration-300 border border-[var(--border)] bg-[var(--bg-elevated)] rounded-2xl ${
                   isExpanded ? 'ring-2 ring-[var(--accent)]/50 shadow-xl' : 'hover:border-[var(--accent)]/40'
                 }`}
               >
                 {/* ────── MAIN PROJECT ROW (PREVIEW + CONTENT) ────── */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
                   
-                  {/* LEFT: Realistic Laptop/Desktop Preview Frame (5 cols) */}
+                  {/* LEFT: Realistic macOS Desktop Preview Frame (5 cols) */}
                   <div
                     className="lg:col-span-5 cursor-pointer"
                     onClick={() => toggleProject(project.id)}
                     title={isExpanded ? 'Click to hide details' : 'Click to view details in place'}
                   >
-                    <div className="relative rounded-xl overflow-hidden border border-[var(--border)] bg-[#0d1527] shadow-md group-hover:border-[var(--accent)]/60 transition-all">
+                    <div className="relative rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--bg-surface)] shadow-md group-hover:border-[var(--accent)]/60 transition-all">
                       {/* Browser Chrome Top Bar */}
-                      <div className="flex items-center justify-between px-3 py-2 bg-[#172339] border-b border-white/10 select-none">
+                      <div className="flex items-center justify-between px-3 py-2 bg-[var(--bg-inset)] border-b border-[var(--border)] select-none">
                         <div className="flex items-center gap-1.5">
                           <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]" />
                           <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
                           <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F]" />
                         </div>
-                        <div className="px-2.5 py-0.5 rounded-md bg-black/40 text-[10px] font-mono-code text-[var(--accent)] truncate max-w-[200px] flex items-center gap-1.5">
+                        <div className="px-2.5 py-0.5 rounded-md bg-[var(--bg-elevated)] border border-[var(--border)] text-[10px] font-mono-code text-[var(--accent)] truncate max-w-[200px] flex items-center gap-1.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-[var(--success)] animate-pulse shrink-0" />
                           <span className="truncate">
                             {project.id === 'lifelink'
@@ -356,47 +296,24 @@ export function Projects() {
                               : 'github.com/SarthakMandhare34/Heat-safe'}
                           </span>
                         </div>
-                        <span className="text-[10px] font-mono-code text-white/60">
+                        <span className="text-[10px] font-mono-code text-[var(--text-dim)] font-medium">
                           {project.statusBadge}
                         </span>
                       </div>
 
                       {/* Display Screen */}
-                      {project.imageSrc ? (
-                        <div className="relative aspect-[16/10] overflow-hidden bg-[#070d19]">
-                          <img
-                            src={project.imageSrc}
-                            alt={`${project.name} preview`}
-                            className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                          />
-                          {project.internshipBadge && (
-                            <div className="absolute bottom-2.5 left-2.5 z-10 bg-black/75 border border-[var(--accent)] rounded-md px-2.5 py-0.5 font-mono-code text-[10px] font-bold text-[var(--accent)] backdrop-blur-md">
-                              {project.internshipBadge}
-                            </div>
-                          )}
-                        </div>
-                      ) : (
-                        <div className="relative aspect-[16/10] overflow-hidden bg-[#09101d] p-3.5 sm:p-4 flex flex-col justify-between font-mono-code text-[11px] select-none border-t border-white/5">
-                          <div className="flex items-center justify-between text-[var(--accent)] border-b border-white/10 pb-2">
-                            <span className="flex items-center gap-1.5 font-semibold">
-                              <Sparkles className="w-3.5 h-3.5 text-[var(--accent)]" />
-                              <span>AICTE Internship Codebase</span>
-                            </span>
-                            <span className="text-[10px] text-white/50">Lenovo LEAP</span>
+                      <div className="relative aspect-[16/10] overflow-hidden bg-[var(--bg-inset)]">
+                        <img
+                          src={project.imageSrc}
+                          alt={`${project.name} preview`}
+                          className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                        />
+                        {project.internshipBadge && (
+                          <div className="absolute bottom-2.5 left-2.5 z-10 bg-black/80 border border-[var(--accent)] rounded-md px-2.5 py-0.5 font-mono-code text-[10px] font-bold text-[var(--accent)] backdrop-blur-md">
+                            {project.internshipBadge}
                           </div>
-
-                          <div className="space-y-1.5 text-[10px] sm:text-[11px] text-[var(--text-dim)] py-1.5">
-                            <p className="text-white/80 font-semibold">// Gemini Prompt Engineering &amp; Heat Safety</p>
-                            <p className="truncate"><span className="text-[var(--accent)]">const</span> risk = <span className="text-[#34D399]">assessHeatRisk</span>(temp, humidity);</p>
-                            <p className="truncate"><span className="text-[var(--accent)]">const</span> plan = <span className="text-[var(--accent)]">await</span> gemini.<span className="text-[#34D399]">generateHydrationGuidance</span>(risk);</p>
-                          </div>
-
-                          <div className="flex items-center justify-between text-[10px] pt-2 border-t border-white/10 text-white/70">
-                            <span>Credential: 6302092</span>
-                            <span className="text-[var(--accent)] font-semibold">GitHub Source ↗</span>
-                          </div>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </div>
 
@@ -418,9 +335,20 @@ export function Projects() {
                         {project.description}
                       </p>
 
+                      {/* Explicit My Contribution Callout */}
+                      <div className="mt-3 p-3 rounded-xl tactile-inset space-y-1">
+                        <span className="font-mono-code text-[11px] font-semibold text-[var(--accent)] uppercase flex items-center gap-1.5">
+                          <Code2 className="w-3.5 h-3.5" />
+                          My Contribution
+                        </span>
+                        <p className="font-inter text-xs text-[var(--text-secondary)] leading-relaxed text-justified">
+                          {project.myContribution}
+                        </p>
+                      </div>
+
                       {/* Callout metrics for LifeLink */}
                       {project.id === 'lifelink' && (
-                        <div className="grid grid-cols-2 gap-2.5 sm:gap-3 mt-3.5">
+                        <div className="grid grid-cols-2 gap-2.5 sm:gap-3 mt-3">
                           <div className="p-3 rounded-xl tactile-inset">
                             <div className="flex items-center gap-1.5 font-mono-code text-base sm:text-lg font-bold text-[var(--accent)]">
                               <Stethoscope className="w-4 h-4 text-[var(--accent)]" />

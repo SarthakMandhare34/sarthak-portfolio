@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Home, Briefcase, Code2, GraduationCap, User, Mail } from 'lucide-react';
+import { Home, Briefcase, Code2, GraduationCap, User, Mail, ShieldCheck } from 'lucide-react';
 import anime from 'animejs';
 
 interface TabItem {
@@ -13,6 +13,7 @@ const TABS: TabItem[] = [
   { id: 'hero', label: 'Home', href: '#home', icon: Home },
   { id: 'about', label: 'About', href: '#about', icon: User },
   { id: 'work', label: 'Projects', href: '#work', icon: Briefcase },
+  { id: 'experience', label: 'Internships', href: '#experience', icon: ShieldCheck },
   { id: 'skills', label: 'Skills', href: '#skills', icon: Code2 },
   { id: 'education', label: 'Education', href: '#education', icon: GraduationCap },
   { id: 'contact', label: 'Contact', href: '#contact', icon: Mail },

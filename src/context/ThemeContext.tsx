@@ -17,8 +17,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       if (stored === 'light' || stored === 'dark') {
         return stored;
       }
+      // Respect operating system preferred appearance when no saved preference exists
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      return 'light';
     }
-    return 'dark'; // Default is always dark, no system preference detection
+    return 'dark';
   });
 
   useEffect(() => {

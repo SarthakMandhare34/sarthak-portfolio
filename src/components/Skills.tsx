@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import anime from 'animejs';
+import React from 'react';
 import {
   Code2,
   Layout,
@@ -70,80 +69,15 @@ const SKILL_CATEGORIES: SkillCategory[] = [
 ];
 
 export function Skills() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  // Butter-smooth 60fps/120fps Anime.js bi-directional scroll animation
-  useEffect(() => {
-    const sectionEl = sectionRef.current;
-    if (!sectionEl) return;
-
-    const header = sectionEl.querySelector('.skills-header');
-    const cards = sectionEl.querySelectorAll('.skill-card');
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            anime.remove([sectionEl, header, cards]);
-
-            // Animate main section wrapper
-            anime({
-              targets: sectionEl,
-              opacity: [0, 1],
-              translateY: [10, 0],
-              duration: 360,
-              easing: 'cubicBezier(0.16, 1, 0.3, 1)',
-            });
-
-            // Animate section header
-            anime({
-              targets: header,
-              opacity: [0, 1],
-              translateY: [10, 0],
-              duration: 340,
-              easing: 'easeOutCubic',
-              delay: 30,
-            });
-
-            // Animate 8 skill cards with snappy micro-stagger
-            anime({
-              targets: cards,
-              opacity: [0, 1],
-              translateY: [12, 0],
-              delay: anime.stagger(25, { start: 50 }),
-              duration: 340,
-              easing: 'easeOutCubic',
-            });
-          } else {
-            // Smooth exit reset for continuous bi-directional scroll animation
-            anime.remove([sectionEl, header, cards]);
-            anime({
-              targets: [sectionEl, header, cards],
-              opacity: 0,
-              translateY: 8,
-              duration: 200,
-              easing: 'easeInQuad',
-            });
-          }
-        });
-      },
-      { threshold: 0.06, rootMargin: '0px 0px -30px 0px' }
-    );
-
-    observer.observe(sectionEl);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
       id="skills"
-      ref={sectionRef}
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative opacity-0"
+      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ──────────────── SECTION HEADER ──────────────── */}
-        <div className="skills-header mb-7 sm:mb-10 max-w-3xl opacity-0">
+        <div className="scroll-reveal scroll-scale-up mb-7 sm:mb-10 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
             <span>Skills</span>
           </div>
@@ -157,13 +91,14 @@ export function Skills() {
 
         {/* ──────────────── 8 SKILL CARDS ──────────────── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
-          {SKILL_CATEGORIES.map((cat) => {
+          {SKILL_CATEGORIES.map((cat, idx) => {
             const IconComponent = cat.icon;
+            const staggerClass = `stagger-${(idx % 4) + 1}`;
 
             return (
               <div
                 key={cat.id}
-                className="skill-card opacity-0 neumorphic-card p-4 sm:p-6 rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)]/90 flex flex-col justify-between hover:border-[var(--accent)] transition-all duration-300"
+                className={`skill-card scroll-reveal scroll-flip-up ${staggerClass} neumorphic-card p-4 sm:p-6 rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)]/90 flex flex-col justify-between hover:border-[var(--accent)] transition-all duration-300`}
               >
                 <div>
                   <div className="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--accent)] shrink-0 mb-3.5">

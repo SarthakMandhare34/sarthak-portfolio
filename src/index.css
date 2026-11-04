@@ -7,42 +7,46 @@
   :root,
   html[data-theme="dark"],
   html.dark {
-    --bg-base: #001011;
-    --bg-surface: #001719;
-    --bg-elevated: #04252A;
-    --border: rgba(108, 207, 246, 0.22);
-    --border-active: #6CCFF6;
-    --accent: #6CCFF6;
-    --accent-soft: rgba(108, 207, 246, 0.16);
-    --text-primary: #FFFFFF;
-    --text-secondary: #C4EBFA;
-    --text-dim: #76B9D6;
+    /* macOS Deep Charcoal & Graphite Surfaces */
+    --bg-base: #0B0F14;
+    --bg-surface: #121720;
+    --bg-elevated: #18202B;
+    --bg-inset: #0D1219;
+    --border: rgba(255, 255, 255, 0.09);
+    --border-active: #38BDF8;
+    --accent: #38BDF8;
+    --accent-soft: rgba(56, 189, 248, 0.12);
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-dim: #64748B;
     --success: #34D399;
-    --photo-overlay-start: rgba(0, 16, 17, 0.96);
-    --photo-overlay-end: rgba(0, 16, 17, 0.18);
-    --font-display: 'After', 'Syne', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-sub: 'Anson', 'Space Grotesk', 'Inter', -apple-system, sans-serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --photo-overlay-start: rgba(11, 15, 20, 0.96);
+    --photo-overlay-end: rgba(11, 15, 20, 0.18);
+    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Space Grotesk', 'Syne', sans-serif;
+    --font-sub: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Inter', "SF Pro Text", "Segoe UI", Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   }
 
   html[data-theme="light"] {
-    --bg-base: #DBEAFE;
-    --bg-surface: #EFF6FF;
+    /* macOS Soft Blue-White & Refined White Surfaces */
+    --bg-base: #EDF2F7;
+    --bg-surface: #F8FAFC;
     --bg-elevated: #FFFFFF;
-    --border: rgba(37, 99, 235, 0.28);
-    --border-active: #2563EB;
-    --accent: #2563EB;
-    --accent-soft: rgba(37, 99, 235, 0.14);
+    --bg-inset: #E2E8F0;
+    --border: rgba(203, 213, 225, 0.85);
+    --border-active: #0071E3;
+    --accent: #0071E3;
+    --accent-soft: rgba(0, 113, 227, 0.1);
     --text-primary: #0F172A;
-    --text-secondary: #1E3A8A;
-    --text-dim: #2563EB;
-    --success: #15803D;
-    --photo-overlay-start: rgba(219, 234, 254, 0.96);
-    --photo-overlay-end: rgba(219, 234, 254, 0.20);
-    --font-display: 'After', 'Syne', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-sub: 'Anson', 'Space Grotesk', 'Inter', -apple-system, sans-serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --text-secondary: #334155;
+    --text-dim: #64748B;
+    --success: #16A34A;
+    --photo-overlay-start: rgba(237, 242, 247, 0.96);
+    --photo-overlay-end: rgba(237, 242, 247, 0.20);
+    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Space Grotesk', 'Syne', sans-serif;
+    --font-sub: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Inter', "SF Pro Text", "Segoe UI", Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   }
 
@@ -50,7 +54,7 @@
     background-color: var(--bg-base);
     color: var(--text-primary);
     font-family: var(--font-body);
-    transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+    transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
     overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
@@ -67,7 +71,7 @@
   .neumorphic-card,
   .neumorphic-pill,
   .neumorphic-btn {
-    transition: background-color 250ms ease, border-color 250ms ease, color 250ms ease;
+    transition: background-color 220ms ease, border-color 220ms ease, color 220ms ease;
   }
 }
 
@@ -117,47 +121,36 @@ html {
   border: 1px solid var(--border);
   border-radius: 1.5rem;
   box-shadow:
-    -6px -6px 18px rgba(108, 207, 246, 0.07),
-    -2px -2px 6px rgba(255, 255, 255, 0.04),
-    8px 8px 24px rgba(0, 0, 0, 0.85),
-    4px 4px 10px rgba(0, 0, 0, 0.9),
-    inset 1px 1px 1.5px rgba(108, 207, 246, 0.12),
-    inset -1px -1px 2px rgba(0, 0, 0, 0.6);
-  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    -4px -4px 14px rgba(255, 255, 255, 0.03),
+    6px 8px 24px rgba(0, 0, 0, 0.65),
+    inset 1px 1px 1.5px rgba(255, 255, 255, 0.06);
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 html[data-theme="light"] .neumorphic-card {
-  background: #EFF6FF;
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   box-shadow:
-    -8px -8px 20px rgba(255, 255, 255, 0.95),
-    -3px -3px 8px rgba(255, 255, 255, 1),
-    8px 8px 22px rgba(160, 185, 218, 0.55),
-    3px 3px 8px rgba(160, 185, 218, 0.35),
-    inset 1px 1px 1px rgba(255, 255, 255, 1),
-    inset -1px -1px 2px rgba(160, 185, 218, 0.15);
+    -6px -6px 16px rgba(255, 255, 255, 0.95),
+    6px 8px 20px rgba(166, 180, 200, 0.35),
+    inset 1px 1px 1px rgba(255, 255, 255, 1);
 }
 
 .neumorphic-card:hover {
   transform: translateY(-2px);
   border-color: var(--border-active);
   box-shadow:
-    -8px -8px 22px rgba(108, 207, 246, 0.12),
-    -3px -3px 8px rgba(255, 255, 255, 0.06),
-    12px 14px 30px rgba(0, 0, 0, 0.9),
-    inset 1px 1px 2px rgba(108, 207, 246, 0.18),
-    inset -1px -1px 2px rgba(0, 0, 0, 0.6);
+    -6px -6px 18px rgba(255, 255, 255, 0.04),
+    8px 12px 28px rgba(0, 0, 0, 0.75),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.08);
 }
 
 html[data-theme="light"] .neumorphic-card:hover {
   border-color: var(--accent);
   box-shadow:
-    -11px -11px 24px rgba(255, 255, 255, 1),
-    -4px -4px 10px rgba(255, 255, 255, 1),
-    12px 14px 28px rgba(160, 185, 218, 0.65),
-    4px 4px 10px rgba(160, 185, 218, 0.4),
-    inset 1px 1px 1px rgba(255, 255, 255, 1),
-    inset -1px -1px 2px rgba(160, 185, 218, 0.2);
+    -8px -8px 20px rgba(255, 255, 255, 1),
+    8px 12px 26px rgba(166, 180, 200, 0.45),
+    inset 1px 1px 1px rgba(255, 255, 255, 1);
 }
 
 /* Tactile Neumorphic Pill Badges */
@@ -165,81 +158,77 @@ html[data-theme="light"] .neumorphic-card:hover {
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   box-shadow:
-    -3px -3px 7px rgba(108, 207, 246, 0.06),
+    -2px -2px 6px rgba(255, 255, 255, 0.04),
     3px 3px 8px rgba(0, 0, 0, 0.5),
-    inset 1px 1px 1px rgba(255, 255, 255, 0.15),
-    inset -1px -1px 1px rgba(0, 0, 0, 0.4);
+    inset 1px 1px 1px rgba(255, 255, 255, 0.1);
   transition: all 200ms ease;
 }
 
 html[data-theme="light"] .neumorphic-pill {
-  background: #EFF6FF;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.9);
   box-shadow:
-    -4px -4px 9px rgba(255, 255, 255, 0.95),
-    4px 4px 9px rgba(160, 185, 218, 0.5),
-    inset 1px 1px 1px rgba(255, 255, 255, 1),
-    inset -1px -1px 1px rgba(160, 185, 218, 0.12);
+    -3px -3px 8px rgba(255, 255, 255, 0.95),
+    3px 3px 8px rgba(166, 180, 200, 0.35),
+    inset 1px 1px 1px rgba(255, 255, 255, 1);
 }
 
 .neumorphic-pill:hover {
   border-color: var(--accent);
   color: var(--accent);
   box-shadow:
-    -5px -5px 11px rgba(108, 207, 246, 0.1),
-    5px 5px 12px rgba(0, 0, 0, 0.65),
-    inset 1px 1px 1px rgba(255, 255, 255, 0.2);
+    -3px -3px 8px rgba(255, 255, 255, 0.06),
+    4px 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 html[data-theme="light"] .neumorphic-pill:hover {
   border-color: var(--accent);
   box-shadow:
-    -5px -5px 11px rgba(255, 255, 255, 1),
-    5px 5px 12px rgba(160, 185, 218, 0.6),
-    inset 1px 1px 1px rgba(255, 255, 255, 1);
+    -4px -4px 10px rgba(255, 255, 255, 1),
+    4px 4px 10px rgba(166, 180, 200, 0.45);
 }
 
 /* ──────────────── ADVANCED TACTILE PHYSICAL UTILITIES ──────────────── */
 
 /* Recessed tactile socket for stats, metric gauges, and info containers */
 .tactile-inset {
-  background: #001214;
-  border: 1px solid rgba(108, 207, 246, 0.12);
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
   box-shadow:
-    inset 4px 4px 10px rgba(0, 0, 0, 0.8),
-    inset -3px -3px 8px rgba(108, 207, 246, 0.05),
-    0 1px 1px rgba(255, 255, 255, 0.03);
+    inset 3px 3px 8px rgba(0, 0, 0, 0.65),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.03),
+    0 1px 1px rgba(255, 255, 255, 0.02);
   transition: all 200ms ease;
 }
 
 html[data-theme="light"] .tactile-inset {
-  background: #EAF2FD;
-  border: 1px solid rgba(191, 219, 254, 0.65);
+  background: #E2E8F0;
+  border: 1px solid rgba(203, 213, 225, 0.85);
   box-shadow:
-    inset 4px 4px 8px rgba(160, 185, 218, 0.6),
-    inset -4px -4px 8px rgba(255, 255, 255, 0.95),
+    inset 3px 3px 7px rgba(166, 180, 200, 0.45),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.95),
     0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 /* Molded tactile micro-chip for tech stacks, skills, and tags */
 .tactile-chip {
-  background: #02181B;
-  border: 1px solid rgba(108, 207, 246, 0.18);
-  border-radius: 0.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
   box-shadow:
-    -2px -2px 6px rgba(108, 207, 246, 0.06),
-    3px 3px 7px rgba(0, 0, 0, 0.55),
-    inset 0.5px 0.5px 0.5px rgba(108, 207, 246, 0.12);
+    -2px -2px 5px rgba(255, 255, 255, 0.03),
+    2px 3px 6px rgba(0, 0, 0, 0.45),
+    inset 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.06);
   transition: all 180ms ease;
   user-select: none;
 }
 
 html[data-theme="light"] .tactile-chip {
-  background: #EFF6FF;
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.9);
   box-shadow:
-    -3px -3px 6px rgba(255, 255, 255, 0.95),
-    3px 3px 6px rgba(160, 185, 218, 0.45),
+    -2px -2px 5px rgba(255, 255, 255, 0.95),
+    2px 3px 6px rgba(166, 180, 200, 0.35),
     inset 0.5px 0.5px 0.5px rgba(255, 255, 255, 1);
 }
 
@@ -247,34 +236,34 @@ html[data-theme="light"] .tactile-chip {
   transform: translateY(-1px);
   border-color: var(--accent);
   box-shadow:
-    -2.5px -2.5px 7px rgba(108, 207, 246, 0.12),
-    4px 4px 10px rgba(0, 0, 0, 0.7);
+    -2px -2px 6px rgba(255, 255, 255, 0.06),
+    3px 4px 8px rgba(0, 0, 0, 0.55);
 }
 
 html[data-theme="light"] .tactile-chip:hover {
   border-color: var(--accent);
   box-shadow:
-    -4px -4px 9px rgba(255, 255, 255, 1),
-    4px 4px 9px rgba(160, 185, 218, 0.6);
+    -3px -3px 7px rgba(255, 255, 255, 1),
+    3px 4px 8px rgba(166, 180, 200, 0.45);
 }
 
 /* Machined tactile socket for icons & monogram tokens */
 .tactile-icon-socket {
-  background: #02171A;
-  border: 1px solid rgba(108, 207, 246, 0.2);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
   box-shadow:
-    -2.5px -2.5px 7px rgba(108, 207, 246, 0.08),
-    4px 4px 10px rgba(0, 0, 0, 0.65),
-    inset 1px 1px 1px rgba(108, 207, 246, 0.12);
+    -2px -2px 6px rgba(255, 255, 255, 0.04),
+    3px 3px 8px rgba(0, 0, 0, 0.55),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.08);
   transition: all 200ms ease;
 }
 
 html[data-theme="light"] .tactile-icon-socket {
-  background: #EFF6FF;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.9);
   box-shadow:
-    -4px -4px 9px rgba(255, 255, 255, 0.95),
-    4px 4px 9px rgba(160, 185, 218, 0.5),
+    -3px -3px 7px rgba(255, 255, 255, 0.95),
+    3px 3px 8px rgba(166, 180, 200, 0.35),
     inset 1px 1px 1px rgba(255, 255, 255, 1);
 }
 
@@ -285,39 +274,39 @@ html[data-theme="light"] .tactile-icon-socket {
   border-radius: 1.25rem;
   padding: 0.3rem;
   box-shadow:
-    -4px -4px 12px rgba(108, 207, 246, 0.05),
-    6px 6px 18px rgba(0, 0, 0, 0.65),
-    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.15),
-    inset 0 -2px 3px 0 rgba(0, 0, 0, 0.55);
+    -3px -3px 10px rgba(255, 255, 255, 0.03),
+    5px 6px 18px rgba(0, 0, 0, 0.6),
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -2px 3px 0 rgba(0, 0, 0, 0.4);
 }
 
 html[data-theme="light"] .tactile-display-frame {
-  background: #EFF6FF;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.9);
   box-shadow:
-    -6px -6px 16px rgba(255, 255, 255, 0.95),
-    6px 6px 16px rgba(160, 185, 218, 0.45),
+    -5px -5px 14px rgba(255, 255, 255, 0.95),
+    5px 6px 16px rgba(166, 180, 200, 0.35),
     inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
-    inset 0 -2px 3px 0 rgba(160, 185, 218, 0.15);
+    inset 0 -2px 3px 0 rgba(166, 180, 200, 0.15);
 }
 
 /* Status badge pill */
 .tactile-status-badge {
-  background: #04252A;
-  border: 1px solid rgba(108, 207, 246, 0.2);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   border-radius: 9999px;
   box-shadow:
-    -2px -2px 6px rgba(108, 207, 246, 0.06),
-    3px 3px 8px rgba(0, 0, 0, 0.5),
-    inset 0.5px 0.5px 1px rgba(255, 255, 255, 0.2);
+    -2px -2px 5px rgba(255, 255, 255, 0.04),
+    2px 3px 6px rgba(0, 0, 0, 0.45),
+    inset 0.5px 0.5px 1px rgba(255, 255, 255, 0.1);
 }
 
 html[data-theme="light"] .tactile-status-badge {
-  background: #EFF6FF;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.9);
   box-shadow:
-    -3px -3px 8px rgba(255, 255, 255, 0.95),
-    3px 3px 8px rgba(160, 185, 218, 0.4),
+    -3px -3px 7px rgba(255, 255, 255, 0.95),
+    2px 3px 6px rgba(166, 180, 200, 0.3),
     inset 0.5px 0.5px 1px rgba(255, 255, 255, 1);
 }
 
@@ -519,41 +508,48 @@ html[data-theme="light"] .button:active .button-inner {
 
 /* Secondary tactile button variant */
 .button.button-secondary {
-  background-color: rgba(0, 16, 17, 0.85);
+  background-color: rgba(15, 20, 28, 0.85);
   box-shadow:
-    -0.15em -0.15em 0.15em -0.075em rgba(108, 207, 246, 0.25),
-    0.0375em 0.0375em 0.0675em 0 rgba(0, 0, 0, 0.3);
+    -0.15em -0.15em 0.15em -0.075em rgba(56, 189, 248, 0.2),
+    0.0375em 0.0375em 0.0675em 0 rgba(0, 0, 0, 0.35);
 }
 
 .button.button-secondary .button-inner {
   background-image: linear-gradient(135deg,
-      #08292E,
-      #021416);
+      #202836,
+      #141A24);
   box-shadow:
-    0 0 0 1px rgba(108, 207, 246, 0.35) inset,
+    0 0 0 1px rgba(56, 189, 248, 0.28) inset,
     -0.05em -0.05em 0.05em 0 inset rgba(0, 0, 0, 0.4),
-    0.025em 0.05em 0.1em 0 inset rgba(255, 255, 255, 0.1),
+    0.025em 0.05em 0.1em 0 inset rgba(255, 255, 255, 0.08),
     -0.075em -0.25em 0.25em 0.1em inset rgba(0, 0, 0, 0.3);
 }
 
 .button.button-secondary .button-inner span {
-  color: #F0F9FB;
+  color: #F8FAFC;
   text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
+}
+
+html[data-theme="light"] .button.button-secondary {
+  background-color: #E2E8F0;
+  box-shadow:
+    -2px -2px 6px rgba(255, 255, 255, 0.9),
+    3px 3px 8px rgba(160, 175, 195, 0.4);
 }
 
 html[data-theme="light"] .button.button-secondary .button-inner {
   background-image: linear-gradient(135deg,
       #FFFFFF,
-      #DBEAFE);
+      #EDF2F7);
   box-shadow:
-    0 0 0 1px rgba(37, 99, 235, 0.35) inset,
-    -0.05em -0.05em 0.05em 0 inset rgba(37, 99, 235, 0.1),
-    0.025em 0.05em 0.1em 0 inset rgba(255, 255, 255, 0.9),
-    -0.075em -0.25em 0.25em 0.1em inset rgba(37, 99, 235, 0.1);
+    0 0 0 1px rgba(203, 213, 225, 0.9) inset,
+    -0.05em -0.05em 0.05em 0 inset rgba(0, 113, 227, 0.08),
+    0.025em 0.05em 0.1em 0 inset rgba(255, 255, 255, 0.95),
+    -0.075em -0.25em 0.25em 0.1em inset rgba(160, 175, 195, 0.15);
 }
 
 html[data-theme="light"] .button.button-secondary .button-inner span {
-  color: #001011;
+  color: #0F172A;
   text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
 }
 
@@ -568,23 +564,23 @@ html[data-theme="light"] .button.button-secondary .button-inner span {
 
 /* Neumorphic tactile button utility */
 .neumorphic-btn {
-  background: #04252A;
-  border: 1px solid rgba(108, 207, 246, 0.22);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   border-radius: 0.875rem;
   box-shadow:
-    -3px -3px 8px rgba(108, 207, 246, 0.08),
-    4px 4px 12px rgba(0, 0, 0, 0.75),
-    inset 1px 1px 1px rgba(255, 255, 255, 0.12);
+    -2px -2px 6px rgba(255, 255, 255, 0.04),
+    3px 4px 10px rgba(0, 0, 0, 0.55),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.08);
   transition: all 180ms ease;
   user-select: none;
 }
 
 html[data-theme="light"] .neumorphic-btn {
-  background: #EFF6FF;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: #FFFFFF;
+  border: 1px solid rgba(203, 213, 225, 0.9);
   box-shadow:
-    -4px -4px 10px rgba(255, 255, 255, 0.95),
-    4px 4px 10px rgba(160, 185, 218, 0.5),
+    -3px -3px 8px rgba(255, 255, 255, 0.95),
+    3px 4px 8px rgba(166, 180, 200, 0.35),
     inset 1px 1px 1px rgba(255, 255, 255, 1);
 }
 
@@ -592,29 +588,29 @@ html[data-theme="light"] .neumorphic-btn {
   border-color: var(--accent);
   transform: translateY(-1px);
   box-shadow:
-    -4px -4px 12px rgba(108, 207, 246, 0.15),
-    6px 6px 16px rgba(0, 0, 0, 0.85);
+    -3px -3px 8px rgba(255, 255, 255, 0.06),
+    4px 5px 12px rgba(0, 0, 0, 0.65);
 }
 
 html[data-theme="light"] .neumorphic-btn:hover {
   border-color: var(--accent);
   box-shadow:
-    -6px -6px 14px rgba(255, 255, 255, 1),
-    6px 6px 14px rgba(160, 185, 218, 0.65);
+    -4px -4px 10px rgba(255, 255, 255, 1),
+    4px 5px 10px rgba(166, 180, 200, 0.45);
 }
 
 .neumorphic-btn:active {
   transform: translateY(1px);
   box-shadow:
-    inset 3px 3px 8px rgba(0, 0, 0, 0.85),
-    inset -2px -2px 6px rgba(108, 207, 246, 0.1);
+    inset 3px 3px 7px rgba(0, 0, 0, 0.7),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.03);
 }
 
 html[data-theme="light"] .neumorphic-btn:active {
   transform: translateY(1px);
   box-shadow:
-    inset 3px 3px 7px rgba(160, 185, 218, 0.65),
-    inset -3px -3px 7px rgba(255, 255, 255, 0.95);
+    inset 3px 3px 6px rgba(166, 180, 200, 0.55),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.95);
 }
 
 /* Smooth fade-in for inline project details and modal content */
@@ -634,36 +630,147 @@ html[data-theme="light"] .neumorphic-btn:active {
   animation: fadeIn 280ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Initial opacity & GPU compositing for Anime.js elements (prevents FOUC flash) */
-.hero-photo,
-.hero-avatar-mobile,
-.hero-status,
-.hero-name-line-1,
-.hero-name-line-2,
-.hero-role,
-.hero-tagline,
-.hero-btn-primary,
-.hero-btn-secondary,
-.hero-socials,
-.hero-title,
-.hero-location,
-.hero-cta-buttons,
-.about-header,
-.about-anim-card,
-.focus-area-card,
-.project-header,
-.case-study-card,
-.skills-header,
-.skill-card,
-.edu-header,
-.edu-feature-card,
-.contact-header,
-.contact-card {
+/* ──────────────── ADVANCED CONTINUOUS CSS SCROLL ANIMATION SYSTEM ──────────────── */
+.scroll-reveal {
   opacity: 0;
-  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity, filter, clip-path;
+  transition:
+    opacity 650ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 650ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 650ms cubic-bezier(0.16, 1, 0.3, 1),
+    clip-path 750ms cubic-bezier(0.16, 1, 0.3, 1);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  will-change: transform, opacity;
+}
+
+/* 1. Slide In from Left (Exits back to left when scrolling away) */
+.scroll-slide-left {
+  opacity: 0;
+  transform: translate3d(-60px, 0, 0);
+  filter: blur(8px);
+}
+
+/* 2. Slide In from Right (Exits back to right when scrolling away) */
+.scroll-slide-right {
+  opacity: 0;
+  transform: translate3d(60px, 0, 0);
+  filter: blur(8px);
+}
+
+/* 3. Slide Up (Exits downward when scrolling away) */
+.scroll-slide-up {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0) scale(0.96);
+  filter: blur(6px);
+}
+
+/* 4. Slide Down (Exits upward when scrolling away) */
+.scroll-slide-down {
+  opacity: 0;
+  transform: translate3d(0, -45px, 0) scale(0.96);
+  filter: blur(6px);
+}
+
+/* 5. Scale Up & Unblur */
+.scroll-scale-up {
+  opacity: 0;
+  transform: scale(0.88);
+  filter: blur(10px);
+}
+
+/* 6. Blur to Crystal Clear */
+.scroll-blur-clear {
+  opacity: 0;
+  filter: blur(16px);
+  transform: scale(0.97);
+}
+
+/* 7. Perspective 3D Rotate from Left */
+.scroll-rotate-left {
+  opacity: 0;
+  transform: translate3d(-45px, 25px, 0) rotate(-3.5deg) scale(0.94);
+  filter: blur(6px);
+}
+
+/* 8. Perspective 3D Rotate from Right */
+.scroll-rotate-right {
+  opacity: 0;
+  transform: translate3d(45px, 25px, 0) rotate(3.5deg) scale(0.94);
+  filter: blur(6px);
+}
+
+/* 9. 3D Perspective Card Flip Up */
+.scroll-flip-up {
+  opacity: 0;
+  transform: perspective(1000px) rotateX(15deg) translateY(45px) scale(0.93);
+  filter: blur(6px);
+}
+
+/* 10. Shutter Clip-Path Reveal from Top */
+.scroll-clip-up {
+  opacity: 0;
+  clip-path: inset(0 0 100% 0);
+  transform: translateY(28px);
+  filter: blur(4px);
+}
+
+/* 11. Expanding Radial Clip-Path Reveal */
+.scroll-clip-expand {
+  opacity: 0;
+  clip-path: inset(18% 18% 18% 18% round 1.5rem);
+  transform: scale(0.92);
+  filter: blur(8px);
+}
+
+/* Active State: Triggered Repeatedly on Viewport Enter */
+.scroll-reveal.is-in-view {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) !important;
+  filter: blur(0px) !important;
+  clip-path: inset(0 0 0 0) !important;
+}
+
+.scroll-clip-expand.is-in-view {
+  clip-path: inset(0% 0% 0% 0% round 1.5rem) !important;
+}
+
+/* Staggered Transitions for Content Cascades */
+.stagger-1 { transition-delay: 45ms; }
+.stagger-2 { transition-delay: 90ms; }
+.stagger-3 { transition-delay: 135ms; }
+.stagger-4 { transition-delay: 180ms; }
+.stagger-5 { transition-delay: 225ms; }
+.stagger-6 { transition-delay: 270ms; }
+.stagger-7 { transition-delay: 315ms; }
+.stagger-8 { transition-delay: 360ms; }
+
+/* ──────────────── NATIVE CSS SCROLL-DRIVEN VIEW TIMELINES ──────────────── */
+@supports (animation-timeline: view()) {
+  /* Subtle hero parallax on scroll away */
+  .hero-scroll-parallax {
+    animation: heroScrollExit linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 100%;
+  }
+
+  @keyframes heroScrollExit {
+    to {
+      transform: translateY(-40px) scale(0.94);
+      opacity: 0.25;
+      filter: blur(6px);
+    }
+  }
+}
+
+/* Accessibility: Respect Prefers-Reduced-Motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
 }
 
 /* ──────────────── PRELOADER STYLES ──────────────── */
@@ -675,14 +782,14 @@ html[data-theme="light"] .neumorphic-btn:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #001011;
+  background-color: #0B0F14;
   transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), visibility 400ms cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: all;
   overflow: hidden;
 }
 
 html[data-theme="light"] .preloader-overlay {
-  background-color: #DBEAFE;
+  background-color: #EDF2F7;
 }
 
 .preloader-overlay.fade-out {
@@ -694,8 +801,8 @@ html[data-theme="light"] .preloader-overlay {
 .loader {
   --main-size: clamp(1.6rem, 3.8vw, 2.8rem);
   --text-color: #ffffff;
-  --shine-color: rgba(108, 207, 246, 0.5);
-  --shadow-color: #76B9D6;
+  --shine-color: rgba(56, 189, 248, 0.5);
+  --shadow-color: #38BDF8;
   display: flex;
   flex-direction: column;
   justify-content: center;

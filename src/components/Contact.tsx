@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {
   MapPin,
   ExternalLink,
@@ -11,7 +11,6 @@ import {
   Zap,
   Phone,
 } from 'lucide-react';
-import anime from 'animejs';
 import { TactileButton } from './TactileButton';
 import { downloadBlobFile } from '../utils/download';
 
@@ -20,69 +19,8 @@ interface ContactProps {
 }
 
 export function Contact({ onResumeClick }: ContactProps) {
-  const sectionRef = useRef<HTMLElement>(null);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
-
-  // Butter-smooth 60fps/120fps Anime.js bi-directional scroll animation
-  useEffect(() => {
-    const sectionEl = sectionRef.current;
-    if (!sectionEl) return;
-
-    const header = sectionEl.querySelector('.contact-header');
-    const cards = sectionEl.querySelectorAll('.contact-card');
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            anime.remove([sectionEl, header, cards]);
-
-            // Animate main section wrapper
-            anime({
-              targets: sectionEl,
-              opacity: [0, 1],
-              translateY: [10, 0],
-              duration: 360,
-              easing: 'cubicBezier(0.16, 1, 0.3, 1)',
-            });
-
-            anime({
-              targets: header,
-              opacity: [0, 1],
-              translateY: [10, 0],
-              duration: 340,
-              easing: 'easeOutCubic',
-              delay: 30,
-            });
-
-            anime({
-              targets: cards,
-              opacity: [0, 1],
-              translateY: [12, 0],
-              delay: anime.stagger(40, { start: 60 }),
-              duration: 350,
-              easing: 'easeOutCubic',
-            });
-          } else {
-            // Smooth exit reset for continuous bi-directional scroll animation
-            anime.remove([sectionEl, header, cards]);
-            anime({
-              targets: [sectionEl, header, cards],
-              opacity: 0,
-              translateY: 8,
-              duration: 200,
-              easing: 'easeInQuad',
-            });
-          }
-        });
-      },
-      { threshold: 0.06, rootMargin: '0px 0px -30px 0px' }
-    );
-
-    observer.observe(sectionEl);
-    return () => observer.disconnect();
-  }, []);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText('sarthakmandhare34@gmail.com');
@@ -103,13 +41,12 @@ export function Contact({ onResumeClick }: ContactProps) {
   return (
     <section
       id="contact"
-      ref={sectionRef}
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative opacity-0"
+      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ──────────────── SECTION HEADER ──────────────── */}
-        <div className="contact-header mb-7 sm:mb-12 max-w-3xl opacity-0">
+        <div className="contact-header scroll-reveal scroll-scale-up mb-7 sm:mb-12 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
             <span>Contact</span>
           </div>
@@ -125,7 +62,7 @@ export function Contact({ onResumeClick }: ContactProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
           
           {/* Email Card */}
-          <div className="contact-card opacity-0 neumorphic-card p-4 sm:p-7 md:p-8 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl flex flex-col justify-between space-y-5">
+          <div className="contact-card scroll-reveal scroll-slide-left neumorphic-card p-4 sm:p-7 md:p-8 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl flex flex-col justify-between space-y-5">
             <div>
               <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
                 <span className="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold flex items-center gap-1.5">
@@ -173,7 +110,7 @@ export function Contact({ onResumeClick }: ContactProps) {
           </div>
 
           {/* Phone & Location Card */}
-          <div className="contact-card opacity-0 neumorphic-card p-4 sm:p-7 md:p-8 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl flex flex-col justify-between space-y-5">
+          <div className="contact-card scroll-reveal scroll-slide-right stagger-1 neumorphic-card p-4 sm:p-7 md:p-8 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl flex flex-col justify-between space-y-5">
             <div>
               <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
                 <span className="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold flex items-center gap-1.5">
@@ -223,7 +160,7 @@ export function Contact({ onResumeClick }: ContactProps) {
         </div>
 
         {/* ──────────────── CURRICULUM VITAE & LINKS ROW ──────────────── */}
-        <div className="contact-card opacity-0 mt-7 sm:mt-10 p-4 sm:p-7 md:p-8 rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)]/90 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6">
+        <div className="contact-card scroll-reveal scroll-slide-up stagger-2 mt-7 sm:mt-10 p-4 sm:p-7 md:p-8 rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] neumorphic-card flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6">
           <div>
             <span className="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold block mb-1">
               Curriculum Vitae

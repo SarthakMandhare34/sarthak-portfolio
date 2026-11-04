@@ -11,6 +11,7 @@ interface NavbarProps {
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#work' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
@@ -20,6 +21,7 @@ export function Navbar({ onResumeClick }: NavbarProps) {
   const { theme, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [activeSection, setActiveSection] = useState('about');
   const prevScrolledRef = useRef(false);
   const navBgRef = useRef<HTMLDivElement>(null);
   const themeIconRef = useRef<HTMLDivElement>(null);
@@ -30,7 +32,6 @@ export function Navbar({ onResumeClick }: NavbarProps) {
     if (hasAnimatedMountRef.current) return;
     hasAnimatedMountRef.current = true;
 
-    // Stagger in: logo, nav links, theme toggle, resume button with snappy 60fps/120fps timing
     anime({
       targets: '.nav-anim-item',
       opacity: [0, 1],
@@ -41,14 +42,14 @@ export function Navbar({ onResumeClick }: NavbarProps) {
     });
   }, []);
 
-  // 60fps requestAnimationFrame-throttled scroll listener for buttery progress & threshold
+  // 60fps requestAnimationFrame-throttled scroll listener for progress and active section
   useEffect(() => {
     let ticking = false;
 
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const scrolled = window.scrollY > 40;
+          const scrolled = window.scrollY > 30;
           setIsScrolled(scrolled);
 
           const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -56,6 +57,20 @@ export function Navbar({ onResumeClick }: NavbarProps) {
             const currentProgress = (window.scrollY / totalHeight) * 100;
             setScrollProgress(Math.min(100, Math.max(0, currentProgress)));
           }
+
+          // Active section detection
+          const scrollPos = window.scrollY + 120;
+          for (const link of [...NAV_LINKS].reverse()) {
+            const el = document.querySelector(link.href);
+            if (el) {
+              const top = (el as HTMLElement).offsetTop;
+              if (scrollPos >= top) {
+                setActiveSection(link.href);
+                break;
+              }
+            }
+          }
+
           ticking = false;
         });
         ticking = true;
@@ -155,17 +170,24 @@ export function Navbar({ onResumeClick }: NavbarProps) {
           {/* RIGHT: Desktop Nav links, Theme Toggle, Resume Button */}
           <div className="flex items-center gap-2.5 sm:gap-4 md:gap-5">
             {/* Desktop Nav Links (Hidden below 768px) */}
-            <nav className="hidden md:flex items-center gap-6 text-[14px] font-inter">
-              {NAV_LINKS.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={(e) => scrollToSection(e, link.href)}
-                  className="nav-anim-item opacity-0 font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors duration-200"
-                >
-                  {link.label}
-                </a>
-              ))}
+            <nav className="hidden md:flex items-center gap-1 text-[13.5px] font-inter p-1 rounded-xl bg-[var(--bg-inset)]/60 border border-[var(--border)]">
+              {NAV_LINKS.map((link) => {
+                const isActive = activeSection === link.href;
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className={`nav-anim-item opacity-0 px-3 py-1 rounded-lg transition-all duration-200 ${
+                      isActive
+                        ? 'text-[var(--accent)] font-semibold bg-[var(--bg-elevated)] shadow-sm'
+                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/50 font-medium'
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
             </nav>
 
             {/* Mobile Resume Quick-Action Button */}

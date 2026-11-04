@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   GraduationCap,
   Award,
@@ -9,7 +9,6 @@ import {
   X,
   FileText,
 } from 'lucide-react';
-import anime from 'animejs';
 import { TactileButton } from './TactileButton';
 
 interface CertificateData {
@@ -49,67 +48,8 @@ const CERTIFICATES: CertificateData[] = [
 ];
 
 export function Education() {
-  const sectionRef = useRef<HTMLElement>(null);
   const [modalCert, setModalCert] = useState<CertificateData | null>(null);
   const [copiedCertId, setCopiedCertId] = useState<string | null>(null);
-
-  // Snappy Anime.js scroll animation
-  useEffect(() => {
-    const sectionEl = sectionRef.current;
-    if (!sectionEl) return;
-
-    const header = sectionEl.querySelector('.edu-header');
-    const cards = sectionEl.querySelectorAll('.edu-feature-card');
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            anime.remove([sectionEl, header, cards]);
-
-            anime({
-              targets: sectionEl,
-              opacity: [0, 1],
-              translateY: [10, 0],
-              duration: 360,
-              easing: 'cubicBezier(0.16, 1, 0.3, 1)',
-            });
-
-            anime({
-              targets: header,
-              opacity: [0, 1],
-              translateY: [10, 0],
-              duration: 340,
-              easing: 'easeOutCubic',
-              delay: 30,
-            });
-
-            anime({
-              targets: cards,
-              opacity: [0, 1],
-              translateY: [12, 0],
-              delay: anime.stagger(35, { start: 60 }),
-              duration: 350,
-              easing: 'easeOutCubic',
-            });
-          } else {
-            anime.remove([sectionEl, header, cards]);
-            anime({
-              targets: [sectionEl, header, cards],
-              opacity: 0,
-              translateY: 8,
-              duration: 200,
-              easing: 'easeInQuad',
-            });
-          }
-        });
-      },
-      { threshold: 0.06, rootMargin: '0px 0px -30px 0px' }
-    );
-
-    observer.observe(sectionEl);
-    return () => observer.disconnect();
-  }, []);
 
   // Handle ESC key for certificate modal
   useEffect(() => {
@@ -131,13 +71,12 @@ export function Education() {
   return (
     <section
       id="education"
-      ref={sectionRef}
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-24 transition-colors duration-450 border-t border-[var(--border)] relative opacity-0"
+      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-24 transition-colors duration-450 border-t border-[var(--border)] relative"
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ──────────────── SECTION HEADER ──────────────── */}
-        <div className="edu-header mb-8 sm:mb-10 max-w-3xl opacity-0">
+        <div className="scroll-reveal scroll-slide-down mb-8 sm:mb-10 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
             <span>Education</span>
           </div>
@@ -153,7 +92,7 @@ export function Education() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 items-start">
           
           {/* ────── LEFT COLUMN: UNDERGRADUATE DEGREE (6 cols) ────── */}
-          <div className="edu-feature-card neumorphic-card p-5 sm:p-7 md:p-8 opacity-0 lg:col-span-6 space-y-5 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+          <div className="edu-feature-card scroll-reveal scroll-slide-left neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-6 space-y-5 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
             {/* Meta Badges */}
             <div className="flex flex-wrap items-center gap-2 text-xs font-mono-code">
               <span className="px-3 py-1 rounded-full border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--accent)] font-semibold">
@@ -206,7 +145,7 @@ export function Education() {
           </div>
 
           {/* ────── RIGHT COLUMN: PROGRAM CERTIFICATIONS (6 cols) ────── */}
-          <div className="edu-feature-card neumorphic-card p-5 sm:p-7 md:p-8 opacity-0 lg:col-span-6 space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+          <div className="edu-feature-card scroll-reveal scroll-slide-right stagger-1 neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-6 space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
             <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5">
               <h3 className="font-display font-bold text-lg sm:text-xl text-[var(--text-primary)]">
                 Program Certifications

@@ -9,14 +9,19 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Projects } from './components/Projects';
+import { Experience } from './components/Experience';
 import { Skills } from './components/Skills';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { ResumeModal } from './components/ResumeModal';
+import { useScrollAnimations } from './utils/useScrollAnimations';
 
 export default function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
+
+  // Initialize continuous scroll animations across all sections
+  useScrollAnimations();
 
   // Gracefully dismiss the initial network preloader once React has mounted
   useEffect(() => {
@@ -31,11 +36,12 @@ export default function App() {
         {/* Top Navigation Bar */}
         <Navbar onResumeClick={() => setIsResumeOpen(true)} />
 
-        {/* Main Content: Hero, About, Projects, Skills, Education, and Contact */}
+        {/* Main Content: Hero, About, Projects, Experience, Skills, Education, and Contact */}
         <main>
           <Hero onResumeClick={() => setIsResumeOpen(true)} />
           <About />
           <Projects />
+          <Experience />
           <Skills />
           <Education />
           <Contact onResumeClick={() => setIsResumeOpen(true)} />

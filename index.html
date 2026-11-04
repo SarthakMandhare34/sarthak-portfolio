@@ -23,13 +23,19 @@
     (function () {
       try {
         var saved = localStorage.getItem('portfolio-theme');
-        if (saved === 'light' || saved === 'dark') {
-          document.documentElement.setAttribute('data-theme', saved);
-          if (saved === 'dark') {
-            document.documentElement.classList.add('dark');
+        var theme = saved;
+        if (!theme || (theme !== 'light' && theme !== 'dark')) {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            theme = 'dark';
           } else {
-            document.documentElement.classList.remove('dark');
+            theme = 'light';
           }
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
         }
       } catch (e) { }
     })();
@@ -45,14 +51,14 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #001011;
+      background-color: #0B0F14;
       transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), visibility 400ms cubic-bezier(0.16, 1, 0.3, 1);
       pointer-events: all;
       overflow: hidden;
     }
 
     html[data-theme="light"] .preloader-overlay {
-      background-color: #DBEAFE;
+      background-color: #EDF2F7;
     }
 
     .preloader-overlay.fade-out {
@@ -64,8 +70,8 @@
     .loader {
       --main-size: clamp(1.6rem, 3.8vw, 2.8rem);
       --text-color: #ffffff;
-      --shine-color: rgba(108, 207, 246, 0.5);
-      --shadow-color: #76B9D6;
+      --shine-color: rgba(56, 189, 248, 0.5);
+      --shadow-color: #38BDF8;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -73,7 +79,7 @@
       user-select: none;
       position: relative;
       font-size: var(--main-size);
-      font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Space Grotesk', 'Inter', sans-serif;
       font-weight: 900;
       letter-spacing: 0.02em;
       text-transform: uppercase;
@@ -86,7 +92,7 @@
 
     html[data-theme="light"] .loader {
       --text-color: #0F172A;
-      --shine-color: rgba(37, 99, 235, 0.4);
+      --shine-color: rgba(0, 113, 227, 0.4);
       --shadow-color: #93C5FD;
     }
 

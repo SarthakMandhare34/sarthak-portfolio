@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import {
   GraduationCap,
   MapPin,
@@ -9,93 +9,17 @@ import {
   Server,
   Sparkles,
 } from 'lucide-react';
-import anime from 'animejs';
 
 export function About() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  // High-performance 60fps/120fps Anime.js bi-directional scroll animation
-  useEffect(() => {
-    const sectionEl = sectionRef.current;
-    if (!sectionEl) return;
-
-    const header = sectionEl.querySelector('.about-header');
-    const cards = sectionEl.querySelectorAll('.about-anim-card');
-    const focusCards = sectionEl.querySelectorAll('.focus-area-card');
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            anime.remove([sectionEl, header, cards, focusCards]);
-
-            // Animate main section wrapper
-            anime({
-              targets: sectionEl,
-              opacity: [0, 1],
-              translateY: [10, 0],
-              duration: 360,
-              easing: 'cubicBezier(0.16, 1, 0.3, 1)',
-            });
-
-            // Header animation
-            anime({
-              targets: header,
-              opacity: [0, 1],
-              translateY: [10, 0],
-              duration: 340,
-              easing: 'easeOutCubic',
-              delay: 30,
-            });
-
-            // Bio & snapshot cards animation
-            anime({
-              targets: cards,
-              opacity: [0, 1],
-              translateY: [12, 0],
-              delay: anime.stagger(40, { start: 60 }),
-              duration: 350,
-              easing: 'easeOutCubic',
-            });
-
-            // Focus cards animation
-            anime({
-              targets: focusCards,
-              opacity: [0, 1],
-              translateY: [12, 0],
-              delay: anime.stagger(30, { start: 100 }),
-              duration: 340,
-              easing: 'easeOutCubic',
-            });
-          } else {
-            anime.remove([sectionEl, header, cards, focusCards]);
-            anime({
-              targets: [sectionEl, header, cards, focusCards],
-              opacity: 0,
-              translateY: 8,
-              duration: 200,
-              easing: 'easeInQuad',
-            });
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
-    );
-
-    observer.observe(sectionEl);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
       id="about"
-      ref={sectionRef}
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative opacity-0"
+      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ──────────────── SECTION HEADER ──────────────── */}
-        <div className="about-header mb-7 sm:mb-10 max-w-3xl opacity-0">
+        <div className="scroll-reveal scroll-clip-up mb-7 sm:mb-10 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
             <span>About</span>
           </div>
@@ -111,7 +35,7 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 items-stretch">
           
           {/* ────── A. WHO I AM (7 cols) ────── */}
-          <div className="about-anim-card opacity-0 neumorphic-card p-5 sm:p-7 md:p-8 space-y-5 lg:col-span-7 flex flex-col justify-between border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+          <div className="scroll-reveal scroll-slide-left neumorphic-card p-5 sm:p-7 md:p-8 space-y-5 lg:col-span-7 flex flex-col justify-between border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
             <div className="space-y-4 font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] leading-relaxed">
               <h3 className="font-space font-bold text-lg sm:text-xl text-[var(--text-primary)]">
                 Who I Am
@@ -155,7 +79,7 @@ export function About() {
           </div>
 
           {/* ────── B. QUICK INFO (5 cols) ────── */}
-          <div className="about-anim-card opacity-0 neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-5 flex flex-col justify-between space-y-5 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+          <div className="scroll-reveal scroll-slide-right neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-5 flex flex-col justify-between space-y-5 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
             <div>
               <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
                 <h3 className="font-display font-bold text-lg sm:text-xl text-[var(--text-primary)]">
@@ -261,7 +185,7 @@ export function About() {
 
         {/* ──────────────── 3 AREAS OF FOCUS ──────────────── */}
         <div className="mt-12 sm:mt-14">
-          <div className="about-header opacity-0 mb-6 flex items-center justify-between">
+          <div className="scroll-reveal scroll-slide-down mb-6 flex items-center justify-between">
             <h3 className="font-space font-bold text-xl sm:text-2xl text-[var(--text-primary)] tracking-tight">
               What I Do
             </h3>
@@ -269,7 +193,7 @@ export function About() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {/* Area 1 */}
-            <div className="focus-area-card opacity-0 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+            <div className="scroll-reveal scroll-flip-up stagger-1 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
               <div>
                 <div className="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--accent)] shrink-0 mb-3.5">
                   <Layout className="w-5 h-5" />
@@ -287,7 +211,7 @@ export function About() {
             </div>
 
             {/* Area 2 */}
-            <div className="focus-area-card opacity-0 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+            <div className="scroll-reveal scroll-flip-up stagger-2 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
               <div>
                 <div className="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--accent)] shrink-0 mb-3.5">
                   <Sparkles className="w-5 h-5" />
@@ -305,7 +229,7 @@ export function About() {
             </div>
 
             {/* Area 3 */}
-            <div className="focus-area-card opacity-0 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl sm:col-span-2 lg:col-span-1">
+            <div className="scroll-reveal scroll-flip-up stagger-3 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl sm:col-span-2 lg:col-span-1">
               <div>
                 <div className="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--accent)] shrink-0 mb-3.5">
                   <Server className="w-5 h-5" />
