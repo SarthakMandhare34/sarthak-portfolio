@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <!-- Dark Black Nebula Background Gradient -->
+    <radialGradient id="codeBgGlow" cx="45%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#021E23" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#001416" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#001011" stop-opacity="1.0" />
+    </radialGradient>
+
+    <!-- Edge fade mask -->
+    <radialGradient id="edgeVignette" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0" />
+    </radialGradient>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#codeBgGlow)" />
+
+  <!-- Code editor header / tab bar -->
+  <g opacity="0.8" transform="translate(60, 45)">
+    <!-- JS Icon -->
+    <rect x="0" y="0" width="22" height="22" rx="4" fill="#F7DF1E" />
+    <text x="5" y="16" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="12" font-weight="bold" fill="#000000">JS</text>
+    <text x="32" y="16" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="14" fill="#6CCFF6">javascript</text>
+    <text x="125" y="16" font-family="'JetBrains Mono', monospace" font-size="14" fill="#64748B">&gt;</text>
+    <text x="145" y="16" font-family="'JetBrains Mono', monospace" font-size="14" fill="#38BDF8">{} code</text>
+  </g>
+
+  <!-- Code Content with Line Numbers -->
+  <g transform="translate(60, 100)" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace" font-size="20">
+    <!-- Line numbers column -->
+    <g fill="#2563EB" opacity="0.75" text-anchor="end">
+      <text x="35" y="28">1</text>
+      <text x="35" y="58">2</text>
+      <text x="35" y="88">3</text>
+      <text x="35" y="118">4</text>
+      <text x="35" y="148">5</text>
+      <text x="35" y="178">6</text>
+      <text x="35" y="208">7</text>
+      <text x="35" y="238">8</text>
+      <text x="35" y="268">9</text>
+      <text x="35" y="298">10</text>
+      <text x="35" y="328">11</text>
+      <text x="35" y="358">12</text>
+      <text x="35" y="388">13</text>
+      <text x="35" y="418">14</text>
+      <text x="35" y="448">15</text>
+      <text x="35" y="478">16</text>
+      <text x="35" y="508">17</text>
+      <text x="35" y="538">18</text>
+    </g>
+
+    <!-- Code text column -->
+    <g transform="translate(65, 0)">
+      <!-- Line 1: Comment -->
+      <text x="0" y="28" fill="#38BDF8" font-style="italic">// Portfolio Website for Sarthak Mandhare</text>
+
+      <!-- Line 2: const student = { -->
+      <text x="0" y="58">
+        <tspan fill="#F43F5E" font-weight="bold">const</tspan>
+        <tspan fill="#E2E8F0"> </tspan>
+        <tspan fill="#6CCFF6">student</tspan>
+        <tspan fill="#CBD5E1"> = {</tspan>
+      </text>
+
+      <!-- Line 3: name -->
+      <text x="30" y="88">
+        <tspan fill="#6CCFF6">name</tspan>
+        <tspan fill="#CBD5E1">: </tspan>
+        <tspan fill="#FB923C">&quot;Sarthak Mandhare&quot;</tspan>
+        <tspan fill="#CBD5E1">,</tspan>
+      </text>
+
+      <!-- Line 4: stream -->
+      <text x="30" y="118">
+        <tspan fill="#6CCFF6">stream</tspan>
+        <tspan fill="#CBD5E1">: </tspan>
+        <tspan fill="#FB923C">&quot;BSc CS&quot;</tspan>
+        <tspan fill="#CBD5E1">,</tspan>
+      </text>
+
+      <!-- Line 5: year -->
+      <text x="30" y="148">
+        <tspan fill="#6CCFF6">year</tspan>
+        <tspan fill="#CBD5E1">: </tspan>
+        <tspan fill="#FB923C">&quot;TYCS&quot;</tspan>
+        <tspan fill="#CBD5E1">,</tspan>
+      </text>
+
+      <!-- Line 6: semester -->
+      <text x="30" y="178">
+        <tspan fill="#6CCFF6">semester</tspan>
+        <tspan fill="#CBD5E1">: </tspan>
+        <tspan fill="#4ADE80">6</tspan>
+        <tspan fill="#CBD5E1">,</tspan>
+      </text>
+
+      <!-- Line 7: college -->
+      <text x="30" y="208">
+        <tspan fill="#6CCFF6">college</tspan>
+        <tspan fill="#CBD5E1">: </tspan>
+        <tspan fill="#FB923C">&quot;Model College&quot;</tspan>
+        <tspan fill="#CBD5E1">,</tspan>
+      </text>
+
+      <!-- Line 8: score: { -->
+      <text x="30" y="238">
+        <tspan fill="#6CCFF6">score</tspan>
+        <tspan fill="#CBD5E1">: {</tspan>
+      </text>
+
+      <!-- Line 9: type -->
+      <text x="60" y="268">
+        <tspan fill="#6CCFF6">type</tspan>
+        <tspan fill="#CBD5E1">: </tspan>
+        <tspan fill="#FB923C">&quot;CGPA&quot;</tspan>
+        <tspan fill="#CBD5E1">,</tspan>
+      </text>
+
+      <!-- Line 10: value -->
+      <text x="60" y="298">
+        <tspan fill="#6CCFF6">value</tspan>
+        <tspan fill="#CBD5E1">: </tspan>
+        <tspan fill="#4ADE80">6.95</tspan>
+      </text>
+
+      <!-- Line 11: } -->
+      <text x="30" y="328" fill="#CBD5E1">}</text>
+
+      <!-- Line 12: }; -->
+      <text x="0" y="358" fill="#CBD5E1">};</text>
+
+      <!-- Line 13: blank -->
+
+      <!-- Line 14: Comment -->
+      <text x="0" y="418" fill="#38BDF8" font-style="italic">// Portfolio Launch Function</text>
+
+      <!-- Line 15: function launchPortfolio() { -->
+      <text x="0" y="448">
+        <tspan fill="#F43F5E" font-weight="bold">function</tspan>
+        <tspan fill="#E2E8F0"> </tspan>
+        <tspan fill="#6CCFF6">launchPortfolio</tspan>
+        <tspan fill="#CBD5E1">() {</tspan>
+      </text>
+
+      <!-- Line 16: console.log(...) -->
+      <text x="30" y="478">
+        <tspan fill="#6CCFF6">console</tspan>
+        <tspan fill="#CBD5E1">.</tspan>
+        <tspan fill="#6CCFF6">log</tspan>
+        <tspan fill="#CBD5E1">(</tspan>
+        <tspan fill="#4ADE80">&quot;Welcome to Sarthak&apos;s Portfolio!&quot;</tspan>
+        <tspan fill="#CBD5E1">);</tspan>
+      </text>
+
+      <!-- Line 17: } -->
+      <text x="0" y="508" fill="#CBD5E1">}</text>
+    </g>
+  </g>
+
+  <!-- Ambient blue neon glow accents -->
+  <circle cx="950" cy="220" r="180" fill="#2563EB" opacity="0.12" filter="url(#softGlow)" />
+  <circle cx="200" cy="480" r="140" fill="#6CCFF6" opacity="0.08" filter="url(#softGlow)" />
+</svg>
