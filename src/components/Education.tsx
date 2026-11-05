@@ -71,13 +71,13 @@ export function Education() {
   return (
     <section
       id="education"
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-24 transition-colors duration-450 border-t border-[var(--border)] relative"
+      className="w-full bg-transparent py-14 sm:py-20 md:py-24 transition-colors duration-450 border-t border-[var(--border)] relative"
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ──────────────── SECTION HEADER ──────────────── */}
         <div className="scroll-reveal scroll-slide-down mb-8 sm:mb-10 max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full dual-primary-badge text-xs font-mono-code text-[var(--primary-2)] mb-3 font-semibold">
             <span>Education</span>
           </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
@@ -88,14 +88,14 @@ export function Education() {
           </p>
         </div>
 
-        {/* ──────────────── DUAL-COLUMN GRID: CONTENT-DRIVEN HEIGHTS ──────────────── */}
+        {/* ──────────────── DUAL-COLUMN GRID: 50:50 DUAL-PRIMARY BALANCE ──────────────── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 items-start">
           
-          {/* ────── LEFT COLUMN: UNDERGRADUATE DEGREE (6 cols) ────── */}
-          <div className="edu-feature-card scroll-reveal scroll-slide-left neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-6 space-y-5 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+          {/* ────── LEFT COLUMN: UNDERGRADUATE DEGREE (6 cols - Primary 1 Foundation) ────── */}
+          <div className="edu-feature-card scroll-reveal scroll-slide-left neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-6 space-y-5 rounded-2xl">
             {/* Meta Badges */}
             <div className="flex flex-wrap items-center gap-2 text-xs font-mono-code">
-              <span className="px-3 py-1 rounded-full border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--accent)] font-semibold">
+              <span className="px-3 py-1 rounded-full border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--primary-2)] font-semibold">
                 Higher Education
               </span>
               <span className="px-3 py-1 rounded-full border border-[var(--border)] text-[var(--text-secondary)]">
@@ -113,7 +113,7 @@ export function Education() {
               </h3>
 
               <p className="mt-2 text-xs sm:text-sm font-inter text-[var(--text-secondary)] flex items-center gap-2 flex-wrap">
-                <GraduationCap className="w-4 h-4 text-[var(--accent)] shrink-0" />
+                <GraduationCap className="w-4 h-4 text-[var(--primary-2)] shrink-0" />
                 <span>Expected Graduation: 2027 · Dombivli, Mumbai</span>
               </p>
             </div>
@@ -132,7 +132,7 @@ export function Education() {
                 <span className="text-[10px] sm:text-[11px] font-mono-code text-[var(--text-dim)] uppercase block">
                   Verified CGPA
                 </span>
-                <span className="font-mono-code font-bold text-base sm:text-xl text-[var(--accent)] mt-0.5 block">
+                <span className="font-mono-code font-bold text-base sm:text-xl text-[var(--primary-2)] mt-0.5 block">
                   6.95 <span className="text-xs text-[var(--text-dim)] font-normal">/ 10</span>
                 </span>
               </div>
@@ -140,17 +140,17 @@ export function Education() {
 
             <div className="pt-3 border-t border-[var(--border)] flex items-center justify-between text-xs font-mono-code text-[var(--text-dim)]">
               <span>Model College (TYCS)</span>
-              <span className="text-[var(--accent)]">Computer Science</span>
+              <span className="text-[var(--primary-2)] font-semibold">Computer Science</span>
             </div>
           </div>
 
-          {/* ────── RIGHT COLUMN: PROGRAM CERTIFICATIONS (6 cols) ────── */}
-          <div className="edu-feature-card scroll-reveal scroll-slide-right stagger-1 neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-6 space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+          {/* ────── RIGHT COLUMN: PROGRAM CERTIFICATIONS (6 cols - Primary 2 Elevated) ────── */}
+          <div className="edu-feature-card scroll-reveal scroll-slide-right stagger-1 neumorphic-card-p2 p-5 sm:p-7 md:p-8 lg:col-span-6 space-y-4 rounded-2xl">
             <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5">
               <h3 className="font-display font-bold text-lg sm:text-xl text-[var(--text-primary)]">
                 Program Certifications
               </h3>
-              <span className="px-2.5 py-0.5 rounded-full border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--accent)] font-mono-code text-xs font-semibold">
+              <span className="tactile-chip-p2 px-2.5 py-0.5 font-mono-code text-xs font-semibold">
                 2 Issued
               </span>
             </div>
@@ -160,14 +160,14 @@ export function Education() {
               {CERTIFICATES.map((cert) => (
                 <div
                   key={cert.id}
-                  className="p-3.5 sm:p-4 rounded-xl tactile-inset space-y-2 hover:border-[var(--accent)]/40 transition-colors"
+                  className="p-3.5 sm:p-4 rounded-xl tactile-inset-p2 space-y-2 hover:border-[var(--primary-2)] transition-colors"
                 >
                   <div className="flex items-center justify-between text-xs font-mono-code">
                     <span className="font-bold text-[var(--text-primary)]">{cert.platform}</span>
                     <span className="text-[var(--text-dim)]">{cert.date}</span>
                   </div>
 
-                  <h4 className="font-space font-bold text-xs sm:text-sm text-[var(--accent)] break-words">
+                  <h4 className="font-space font-bold text-xs sm:text-sm text-[var(--primary-2)] break-words">
                     {cert.title}
                   </h4>
 

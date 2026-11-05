@@ -77,15 +77,12 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
+      className="w-full bg-transparent py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section Header */}
         <div className="scroll-reveal scroll-clip-up mb-8 sm:mb-12 max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
-            <span>Experience</span>
-          </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
             Virtual Internships
           </h2>
@@ -94,23 +91,24 @@ export function Experience() {
           </p>
         </div>
 
-        {/* 2 Separate Organized Experience Cards */}
+        {/* 2 Separate Organized Experience Cards (50:50 Dual-Primary Balance) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
-          {EXPERIENCES.map((exp, idx) => (
-            <div
-              key={exp.id}
-              className={`exp-card scroll-reveal ${
-                idx === 0 ? 'scroll-rotate-left' : 'scroll-rotate-right stagger-1'
-              } neumorphic-card p-5 sm:p-7 md:p-8 rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] flex flex-col justify-between space-y-6`}
-            >
+          {EXPERIENCES.map((exp, idx) => {
+            return (
+              <div
+                key={exp.id}
+                className={`exp-card scroll-reveal ${
+                  idx === 0 ? 'scroll-rotate-left' : 'scroll-rotate-right stagger-1'
+                } ${idx === 0 ? 'neumorphic-card' : 'neumorphic-card-p2'} p-5 sm:p-7 md:p-8 rounded-2xl flex flex-col justify-between space-y-6`}
+              >
                 {/* Header: Company & Program */}
                 <div>
                   <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
-                    <div className="flex items-center gap-2 font-mono-code text-xs text-[var(--accent)] font-semibold">
+                    <div className="flex items-center gap-2 font-mono-code text-xs text-[var(--primary-2)] font-semibold">
                       <ShieldCheck className="w-4 h-4" />
                       <span>{exp.program}</span>
                     </div>
-                    <span className="tactile-chip px-2.5 py-0.5 font-mono-code text-[11px] text-[var(--text-dim)]">
+                    <span className={`${idx === 0 ? 'tactile-chip' : 'tactile-chip-p2'} px-2.5 py-0.5 font-mono-code text-[11px] text-[var(--text-dim)]`}>
                       {exp.company}
                     </span>
                   </div>
@@ -119,7 +117,7 @@ export function Experience() {
                     <h3 className="font-display font-bold text-xl sm:text-2xl text-[var(--text-primary)] tracking-tight">
                       {exp.company}
                     </h3>
-                    <p className="font-inter text-sm sm:text-base font-semibold text-[var(--accent)]">
+                    <p className="font-inter text-sm sm:text-base font-semibold text-[var(--primary-2)]">
                       {exp.domain}
                     </p>
                     <p className="text-xs text-[var(--text-secondary)] font-inter">
@@ -129,8 +127,8 @@ export function Experience() {
 
                   {/* Duration & Project Inset */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
-                    <div className="p-3 rounded-xl tactile-inset flex items-start gap-2.5">
-                      <Calendar className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
+                    <div className={`p-3 rounded-xl ${idx === 0 ? 'tactile-inset' : 'tactile-inset-p2'} flex items-start gap-2.5`}>
+                      <Calendar className="w-4 h-4 text-[var(--primary-2)] shrink-0 mt-0.5" />
                       <div>
                         <span className="font-mono-code text-[10px] text-[var(--text-dim)] uppercase block">
                           Duration
@@ -141,15 +139,15 @@ export function Experience() {
                       </div>
                     </div>
 
-                    <div className="p-3 rounded-xl tactile-inset flex items-start gap-2.5">
-                      <Briefcase className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
+                    <div className={`p-3 rounded-xl ${idx === 0 ? 'tactile-inset' : 'tactile-inset-p2'} flex items-start gap-2.5`}>
+                      <Briefcase className="w-4 h-4 text-[var(--primary-2)] shrink-0 mt-0.5" />
                       <div className="min-w-0">
                         <span className="font-mono-code text-[10px] text-[var(--text-dim)] uppercase block">
                           Assigned Project
                         </span>
                         <a
                           href={`#project-${exp.projectId}`}
-                          className="font-inter text-xs text-[var(--accent)] font-medium mt-0.5 block truncate hover:underline"
+                          className="font-inter text-xs text-[var(--primary-2)] font-medium mt-0.5 block truncate hover:underline"
                         >
                           {exp.projectTitle.split('—')[0].trim()} ↗
                         </a>
@@ -163,12 +161,12 @@ export function Experience() {
                       Key Responsibilities &amp; Deliverables
                     </span>
                     <ul className="space-y-2">
-                      {exp.responsibilities.map((resp, idx) => (
+                      {exp.responsibilities.map((resp, rIdx) => (
                         <li
-                          key={idx}
+                          key={rIdx}
                           className="flex items-start gap-2 text-xs font-inter text-[var(--text-secondary)] leading-relaxed"
                         >
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[var(--accent)] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[var(--primary-2)] shrink-0 mt-0.5" />
                           <span className="text-justified">{resp}</span>
                         </li>
                       ))}
@@ -180,10 +178,10 @@ export function Experience() {
                 <div className="pt-4 border-t border-[var(--border)] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono-code">
                   <div className="flex items-center gap-2">
                     <span className="text-[var(--text-dim)]">ID:</span>
-                    <span className="text-[var(--accent)] font-bold">{exp.credentialId}</span>
+                    <span className="text-[var(--primary-2)] font-bold">{exp.credentialId}</span>
                     <button
                       onClick={() => handleCopy(exp.credentialId)}
-                      className="p-1 hover:text-[var(--accent)] transition-colors cursor-pointer"
+                      className="p-1 hover:text-[var(--primary-2)] transition-colors cursor-pointer"
                       title="Copy Credential ID"
                       aria-label={`Copy Credential ID ${exp.credentialId}`}
                     >
@@ -211,7 +209,8 @@ export function Experience() {
                 </div>
 
               </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

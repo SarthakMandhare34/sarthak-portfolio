@@ -14,13 +14,13 @@ export function About() {
   return (
     <section
       id="about"
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
+      className="w-full bg-transparent py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ──────────────── SECTION HEADER ──────────────── */}
         <div className="scroll-reveal scroll-clip-up mb-7 sm:mb-10 max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full dual-primary-badge text-xs font-mono-code text-[var(--primary-2)] mb-3 font-semibold">
             <span>About</span>
           </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
@@ -34,8 +34,8 @@ export function About() {
         {/* ──────────────── DUAL-COLUMN GRID: A. NARRATIVE + B. SNAPSHOT ──────────────── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 items-stretch">
           
-          {/* ────── A. WHO I AM (7 cols) ────── */}
-          <div className="scroll-reveal scroll-slide-left neumorphic-card p-5 sm:p-7 md:p-8 space-y-5 lg:col-span-7 flex flex-col justify-between border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+          {/* ────── A. WHO I AM (7 cols - Primary 1 Foundation) ────── */}
+          <div className="scroll-reveal scroll-slide-left neumorphic-card p-5 sm:p-7 md:p-8 space-y-5 lg:col-span-7 flex flex-col justify-between border border-[var(--border)] rounded-2xl">
             <div className="space-y-4 font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] leading-relaxed">
               <h3 className="font-space font-bold text-lg sm:text-xl text-[var(--text-primary)]">
                 Who I Am
@@ -58,34 +58,34 @@ export function About() {
               </p>
             </div>
 
-            {/* Spoken Languages */}
+            {/* Spoken Languages (Balanced 50:50 Chips) */}
             <div className="pt-4 border-t border-[var(--border)] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
               <div className="flex items-center gap-2 font-mono-code text-[var(--text-dim)] uppercase">
-                <Languages className="w-4 h-4 text-[var(--accent)] shrink-0" />
+                <Languages className="w-4 h-4 text-[var(--primary-2)] shrink-0" />
                 <span>Languages:</span>
               </div>
               <div className="flex flex-wrap items-center gap-2 font-inter font-medium text-[var(--text-primary)]">
                 <span className="tactile-chip px-2.5 py-1">
-                  English: <span className="text-[var(--accent)] font-semibold">Fluent</span>
+                  English: <span className="text-[var(--primary-2)] font-semibold">Fluent</span>
+                </span>
+                <span className="tactile-chip-p2 px-2.5 py-1">
+                  Hindi: <span className="text-[var(--primary-2)] font-semibold">Fluent</span>
                 </span>
                 <span className="tactile-chip px-2.5 py-1">
-                  Hindi: <span className="text-[var(--accent)] font-semibold">Fluent</span>
-                </span>
-                <span className="tactile-chip px-2.5 py-1">
-                  Marathi: <span className="text-[var(--accent)] font-semibold">Native</span>
+                  Marathi: <span className="text-[var(--primary-2)] font-semibold">Native</span>
                 </span>
               </div>
             </div>
           </div>
 
-          {/* ────── B. QUICK INFO (5 cols) ────── */}
-          <div className="scroll-reveal scroll-slide-right neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-5 flex flex-col justify-between space-y-5 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+          {/* ────── B. QUICK INFO (5 cols - Primary 2 Elevated Balance) ────── */}
+          <div className="scroll-reveal scroll-slide-right neumorphic-card-p2 p-5 sm:p-7 md:p-8 lg:col-span-5 flex flex-col justify-between space-y-5 rounded-2xl">
             <div>
               <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
                 <h3 className="font-display font-bold text-lg sm:text-xl text-[var(--text-primary)]">
                   Quick Info
                 </h3>
-                <span className="tactile-chip px-2.5 py-0.5 font-mono-code text-xs text-[var(--accent)] font-semibold shrink-0">
+                <span className="tactile-chip-p2 px-2.5 py-0.5 font-mono-code text-xs font-semibold shrink-0">
                   Sem 6 · CGPA 6.95
                 </span>
               </div>
@@ -93,7 +93,7 @@ export function About() {
               <div className="space-y-3.5 text-xs sm:text-sm font-inter">
                 {/* Degree & College */}
                 <div className="flex items-start gap-3 p-3.5 rounded-xl tactile-inset">
-                  <GraduationCap className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
+                  <GraduationCap className="w-4 h-4 text-[var(--primary-2)] shrink-0 mt-0.5" />
                   <div className="min-w-0 flex-1">
                     <span className="text-[var(--text-dim)] font-mono-code text-[11px] block uppercase">
                       Degree
@@ -121,11 +121,11 @@ export function About() {
                     </span>
                   </div>
 
-                  <div className="p-3 rounded-xl tactile-inset">
+                  <div className="p-3 rounded-xl tactile-inset-p2">
                     <span className="text-[var(--text-dim)] font-mono-code text-[10px] block uppercase">
                       Current CGPA
                     </span>
-                    <span className="text-[var(--accent)] font-mono-code font-bold text-sm sm:text-base mt-0.5 block">
+                    <span className="text-[var(--primary-2)] font-mono-code font-bold text-sm sm:text-base mt-0.5 block">
                       6.95 <span className="text-xs text-[var(--text-dim)] font-normal">/ 10</span>
                     </span>
                     <span className="text-[10px] text-[var(--text-secondary)] block">
@@ -136,7 +136,7 @@ export function About() {
 
                 {/* Location */}
                 <div className="flex items-start gap-3 p-3.5 rounded-xl tactile-inset">
-                  <MapPin className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[var(--primary-2)] shrink-0 mt-0.5" />
                   <div className="min-w-0 flex-1">
                     <span className="text-[var(--text-dim)] font-mono-code text-[11px] block uppercase">
                       Location
@@ -151,8 +151,8 @@ export function About() {
                 </div>
 
                 {/* Internship Experience */}
-                <div className="flex items-start gap-3 p-3.5 rounded-xl tactile-inset">
-                  <ShieldCheck className="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3 p-3.5 rounded-xl tactile-inset-p2">
+                  <ShieldCheck className="w-4 h-4 text-[var(--primary-2)] shrink-0 mt-0.5" />
                   <div className="min-w-0 flex-1">
                     <span className="text-[var(--text-dim)] font-mono-code text-[11px] block uppercase">
                       Virtual Internships
@@ -174,7 +174,7 @@ export function About() {
               </span>
               <a
                 href="#education"
-                className="text-[var(--accent)] hover:underline inline-flex items-center gap-1 font-semibold"
+                className="text-[var(--primary-2)] hover:underline inline-flex items-center gap-1 font-semibold"
               >
                 <span>Academic Details</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -192,10 +192,10 @@ export function About() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {/* Area 1 */}
-            <div className="scroll-reveal scroll-flip-up stagger-1 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+            {/* Area 1: Frontend Development (Primary 1 Foundation) */}
+            <div className="scroll-reveal scroll-flip-up stagger-1 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 rounded-2xl">
               <div>
-                <div className="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--accent)] shrink-0 mb-3.5">
+                <div className="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
                   <Layout className="w-5 h-5" />
                 </div>
                 <h4 className="font-space font-bold text-base text-[var(--text-primary)] mb-2">
@@ -205,15 +205,15 @@ export function About() {
                   Building responsive, clean web interfaces with React and TypeScript. I care about intuitive navigation, fast load times, and layouts that look great on phones and desktops.
                 </p>
               </div>
-              <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--accent)] font-semibold">
+              <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--primary-2)] font-semibold">
                 React.js · TypeScript · Tailwind CSS
               </div>
             </div>
 
-            {/* Area 2 */}
-            <div className="scroll-reveal scroll-flip-up stagger-2 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl">
+            {/* Area 2: AI Integration (Primary 2 Elevated) */}
+            <div className="scroll-reveal scroll-flip-up stagger-2 neumorphic-card-p2 p-5 sm:p-6 flex flex-col justify-between space-y-4 rounded-2xl">
               <div>
-                <div className="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--accent)] shrink-0 mb-3.5">
+                <div className="w-10 h-10 rounded-xl tactile-icon-socket-p2 flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <h4 className="font-space font-bold text-base text-[var(--text-primary)] mb-2">
@@ -223,15 +223,15 @@ export function About() {
                   Connecting the Google Gemini API to web apps. I write structured prompts, test tricky inputs, and build smart fallbacks so features stay dependable.
                 </p>
               </div>
-              <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--accent)] font-semibold">
+              <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--primary-2)] font-semibold">
                 Gemini API · Prompt Engineering · Workflows
               </div>
             </div>
 
-            {/* Area 3 */}
-            <div className="scroll-reveal scroll-flip-up stagger-3 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl sm:col-span-2 lg:col-span-1">
+            {/* Area 3: Backend & Databases (Dual-Primary Blend) */}
+            <div className="scroll-reveal scroll-flip-up stagger-3 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 rounded-2xl sm:col-span-2 lg:col-span-1">
               <div>
-                <div className="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--accent)] shrink-0 mb-3.5">
+                <div className="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
                   <Server className="w-5 h-5" />
                 </div>
                 <h4 className="font-space font-bold text-base text-[var(--text-primary)] mb-2">
@@ -241,7 +241,7 @@ export function About() {
                   Writing REST APIs with Node.js and Express, and setting up clean database schemas with MySQL, MongoDB, and Drizzle ORM.
                 </p>
               </div>
-              <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--accent)] font-semibold">
+              <div className="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--primary-2)] font-semibold">
                 Node.js · Express · MySQL · MongoDB
               </div>
             </div>

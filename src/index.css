@@ -7,34 +7,68 @@
   :root,
   html[data-theme="dark"],
   html.dark {
-    /* Exact user palette: Dark Mode */
-    --bg-base: #191970; /* Midnight Navy Blue */
-    --bg-surface: #1E1E82;
-    --bg-elevated: #26269E;
-    --bg-inset: #13135C;
+    /* ──────────────── EQUAL PRIMARY BRAND COLOURS (50:50 BALANCE) ──────────────── */
+    /* Primary colour 1: #191970 (Midnight Navy Blue) */
+    --primary-1: #191970;
+    --primary-1-light: #242498;
+    --primary-1-surface: #1E1E82;
+    --primary-1-elevated: #26269E;
+    --primary-1-inset: #13135C;
+    --primary-1-glow: rgba(55, 75, 245, 0.65);
 
-    /* Primary colour: #FB5607 (Nitro Orange) */
+    /* Primary colour 2: #FB5607 (Nitro Orange) */
+    --primary-2: #FB5607;
+    --primary-2-hover: #FF6A26;
+    --primary-2-surface: #381504;
+    --primary-2-elevated: #4E1E07;
+    --primary-2-inset: #260D02;
+    --primary-2-soft: rgba(251, 86, 7, 0.20);
+    --primary-2-glow: rgba(251, 86, 7, 0.58);
+
+    /* Atmospheric Under-Glow Orbs (Powers Translucent Glassmorphism) */
+    --ambient-orb-p1: rgba(55, 75, 245, 0.65);
+    --ambient-orb-p2: rgba(251, 86, 7, 0.58);
+    --ambient-orb-accent: rgba(200, 253, 3, 0.35);
+    --ambient-orb-warm: rgba(255, 105, 45, 0.45);
+
+    /* 50:50 Dual-Primary Gradient & Atmospheric Tokens */
+    --dual-primary-gradient: linear-gradient(135deg, #191970 0%, #2A1756 36%, #7A2408 72%, #FB5607 100%);
+    --dual-primary-border: linear-gradient(135deg, rgba(25, 25, 112, 0.95), rgba(251, 86, 7, 0.8));
+    --dual-primary-badge: linear-gradient(135deg, rgba(25, 25, 112, 0.95) 0%, rgba(251, 86, 7, 0.42) 100%);
+    --dual-glow-p1: radial-gradient(circle at 18% 25%, rgba(55, 75, 245, 0.65) 0%, transparent 60%);
+    --dual-glow-p2: radial-gradient(circle at 82% 75%, rgba(251, 86, 7, 0.55) 0%, transparent 60%);
+
+    /* Structural Foundation (High-Translucency Frosted Glass) */
+    --bg-base: #0E0E38; /* Rich nocturnal midnight navy allowing both P1 and P2 to radiate in 50:50 balance */
+    --bg-base-rgb: 14, 14, 56;
+    --bg-surface: rgba(25, 25, 112, 0.22);
+    --bg-elevated: rgba(36, 36, 152, 0.20);
+    --bg-inset: rgba(16, 16, 75, 0.30);
+    --glass-border: rgba(255, 255, 255, 0.16);
+    --glass-border-p2: rgba(251, 86, 7, 0.42);
+    --glass-highlight: rgba(255, 255, 255, 0.38);
+
+    /* Semantic Aliases for compatibility */
     --primary: #FB5607;
     --accent: #FB5607;
-    --accent-soft: rgba(251, 86, 7, 0.16);
+    --accent-soft: rgba(251, 86, 7, 0.20);
+    --border: rgba(251, 86, 7, 0.35);
     --border-active: #FB5607;
 
-    /* Button accent: #C8FD03 (Neon Lime) */
-    --btn-accent: #C8FD03;
-    --btn-accent-glow: rgba(200, 253, 3, 0.45);
-    --btn-accent-soft: rgba(200, 253, 3, 0.18);
-
-    /* Decorative accent: #C8FD03 (Neon Lime) */
+    /* ──────────────── DECORATIVE ACCENT: #C8FD03 (Neon Lime) ──────────────── */
+    /* Strictly for buttons, interactive highlights and small details */
     --decorative: #C8FD03;
-    --decorative-soft: rgba(200, 253, 3, 0.16);
+    --decorative-soft: rgba(200, 253, 3, 0.18);
+    --btn-accent: #C8FD03;
+    --btn-accent-glow: rgba(200, 253, 3, 0.52);
+    --btn-accent-soft: rgba(200, 253, 3, 0.20);
     --success: #C8FD03;
 
-    --border: rgba(251, 86, 7, 0.22);
     --text-primary: #FFFFFF;
-    --text-secondary: #CBD5E1;
+    --text-secondary: #E2E8F0;
     --text-dim: #94A3B8;
     --photo-overlay-start: rgba(25, 25, 112, 0.96);
-    --photo-overlay-end: rgba(25, 25, 112, 0.20);
+    --photo-overlay-end: rgba(251, 86, 7, 0.25);
     --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Space Grotesk', 'Syne', sans-serif;
     --font-sub: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     --font-body: -apple-system, BlinkMacSystemFont, 'Inter', "SF Pro Text", "Segoe UI", Roboto, sans-serif;
@@ -42,34 +76,68 @@
   }
 
   html[data-theme="light"] {
-    /* Exact user palette: Light Mode */
-    --bg-base: #DBF2FC; /* Soft Icy Sky Blue */
-    --bg-surface: #E8F5FD;
-    --bg-elevated: #FFFFFF;
-    --bg-inset: #C4E6F8;
+    /* ──────────────── EQUAL PRIMARY BRAND COLOURS (50:50 BALANCE) ──────────────── */
+    /* Primary colour 1: #DBF2FC (Soft Icy Sky Blue) */
+    --primary-1: #DBF2FC;
+    --primary-1-light: #FFFFFF;
+    --primary-1-surface: #EDF7FD;
+    --primary-1-elevated: #FFFFFF;
+    --primary-1-inset: #C4E8FA;
+    --primary-1-glow: rgba(0, 163, 255, 0.45);
 
-    /* Primary colour: #00A3FF (Vibrant Sky Blue) */
+    /* Primary colour 2: #00A3FF (Vibrant Sky Blue) */
+    --primary-2: #00A3FF;
+    --primary-2-hover: #1AB0FF;
+    --primary-2-surface: #E0F2FE;
+    --primary-2-elevated: #BAE6FD;
+    --primary-2-inset: #AEE0FD;
+    --primary-2-soft: rgba(0, 163, 255, 0.18);
+    --primary-2-glow: rgba(253, 110, 136, 0.42);
+
+    /* Atmospheric Under-Glow Orbs (Powers Translucent Glassmorphism) */
+    --ambient-orb-p1: rgba(0, 163, 255, 0.45);
+    --ambient-orb-p2: rgba(253, 110, 136, 0.38);
+    --ambient-orb-accent: rgba(56, 189, 248, 0.42);
+    --ambient-orb-warm: rgba(251, 146, 60, 0.28);
+
+    /* 50:50 Dual-Primary Gradient & Atmospheric Tokens */
+    --dual-primary-gradient: linear-gradient(135deg, #DBF2FC 0%, #82D5FD 48%, #00A3FF 100%);
+    --dual-primary-border: linear-gradient(135deg, rgba(219, 242, 252, 0.95), rgba(0, 163, 255, 0.75));
+    --dual-primary-badge: linear-gradient(135deg, rgba(219, 242, 252, 0.95) 0%, rgba(0, 163, 255, 0.38) 100%);
+    --dual-glow-p1: radial-gradient(circle at 18% 25%, rgba(0, 163, 255, 0.45) 0%, transparent 60%);
+    --dual-glow-p2: radial-gradient(circle at 82% 75%, rgba(253, 110, 136, 0.38) 0%, transparent 60%);
+
+    /* Structural Foundation (High-Translucency Frosted Glass) */
+    --bg-base: #DBF2FC;
+    --bg-base-rgb: 219, 242, 252;
+    --bg-surface: rgba(255, 255, 255, 0.25);
+    --bg-elevated: rgba(255, 255, 255, 0.30);
+    --bg-inset: rgba(219, 242, 252, 0.28);
+    --glass-border: rgba(255, 255, 255, 0.80);
+    --glass-border-p2: rgba(0, 163, 255, 0.42);
+    --glass-highlight: rgba(255, 255, 255, 0.95);
+
+    /* Semantic Aliases */
     --primary: #00A3FF;
     --accent: #00A3FF;
-    --accent-soft: rgba(0, 163, 255, 0.14);
+    --accent-soft: rgba(0, 163, 255, 0.18);
+    --border: rgba(0, 163, 255, 0.35);
     --border-active: #00A3FF;
 
-    /* Button accent: #FD6E88 (Rose Coral) */
-    --btn-accent: #FD6E88;
-    --btn-accent-glow: rgba(253, 110, 136, 0.45);
-    --btn-accent-soft: rgba(253, 110, 136, 0.18);
-
-    /* Decorative accent: #FD6E88 (Rose Pink / Coral) */
+    /* ──────────────── DECORATIVE ACCENT: #FD6E88 (Rose Coral) ──────────────── */
+    /* Strictly for buttons, interactive highlights and small details */
     --decorative: #FD6E88;
-    --decorative-soft: rgba(253, 110, 136, 0.16);
+    --decorative-soft: rgba(253, 110, 136, 0.18);
+    --btn-accent: #FD6E88;
+    --btn-accent-glow: rgba(253, 110, 136, 0.52);
+    --btn-accent-soft: rgba(253, 110, 136, 0.20);
     --success: #059669;
 
-    --border: rgba(0, 163, 255, 0.28);
-    --text-primary: #061B2E;
-    --text-secondary: #214363;
-    --text-dim: #4B7293;
+    --text-primary: #041B2D;
+    --text-secondary: #1C4263;
+    --text-dim: #436F94;
     --photo-overlay-start: rgba(219, 242, 252, 0.96);
-    --photo-overlay-end: rgba(219, 242, 252, 0.20);
+    --photo-overlay-end: rgba(0, 163, 255, 0.22);
     --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Space Grotesk', 'Syne', sans-serif;
     --font-sub: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     --font-body: -apple-system, BlinkMacSystemFont, 'Inter', "SF Pro Text", "Segoe UI", Roboto, sans-serif;
@@ -152,299 +220,508 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ──────────────── FULL FCOLOMBATI TACTILE NEUMORPHIC CARDS ──────────────── */
+/* ──────────────── FULL FCOLOMBATI TACTILE NEUMORPHIC CARDS (GENUINE GLASSMORHPIC & TRANSLUCENT) ──────────────── */
+/* 50:50 Dual-Primary Card Architecture */
 .neumorphic-card {
   position: relative;
-  background-color: #1E1E82;
-  background-image: linear-gradient(135deg, #2727A0 0%, #1E1E82 55%, #151564 100%);
-  border: 1px solid rgba(251, 86, 7, 0.22);
+  background-color: rgba(25, 25, 112, 0.20);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(38, 38, 158, 0.24) 40%,
+    rgba(25, 25, 112, 0.18) 70%,
+    rgba(251, 86, 7, 0.08) 100%
+  );
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.40);
   border-radius: 1.5rem;
-  /* FColombati layered outer shadow + 7-layer inset highlight system */
   box-shadow:
-    /* Outer negative light catch (ambient bounce) */
-    -0.15em -0.15em 0.25em -0.075em rgba(255, 255, 255, 0.08),
-    /* Outer ground contact rim */
-    0 0.06em 0.08em -0.02em rgba(0, 0, 0, 0.95),
-    /* Outer diffuse cast shadow */
-    0.2em 0.4em 0.85em -0.05em rgba(10, 10, 55, 0.9),
-    0 1.2em 2.5em -0.4em rgba(5, 5, 40, 0.85),
-    /* 7-layer FColombati inset bevel system */
-    0 0 0 0 inset rgba(0, 0, 0, 0.2),
-    -0.05em -0.05em 0.08em 0 inset rgba(0, 0, 0, 0.4),
-    0 0 0.08em 0.15em inset rgba(255, 255, 255, 0.04),
-    0 0 0.05em 0.25em inset rgba(255, 255, 255, 0.05),
-    0.025em 0.05em 0.12em 0 inset rgba(255, 255, 255, 0.22),
-    0.12em 0.12em 0.2em inset rgba(255, 255, 255, 0.08),
-    -0.075em -0.25em 0.35em 0.1em inset rgba(8, 8, 40, 0.7);
+    0 8px 32px 0 rgba(0, 0, 0, 0.40),
+    0 2px 8px 0 rgba(0, 0, 0, 0.25),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.28),
+    -0.05em -0.05em 0.08em 0 inset rgba(0, 0, 0, 0.20),
+    0 0 0.08em 0.15em inset rgba(255, 255, 255, 0.06);
   transition:
     box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 250ms cubic-bezier(0.16, 1, 0.3, 1),
     border-color 250ms ease,
-    background-image 250ms ease;
+    background-color 250ms ease;
   will-change: box-shadow, transform;
 }
 
 html[data-theme="light"] .neumorphic-card {
-  background-color: #FFFFFF;
-  background-image: linear-gradient(135deg, #FFFFFF 0%, #F3F9FE 55%, #E3F2FB 100%);
-  border: 1px solid rgba(0, 163, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.22);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.50) 0%,
+    rgba(235, 248, 255, 0.22) 45%,
+    rgba(219, 242, 252, 0.18) 75%,
+    rgba(0, 163, 255, 0.10) 100%
+  );
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
   box-shadow:
-    /* Outer negative white reflection */
-    -0.2em -0.2em 0.45em -0.05em rgba(255, 255, 255, 1),
-    /* Outer ground contact rim */
-    0 0.05em 0.06em -0.02em rgba(100, 165, 205, 0.35),
-    /* Outer diffuse cast shadow */
-    0.2em 0.4em 0.9em -0.05em rgba(90, 155, 195, 0.3),
-    0 1em 2.2em -0.3em rgba(80, 145, 185, 0.2),
-    /* 7-layer FColombati inset bevel system for light */
-    0 0 0 0 inset rgba(0, 163, 255, 0.06),
-    -0.05em -0.05em 0.08em 0 inset rgba(0, 163, 255, 0.12),
-    0 0 0.08em 0.15em inset rgba(255, 255, 255, 0.85),
-    0 0 0.05em 0.25em inset rgba(255, 255, 255, 0.95),
-    0.025em 0.05em 0.12em 0 inset rgba(255, 255, 255, 1),
-    0.12em 0.12em 0.2em inset rgba(255, 255, 255, 0.9),
-    -0.075em -0.25em 0.35em 0.1em inset rgba(90, 155, 195, 0.25);
+    0 8px 32px 0 rgba(0, 163, 255, 0.12),
+    0 2px 8px 0 rgba(0, 163, 255, 0.06),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.95),
+    -0.05em -0.05em 0.08em 0 inset rgba(0, 163, 255, 0.04),
+    0 0 0.08em 0.15em inset rgba(255, 255, 255, 0.85);
 }
 
 .neumorphic-card:hover {
   transform: translateY(-2px);
-  border-color: var(--accent);
+  border-color: var(--primary-2);
+  background-color: rgba(25, 25, 112, 0.30);
   box-shadow:
-    -0.18em -0.18em 0.3em -0.05em rgba(255, 255, 255, 0.1),
-    0 0.08em 0.1em -0.02em rgba(0, 0, 0, 1),
-    0.25em 0.55em 1.2em -0.05em rgba(8, 8, 48, 0.95),
-    0 1.6em 3.2em -0.4em rgba(5, 5, 40, 0.9),
-    /* Inset tactile compression shift */
-    0.08em 0.12em 0.15em 0 inset rgba(0, 0, 0, 0.5),
-    -0.03em -0.04em 0.08em 0.03em inset rgba(0, 0, 0, 0.4),
-    0.2em 0.2em 0.25em 0 inset rgba(0, 0, 0, 0.4),
-    0 0 0.05em 0.3em inset rgba(255, 255, 255, 0.08),
-    0.03em 0.06em 0.15em 0 inset rgba(255, 255, 255, 0.28),
-    0.15em 0.15em 0.22em inset rgba(255, 255, 255, 0.1),
-    -0.09em -0.28em 0.38em 0.12em inset rgba(8, 8, 40, 0.8);
+    0 12px 36px 0 rgba(0, 0, 0, 0.50),
+    0 0 20px rgba(251, 86, 7, 0.35),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.35);
 }
 
 html[data-theme="light"] .neumorphic-card:hover {
-  border-color: var(--accent);
+  border-color: var(--primary-2);
+  background-color: rgba(255, 255, 255, 0.38);
   box-shadow:
-    -0.25em -0.25em 0.55em -0.05em rgba(255, 255, 255, 1),
-    0 0.07em 0.08em -0.02em rgba(80, 150, 195, 0.45),
-    0.25em 0.5em 1.1em -0.05em rgba(70, 140, 185, 0.4),
-    0 1.4em 2.8em -0.3em rgba(60, 130, 175, 0.3),
-    /* Inset tactile compression shift */
-    0.08em 0.12em 0.15em 0 inset rgba(0, 163, 255, 0.12),
-    -0.03em -0.04em 0.08em 0.03em inset rgba(0, 163, 255, 0.08),
-    0.2em 0.2em 0.25em 0 inset rgba(0, 163, 255, 0.08),
-    0 0 0.05em 0.3em inset rgba(255, 255, 255, 0.98),
-    0.03em 0.06em 0.15em 0 inset rgba(255, 255, 255, 1),
-    0.15em 0.15em 0.22em inset rgba(255, 255, 255, 0.95),
-    -0.09em -0.28em 0.38em 0.12em inset rgba(80, 145, 185, 0.3);
+    0 12px 36px 0 rgba(0, 163, 255, 0.20),
+    0 0 20px rgba(0, 163, 255, 0.30),
+    0 1px 0 0 inset rgba(255, 255, 255, 1);
 }
 
-/* ──────────────── FCOLOMBATI TACTILE STATUS BADGES & PILLS ──────────────── */
+/* ──────────────── PRIMARY 2 ELEVATED NEUMORPHIC CARD (.neumorphic-card-p2) (GENUINE GLASSMORHPIC & TRANSLUCENT) ──────────────── */
+/* Creates 50:50 parity for alternating sections, cards and showcases */
+.neumorphic-card-p2 {
+  position: relative;
+  background-color: rgba(55, 22, 5, 0.20);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(251, 86, 7, 0.22) 40%,
+    rgba(32, 20, 65, 0.18) 75%,
+    rgba(25, 25, 112, 0.18) 100%
+  );
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(251, 86, 7, 0.38);
+  border-top: 1px solid rgba(255, 185, 150, 0.50);
+  border-radius: 1.5rem;
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.40),
+    0 2px 8px 0 rgba(251, 86, 7, 0.15),
+    0 0 20px 0 rgba(251, 86, 7, 0.15),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.28);
+  transition:
+    box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 250ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 250ms ease,
+    background-color 250ms ease;
+  will-change: box-shadow, transform;
+}
+
+html[data-theme="light"] .neumorphic-card-p2 {
+  background-color: rgba(224, 242, 254, 0.22);
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.50) 0%,
+    rgba(0, 163, 255, 0.18) 40%,
+    rgba(219, 242, 252, 0.18) 75%,
+    rgba(0, 163, 255, 0.10) 100%
+  );
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid rgba(0, 163, 255, 0.40);
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 163, 255, 0.14),
+    0 2px 8px 0 rgba(0, 163, 255, 0.08),
+    0 0 20px 0 rgba(0, 163, 255, 0.12),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.95);
+}
+
+.neumorphic-card-p2:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-2);
+  background-color: rgba(65, 25, 5, 0.32);
+  box-shadow:
+    0 12px 36px 0 rgba(0, 0, 0, 0.50),
+    0 0 22px rgba(251, 86, 7, 0.42),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.35);
+}
+
+html[data-theme="light"] .neumorphic-card-p2:hover {
+  border-color: var(--primary-2);
+  background-color: rgba(224, 242, 254, 0.38);
+  box-shadow:
+    0 12px 36px 0 rgba(0, 163, 255, 0.22),
+    0 0 22px rgba(0, 163, 255, 0.35),
+    0 1px 0 0 inset rgba(255, 255, 255, 1);
+}
+
+/* ──────────────── FCOLOMBATI TACTILE STATUS BADGES & PILLS (GENUINE GLASSMORHPIC) ──────────────── */
 .tactile-status-badge,
 .neumorphic-pill {
   position: relative;
-  background-color: #242498;
-  background-image: linear-gradient(135deg, #2E2EAC 0%, #1E1E82 100%);
-  border: 1px solid rgba(251, 86, 7, 0.24);
+  background-color: rgba(36, 36, 152, 0.22);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.10) 0%, rgba(46, 46, 172, 0.28) 50%, rgba(251, 86, 7, 0.12) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 9999px;
   box-shadow:
-    -0.12em -0.12em 0.18em -0.05em rgba(255, 255, 255, 0.08),
-    0 0.04em 0.05em -0.01em rgba(0, 0, 0, 0.85),
-    0.1em 0.2em 0.3em -0.02em rgba(5, 5, 35, 0.7),
-    0 0 0.04em 0.12em inset rgba(255, 255, 255, 0.06),
-    0.03em 0.05em 0.1em 0 inset rgba(255, 255, 255, 0.24),
-    -0.06em -0.15em 0.22em 0.06em inset rgba(5, 5, 35, 0.6);
+    0 4px 16px 0 rgba(0, 0, 0, 0.35),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.25),
+    0.03em 0.05em 0.1em 0 inset rgba(255, 255, 255, 0.24);
   transition: all 200ms ease;
   user-select: none;
 }
 
 html[data-theme="light"] .tactile-status-badge,
 html[data-theme="light"] .neumorphic-pill {
-  background-color: #FFFFFF;
-  background-image: linear-gradient(135deg, #FFFFFF 0%, #EBF5FB 100%);
-  border: 1px solid rgba(0, 163, 255, 0.28);
+  background-color: rgba(255, 255, 255, 0.25);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(219, 242, 252, 0.25) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
   box-shadow:
-    -0.18em -0.18em 0.25em -0.05em rgba(255, 255, 255, 1),
-    0 0.04em 0.05em -0.01em rgba(100, 165, 205, 0.4),
-    0.1em 0.2em 0.3em -0.02em rgba(90, 155, 195, 0.35),
-    0 0 0.04em 0.12em inset rgba(255, 255, 255, 0.9),
-    0.03em 0.05em 0.1em 0 inset rgba(255, 255, 255, 1),
-    -0.06em -0.15em 0.22em 0.06em inset rgba(90, 155, 195, 0.25);
+    0 4px 16px 0 rgba(0, 163, 255, 0.10),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.95);
 }
 
 .neumorphic-pill:hover,
 .tactile-status-badge:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--primary-2);
+  color: var(--primary-2);
   transform: translateY(-1px);
+  background-color: rgba(36, 36, 152, 0.35);
   box-shadow:
-    -0.15em -0.15em 0.22em -0.05em rgba(255, 255, 255, 0.1),
-    0 0.06em 0.08em -0.01em rgba(0, 0, 0, 0.95),
-    0.12em 0.25em 0.38em -0.02em rgba(8, 8, 48, 0.8),
-    0.04em 0.06em 0.1em 0 inset rgba(255, 255, 255, 0.32),
-    -0.07em -0.18em 0.25em 0.06em inset rgba(5, 5, 35, 0.7);
+    0 6px 20px 0 rgba(0, 0, 0, 0.40),
+    0 0 14px rgba(251, 86, 7, 0.35),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.35);
 }
 
 html[data-theme="light"] .neumorphic-pill:hover,
 html[data-theme="light"] .tactile-status-badge:hover {
-  border-color: var(--accent);
+  border-color: var(--primary-2);
+  background-color: rgba(255, 255, 255, 0.40);
   box-shadow:
-    -0.22em -0.22em 0.32em -0.05em rgba(255, 255, 255, 1),
-    0 0.06em 0.08em -0.01em rgba(80, 150, 195, 0.45),
-    0.12em 0.25em 0.38em -0.02em rgba(70, 140, 185, 0.4),
-    0.04em 0.06em 0.1em 0 inset rgba(255, 255, 255, 1),
-    -0.07em -0.18em 0.25em 0.06em inset rgba(80, 145, 185, 0.3);
+    0 6px 20px 0 rgba(0, 163, 255, 0.18),
+    0 0 14px rgba(0, 163, 255, 0.30),
+    0 1px 0 0 inset rgba(255, 255, 255, 1);
 }
 
-/* ──────────────── FCOLOMBATI TACTILE INSET SOCKETS ──────────────── */
+/* ──────────────── DUAL-PRIMARY PILL BADGE (GENUINE GLASSMORHPIC) ──────────────── */
+.dual-primary-badge {
+  position: relative;
+  background-image: var(--dual-primary-badge);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 9999px;
+  box-shadow:
+    0 4px 16px 0 rgba(0, 0, 0, 0.35),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.25);
+  transition: all 200ms ease;
+  user-select: none;
+}
+
+html[data-theme="light"] .dual-primary-badge {
+  border: 1px solid rgba(255, 255, 255, 0.90);
+  box-shadow:
+    0 4px 16px 0 rgba(0, 163, 255, 0.12),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.95);
+}
+
+/* ──────────────── FCOLOMBATI TACTILE INSET SOCKETS (FROSTED WELLS) ──────────────── */
 .tactile-inset {
   position: relative;
-  background-color: #121258;
-  background-image: linear-gradient(135deg, #0F0F4E 0%, #161664 100%);
-  border: 1px solid rgba(251, 86, 7, 0.16);
+  background-color: rgba(18, 18, 88, 0.28);
+  background-image: linear-gradient(135deg, rgba(15, 15, 78, 0.35) 0%, rgba(22, 22, 100, 0.22) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 0.875rem;
   box-shadow:
     /* Pressed inward multi-layered shadows */
-    0.12em 0.18em 0.12em 0 inset rgba(0, 0, 0, 0.9),
-    -0.05em -0.06em 0.1em 0.03em inset rgba(5, 5, 30, 0.7),
-    0.28em 0.32em 0.35em 0 inset rgba(0, 0, 0, 0.8),
-    0 0 0.08em 0.3em inset rgba(255, 255, 255, 0.03),
-    -0.08em -0.22em 0.3em 0.12em inset rgba(0, 0, 0, 0.65),
-    0 1px 1px 0 rgba(255, 255, 255, 0.06);
+    0.12em 0.18em 0.12em 0 inset rgba(0, 0, 0, 0.8),
+    -0.05em -0.06em 0.1em 0.03em inset rgba(5, 5, 30, 0.5),
+    0.28em 0.32em 0.35em 0 inset rgba(0, 0, 0, 0.7),
+    0 0 0.08em 0.3em inset rgba(255, 255, 255, 0.04),
+    -0.08em -0.22em 0.3em 0.12em inset rgba(0, 0, 0, 0.55),
+    0 1px 1px 0 rgba(255, 255, 255, 0.10);
   transition: all 250ms ease;
 }
 
 html[data-theme="light"] .tactile-inset {
-  background-color: #C5E5F7;
-  background-image: linear-gradient(135deg, #BCE0F5 0%, #CEEAF8 100%);
-  border: 1px solid rgba(0, 163, 255, 0.22);
+  background-color: rgba(197, 229, 247, 0.35);
+  background-image: linear-gradient(135deg, rgba(188, 224, 245, 0.45) 0%, rgba(206, 234, 248, 0.25) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow:
-    0.12em 0.18em 0.12em 0 inset rgba(120, 175, 210, 0.65),
-    -0.05em -0.06em 0.1em 0.03em inset rgba(120, 175, 210, 0.45),
-    0.28em 0.32em 0.35em 0 inset rgba(120, 175, 210, 0.5),
-    0 0 0.08em 0.3em inset rgba(255, 255, 255, 0.8),
-    -0.08em -0.22em 0.3em 0.12em inset rgba(120, 175, 210, 0.4),
+    0.12em 0.18em 0.12em 0 inset rgba(120, 175, 210, 0.40),
+    -0.05em -0.06em 0.1em 0.03em inset rgba(120, 175, 210, 0.25),
+    0.28em 0.32em 0.35em 0 inset rgba(120, 175, 210, 0.30),
+    0 0 0.08em 0.3em inset rgba(255, 255, 255, 0.85),
+    -0.08em -0.22em 0.3em 0.12em inset rgba(120, 175, 210, 0.20),
     0 1px 1px 0 rgba(255, 255, 255, 0.95);
 }
 
-/* ──────────────── FCOLOMBATI TACTILE CHIPS & PILLS ──────────────── */
+/* Primary 2 Inset Socket */
+.tactile-inset-p2 {
+  position: relative;
+  background-color: rgba(36, 14, 4, 0.28);
+  background-image: linear-gradient(135deg, rgba(45, 17, 4, 0.38) 0%, rgba(26, 10, 2, 0.22) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(251, 86, 7, 0.30);
+  border-radius: 0.875rem;
+  box-shadow:
+    0.12em 0.18em 0.12em 0 inset rgba(0, 0, 0, 0.85),
+    -0.05em -0.06em 0.1em 0.03em inset rgba(35, 12, 4, 0.5),
+    0.28em 0.32em 0.35em 0 inset rgba(0, 0, 0, 0.75),
+    0 0 0.08em 0.3em inset rgba(251, 86, 7, 0.08),
+    -0.08em -0.22em 0.3em 0.12em inset rgba(0, 0, 0, 0.55),
+    0 1px 1px 0 rgba(251, 86, 7, 0.15);
+  transition: all 250ms ease;
+}
+
+html[data-theme="light"] .tactile-inset-p2 {
+  background-color: rgba(224, 242, 254, 0.35);
+  background-image: linear-gradient(135deg, rgba(212, 237, 252, 0.45) 0%, rgba(186, 230, 253, 0.25) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0.12em 0.18em 0.12em 0 inset rgba(0, 140, 220, 0.22),
+    -0.05em -0.06em 0.1em 0.03em inset rgba(0, 140, 220, 0.15),
+    0.28em 0.32em 0.35em 0 inset rgba(0, 140, 220, 0.18),
+    0 0 0.08em 0.3em inset rgba(255, 255, 255, 0.90),
+    -0.08em -0.22em 0.3em 0.12em inset rgba(0, 140, 220, 0.12),
+    0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+/* ──────────────── FCOLOMBATI TACTILE CHIPS & PILLS (GLASSMORHPIC & TRANSLUCENT) ──────────────── */
 .tactile-chip {
   position: relative;
-  background-color: #242498;
-  background-image: linear-gradient(135deg, #2C2CA8 0%, #1E1E82 100%);
-  border: 1px solid rgba(251, 86, 7, 0.24);
+  background-color: rgba(36, 36, 152, 0.30);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(44, 44, 168, 0.35) 50%, rgba(30, 30, 130, 0.20) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 0.65rem;
   box-shadow:
-    -0.12em -0.12em 0.15em -0.05em rgba(255, 255, 255, 0.08),
-    0 0.04em 0.05em -0.01em rgba(0, 0, 0, 0.85),
-    0.08em 0.15em 0.25em -0.02em rgba(5, 5, 35, 0.7),
-    /* Inset specular highlights */
-    0 0 0.03em 0.1em inset rgba(255, 255, 255, 0.05),
+    -0.12em -0.12em 0.15em -0.05em rgba(255, 255, 255, 0.10),
+    0 0.04em 0.05em -0.01em rgba(0, 0, 0, 0.8),
+    0.08em 0.15em 0.25em -0.02em rgba(5, 5, 35, 0.5),
+    /* Inset glass specular highlights */
+    0 1px 0 0 inset rgba(255, 255, 255, 0.22),
     0.025em 0.04em 0.08em 0 inset rgba(255, 255, 255, 0.22),
-    -0.05em -0.12em 0.18em 0.05em inset rgba(5, 5, 35, 0.55);
+    -0.05em -0.12em 0.18em 0.05em inset rgba(5, 5, 35, 0.45);
   transition: all 200ms ease;
   user-select: none;
 }
 
 html[data-theme="light"] .tactile-chip {
-  background-color: #FFFFFF;
-  background-image: linear-gradient(135deg, #FFFFFF 0%, #E9F4FB 100%);
-  border: 1px solid rgba(0, 163, 255, 0.28);
+  background-color: rgba(255, 255, 255, 0.35);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(233, 244, 251, 0.25) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
   box-shadow:
-    -0.15em -0.15em 0.2em -0.05em rgba(255, 255, 255, 1),
-    0 0.04em 0.05em -0.01em rgba(100, 165, 205, 0.4),
-    0.08em 0.15em 0.25em -0.02em rgba(90, 155, 195, 0.35),
-    /* Inset specular highlights */
-    0 0 0.03em 0.1em inset rgba(255, 255, 255, 0.85),
+    -0.15em -0.15em 0.2em -0.05em rgba(255, 255, 255, 0.95),
+    0 0.04em 0.05em -0.01em rgba(100, 165, 205, 0.18),
+    0.08em 0.15em 0.25em -0.02em rgba(90, 155, 195, 0.12),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.95),
     0.025em 0.04em 0.08em 0 inset rgba(255, 255, 255, 1),
-    -0.05em -0.12em 0.18em 0.05em inset rgba(90, 155, 195, 0.25);
+    -0.05em -0.12em 0.18em 0.05em inset rgba(90, 155, 195, 0.12);
 }
 
 .tactile-chip:hover {
   transform: translateY(-1px);
-  border-color: var(--accent);
+  border-color: var(--primary-2);
+  background-color: rgba(36, 36, 152, 0.45);
   box-shadow:
-    -0.15em -0.15em 0.22em -0.05em rgba(255, 255, 255, 0.1),
-    0 0.06em 0.08em -0.01em rgba(0, 0, 0, 0.95),
-    0.12em 0.2em 0.35em -0.02em rgba(8, 8, 48, 0.8),
-    0.04em 0.06em 0.1em 0 inset rgba(255, 255, 255, 0.32),
-    -0.06em -0.15em 0.22em 0.06em inset rgba(5, 5, 35, 0.65);
+    -0.15em -0.15em 0.22em -0.05em rgba(255, 255, 255, 0.20),
+    0 0 12px rgba(251, 86, 7, 0.35),
+    0 0.06em 0.08em -0.01em rgba(0, 0, 0, 0.90),
+    0.12em 0.2em 0.35em -0.02em rgba(8, 8, 48, 0.6),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.32);
 }
 
 html[data-theme="light"] .tactile-chip:hover {
-  border-color: var(--accent);
+  border-color: var(--primary-2);
+  background-color: rgba(255, 255, 255, 0.55);
   box-shadow:
     -0.2em -0.2em 0.28em -0.05em rgba(255, 255, 255, 1),
-    0 0.06em 0.08em -0.01em rgba(80, 150, 195, 0.5),
-    0.12em 0.2em 0.35em -0.02em rgba(70, 140, 185, 0.45),
-    0.04em 0.06em 0.1em 0 inset rgba(255, 255, 255, 1),
-    -0.06em -0.15em 0.22em 0.06em inset rgba(80, 145, 185, 0.35);
+    0 0 12px rgba(0, 163, 255, 0.30),
+    0 0.06em 0.08em -0.01em rgba(80, 150, 195, 0.25),
+    0.12em 0.2em 0.35em -0.02em rgba(70, 140, 185, 0.18),
+    0 1px 0 0 inset rgba(255, 255, 255, 1);
 }
 
-/* ──────────────── FCOLOMBATI TACTILE ICON SOCKETS ──────────────── */
+/* Primary 2 Tactile Chip (Frosted Amber / Orange Glow) */
+.tactile-chip-p2 {
+  position: relative;
+  background-color: rgba(56, 21, 4, 0.30);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(78, 30, 7, 0.38) 50%, rgba(48, 19, 5, 0.22) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(251, 86, 7, 0.45);
+  border-top: 1px solid rgba(255, 185, 150, 0.50);
+  border-radius: 0.65rem;
+  color: #FB5607;
+  box-shadow:
+    -0.12em -0.12em 0.15em -0.05em rgba(251, 86, 7, 0.2),
+    0 0.04em 0.05em -0.01em rgba(0, 0, 0, 0.8),
+    0.08em 0.15em 0.25em -0.02em rgba(35, 12, 4, 0.5),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.25);
+  transition: all 200ms ease;
+  user-select: none;
+}
+
+html[data-theme="light"] .tactile-chip-p2 {
+  background-color: rgba(224, 242, 254, 0.35);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(224, 242, 254, 0.40) 50%, rgba(186, 230, 253, 0.25) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(0, 163, 255, 0.45);
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
+  color: #0077BA;
+  box-shadow:
+    -0.15em -0.15em 0.2em -0.05em rgba(255, 255, 255, 0.95),
+    0 0.04em 0.05em -0.01em rgba(0, 163, 255, 0.16),
+    0.08em 0.15em 0.25em -0.02em rgba(0, 140, 220, 0.12),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.95);
+}
+
+.tactile-chip-p2:hover {
+  transform: translateY(-1px);
+  border-color: #FF7A33;
+  background-color: rgba(65, 25, 5, 0.45);
+  box-shadow:
+    0 0 14px rgba(251, 86, 7, 0.45),
+    -0.15em -0.15em 0.22em -0.05em rgba(251, 86, 7, 0.25),
+    0 0.06em 0.08em -0.01em rgba(0, 0, 0, 0.90);
+}
+
+html[data-theme="light"] .tactile-chip-p2:hover {
+  border-color: #00A3FF;
+  background-color: rgba(224, 242, 254, 0.55);
+  box-shadow:
+    0 0 14px rgba(0, 163, 255, 0.35),
+    -0.2em -0.2em 0.28em -0.05em rgba(255, 255, 255, 1);
+}
+
+/* ──────────────── FCOLOMBATI TACTILE ICON SOCKETS (FROSTED GLASS) ──────────────── */
 .tactile-icon-socket {
   position: relative;
-  background-color: #242498;
-  background-image: linear-gradient(135deg, #2E2EAC 0%, #1E1E82 100%);
-  border: 1px solid rgba(251, 86, 7, 0.24);
+  background-color: rgba(36, 36, 152, 0.30);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.10) 0%, rgba(46, 46, 172, 0.35) 50%, rgba(30, 30, 130, 0.22) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow:
-    -0.12em -0.12em 0.18em -0.05em rgba(255, 255, 255, 0.08),
-    0 0.05em 0.06em -0.01em rgba(0, 0, 0, 0.85),
-    0.1em 0.2em 0.3em -0.02em rgba(5, 5, 35, 0.7),
-    0 0 0.04em 0.12em inset rgba(255, 255, 255, 0.06),
-    0.03em 0.05em 0.1em 0 inset rgba(255, 255, 255, 0.25),
-    0.1em 0.1em 0.15em inset rgba(255, 255, 255, 0.08),
-    -0.06em -0.15em 0.22em 0.06em inset rgba(5, 5, 35, 0.6);
+    -0.12em -0.12em 0.18em -0.05em rgba(255, 255, 255, 0.10),
+    0 0.05em 0.06em -0.01em rgba(0, 0, 0, 0.8),
+    0.1em 0.2em 0.3em -0.02em rgba(5, 5, 35, 0.5),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.25);
   transition: all 200ms ease;
 }
 
 html[data-theme="light"] .tactile-icon-socket {
-  background-color: #FFFFFF;
-  background-image: linear-gradient(135deg, #FFFFFF 0%, #E8F5FD 100%);
-  border: 1px solid rgba(0, 163, 255, 0.28);
+  background-color: rgba(255, 255, 255, 0.35);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(232, 245, 253, 0.25) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
   box-shadow:
-    -0.18em -0.18em 0.25em -0.05em rgba(255, 255, 255, 1),
-    0 0.04em 0.05em -0.01em rgba(100, 165, 205, 0.4),
-    0.1em 0.2em 0.3em -0.02em rgba(90, 155, 195, 0.35),
-    0 0 0.04em 0.12em inset rgba(255, 255, 255, 0.9),
+    -0.18em -0.18em 0.25em -0.05em rgba(255, 255, 255, 0.95),
+    0 0.04em 0.05em -0.01em rgba(100, 165, 205, 0.25),
+    0.1em 0.2em 0.3em -0.02em rgba(90, 155, 195, 0.2),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.95),
     0.03em 0.05em 0.1em 0 inset rgba(255, 255, 255, 1),
     0.1em 0.1em 0.15em inset rgba(255, 255, 255, 0.85),
-    -0.06em -0.15em 0.22em 0.06em inset rgba(90, 155, 195, 0.25);
+    -0.06em -0.15em 0.22em 0.06em inset rgba(90, 155, 195, 0.18);
 }
 
-/* ──────────────── FCOLOMBATI TACTILE DISPLAY FRAME ──────────────── */
+/* Primary 2 Icon Socket */
+.tactile-icon-socket-p2 {
+  position: relative;
+  background-color: rgba(56, 21, 4, 0.30);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(74, 26, 6, 0.38) 50%, rgba(42, 15, 3, 0.22) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(251, 86, 7, 0.45);
+  border-top: 1px solid rgba(255, 185, 150, 0.50);
+  box-shadow:
+    -0.12em -0.12em 0.18em -0.05em rgba(251, 86, 7, 0.22),
+    0 0.05em 0.06em -0.01em rgba(0, 0, 0, 0.8),
+    0.1em 0.2em 0.3em -0.02em rgba(35, 12, 4, 0.5),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.25);
+  transition: all 200ms ease;
+}
+
+html[data-theme="light"] .tactile-icon-socket-p2 {
+  background-color: rgba(224, 242, 254, 0.35);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(224, 242, 254, 0.40) 50%, rgba(186, 230, 253, 0.25) 100%);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border: 1px solid rgba(0, 163, 255, 0.45);
+  border-top: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    -0.18em -0.18em 0.25em -0.05em rgba(255, 255, 255, 0.95),
+    0 0.04em 0.05em -0.01em rgba(0, 163, 255, 0.25),
+    0.1em 0.2em 0.3em -0.02em rgba(0, 140, 220, 0.2),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.95),
+    0.03em 0.05em 0.1em 0 inset rgba(255, 255, 255, 1);
+}
+
+/* ──────────────── FCOLOMBATI TACTILE DISPLAY FRAME (TRANSLUCENT macOS BEZEL) ──────────────── */
 .tactile-display-frame {
   position: relative;
-  background-color: #1A1A78;
-  background-image: linear-gradient(135deg, #242498 0%, #151564 100%);
-  border: 1px solid rgba(251, 86, 7, 0.24);
+  background-color: rgba(26, 26, 120, 0.25);
+  background-image: linear-gradient(135deg, rgba(36, 36, 152, 0.35) 0%, rgba(21, 21, 100, 0.20) 100%);
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 1.25rem;
   padding: 0.35rem;
   box-shadow:
-    -0.15em -0.15em 0.25em -0.05em rgba(255, 255, 255, 0.08),
-    0 0.08em 0.1em -0.02em rgba(0, 0, 0, 0.95),
-    0.2em 0.4em 0.9em -0.05em rgba(8, 8, 48, 0.85),
-    0 1em 2.5em -0.3em rgba(5, 5, 40, 0.8),
-    0 0 0.05em 0.15em inset rgba(255, 255, 255, 0.05),
+    -0.15em -0.15em 0.25em -0.05em rgba(255, 255, 255, 0.10),
+    0 0.08em 0.1em -0.02em rgba(0, 0, 0, 0.85),
+    0.2em 0.4em 0.9em -0.05em rgba(8, 8, 48, 0.55),
+    0 1em 2.5em -0.3em rgba(5, 5, 40, 0.45),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.22),
     0.03em 0.06em 0.12em 0 inset rgba(255, 255, 255, 0.22),
-    -0.08em -0.2em 0.35em 0.1em inset rgba(5, 5, 35, 0.65);
+    -0.08em -0.2em 0.35em 0.1em inset rgba(5, 5, 35, 0.5);
   transition: all 250ms ease;
 }
 
 html[data-theme="light"] .tactile-display-frame {
-  background-color: #FFFFFF;
-  background-image: linear-gradient(135deg, #FFFFFF 0%, #E8F4FB 100%);
-  border: 1px solid rgba(0, 163, 255, 0.28);
+  background-color: rgba(255, 255, 255, 0.70);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(232, 244, 251, 0.62) 100%);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.90);
+  border-top: 1px solid rgba(255, 255, 255, 0.98);
   box-shadow:
-    -0.2em -0.2em 0.4em -0.05em rgba(255, 255, 255, 1),
-    0 0.06em 0.07em -0.02em rgba(100, 165, 205, 0.4),
-    0.2em 0.4em 0.9em -0.05em rgba(90, 155, 195, 0.35),
-    0 1em 2.2em -0.3em rgba(80, 145, 185, 0.25),
-    0 0 0.05em 0.15em inset rgba(255, 255, 255, 0.85),
+    -0.2em -0.2em 0.4em -0.05em rgba(255, 255, 255, 0.95),
+    0 0.06em 0.07em -0.02em rgba(100, 165, 205, 0.25),
+    0.2em 0.4em 0.9em -0.05em rgba(90, 155, 195, 0.2),
+    0 1em 2.2em -0.3em rgba(80, 145, 185, 0.15),
+    0 1px 0 0 inset rgba(255, 255, 255, 0.95),
     0.03em 0.06em 0.12em 0 inset rgba(255, 255, 255, 1),
-    -0.08em -0.2em 0.35em 0.1em inset rgba(90, 155, 195, 0.3);
+    -0.08em -0.2em 0.35em 0.1em inset rgba(90, 155, 195, 0.18);
 }
 
 
@@ -818,122 +1095,112 @@ html[data-theme="light"] .neumorphic-btn:active {
 }
 
 /* ──────────────── ADVANCED CONTINUOUS CSS SCROLL ANIMATION SYSTEM ──────────────── */
+/* Resilient Progressive Enhancement: Elements are fully visible by default */
 .scroll-reveal {
-  opacity: 0;
-  will-change: transform, opacity, filter, clip-path;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0px);
+  will-change: transform, opacity;
   transition:
-    opacity 650ms cubic-bezier(0.16, 1, 0.3, 1),
-    transform 650ms cubic-bezier(0.16, 1, 0.3, 1),
-    filter 650ms cubic-bezier(0.16, 1, 0.3, 1),
-    clip-path 750ms cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 600ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 600ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 600ms cubic-bezier(0.16, 1, 0.3, 1);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* 1. Slide In from Left (Exits back to left when scrolling away) */
-.scroll-slide-left {
+/* Pending Entrance State (applied only to unrevealed elements below the fold via JS) */
+.scroll-reveal.scroll-pending.scroll-slide-left {
   opacity: 0;
-  transform: translate3d(-60px, 0, 0);
-  filter: blur(8px);
+  transform: translate3d(-36px, 0, 0);
+  filter: blur(5px);
 }
 
-/* 2. Slide In from Right (Exits back to right when scrolling away) */
-.scroll-slide-right {
+.scroll-reveal.scroll-pending.scroll-slide-right {
   opacity: 0;
-  transform: translate3d(60px, 0, 0);
-  filter: blur(8px);
+  transform: translate3d(36px, 0, 0);
+  filter: blur(5px);
 }
 
-/* 3. Slide Up (Exits downward when scrolling away) */
-.scroll-slide-up {
+.scroll-reveal.scroll-pending.scroll-slide-up {
   opacity: 0;
-  transform: translate3d(0, 50px, 0) scale(0.96);
-  filter: blur(6px);
-}
-
-/* 4. Slide Down (Exits upward when scrolling away) */
-.scroll-slide-down {
-  opacity: 0;
-  transform: translate3d(0, -45px, 0) scale(0.96);
-  filter: blur(6px);
-}
-
-/* 5. Scale Up & Unblur */
-.scroll-scale-up {
-  opacity: 0;
-  transform: scale(0.88);
-  filter: blur(10px);
-}
-
-/* 6. Blur to Crystal Clear */
-.scroll-blur-clear {
-  opacity: 0;
-  filter: blur(16px);
-  transform: scale(0.97);
-}
-
-/* 7. Perspective 3D Rotate from Left */
-.scroll-rotate-left {
-  opacity: 0;
-  transform: translate3d(-45px, 25px, 0) rotate(-3.5deg) scale(0.94);
-  filter: blur(6px);
-}
-
-/* 8. Perspective 3D Rotate from Right */
-.scroll-rotate-right {
-  opacity: 0;
-  transform: translate3d(45px, 25px, 0) rotate(3.5deg) scale(0.94);
-  filter: blur(6px);
-}
-
-/* 9. 3D Perspective Card Flip Up */
-.scroll-flip-up {
-  opacity: 0;
-  transform: perspective(1000px) rotateX(15deg) translateY(45px) scale(0.93);
-  filter: blur(6px);
-}
-
-/* 10. Shutter Clip-Path Reveal from Top */
-.scroll-clip-up {
-  opacity: 0;
-  clip-path: inset(0 0 100% 0);
-  transform: translateY(28px);
+  transform: translate3d(0, 32px, 0) scale(0.98);
   filter: blur(4px);
 }
 
-/* 11. Expanding Radial Clip-Path Reveal */
-.scroll-clip-expand {
+.scroll-reveal.scroll-pending.scroll-slide-down {
   opacity: 0;
-  clip-path: inset(18% 18% 18% 18% round 1.5rem);
-  transform: scale(0.92);
-  filter: blur(8px);
+  transform: translate3d(0, -28px, 0) scale(0.98);
+  filter: blur(4px);
 }
 
-/* Active State: Triggered Repeatedly on Viewport Enter */
+.scroll-reveal.scroll-pending.scroll-scale-up {
+  opacity: 0;
+  transform: scale(0.94);
+  filter: blur(6px);
+}
+
+.scroll-reveal.scroll-pending.scroll-blur-clear {
+  opacity: 0;
+  filter: blur(10px);
+  transform: scale(0.98);
+}
+
+.scroll-reveal.scroll-pending.scroll-rotate-left {
+  opacity: 0;
+  transform: translate3d(-24px, 16px, 0) rotate(-2deg) scale(0.96);
+  filter: blur(4px);
+}
+
+.scroll-reveal.scroll-pending.scroll-rotate-right {
+  opacity: 0;
+  transform: translate3d(24px, 16px, 0) rotate(2deg) scale(0.96);
+  filter: blur(4px);
+}
+
+.scroll-reveal.scroll-pending.scroll-flip-up {
+  opacity: 0;
+  transform: perspective(800px) rotateX(10deg) translateY(24px) scale(0.96);
+  filter: blur(4px);
+}
+
+.scroll-reveal.scroll-pending.scroll-clip-up {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(4px);
+}
+
+.scroll-reveal.scroll-pending.scroll-clip-expand {
+  opacity: 0;
+  transform: scale(0.95);
+  filter: blur(6px);
+}
+
+/* Active In-View State: 100% Crisp Visibility */
 .scroll-reveal.is-in-view {
   opacity: 1 !important;
   transform: translate3d(0, 0, 0) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) !important;
   filter: blur(0px) !important;
-  clip-path: inset(0 0 0 0) !important;
+  clip-path: none !important;
 }
 
 .scroll-clip-expand.is-in-view {
-  clip-path: inset(0% 0% 0% 0% round 1.5rem) !important;
+  clip-path: none !important;
 }
 
 /* Staggered Transitions for Content Cascades */
-.stagger-1 { transition-delay: 45ms; }
-.stagger-2 { transition-delay: 90ms; }
-.stagger-3 { transition-delay: 135ms; }
-.stagger-4 { transition-delay: 180ms; }
-.stagger-5 { transition-delay: 225ms; }
-.stagger-6 { transition-delay: 270ms; }
-.stagger-7 { transition-delay: 315ms; }
-.stagger-8 { transition-delay: 360ms; }
+.stagger-1 { transition-delay: 40ms; }
+.stagger-2 { transition-delay: 80ms; }
+.stagger-3 { transition-delay: 120ms; }
+.stagger-4 { transition-delay: 160ms; }
+.stagger-5 { transition-delay: 200ms; }
+.stagger-6 { transition-delay: 240ms; }
+.stagger-7 { transition-delay: 280ms; }
+.stagger-8 { transition-delay: 320ms; }
 
 /* ──────────────── NATIVE CSS SCROLL-DRIVEN VIEW TIMELINES ──────────────── */
 @supports (animation-timeline: view()) {
-  /* Subtle hero parallax on scroll away */
+  /* Subtle hero parallax on scroll away without dropping opacity or blurring */
   .hero-scroll-parallax {
     animation: heroScrollExit linear both;
     animation-timeline: view();
@@ -942,9 +1209,7 @@ html[data-theme="light"] .neumorphic-btn:active {
 
   @keyframes heroScrollExit {
     to {
-      transform: translateY(-40px) scale(0.94);
-      opacity: 0.25;
-      filter: blur(6px);
+      transform: translateY(-20px) scale(0.98);
     }
   }
 }
@@ -954,41 +1219,41 @@ html[data-theme="light"] .neumorphic-btn:active {
   .scroll-reveal {
     transition-duration: 480ms !important;
   }
-  .scroll-slide-left {
-    transform: translate3d(-24px, 0, 0);
+  .scroll-reveal.scroll-pending.scroll-slide-left {
+    transform: translate3d(-20px, 0, 0);
+    filter: blur(3px);
+  }
+  .scroll-reveal.scroll-pending.scroll-slide-right {
+    transform: translate3d(20px, 0, 0);
+    filter: blur(3px);
+  }
+  .scroll-reveal.scroll-pending.scroll-slide-up {
+    transform: translate3d(0, 20px, 0) scale(0.98);
+    filter: blur(3px);
+  }
+  .scroll-reveal.scroll-pending.scroll-slide-down {
+    transform: translate3d(0, -18px, 0) scale(0.98);
+    filter: blur(3px);
+  }
+  .scroll-reveal.scroll-pending.scroll-scale-up {
+    transform: scale(0.95);
     filter: blur(4px);
   }
-  .scroll-slide-right {
-    transform: translate3d(24px, 0, 0);
-    filter: blur(4px);
-  }
-  .scroll-slide-up {
-    transform: translate3d(0, 24px, 0) scale(0.97);
-    filter: blur(4px);
-  }
-  .scroll-slide-down {
-    transform: translate3d(0, -20px, 0) scale(0.97);
-    filter: blur(4px);
-  }
-  .scroll-scale-up {
-    transform: scale(0.92);
+  .scroll-reveal.scroll-pending.scroll-blur-clear {
     filter: blur(6px);
+    transform: scale(0.98);
   }
-  .scroll-blur-clear {
-    filter: blur(10px);
-    transform: scale(0.97);
+  .scroll-reveal.scroll-pending.scroll-rotate-left {
+    transform: translate3d(-14px, 10px, 0) rotate(-1.5deg) scale(0.97);
+    filter: blur(3px);
   }
-  .scroll-rotate-left {
-    transform: translate3d(-18px, 12px, 0) rotate(-2deg) scale(0.96);
-    filter: blur(4px);
+  .scroll-reveal.scroll-pending.scroll-rotate-right {
+    transform: translate3d(14px, 10px, 0) rotate(1.5deg) scale(0.97);
+    filter: blur(3px);
   }
-  .scroll-rotate-right {
-    transform: translate3d(18px, 12px, 0) rotate(2deg) scale(0.96);
-    filter: blur(4px);
-  }
-  .scroll-flip-up {
-    transform: perspective(600px) rotateX(10deg) translateY(24px) scale(0.95);
-    filter: blur(4px);
+  .scroll-reveal.scroll-pending.scroll-flip-up {
+    transform: perspective(600px) rotateX(8deg) translateY(18px) scale(0.97);
+    filter: blur(3px);
   }
   .stagger-1 { transition-delay: 25ms; }
   .stagger-2 { transition-delay: 50ms; }

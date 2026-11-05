@@ -111,10 +111,10 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         className="fixed inset-0 bg-black/85 backdrop-blur-xl transition-opacity opacity-0"
       />
 
-      {/* Modal Dialog with Neumorphic Styling */}
+      {/* Modal Dialog with Neumorphic & Glassmorphic Styling */}
       <div
         ref={modalRef}
-        className="relative w-full max-w-5xl h-[94vh] sm:h-[92vh] neumorphic-card bg-[var(--bg-surface)] p-3.5 sm:p-5 md:p-6 z-10 text-[var(--text-primary)] flex flex-col opacity-0 rounded-2xl border border-[var(--border)]"
+        className="relative w-full max-w-5xl h-[94vh] sm:h-[92vh] neumorphic-card p-3.5 sm:p-5 md:p-6 z-10 text-[var(--text-primary)] flex flex-col opacity-0 rounded-2xl"
       >
         {/* Header Bar */}
         <div className="flex items-center justify-between border-b border-[var(--border)] pb-3 mb-2.5 sm:mb-3 gap-2 sm:gap-4">

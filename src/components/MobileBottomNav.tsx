@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Home, Briefcase, Code2, GraduationCap, User, Mail, ShieldCheck } from 'lucide-react';
+import { Home, Briefcase, Code2, GraduationCap, User, Mail } from 'lucide-react';
 import anime from 'animejs';
 
 interface TabItem {
@@ -13,7 +13,6 @@ const TABS: TabItem[] = [
   { id: 'hero', label: 'Home', href: '#home', icon: Home },
   { id: 'about', label: 'About', href: '#about', icon: User },
   { id: 'work', label: 'Projects', href: '#work', icon: Briefcase },
-  { id: 'experience', label: 'Internships', href: '#experience', icon: ShieldCheck },
   { id: 'skills', label: 'Skills', href: '#skills', icon: Code2 },
   { id: 'education', label: 'Education', href: '#education', icon: GraduationCap },
   { id: 'contact', label: 'Contact', href: '#contact', icon: Mail },
@@ -99,7 +98,7 @@ export function MobileBottomNav() {
     <nav
       ref={navRef}
       aria-label="Mobile Navigation"
-      className="md:hidden fixed bottom-0 left-0 w-full min-h-[56px] bg-[var(--bg-surface)]/95 backdrop-blur-md border-t border-[var(--border)] z-40 flex items-center justify-around px-1 pt-1 pb-[max(env(safe-area-inset-bottom,0px),6px)]"
+      className="md:hidden fixed bottom-0 left-0 w-full min-h-[56px] bg-[var(--bg-surface)] backdrop-blur-xl border-t border-[var(--border)] z-40 flex items-center justify-around px-1 pt-1 pb-[max(env(safe-area-inset-bottom,0px),6px)] shadow-[0_-4px_24px_rgba(0,0,0,0.25)]"
     >
       {TABS.map((tab) => {
         const Icon = tab.icon;

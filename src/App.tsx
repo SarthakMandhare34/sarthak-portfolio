@@ -9,7 +9,6 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Projects } from './components/Projects';
-import { Experience } from './components/Experience';
 import { Skills } from './components/Skills';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
@@ -32,23 +31,72 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <div className="relative min-h-screen bg-[var(--bg-base)] text-[var(--text-primary)] transition-colors duration-450">
+      <div className="relative min-h-screen bg-[var(--bg-base)] text-[var(--text-primary)] transition-colors duration-450 overflow-x-hidden">
+        {/* ──────── FIXED ATMOSPHERIC AMBIENT MESH (POWERS VIBRANT TRANSLUCENT GLASSMORHPISM) ──────── */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden z-0 select-none" aria-hidden="true">
+          {/* Top-Left Orb (Primary 1 / Royal Blue / Sky Blue) */}
+          <div
+            className="absolute -top-24 -left-28 w-[680px] h-[680px] rounded-full opacity-70 dark:opacity-60 blur-[130px]"
+            style={{
+              background: 'radial-gradient(circle, var(--ambient-orb-p1) 0%, transparent 70%)',
+            }}
+          />
+          {/* Top-Right Orb behind Hero portrait (Primary 2 / Nitro Orange / Rose Coral) */}
+          <div
+            className="absolute top-10 -right-24 w-[650px] h-[650px] rounded-full opacity-65 dark:opacity-55 blur-[130px]"
+            style={{
+              background: 'radial-gradient(circle, var(--ambient-orb-p2) 0%, transparent 70%)',
+            }}
+          />
+
+          {/* Mid-Left Orb (About & Projects) - Accent Lime / Cerulean */}
+          <div
+            className="absolute top-[30%] -left-32 w-[600px] h-[600px] rounded-full opacity-60 dark:opacity-50 blur-[140px]"
+            style={{
+              background: 'radial-gradient(circle, var(--ambient-orb-accent) 0%, transparent 70%)',
+            }}
+          />
+
+          {/* Mid-Right Orb (Projects & Experience) - Vibrant Sky / Royal Navy */}
+          <div
+            className="absolute top-[48%] -right-32 w-[650px] h-[650px] rounded-full opacity-65 dark:opacity-55 blur-[140px]"
+            style={{
+              background: 'radial-gradient(circle, var(--ambient-orb-p1) 0%, transparent 70%)',
+            }}
+          />
+
+          {/* Lower-Left Orb (Experience & Skills) - Primary 2 Nitro Orange / Rose Coral */}
+          <div
+            className="absolute top-[68%] -left-28 w-[640px] h-[640px] rounded-full opacity-60 dark:opacity-50 blur-[130px]"
+            style={{
+              background: 'radial-gradient(circle, var(--ambient-orb-p2) 0%, transparent 70%)',
+            }}
+          />
+
+          {/* Bottom-Right Orb (Education & Contact) - Accent Lime / Cerulean */}
+          <div
+            className="absolute -bottom-24 right-[10%] w-[680px] h-[680px] rounded-full opacity-65 dark:opacity-55 blur-[140px]"
+            style={{
+              background: 'radial-gradient(circle, var(--ambient-orb-accent) 0%, transparent 70%)',
+            }}
+          />
+        </div>
+
         {/* Top Navigation Bar */}
         <Navbar onResumeClick={() => setIsResumeOpen(true)} />
 
-        {/* Main Content: Hero, About, Projects, Experience, Skills, Education, and Contact */}
-        <main>
+        {/* Main Content: Hero, About, Projects, Skills, Education, and Contact */}
+        <main className="relative z-10">
           <Hero onResumeClick={() => setIsResumeOpen(true)} />
           <About />
           <Projects />
-          <Experience />
           <Skills />
           <Education />
           <Contact onResumeClick={() => setIsResumeOpen(true)} />
         </main>
 
-        {/* Minimal Footer */}
-        <footer className="w-full border-t border-[var(--border)] bg-[var(--bg-base)] py-8 pb-24 md:py-10 text-xs font-inter text-[var(--text-secondary)]">
+        {/* Minimal Frosted Glass Footer */}
+        <footer className="relative z-10 w-full border-t border-[var(--border)] bg-[var(--bg-surface)] backdrop-blur-xl py-8 pb-24 md:py-10 text-xs font-inter text-[var(--text-secondary)]">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
               <span className="font-space font-bold text-[var(--text-primary)]">Sarthak Mangesh Mandhare</span>

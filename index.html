@@ -62,9 +62,9 @@
     }
 
     .preloader-overlay.fade-out {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
     }
 
     .loader {
@@ -356,14 +356,15 @@
 
       window.__dismissPreloader = dismiss;
 
-      if (document.readyState === 'complete') {
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
         dismiss();
       } else {
+        window.addEventListener('DOMContentLoaded', dismiss);
         window.addEventListener('load', dismiss);
       }
 
-      // Guaranteed safety timeout (3s) so stalled network requests never permanently block the user
-      setTimeout(dismiss, 3000);
+      // Guaranteed safety timeout (600ms) so stalled network requests never permanently block the user
+      setTimeout(dismiss, 600);
     })();
   </script>
 

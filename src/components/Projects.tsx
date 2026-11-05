@@ -198,7 +198,7 @@ export function Projects() {
   return (
     <section
       id="work"
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-26 transition-colors duration-450 border-t border-[var(--border)] relative"
+      className="w-full bg-transparent py-14 sm:py-20 md:py-26 transition-colors duration-450 border-t border-[var(--border)] relative"
     >
       <div id="projects" className="absolute -top-16 left-0 w-0 h-0 pointer-events-none" />
 
@@ -206,7 +206,7 @@ export function Projects() {
         
         {/* ──────────────── SECTION HEADER ──────────────── */}
         <div className="scroll-reveal scroll-blur-clear mb-7 sm:mb-10 max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full dual-primary-badge text-xs font-mono-code text-[var(--primary-2)] mb-3 font-semibold">
             <span>Projects</span>
           </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
@@ -224,7 +224,7 @@ export function Projects() {
               onClick={() => handleFilterChange('all')}
               className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
                 activeFilter === 'all'
-                  ? 'tactile-chip text-[var(--accent)] font-semibold'
+                  ? 'tactile-chip-p2 text-[var(--primary-2)] font-semibold'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
               }`}
             >
@@ -234,7 +234,7 @@ export function Projects() {
               onClick={() => handleFilterChange('academic')}
               className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
                 activeFilter === 'academic'
-                  ? 'tactile-chip text-[var(--accent)] font-semibold'
+                  ? 'tactile-chip-p2 text-[var(--primary-2)] font-semibold'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
               }`}
             >
@@ -244,7 +244,7 @@ export function Projects() {
               onClick={() => handleFilterChange('internship')}
               className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap ${
                 activeFilter === 'internship'
-                  ? 'tactile-chip text-[var(--accent)] font-semibold'
+                  ? 'tactile-chip-p2 text-[var(--primary-2)] font-semibold'
                   : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40'
               }`}
             >
@@ -253,18 +253,19 @@ export function Projects() {
           </div>
         </div>
 
-        {/* ──────────────── 4 DISTINCT SHOWCASE CARDS (EXPANDS IN ITS OWN SPACE) ──────────────── */}
+        {/* ──────────────── 4 DISTINCT SHOWCASE CARDS (50:50 DUAL-PRIMARY BALANCE) ──────────────── */}
         <div className="space-y-6 sm:space-y-8">
           {filteredProjects.map((project, idx) => {
             const isExpanded = expandedProjectId === project.id;
             const animClass = idx % 2 === 0 ? 'scroll-slide-left' : 'scroll-slide-right';
+            const cardThemeClass = idx % 2 === 0 ? 'neumorphic-card' : 'neumorphic-card-p2';
 
             return (
               <article
                 key={project.id}
                 id={`project-${project.id}`}
-                className={`project-showcase-card scroll-reveal ${animClass} neumorphic-card group relative p-5 sm:p-7 md:p-8 transition-all duration-300 border border-[var(--border)] bg-[var(--bg-elevated)] rounded-2xl ${
-                  isExpanded ? 'ring-2 ring-[var(--accent)]/50 shadow-xl' : 'hover:border-[var(--accent)]/40'
+                className={`project-showcase-card scroll-reveal ${animClass} ${cardThemeClass} group relative p-5 sm:p-7 md:p-8 transition-all duration-300 rounded-2xl ${
+                  isExpanded ? 'ring-2 ring-[var(--primary-2)]/50 shadow-xl' : 'hover:border-[var(--primary-2)]/50'
                 }`}
               >
                 {/* ────── MAIN PROJECT ROW (PREVIEW + CONTENT) ────── */}
@@ -389,12 +390,14 @@ export function Projects() {
                         </div>
                       )}
 
-                      {/* Stack Chips */}
+                      {/* Stack Chips (50:50 Dual-Primary Chip Distribution) */}
                       <div className="mt-3.5 pt-2 flex flex-wrap gap-1.5">
-                        {project.stack.map((tech) => (
+                        {project.stack.map((tech, sIdx) => (
                           <span
                             key={tech}
-                            className="tactile-chip px-2.5 py-1 font-mono-code text-[11px] text-[var(--accent)]"
+                            className={`${
+                              sIdx % 2 === 0 ? 'tactile-chip text-[var(--text-primary)]' : 'tactile-chip-p2 text-[var(--primary-2)]'
+                            } px-2.5 py-1 font-mono-code text-[11px] font-medium`}
                           >
                             {tech}
                           </span>

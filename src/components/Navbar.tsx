@@ -11,7 +11,6 @@ interface NavbarProps {
 const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#work' },
-  { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
@@ -99,18 +98,15 @@ export function Navbar({ onResumeClick }: NavbarProps) {
     }
   }, [isScrolled]);
 
-  // Handle Theme Toggle with Anime.js 180deg rotation & fade
+  // Handle Theme Toggle with clean 360deg spin & spring scale
   const handleThemeToggle = () => {
     if (themeIconRef.current) {
       anime({
         targets: themeIconRef.current,
-        rotate: '+=180deg',
-        opacity: [
-          { value: 0, duration: 125, easing: 'easeOutQuad' },
-          { value: 1, duration: 125, easing: 'easeInQuad' },
-        ],
-        duration: 250,
-        easing: 'easeInOutQuad',
+        rotate: [0, 360],
+        scale: [0.75, 1],
+        duration: 350,
+        easing: 'easeOutBack',
       });
     }
     toggleTheme();
@@ -137,10 +133,10 @@ export function Navbar({ onResumeClick }: NavbarProps) {
 
   return (
     <>
-      {/* ──────────────── TOP VIEWPORT SCROLL PROGRESS BAR ──────────────── */}
+      {/* ──────────────── TOP VIEWPORT SCROLL PROGRESS BAR (DUAL-PRIMARY + DECORATIVE) ──────────────── */}
       <div className="fixed top-0 left-0 w-full h-[3px] z-50 pointer-events-none bg-[var(--border)]/20">
         <div
-          className="h-full bg-gradient-to-r from-[var(--accent)] to-[var(--decorative)] transition-all duration-150 ease-out shadow-[0_0_10px_var(--decorative)]"
+          className="h-full bg-gradient-to-r from-[var(--primary-1-light)] via-[var(--primary-2)] to-[var(--decorative)] transition-all duration-150 ease-out shadow-[0_0_10px_var(--decorative)]"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -155,12 +151,12 @@ export function Navbar({ onResumeClick }: NavbarProps) {
 
         {/* Navigation Content Container */}
         <div className="relative max-w-[1280px] mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* LEFT: Monogram Logo */}
-          <div className="nav-anim-item opacity-0">
+          {/* LEFT: Monogram Logo (Dual-Primary Sockets) */}
+          <div className="nav-anim-item">
             <a
               href="#"
               onClick={scrollToTop}
-              className="font-display font-bold text-[14px] text-[var(--accent)] tracking-tight inline-flex items-center justify-center w-8 h-8 rounded-xl tactile-icon-socket transition-transform active:scale-95"
+              className="font-display font-bold text-[14px] text-[var(--primary-2)] tracking-tight inline-flex items-center justify-center w-8 h-8 rounded-xl tactile-icon-socket transition-transform active:scale-95"
               aria-label="Sarthak Mandhare - Back to top"
             >
               SM
@@ -178,7 +174,7 @@ export function Navbar({ onResumeClick }: NavbarProps) {
                     key={link.label}
                     href={link.href}
                     onClick={(e) => scrollToSection(e, link.href)}
-                    className={`nav-anim-item opacity-0 px-3 py-1 rounded-lg transition-all duration-200 ${
+                    className={`nav-anim-item px-3 py-1 rounded-lg transition-all duration-200 ${
                       isActive
                         ? 'text-[var(--accent)] font-semibold tactile-chip'
                         : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40 font-medium'
@@ -191,7 +187,7 @@ export function Navbar({ onResumeClick }: NavbarProps) {
             </nav>
 
             {/* Mobile Resume Quick-Action Button */}
-            <div className="nav-anim-item opacity-0 md:hidden">
+            <div className="nav-anim-item md:hidden">
               <TactileButton
                 onClick={onResumeClick}
                 variant="secondary"
@@ -203,7 +199,7 @@ export function Navbar({ onResumeClick }: NavbarProps) {
             </div>
 
             {/* Theme Toggle Button */}
-            <div className="nav-anim-item opacity-0">
+            <div className="nav-anim-item">
               <button
                 onClick={handleThemeToggle}
                 aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
@@ -220,7 +216,7 @@ export function Navbar({ onResumeClick }: NavbarProps) {
             </div>
 
             {/* Desktop Tactile Resume Button (Hidden below 768px) */}
-            <div className="nav-anim-item opacity-0 hidden md:block">
+            <div className="nav-anim-item hidden md:block">
               <TactileButton
                 onClick={onResumeClick}
                 variant="secondary"

@@ -41,13 +41,13 @@ export function Contact({ onResumeClick }: ContactProps) {
   return (
     <section
       id="contact"
-      className="w-full bg-[var(--bg-base)] py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
+      className="w-full bg-transparent py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ──────────────── SECTION HEADER ──────────────── */}
         <div className="contact-header scroll-reveal scroll-scale-up mb-7 sm:mb-12 max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-elevated)] border border-[var(--border)] text-xs font-mono-code text-[var(--accent)] mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full dual-primary-badge text-xs font-mono-code text-[var(--primary-2)] mb-3 font-semibold">
             <span>Contact</span>
           </div>
           <h2 className="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
@@ -58,15 +58,15 @@ export function Contact({ onResumeClick }: ContactProps) {
           </p>
         </div>
 
-        {/* ──────────────── CONTACT CARDS GRID ──────────────── */}
+        {/* ──────────────── CONTACT CARDS GRID (50:50 DUAL-PRIMARY BALANCE) ──────────────── */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
           
-          {/* Email Card */}
-          <div className="contact-card scroll-reveal scroll-slide-left neumorphic-card p-4 sm:p-7 md:p-8 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl flex flex-col justify-between space-y-5">
+          {/* Email Card (Primary 1 Foundation) */}
+          <div className="contact-card scroll-reveal scroll-slide-left neumorphic-card p-4 sm:p-7 md:p-8 rounded-2xl flex flex-col justify-between space-y-5">
             <div>
               <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
-                <span className="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold flex items-center gap-1.5">
-                  <Zap className="w-3.5 h-3.5 text-[var(--accent)] shrink-0" />
+                <span className="font-mono-code text-xs text-[var(--primary-2)] uppercase font-semibold flex items-center gap-1.5">
+                  <Zap className="w-3.5 h-3.5 text-[var(--primary-2)] shrink-0" />
                   <span>Primary Channel · Within 24h</span>
                 </span>
               </div>
@@ -76,7 +76,7 @@ export function Contact({ onResumeClick }: ContactProps) {
               </span>
               <a
                 href="mailto:sarthakmandhare34@gmail.com"
-                className="font-display font-bold text-base sm:text-xl md:text-2xl text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors mt-1 block break-all"
+                className="font-display font-bold text-base sm:text-xl md:text-2xl text-[var(--text-primary)] hover:text-[var(--primary-2)] transition-colors mt-1 block break-all"
               >
                 sarthakmandhare34@gmail.com
               </a>
@@ -109,12 +109,12 @@ export function Contact({ onResumeClick }: ContactProps) {
             </div>
           </div>
 
-          {/* Phone & Location Card */}
-          <div className="contact-card scroll-reveal scroll-slide-right stagger-1 neumorphic-card p-4 sm:p-7 md:p-8 border border-[var(--border)] bg-[var(--bg-elevated)]/90 rounded-2xl flex flex-col justify-between space-y-5">
+          {/* Phone & Location Card (Primary 2 Elevated) */}
+          <div className="contact-card scroll-reveal scroll-slide-right stagger-1 neumorphic-card-p2 p-4 sm:p-7 md:p-8 rounded-2xl flex flex-col justify-between space-y-5">
             <div>
               <div className="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
-                <span className="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[var(--accent)] shrink-0" />
+                <span className="font-mono-code text-xs text-[var(--primary-2)] uppercase font-semibold flex items-center gap-1.5">
+                  <MapPin className="w-3.5 h-3.5 text-[var(--primary-2)] shrink-0" />
                   <span>Dombivli, Mumbai</span>
                 </span>
               </div>
@@ -124,7 +124,7 @@ export function Contact({ onResumeClick }: ContactProps) {
               </span>
               <a
                 href="tel:+919326397599"
-                className="font-display font-bold text-base sm:text-xl md:text-2xl text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors mt-1 block font-mono-code break-words"
+                className="font-display font-bold text-base sm:text-xl md:text-2xl text-[var(--text-primary)] hover:text-[var(--primary-2)] transition-colors mt-1 block font-mono-code break-words"
               >
                 +91 93263 97599
               </a>
@@ -160,7 +160,7 @@ export function Contact({ onResumeClick }: ContactProps) {
         </div>
 
         {/* ──────────────── CURRICULUM VITAE & LINKS ROW ──────────────── */}
-        <div className="contact-card scroll-reveal scroll-slide-up stagger-2 mt-7 sm:mt-10 p-4 sm:p-7 md:p-8 rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] neumorphic-card flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6">
+        <div className="contact-card scroll-reveal scroll-slide-up stagger-2 mt-7 sm:mt-10 p-4 sm:p-7 md:p-8 rounded-2xl neumorphic-card flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6">
           <div>
             <span className="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold block mb-1">
               Curriculum Vitae

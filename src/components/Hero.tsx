@@ -6,7 +6,7 @@ interface HeroProps {
   onResumeClick?: () => void;
 }
 
-export function Hero({ onResumeClick }: HeroProps) {
+export function Hero({ onResumeClick: _onResumeClick }: HeroProps = {}) {
   const photoImageRef = useRef<HTMLImageElement>(null);
 
   // ──────────────── SUBTLE MOUSE PARALLAX (NATURAL & GENTLE, 45-60 FPS) ────────────────
@@ -85,22 +85,28 @@ export function Hero({ onResumeClick }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[calc(100svh-64px)] md:min-h-[88vh] flex items-center justify-center overflow-hidden bg-[var(--bg-base)] select-none pt-20 pb-12 sm:pt-24 sm:pb-16 lg:py-20"
+      className="relative w-full min-h-[calc(100svh-64px)] md:min-h-[88vh] flex items-center justify-center overflow-hidden bg-transparent select-none pt-20 pb-12 sm:pt-24 sm:pb-16 lg:py-20"
     >
-      {/* Soft background ambient gradient glow */}
+      {/* ──────────────── DUAL-PRIMARY AMBIENT LIGHT FIELDS ──────────────── */}
       <div
-        className="absolute top-1/4 right-1/4 w-[480px] h-[480px] rounded-full pointer-events-none opacity-40 dark:opacity-25 blur-[120px]"
+        className="absolute top-10 -left-20 w-[540px] h-[540px] rounded-full pointer-events-none opacity-65 dark:opacity-55 blur-[125px]"
         style={{
-          background: 'radial-gradient(circle, var(--accent) 0%, var(--decorative-soft) 40%, transparent 70%)',
+          background: 'radial-gradient(circle, var(--ambient-orb-p1) 0%, transparent 70%)',
+        }}
+      />
+      <div
+        className="absolute top-16 right-0 sm:right-12 w-[520px] h-[520px] rounded-full pointer-events-none opacity-60 dark:opacity-50 blur-[125px]"
+        style={{
+          background: 'radial-gradient(circle, var(--ambient-orb-p2) 0%, transparent 70%)',
         }}
       />
 
-      {/* ──────────────── BALANCED 2-COLUMN CONTAINER ──────────────── */}
+      {/* ──────────────── 2-COLUMN BALANCED CONTAINER ──────────────── */}
       <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
           {/* ────── LEFT COLUMN: IDENTITY & ACTIONS (7 cols) ────── */}
-          <div className="lg:col-span-7 flex flex-col justify-center order-1 lg:order-1">
+          <div className="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1">
             
             {/* Clear & Prominent Introduction (Single cohesive heading) */}
             <div className="scroll-reveal scroll-slide-left stagger-1">
@@ -175,12 +181,12 @@ export function Hero({ onResumeClick }: HeroProps) {
 
           </div>
 
-          {/* ────── RIGHT COLUMN: REFINED macOS FLOATING PORTRAIT (5 cols) ────── */}
-          <div className="lg:col-span-5 flex justify-center order-2 lg:order-2">
-            <div className="scroll-reveal scroll-rotate-right hero-scroll-parallax stagger-2 w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[390px] mx-auto">
+          {/* ────── RIGHT COLUMN: PROPORTIONATE, COMMANDING TRANSLUCENT GLASS PORTRAIT (5 cols) ────── */}
+          <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
+            <div className="scroll-reveal scroll-rotate-right hero-scroll-parallax stagger-2 w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[430px] xl:max-w-[460px]">
               
-              {/* macOS Window Bezel Container */}
-              <div className="neumorphic-card p-3 sm:p-4 rounded-3xl relative">
+              {/* Outer Translucent Frosted Glass Card Container */}
+              <div className="neumorphic-card p-3 sm:p-4 rounded-3xl relative backdrop-blur-2xl shadow-2xl border border-[var(--glass-border)]">
                 
                 {/* macOS Title Bar with Traffic Lights */}
                 <div className="flex items-center justify-between pb-3 px-1 border-b border-[var(--border)] select-none">
@@ -195,19 +201,19 @@ export function Hero({ onResumeClick }: HeroProps) {
                   <div className="w-8" />
                 </div>
 
-                {/* Profile Portrait Image Frame (Perfect 1:1 Framing for Sarthak Photo) */}
-                <div className="relative mt-3 rounded-2xl overflow-hidden aspect-square tactile-display-frame">
+                {/* Profile Portrait Image Frame: TALL 3.4/4.4 Aspect Ratio with Full Headroom & Upper Suit Framing */}
+                <div className="relative mt-3 rounded-2xl overflow-hidden aspect-[3.4/4.4] bg-[var(--bg-inset)] border border-[var(--border)]">
                   <img
                     ref={photoImageRef}
                     src="/images/sarthak.jpg"
                     alt="Sarthak M. Mandhare"
-                    className="w-full h-full object-cover object-[center_18%] will-change-transform"
+                    className="w-full h-full object-cover object-[center_12%] will-change-transform"
                     style={{
                       filter: 'contrast(1.03) brightness(1.03) saturate(1.02)',
                     }}
                   />
-                  {/* Subtle inner gradient shadow at bottom of image */}
-                  <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
+                  {/* Subtle inner bottom gradient dissolve so suit fades naturally into the bezel */}
+                  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[var(--bg-base)]/80 via-[var(--bg-base)]/30 to-transparent pointer-events-none" />
                 </div>
 
                 {/* Floating Status Footer inside Card */}
