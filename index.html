@@ -108,59 +108,15 @@
       font-size: 1em;
     }
 
-    .loader .text:nth-child(1) {
-      clip-path: polygon(0% 0%, 11.11% 0%, 11.11% 100%, 0% 100%);
-      transform: scale(0.78);
-      opacity: 0.6;
-    }
-
-    .loader .text:nth-child(2) {
-      clip-path: polygon(11.11% 0%, 22.22% 0%, 22.22% 100%, 11.11% 100%);
-      transform: scale(0.83);
-      opacity: 0.7;
-    }
-
-    .loader .text:nth-child(3) {
-      clip-path: polygon(22.22% 0%, 33.33% 0%, 33.33% 100%, 22.22% 100%);
-      transform: scale(0.88);
-      opacity: 0.8;
-    }
-
-    .loader .text:nth-child(4) {
-      clip-path: polygon(33.33% 0%, 44.44% 0%, 44.44% 100%, 33.33% 100%);
-      transform: scale(0.94);
-      opacity: 0.9;
-    }
-
-    .loader .text:nth-child(5) {
-      clip-path: polygon(44.44% 0%, 55.55% 0%, 55.55% 100%, 44.44% 100%);
-      transform: scale(1);
-      opacity: 1;
-    }
-
-    .loader .text:nth-child(6) {
-      clip-path: polygon(55.55% 0%, 66.66% 0%, 66.66% 100%, 55.55% 100%);
-      transform: scale(0.94);
-      opacity: 0.9;
-    }
-
-    .loader .text:nth-child(7) {
-      clip-path: polygon(66.66% 0%, 77.77% 0%, 77.77% 100%, 66.66% 100%);
-      transform: scale(0.88);
-      opacity: 0.8;
-    }
-
-    .loader .text:nth-child(8) {
-      clip-path: polygon(77.77% 0%, 88.88% 0%, 88.88% 100%, 77.77% 100%);
-      transform: scale(0.83);
-      opacity: 0.7;
-    }
-
-    .loader .text:nth-child(9) {
-      clip-path: polygon(88.88% 0%, 100% 0%, 100% 100%, 88.88% 100%);
-      transform: scale(0.78);
-      opacity: 0.6;
-    }
+    .loader .text:nth-child(1) { clip-path: polygon(0% 0%, 11.11% 0%, 11.11% 100%, 0% 100%); transform: scale(0.78); opacity: 0.6; }
+    .loader .text:nth-child(2) { clip-path: polygon(11.11% 0%, 22.22% 0%, 22.22% 100%, 11.11% 100%); transform: scale(0.83); opacity: 0.7; }
+    .loader .text:nth-child(3) { clip-path: polygon(22.22% 0%, 33.33% 0%, 33.33% 100%, 22.22% 100%); transform: scale(0.88); opacity: 0.8; }
+    .loader .text:nth-child(4) { clip-path: polygon(33.33% 0%, 44.44% 0%, 44.44% 100%, 33.33% 100%); transform: scale(0.94); opacity: 0.9; }
+    .loader .text:nth-child(5) { clip-path: polygon(44.44% 0%, 55.55% 0%, 55.55% 100%, 44.44% 100%); transform: scale(1); opacity: 1; }
+    .loader .text:nth-child(6) { clip-path: polygon(55.55% 0%, 66.66% 0%, 66.66% 100%, 55.55% 100%); transform: scale(0.94); opacity: 0.9; }
+    .loader .text:nth-child(7) { clip-path: polygon(66.66% 0%, 77.77% 0%, 77.77% 100%, 66.66% 100%); transform: scale(0.88); opacity: 0.8; }
+    .loader .text:nth-child(8) { clip-path: polygon(77.77% 0%, 88.88% 0%, 88.88% 100%, 77.77% 100%); transform: scale(0.83); opacity: 0.7; }
+    .loader .text:nth-child(9) { clip-path: polygon(88.88% 0%, 100% 0%, 100% 100%, 88.88% 100%); transform: scale(0.78); opacity: 0.6; }
 
     .loader .text span {
       animation:
@@ -168,85 +124,14 @@
         shadow 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite;
     }
 
-    .loader .text:nth-child(1) span {
-      background: linear-gradient(to right,
-          var(--text-color) 4%,
-          var(--shadow-color) 7%);
-      background-size: 200% auto;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .loader .text:nth-child(2) span {
-      background: linear-gradient(to right,
-          var(--text-color) 9%,
-          var(--shadow-color) 13%);
-      background-size: 200% auto;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .loader .text:nth-child(3) span {
-      background: linear-gradient(to right,
-          var(--text-color) 15%,
-          var(--shadow-color) 18%);
-      background-size: 200% auto;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .loader .text:nth-child(4) span {
-      background: linear-gradient(to right,
-          var(--text-color) 20%,
-          var(--shadow-color) 23%);
-      background-size: 200% auto;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .loader .text:nth-child(6) span {
-      background: linear-gradient(to right,
-          var(--shadow-color) 29%,
-          var(--text-color) 32%);
-      background-size: 200% auto;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .loader .text:nth-child(7) span {
-      background: linear-gradient(to right,
-          var(--shadow-color) 34%,
-          var(--text-color) 37%);
-      background-size: 200% auto;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .loader .text:nth-child(8) span {
-      background: linear-gradient(to right,
-          var(--shadow-color) 39%,
-          var(--text-color) 42%);
-      background-size: 200% auto;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .loader .text:nth-child(9) span {
-      background: linear-gradient(to right,
-          var(--shadow-color) 45%,
-          var(--text-color) 48%);
-      background-size: 200% auto;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+    .loader .text:nth-child(1) span { background: linear-gradient(to right, var(--text-color) 4%, var(--shadow-color) 7%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .loader .text:nth-child(2) span { background: linear-gradient(to right, var(--text-color) 9%, var(--shadow-color) 13%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .loader .text:nth-child(3) span { background: linear-gradient(to right, var(--text-color) 15%, var(--shadow-color) 18%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .loader .text:nth-child(4) span { background: linear-gradient(to right, var(--text-color) 20%, var(--shadow-color) 23%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .loader .text:nth-child(6) span { background: linear-gradient(to right, var(--shadow-color) 29%, var(--text-color) 32%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .loader .text:nth-child(7) span { background: linear-gradient(to right, var(--shadow-color) 34%, var(--text-color) 37%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .loader .text:nth-child(8) span { background: linear-gradient(to right, var(--shadow-color) 39%, var(--text-color) 42%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; color: transparent; }
+    .loader .text:nth-child(9) span { background: linear-gradient(to right, var(--shadow-color) 45%, var(--text-color) 48%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; color: transparent; }
 
     .loader .line {
       position: relative;
@@ -281,37 +166,17 @@
     }
 
     @keyframes wobble {
-      0% {
-        transform: translateX(-90%);
-      }
-
-      50% {
-        transform: translateX(90%);
-      }
-
-      100% {
-        transform: translateX(-90%);
-      }
+      0% { transform: translateX(-90%); }
+      50% { transform: translateX(90%); }
+      100% { transform: translateX(-90%); }
     }
-
     @keyframes scrolling {
-      0% {
-        transform: translateX(-100%);
-      }
-
-      100% {
-        transform: translateX(100%);
-      }
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
     }
-
     @keyframes shadow {
-      0% {
-        background-position: -98% 0;
-      }
-
-      100% {
-        background-position: 102% 0;
-      }
+      0% { background-position: -98% 0; }
+      100% { background-position: 102% 0; }
     }
   </style>
 </head>
@@ -335,16 +200,13 @@
     </div>
   </div>
 
-  <!-- Preloader Management Script (Natural dismissal once app and assets are ready) -->
   <script>
     (function () {
       var dismissed = false;
-
       function dismiss() {
         if (dismissed) return;
         var preloader = document.getElementById('app-preloader');
         if (!preloader) return;
-
         dismissed = true;
         preloader.classList.add('fade-out');
         setTimeout(function () {
@@ -353,23 +215,1894 @@
           }
         }, 450);
       }
-
       window.__dismissPreloader = dismiss;
-
       if (document.readyState === 'complete' || document.readyState === 'interactive') {
         dismiss();
       } else {
         window.addEventListener('DOMContentLoaded', dismiss);
         window.addEventListener('load', dismiss);
       }
-
-      // Guaranteed safety timeout (600ms) so stalled network requests never permanently block the user
       setTimeout(dismiss, 600);
     })();
   </script>
 
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <!-- ──────────────── TOP VIEWPORT SCROLL PROGRESS BAR ──────────────── -->
+  <div class="fixed top-0 left-0 w-full h-[3px] z-50 pointer-events-none bg-[var(--border)]/20">
+    <div
+      id="scroll-progress-bar"
+      class="h-full bg-gradient-to-r from-[var(--primary-1-light)] via-[var(--primary-2)] to-[var(--decorative)] transition-all duration-150 ease-out shadow-[0_0_10px_var(--decorative)]"
+      style="width: 0%"
+    ></div>
+  </div>
+
+  <div class="relative min-h-screen bg-[var(--bg-base)] text-[var(--text-primary)] transition-colors duration-450 overflow-x-hidden">
+
+    <!-- ──────── FIXED ATMOSPHERIC AMBIENT MESH (POWERS VIBRANT TRANSLUCENT GLASSMORHPISM) ──────── -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0 select-none" aria-hidden="true">
+      <!-- Top-Left Orb (Primary 1 / Royal Blue / Sky Blue) -->
+      <div
+        class="absolute -top-24 -left-28 w-[680px] h-[680px] rounded-full opacity-70 dark:opacity-60 blur-[130px]"
+        style="background: radial-gradient(circle, var(--ambient-orb-p1) 0%, transparent 70%);"
+      ></div>
+      <!-- Top-Right Orb behind Hero portrait (Primary 2 / Nitro Orange / Rose Coral) -->
+      <div
+        class="absolute top-10 -right-24 w-[650px] h-[650px] rounded-full opacity-65 dark:opacity-55 blur-[130px]"
+        style="background: radial-gradient(circle, var(--ambient-orb-p2) 0%, transparent 70%);"
+      ></div>
+      <!-- Mid-Left Orb (About & Projects) - Accent Lime / Cerulean -->
+      <div
+        class="absolute top-[30%] -left-32 w-[600px] h-[600px] rounded-full opacity-60 dark:opacity-50 blur-[140px]"
+        style="background: radial-gradient(circle, var(--ambient-orb-accent) 0%, transparent 70%);"
+      ></div>
+      <!-- Mid-Right Orb (Projects & Experience) - Vibrant Sky / Royal Navy -->
+      <div
+        class="absolute top-[48%] -right-32 w-[650px] h-[650px] rounded-full opacity-65 dark:opacity-55 blur-[140px]"
+        style="background: radial-gradient(circle, var(--ambient-orb-p1) 0%, transparent 70%);"
+      ></div>
+      <!-- Lower-Left Orb (Experience & Skills) - Primary 2 Nitro Orange / Rose Coral -->
+      <div
+        class="absolute top-[68%] -left-28 w-[640px] h-[640px] rounded-full opacity-60 dark:opacity-50 blur-[130px]"
+        style="background: radial-gradient(circle, var(--ambient-orb-p2) 0%, transparent 70%);"
+      ></div>
+      <!-- Bottom-Right Orb (Education & Contact) - Accent Lime / Cerulean -->
+      <div
+        class="absolute -bottom-24 right-[10%] w-[680px] h-[680px] rounded-full opacity-65 dark:opacity-55 blur-[140px]"
+        style="background: radial-gradient(circle, var(--ambient-orb-accent) 0%, transparent 70%);"
+      ></div>
+    </div>
+
+    <!-- ──────────────── NAVIGATION BAR ──────────────── -->
+    <header class="fixed top-0 left-0 w-full h-[60px] z-40 transition-none select-none">
+      <div
+        id="nav-bg-layer"
+        style="opacity: 0"
+        class="absolute inset-0 bg-[var(--bg-surface)]/90 backdrop-blur-[12px] border-b border-[var(--border)] pointer-events-none"
+      ></div>
+
+      <div class="relative max-w-[1280px] mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="nav-anim-item">
+          <a
+            href="#"
+            class="font-display font-bold text-[14px] text-[var(--primary-2)] tracking-tight inline-flex items-center justify-center w-8 h-8 rounded-xl tactile-icon-socket transition-transform active:scale-95"
+            aria-label="Sarthak Mandhare - Back to top"
+          >
+            SM
+          </a>
+        </div>
+
+        <!-- Links, Controls, Buttons -->
+        <div class="flex items-center gap-2.5 sm:gap-4 md:gap-5">
+          <!-- Desktop Nav Links -->
+          <nav class="hidden md:flex items-center gap-1 text-[13.5px] font-inter p-1 rounded-xl tactile-inset">
+            <a href="#about" data-nav-link class="nav-anim-item px-3 py-1 rounded-lg transition-all duration-200 text-[var(--accent)] font-semibold tactile-chip">About</a>
+            <a href="#work" data-nav-link class="nav-anim-item px-3 py-1 rounded-lg transition-all duration-200 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40 font-medium">Projects</a>
+            <a href="#skills" data-nav-link class="nav-anim-item px-3 py-1 rounded-lg transition-all duration-200 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40 font-medium">Skills</a>
+            <a href="#education" data-nav-link class="nav-anim-item px-3 py-1 rounded-lg transition-all duration-200 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40 font-medium">Education</a>
+            <a href="#contact" data-nav-link class="nav-anim-item px-3 py-1 rounded-lg transition-all duration-200 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40 font-medium">Contact</a>
+          </nav>
+
+          <!-- Mobile Resume Button -->
+          <div class="nav-anim-item md:hidden">
+            <button type="button" data-open-resume class="button button-sm button-secondary" aria-label="View Resume PDF">
+              <div class="button-outer">
+                <div class="button-inner">
+                  <span>Resume ↓</span>
+                </div>
+              </div>
+            </button>
+          </div>
+
+          <!-- Theme Toggle Button -->
+          <div class="nav-anim-item">
+            <button
+              id="theme-toggle-btn"
+              type="button"
+              aria-label="Switch to light mode"
+              class="neumorphic-btn w-9 h-9 flex items-center justify-center text-[var(--text-primary)] cursor-pointer"
+            >
+              <div id="theme-icon-wrap" class="flex items-center justify-center">
+                <!-- Moon icon (dark mode) -->
+                <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-[17px] h-[17px]">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                </svg>
+                <!-- Sun icon (light mode) -->
+                <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-[17px] h-[17px] hidden">
+                  <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+                </svg>
+              </div>
+            </button>
+          </div>
+
+          <!-- Desktop Tactile Resume Button -->
+          <div class="nav-anim-item hidden md:block">
+            <button type="button" data-open-resume class="button button-sm button-secondary" aria-label="View Resume PDF">
+              <div class="button-outer">
+                <div class="button-inner">
+                  <span class="flex items-center gap-1.5">Resume <span>↓</span></span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ──────────────── MAIN CONTENT ──────────────── -->
+    <main class="relative z-10">
+
+      <!-- ═══════════════ SECTION: HERO ═══════════════ -->
+      <section
+        id="home"
+        class="relative w-full min-h-[calc(100svh-64px)] md:min-h-[88vh] flex items-center justify-center overflow-hidden bg-transparent select-none pt-20 pb-12 sm:pt-24 sm:pb-16 lg:py-20"
+      >
+        <div
+          class="absolute top-10 -left-20 w-[540px] h-[540px] rounded-full pointer-events-none opacity-65 dark:opacity-55 blur-[125px]"
+          style="background: radial-gradient(circle, var(--ambient-orb-p1) 0%, transparent 70%);"
+        ></div>
+        <div
+          class="absolute top-16 right-0 sm:right-12 w-[520px] h-[520px] rounded-full pointer-events-none opacity-60 dark:opacity-55 blur-[125px]"
+          style="background: radial-gradient(circle, var(--ambient-orb-p2) 0%, transparent 70%);"
+        ></div>
+
+        <div class="relative z-10 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+            <!-- LEFT COLUMN: IDENTITY & ACTIONS (7 cols) -->
+            <div class="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1">
+              <div class="scroll-reveal scroll-slide-left stagger-1">
+                <h1 class="font-display font-bold text-[clamp(28px,5.5vw,48px)] text-[var(--text-primary)] leading-[1.15] tracking-tight">
+                  Hi, I&apos;m <span class="text-[var(--accent)]">Sarthak M. Mandhare</span><span class="text-[var(--decorative)]">.</span>
+                </h1>
+              </div>
+
+              <div class="scroll-reveal scroll-slide-left stagger-2 mt-3 space-y-1">
+                <p class="font-inter text-base sm:text-lg md:text-xl font-semibold text-[var(--text-primary)] tracking-tight">
+                  Full-Stack Software Developer
+                </p>
+                <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] flex items-center gap-1.5 flex-wrap">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-[var(--accent)] shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Dombivli, Mumbai, Maharashtra, India</span>
+                </p>
+              </div>
+
+              <div class="scroll-reveal scroll-slide-left stagger-3 mt-4 sm:mt-5 font-inter text-sm sm:text-[15px] md:text-base text-[var(--text-secondary)] leading-relaxed space-y-2.5 max-w-xl">
+                <p class="font-medium text-[var(--text-primary)] text-justified">
+                  &ldquo;I build practical web applications with a focus on frontend experiences, backend functionality and AI integration.&rdquo;
+                </p>
+                <p class="text-xs sm:text-sm text-[var(--text-secondary)] text-justified">
+                  Computer Science student at Keraleeya Samajam&apos;s Model College (Autonomous). Built and deployed full-stack web applications and completed two AICTE-approved virtual internships with IBM and Lenovo.
+                </p>
+              </div>
+
+              <div class="scroll-reveal scroll-slide-up stagger-4 mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3 w-full sm:w-auto">
+                <a href="#projects" class="button w-full sm:w-auto">
+                  <div class="button-outer">
+                    <div class="button-inner">
+                      <span class="flex items-center justify-center gap-2">
+                        <span>Explore Projects</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="scroll-reveal scroll-slide-up stagger-5 mt-6 sm:mt-7 flex items-center gap-5 sm:gap-6">
+                <a
+                  href="https://github.com/SarthakMandhare34"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-mono-code text-xs sm:text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors flex items-center gap-1 group py-1"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  <span>GitHub</span>
+                  <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/sarthak-mandhare-8a6730377"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-mono-code text-xs sm:text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors flex items-center gap-1 group py-1"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                  <span>LinkedIn</span>
+                  <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: PROPORTIONATE GLASS PORTRAIT (5 cols) -->
+            <div class="lg:col-span-5 flex justify-center order-1 lg:order-2">
+              <div class="scroll-reveal scroll-rotate-right hero-scroll-parallax stagger-2 w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[430px] xl:max-w-[460px]">
+                <div class="neumorphic-card p-3 sm:p-4 rounded-3xl relative backdrop-blur-2xl shadow-2xl border border-[var(--glass-border)]">
+                  <!-- Traffic Lights Bar -->
+                  <div class="flex items-center justify-between pb-3 px-1 border-b border-[var(--border)] select-none">
+                    <div class="flex items-center gap-1.5">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#FF5F56] inline-block shadow-xs"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] inline-block shadow-xs"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#27C93F] inline-block shadow-xs"></span>
+                    </div>
+                    <div class="px-2.5 py-0.5 rounded-md tactile-inset text-[10px] font-mono-code text-[var(--accent)] truncate">
+                      sarthak-mandhare.dev
+                    </div>
+                    <div class="w-8"></div>
+                  </div>
+
+                  <!-- Profile Photo Frame -->
+                  <div class="relative mt-3 rounded-2xl overflow-hidden aspect-[3.4/4.4] bg-[var(--bg-inset)] border border-[var(--border)]">
+                    <img
+                      id="hero-portrait-img"
+                      src="/images/sarthak.jpg"
+                      alt="Sarthak M. Mandhare"
+                      class="w-full h-full object-cover object-[center_12%] will-change-transform"
+                      style="filter: contrast(1.03) brightness(1.03) saturate(1.02);"
+                    />
+                    <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[var(--bg-base)]/80 via-[var(--bg-base)]/30 to-transparent pointer-events-none"></div>
+                  </div>
+
+                  <!-- Footer in card -->
+                  <div class="mt-3 pt-2.5 border-t border-[var(--border)] flex items-center justify-between text-[11px] font-mono-code text-[var(--text-secondary)]">
+                    <span class="truncate">Keraleeya Samajam&apos;s Model College</span>
+                    <span class="text-[var(--accent)] font-semibold shrink-0 ml-1">B.Sc. CS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ SECTION: ABOUT ═══════════════ -->
+      <section
+        id="about"
+        class="w-full bg-transparent py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
+      >
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="scroll-reveal scroll-clip-up mb-7 sm:mb-10 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full dual-primary-badge text-xs font-mono-code text-[var(--primary-2)] mb-3 font-semibold">
+              <span>About</span>
+            </div>
+            <h2 class="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
+              About Me
+            </h2>
+            <p class="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
+              A quick look at my background, skills, and how I build software.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 items-stretch">
+            <!-- A. WHO I AM (7 cols) -->
+            <div class="scroll-reveal scroll-slide-left neumorphic-card p-5 sm:p-7 md:p-8 space-y-5 lg:col-span-7 flex flex-col justify-between border border-[var(--border)] rounded-2xl">
+              <div class="space-y-4 font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] leading-relaxed">
+                <h3 class="font-space font-bold text-lg sm:text-xl text-[var(--text-primary)]">
+                  Who I Am
+                </h3>
+                <p class="text-justified">
+                  I am currently a Computer Science student at <strong class="text-[var(--text-primary)] font-semibold">Keraleeya Samajam&apos;s Model College (Autonomous)</strong> in Dombivli, Mumbai (graduating in 2027). I enjoy taking ideas and turning them into real, working web applications that people can easily use.
+                </p>
+                <p class="text-justified">
+                  For frontend development, I build clean and responsive user interfaces with <strong class="text-[var(--text-primary)] font-semibold">React</strong> and <strong class="text-[var(--text-primary)] font-semibold">TypeScript</strong>. For the backend, I create reliable APIs with <strong class="text-[var(--text-primary)] font-semibold">Node.js</strong> and <strong class="text-[var(--text-primary)] font-semibold">Express</strong>, paired with databases like <strong class="text-[var(--text-primary)] font-semibold">MySQL</strong> and <strong class="text-[var(--text-primary)] font-semibold">MongoDB</strong> using <strong class="text-[var(--text-primary)] font-semibold">Drizzle ORM</strong>.
+                </p>
+                <p class="text-justified">
+                  I also have practical experience integrating AI with the <strong class="text-[var(--text-primary)] font-semibold">Google Gemini API</strong>. I write structured prompts and add clear fallback rules so the application continues working smoothly even when an AI service is slow or unavailable.
+                </p>
+                <p class="text-justified">
+                  My approach is simple: write clean, maintainable code, test thoroughly, and build software that works reliably in the real world.
+                </p>
+              </div>
+
+              <!-- Spoken Languages -->
+              <div class="pt-4 border-t border-[var(--border)] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                <div class="flex items-center gap-2 font-mono-code text-[var(--text-dim)] uppercase">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--primary-2)] shrink-0"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+                  <span>Languages:</span>
+                </div>
+                <div class="flex flex-wrap items-center gap-2 font-inter font-medium text-[var(--text-primary)]">
+                  <span class="tactile-chip px-2.5 py-1">
+                    English: <span class="text-[var(--primary-2)] font-semibold">Fluent</span>
+                  </span>
+                  <span class="tactile-chip-p2 px-2.5 py-1">
+                    Hindi: <span class="text-[var(--primary-2)] font-semibold">Fluent</span>
+                  </span>
+                  <span class="tactile-chip px-2.5 py-1">
+                    Marathi: <span class="text-[var(--primary-2)] font-semibold">Native</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- B. QUICK INFO (5 cols) -->
+            <div class="scroll-reveal scroll-slide-right neumorphic-card-p2 p-5 sm:p-7 md:p-8 lg:col-span-5 flex flex-col justify-between space-y-5 rounded-2xl">
+              <div>
+                <div class="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
+                  <h3 class="font-display font-bold text-lg sm:text-xl text-[var(--text-primary)]">
+                    Quick Info
+                  </h3>
+                  <span class="tactile-chip-p2 px-2.5 py-0.5 font-mono-code text-xs font-semibold shrink-0">
+                    Sem 6 · CGPA 6.95
+                  </span>
+                </div>
+
+                <div class="space-y-3.5 text-xs sm:text-sm font-inter">
+                  <!-- Degree -->
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl tactile-inset">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--primary-2)] shrink-0 mt-0.5"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                    <div class="min-w-0 flex-1">
+                      <span class="text-[var(--text-dim)] font-mono-code text-[11px] block uppercase">Degree</span>
+                      <span class="text-[var(--text-primary)] font-semibold block">Bachelor of Science in Computer Science</span>
+                      <p class="text-[var(--text-secondary)] text-xs mt-0.5 text-justified">Keraleeya Samajam&apos;s Model College (Autonomous)</p>
+                    </div>
+                  </div>
+
+                  <!-- Academic Standing -->
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="p-3 rounded-xl tactile-inset">
+                      <span class="text-[var(--text-dim)] font-mono-code text-[10px] block uppercase">Current Semester</span>
+                      <span class="text-[var(--text-primary)] font-mono-code font-bold text-sm sm:text-base mt-0.5 block">6th Semester</span>
+                      <span class="text-[10px] text-[var(--text-secondary)] block">Expected Grad: 2027</span>
+                    </div>
+
+                    <div class="p-3 rounded-xl tactile-inset-p2">
+                      <span class="text-[var(--text-dim)] font-mono-code text-[10px] block uppercase">Current CGPA</span>
+                      <span class="text-[var(--primary-2)] font-mono-code font-bold text-sm sm:text-base mt-0.5 block">6.95 <span class="text-xs text-[var(--text-dim)] font-normal">/ 10</span></span>
+                      <span class="text-[10px] text-[var(--text-secondary)] block">Verified Grade</span>
+                    </div>
+                  </div>
+
+                  <!-- Location -->
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl tactile-inset">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--primary-2)] shrink-0 mt-0.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                    <div class="min-w-0 flex-1">
+                      <span class="text-[var(--text-dim)] font-mono-code text-[11px] block uppercase">Location</span>
+                      <span class="text-[var(--text-primary)] font-semibold block">Dombivli, Mumbai, Maharashtra, India</span>
+                      <p class="text-[var(--text-secondary)] text-xs mt-0.5 text-justified">Open to on-site, hybrid, and remote developer roles</p>
+                    </div>
+                  </div>
+
+                  <!-- Virtual Internships -->
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl tactile-inset-p2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--primary-2)] shrink-0 mt-0.5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                    <div class="min-w-0 flex-1">
+                      <span class="text-[var(--text-dim)] font-mono-code text-[11px] block uppercase">Virtual Internships</span>
+                      <span class="text-[var(--text-primary)] font-semibold block">Lenovo LEAP &amp; IBM SkillsBuild</span>
+                      <p class="text-[var(--text-secondary)] text-xs mt-0.5 text-justified">Two 6-week AICTE virtual internships with verified certificates</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-3 border-t border-[var(--border)] flex items-center justify-between text-xs font-mono-code">
+                <span class="text-[var(--text-dim)]">Autonomous Institution</span>
+                <a href="#education" class="text-[var(--primary-2)] hover:underline inline-flex items-center gap-1 font-semibold">
+                  <span>Academic Details</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 AREAS OF FOCUS: WHAT I DO -->
+          <div class="mt-12 sm:mt-14">
+            <div class="scroll-reveal scroll-slide-down mb-6 flex items-center justify-between">
+              <h3 class="font-space font-bold text-xl sm:text-2xl text-[var(--text-primary)] tracking-tight">
+                What I Do
+              </h3>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+              <!-- Focus 1 -->
+              <div class="scroll-reveal scroll-flip-up stagger-1 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 rounded-2xl">
+                <div>
+                  <div class="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                  </div>
+                  <h4 class="font-space font-bold text-base text-[var(--text-primary)] mb-2">Frontend Development</h4>
+                  <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
+                    Building responsive, clean web interfaces with React and TypeScript. I care about intuitive navigation, fast load times, and layouts that look great on phones and desktops.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--primary-2)] font-semibold">
+                  React.js · TypeScript · Tailwind CSS
+                </div>
+              </div>
+
+              <!-- Focus 2 -->
+              <div class="scroll-reveal scroll-flip-up stagger-2 neumorphic-card-p2 p-5 sm:p-6 flex flex-col justify-between space-y-4 rounded-2xl">
+                <div>
+                  <div class="w-10 h-10 rounded-xl tactile-icon-socket-p2 flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+                  </div>
+                  <h4 class="font-space font-bold text-base text-[var(--text-primary)] mb-2">AI Integration</h4>
+                  <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
+                    Connecting the Google Gemini API to web apps. I write structured prompts, test tricky inputs, and build smart fallbacks so features stay dependable.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--primary-2)] font-semibold">
+                  Gemini API · Prompt Engineering · Workflows
+                </div>
+              </div>
+
+              <!-- Focus 3 -->
+              <div class="scroll-reveal scroll-flip-up stagger-3 neumorphic-card p-5 sm:p-6 flex flex-col justify-between space-y-4 rounded-2xl sm:col-span-2 lg:col-span-1">
+                <div>
+                  <div class="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                  </div>
+                  <h4 class="font-space font-bold text-base text-[var(--text-primary)] mb-2">Backend &amp; Databases</h4>
+                  <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
+                    Writing REST APIs with Node.js and Express, and setting up clean database schemas with MySQL, MongoDB, and Drizzle ORM.
+                  </p>
+                </div>
+                <div class="pt-3 border-t border-[var(--border)] text-[11px] font-mono-code text-[var(--primary-2)] font-semibold">
+                  Node.js · Express · MySQL · MongoDB
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══════════════ SECTION: PROJECTS ═══════════════ -->
+      <section
+        id="work"
+        class="w-full bg-transparent py-14 sm:py-20 md:py-26 transition-colors duration-450 border-t border-[var(--border)] relative"
+      >
+        <div id="projects" class="absolute -top-16 left-0 w-0 h-0 pointer-events-none"></div>
+
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="scroll-reveal scroll-blur-clear mb-7 sm:mb-10 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full dual-primary-badge text-xs font-mono-code text-[var(--primary-2)] mb-3 font-semibold">
+              <span>Projects</span>
+            </div>
+            <h2 class="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
+              Projects &amp; Virtual Internships
+            </h2>
+            <p class="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
+              Web applications and AICTE virtual internships I&apos;ve built. Click &ldquo;Details&rdquo; on any project to see its architecture and how it works.
+            </p>
+          </div>
+
+          <!-- Category Filter Bar -->
+          <div class="scroll-reveal scroll-slide-down stagger-1 mb-7 sm:mb-10 flex items-center border-b border-[var(--border)] pb-4 overflow-x-auto no-scrollbar">
+            <div class="p-1 rounded-2xl tactile-inset flex flex-nowrap sm:flex-wrap gap-1 min-w-max">
+              <button
+                type="button"
+                data-filter-btn="all"
+                class="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap tactile-chip-p2 text-[var(--primary-2)] font-semibold"
+              >
+                All Projects (4)
+              </button>
+              <button
+                type="button"
+                data-filter-btn="academic"
+                class="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40"
+              >
+                Major Academic Projects
+              </button>
+              <button
+                type="button"
+                data-filter-btn="internship"
+                class="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer whitespace-nowrap text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]/40"
+              >
+                Virtual Internships (IBM &amp; Lenovo)
+              </button>
+            </div>
+          </div>
+
+          <!-- Showcase Cards -->
+          <div class="space-y-6 sm:space-y-8">
+
+            <!-- PROJECT 1: LifeLink -->
+            <article
+              id="project-lifelink"
+              data-project-category="academic"
+              class="project-showcase-card scroll-reveal scroll-slide-left neumorphic-card group relative p-5 sm:p-7 md:p-8 transition-all duration-300 rounded-2xl hover:border-[var(--primary-2)]/50"
+            >
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+                <!-- Browser Chrome Preview (5 cols) -->
+                <div class="lg:col-span-5 cursor-pointer" data-project-frame-toggle="lifelink" title="Click to view details in place">
+                  <div class="tactile-display-frame overflow-hidden group-hover:border-[var(--accent)]/60 transition-all">
+                    <div class="flex items-center justify-between px-3 py-2 bg-[var(--bg-inset)] border-b border-[var(--border)] select-none">
+                      <div class="flex items-center gap-1.5">
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
+                      </div>
+                      <div class="px-2.5 py-0.5 rounded-md bg-[var(--bg-elevated)] border border-[var(--border)] text-[10px] font-mono-code text-[var(--accent)] truncate max-w-[200px] flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--decorative)] animate-pulse shrink-0 shadow-[0_0_6px_var(--decorative)]"></span>
+                        <span class="truncate">lifelink.onrender.com</span>
+                      </div>
+                      <span class="text-[10px] font-mono-code text-[var(--text-dim)] font-medium">Deployed on Render</span>
+                    </div>
+
+                    <div class="relative aspect-[16/10] overflow-hidden bg-[var(--bg-inset)]">
+                      <img src="/images/projects/lifelink.png" alt="LifeLink preview" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Content & Actions (7 cols) -->
+                <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                  <div>
+                    <span class="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold block mb-1">
+                      Major Academic Project · Prototype
+                    </span>
+                    <h3 class="font-space font-bold text-xl sm:text-2xl md:text-3xl text-[var(--text-primary)] tracking-tight">
+                      LifeLink
+                    </h3>
+                    <p class="font-inter text-xs sm:text-sm font-semibold text-[var(--text-secondary)] mt-0.5">
+                      LifeLink — Smart Healthcare Assistance Platform
+                    </p>
+                    <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mt-2.5 text-justified">
+                      A healthcare prototype connecting patients with medical specialists. Features include AI-guided symptom triage, doctor discovery across 19 Mumbai railway stations, appointment booking, digital prescriptions, and an Emergency Health Passport. Powered by Gemini Flash guidance with built-in emergency checks, age-based rules, and safe fallback responses.
+                    </p>
+
+                    <div class="mt-3 p-3 rounded-xl tactile-inset space-y-1">
+                      <span class="font-mono-code text-[11px] font-semibold text-[var(--accent)] uppercase flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                        My Contribution
+                      </span>
+                      <p class="font-inter text-xs text-[var(--text-secondary)] leading-relaxed text-justified">
+                        Primary contribution: Lead frontend architecture and UI development in React and TypeScript, integration with backend endpoints, Drizzle ORM data modeling in MySQL, Gemini Flash AI implementation with safety fallbacks, and comprehensive test suite (247 tests across 33 files).
+                      </p>
+                    </div>
+
+                    <!-- Metrics for LifeLink -->
+                    <div class="grid grid-cols-2 gap-2.5 sm:gap-3 mt-3">
+                      <div class="p-3 rounded-xl tactile-inset">
+                        <div class="flex items-center gap-1.5 font-mono-code text-base sm:text-lg font-bold text-[var(--accent)]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)]"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
+                          <span>52</span>
+                        </div>
+                        <span class="text-[11px] font-inter text-[var(--text-secondary)] font-medium block">Simulated Doctors (19 Stations)</span>
+                      </div>
+                      <div class="p-3 rounded-xl tactile-inset">
+                        <div class="flex items-center gap-1.5 font-mono-code text-base sm:text-lg font-bold text-[var(--accent)]">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)]"><path d="M21 7 6.82 21.18a2.83 2.83 0 0 1-3.99-.01v0a2.83 2.83 0 0 1 0-4L17 3"/><path d="m16 2 6 6"/><path d="M12 16H4"/></svg>
+                          <span>247</span>
+                        </div>
+                        <span class="text-[11px] font-inter text-[var(--text-secondary)] font-medium block">Automated Tests (33 Files)</span>
+                      </div>
+                    </div>
+
+                    <!-- Tech Chips -->
+                    <div class="mt-3.5 pt-2 flex flex-wrap gap-1.5">
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">React</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">TypeScript</span>
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Node.js</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Express</span>
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">MySQL</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Drizzle ORM</span>
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Gemini AI</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">tRPC</span>
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">SSE</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Render</span>
+                    </div>
+                  </div>
+
+                  <!-- Actions -->
+                  <div class="pt-3.5 border-t border-[var(--border)] flex flex-wrap items-center gap-2 sm:gap-2.5">
+                    <button type="button" data-project-toggle="lifelink" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <span class="toggle-label">Details</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down-icon w-3.5 h-3.5"><path d="m6 9 6 6 6-6"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-up-icon w-3.5 h-3.5 hidden"><path d="m18 15-6-6-6 6"/></svg>
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+
+                    <a href="https://new-lifelink-smart-healthcare-assistance.onrender.com/" target="_blank" rel="noopener noreferrer" class="button button-sm">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <span>Visit Live App</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="https://github.com/SarthakMandhare34/New-LifeLink-Smart-Healthcare-Assistance-Platform" target="_blank" rel="noopener noreferrer" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            <span>GitHub</span>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- In-Place Expanded Details -->
+              <div id="project-lifelink-details" class="hidden mt-6 pt-6 border-t border-[var(--border)] space-y-5 animate-fade-in">
+                <div class="flex items-center justify-between border-b border-[var(--border)] pb-3">
+                  <div class="flex items-center gap-2 text-xs font-mono-code text-[var(--accent)] font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>
+                    <span>Architecture, Testing &amp; Implementation Details</span>
+                  </div>
+                  <button type="button" data-project-toggle="lifelink" class="text-xs font-mono-code text-[var(--text-secondary)] hover:text-[var(--text-primary)] cursor-pointer inline-flex items-center gap-1">
+                    <span>Close Details</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m18 15-6-6-6 6"/></svg>
+                  </button>
+                </div>
+
+                <div class="p-4 rounded-xl tactile-inset space-y-1.5">
+                  <span class="font-mono-code text-[11px] text-[var(--accent)] uppercase font-semibold block">Problem &amp; Practical Solution</span>
+                  <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
+                    Scattered clinic directories and missing medical records delay patient care. LifeLink brings doctor discovery across 19 Mumbai railway hubs, symptom checking, and appointment management into one dependable portal.
+                  </p>
+                </div>
+
+                <div class="space-y-2.5">
+                  <span class="font-mono-code text-[11px] text-[var(--text-dim)] uppercase tracking-wider block">Technical Architecture &amp; Key Deliverables</span>
+                  <ul class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Built a healthcare prototype with symptom checking, doctor search, appointment booking, digital prescriptions, and an Emergency Health Passport, working mainly on the React/TypeScript frontend and wiring it to the backend and AI layer.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Used Gemini Flash for symptom-based guidance, with built-in emergency checks, age-based rules, and a fallback response when the AI call fails.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Built doctor search and appointment booking across 52 simulated doctors spanning 19 Mumbai railway stations.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Modeled and managed application data in MySQL using Drizzle ORM.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Deployed the prototype to Render, including the production environment and database connection setup.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Wrote 247 tests across 33 files (1 skipped), covering unit and integration behavior.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="pt-3 border-t border-[var(--border)] flex flex-wrap items-center justify-between gap-3 text-xs font-mono-code">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <a href="https://new-lifelink-smart-healthcare-assistance.onrender.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[var(--accent)] text-[#001011] font-bold inline-flex items-center gap-1 hover:opacity-90 transition-opacity">
+                      <span>Open Live Application</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                    <a href="https://github.com/SarthakMandhare34/New-LifeLink-Smart-Healthcare-Assistance-Platform" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors inline-flex items-center gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                      <span>View Source Code</span>
+                    </a>
+                  </div>
+                  <button type="button" data-project-toggle="lifelink" class="text-[var(--accent)] hover:underline inline-flex items-center gap-1 font-semibold cursor-pointer py-1">
+                    <span>Hide Details ↑</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 2: LuminaHub -->
+            <article
+              id="project-luminahub"
+              data-project-category="internship"
+              class="project-showcase-card scroll-reveal scroll-slide-right neumorphic-card-p2 group relative p-5 sm:p-7 md:p-8 transition-all duration-300 rounded-2xl hover:border-[var(--primary-2)]/50"
+            >
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+                <div class="lg:col-span-5 cursor-pointer" data-project-frame-toggle="luminahub" title="Click to view details in place">
+                  <div class="tactile-display-frame overflow-hidden group-hover:border-[var(--accent)]/60 transition-all">
+                    <div class="flex items-center justify-between px-3 py-2 bg-[var(--bg-inset)] border-b border-[var(--border)] select-none">
+                      <div class="flex items-center gap-1.5">
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
+                      </div>
+                      <div class="px-2.5 py-0.5 rounded-md bg-[var(--bg-elevated)] border border-[var(--border)] text-[10px] font-mono-code text-[var(--accent)] truncate max-w-[200px] flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--decorative)] animate-pulse shrink-0 shadow-[0_0_6px_var(--decorative)]"></span>
+                        <span class="truncate">lumina-hub.onrender.com</span>
+                      </div>
+                      <span class="text-[10px] font-mono-code text-[var(--text-dim)] font-medium">ID: BHIBMAC04046</span>
+                    </div>
+
+                    <div class="relative aspect-[16/10] overflow-hidden bg-[var(--bg-inset)]">
+                      <img src="/images/projects/luminahub.png" alt="LuminaHub preview" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]" />
+                      <div class="absolute bottom-2.5 left-2.5 z-10 bg-black/85 border border-[var(--decorative)] rounded-md px-2.5 py-0.5 font-mono-code text-[10px] font-bold text-[var(--decorative)] backdrop-blur-md shadow-sm">
+                        IBM SkillsBuild, AICTE
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                  <div>
+                    <span class="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold block mb-1">
+                      AICTE Virtual Internship · IBM SkillsBuild
+                    </span>
+                    <h3 class="font-space font-bold text-xl sm:text-2xl md:text-3xl text-[var(--text-primary)] tracking-tight">
+                      LuminaHub
+                    </h3>
+                    <p class="font-inter text-xs sm:text-sm font-semibold text-[var(--text-secondary)] mt-0.5">
+                      LuminaHub — Educational Diagnostic Pre-Grader
+                    </p>
+                    <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mt-2.5 text-justified">
+                      An educational diagnostic platform developed during the IBM SkillsBuild virtual internship that reviews student homework submissions, identifies conceptual misunderstandings, and generates adaptive follow-up practice exercises.
+                    </p>
+
+                    <div class="mt-3 p-3 rounded-xl tactile-inset space-y-1">
+                      <span class="font-mono-code text-[11px] font-semibold text-[var(--accent)] uppercase flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                        My Contribution
+                      </span>
+                      <p class="font-inter text-xs text-[var(--text-secondary)] leading-relaxed text-justified">
+                        Internship contribution: Built the complete diagnostic grading interface with React and TypeScript, structured prompt evaluation for Gemini API, teacher analytics dashboard for class-wide learning gaps, and adaptive feedback loops.
+                      </p>
+                    </div>
+
+                    <div class="mt-3.5 p-3 rounded-xl tactile-inset flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono-code">
+                      <div class="flex items-center gap-1.5 text-[var(--accent)] font-semibold truncate">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+                        <span class="truncate">AICTE Verified Certificate: BHIBMAC04046</span>
+                      </div>
+                      <a href="/certificates/IBM_SkillsBuild_Certificate_BHIBMAC04046.pdf" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline inline-flex items-center gap-1 font-bold shrink-0">
+                        <span>Open Certificate PDF ↗</span>
+                      </a>
+                    </div>
+
+                    <div class="mt-3.5 pt-2 flex flex-wrap gap-1.5">
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">React</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">TypeScript</span>
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Node.js</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Express</span>
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Gemini API</span>
+                    </div>
+                  </div>
+
+                  <div class="pt-3.5 border-t border-[var(--border)] flex flex-wrap items-center gap-2 sm:gap-2.5">
+                    <button type="button" data-project-toggle="luminahub" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <span class="toggle-label">Details</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down-icon w-3.5 h-3.5"><path d="m6 9 6 6 6-6"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-up-icon w-3.5 h-3.5 hidden"><path d="m18 15-6-6-6 6"/></svg>
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+
+                    <a href="https://lumina-hub-pyyu.onrender.com/" target="_blank" rel="noopener noreferrer" class="button button-sm">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <span>Visit Live App</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="https://github.com/SarthakMandhare34/lumina-hub-" target="_blank" rel="noopener noreferrer" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            <span>GitHub</span>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="/certificates/IBM_SkillsBuild_Certificate_BHIBMAC04046.pdf" target="_blank" rel="noopener noreferrer" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+                            <span>Certificate PDF</span>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- In-Place Expanded Details -->
+              <div id="project-luminahub-details" class="hidden mt-6 pt-6 border-t border-[var(--border)] space-y-5 animate-fade-in">
+                <div class="flex items-center justify-between border-b border-[var(--border)] pb-3">
+                  <div class="flex items-center gap-2 text-xs font-mono-code text-[var(--accent)] font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>
+                    <span>Architecture, Testing &amp; Implementation Details</span>
+                  </div>
+                  <button type="button" data-project-toggle="luminahub" class="text-xs font-mono-code text-[var(--text-secondary)] hover:text-[var(--text-primary)] cursor-pointer inline-flex items-center gap-1">
+                    <span>Close Details</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m18 15-6-6-6 6"/></svg>
+                  </button>
+                </div>
+
+                <div class="p-4 rounded-xl tactile-inset space-y-1.5">
+                  <span class="font-mono-code text-[11px] text-[var(--accent)] uppercase font-semibold block">Problem &amp; Practical Solution</span>
+                  <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
+                    Standard homework grading shows a total score without identifying where a student got confused. LuminaHub analyzes reasoning steps and alerts instructors to class-wide learning gaps.
+                  </p>
+                </div>
+
+                <div class="space-y-2.5">
+                  <span class="font-mono-code text-[11px] text-[var(--text-dim)] uppercase tracking-wider block">Technical Architecture &amp; Key Deliverables</span>
+                  <ul class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Built a platform that reviews student submissions, flags conceptual misunderstandings, and generates follow-up practice questions, using React, TypeScript, Node.js, Express, and the Gemini API.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Implemented diagnostic grading, concept-mastery analysis, and adaptive hints so feedback changes based on where a student is stuck, rather than showing the same response to everyone.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Built a teacher-facing analytics view so instructors can see which concepts a class is struggling with, not just individual scores.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Tested and evaluated the integrated AI features with test fixtures and structured prompts before merging them into the main UI.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="pt-3 border-t border-[var(--border)] flex flex-wrap items-center justify-between gap-3 text-xs font-mono-code">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <a href="https://lumina-hub-pyyu.onrender.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[var(--accent)] text-[#001011] font-bold inline-flex items-center gap-1 hover:opacity-90">
+                      <span>Open Live Application</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                    <a href="https://github.com/SarthakMandhare34/lumina-hub-" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors inline-flex items-center gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                      <span>View Source Code</span>
+                    </a>
+                  </div>
+                  <button type="button" data-project-toggle="luminahub" class="text-[var(--accent)] hover:underline inline-flex items-center gap-1 font-semibold cursor-pointer py-1">
+                    <span>Hide Details ↑</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 3: KnowThySelf -->
+            <article
+              id="project-knowthyself"
+              data-project-category="academic"
+              class="project-showcase-card scroll-reveal scroll-slide-left neumorphic-card group relative p-5 sm:p-7 md:p-8 transition-all duration-300 rounded-2xl hover:border-[var(--primary-2)]/50"
+            >
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+                <div class="lg:col-span-5 cursor-pointer" data-project-frame-toggle="knowthyself" title="Click to view details in place">
+                  <div class="tactile-display-frame overflow-hidden group-hover:border-[var(--accent)]/60 transition-all">
+                    <div class="flex items-center justify-between px-3 py-2 bg-[var(--bg-inset)] border-b border-[var(--border)] select-none">
+                      <div class="flex items-center gap-1.5">
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
+                      </div>
+                      <div class="px-2.5 py-0.5 rounded-md bg-[var(--bg-elevated)] border border-[var(--border)] text-[10px] font-mono-code text-[var(--accent)] truncate max-w-[200px] flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--decorative)] animate-pulse shrink-0 shadow-[0_0_6px_var(--decorative)]"></span>
+                        <span class="truncate">knowthyself.vercel.app</span>
+                      </div>
+                      <span class="text-[10px] font-mono-code text-[var(--text-dim)] font-medium">Deployed on Vercel</span>
+                    </div>
+
+                    <div class="relative aspect-[16/10] overflow-hidden bg-[var(--bg-inset)]">
+                      <img src="/images/projects/knowthyself.png" alt="KnowThySelf preview" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                  <div>
+                    <span class="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold block mb-1">
+                      Group Project · Frontend Contribution
+                    </span>
+                    <h3 class="font-space font-bold text-xl sm:text-2xl md:text-3xl text-[var(--text-primary)] tracking-tight">
+                      KnowThySelf
+                    </h3>
+                    <p class="font-inter text-xs sm:text-sm font-semibold text-[var(--text-secondary)] mt-0.5">
+                      KnowThySelf — MBTI Personality Assessment Platform
+                    </p>
+                    <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mt-2.5 text-justified">
+                      A five-page MBTI personality assessment and recommendation platform featuring a dynamic questionnaire flow, real-time trait scoring with percentage calculations, and a tailored results dashboard.
+                    </p>
+
+                    <div class="mt-3 p-3 rounded-xl tactile-inset space-y-1">
+                      <span class="font-mono-code text-[11px] font-semibold text-[var(--accent)] uppercase flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                        My Contribution
+                      </span>
+                      <p class="font-inter text-xs text-[var(--text-secondary)] leading-relaxed text-justified">
+                        Collaborative frontend contribution: Built all five user-facing pages (home, login, questionnaire, dashboard, recommendations), smooth card slide transitions, real-time trait score math, and HTML5 Canvas interactive background.
+                      </p>
+                    </div>
+
+                    <div class="mt-3.5 pt-2 flex flex-wrap gap-1.5">
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">HTML5</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">CSS3</span>
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">JavaScript</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Node.js</span>
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Express</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">MongoDB</span>
+                    </div>
+                  </div>
+
+                  <div class="pt-3.5 border-t border-[var(--border)] flex flex-wrap items-center gap-2 sm:gap-2.5">
+                    <button type="button" data-project-toggle="knowthyself" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <span class="toggle-label">Details</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down-icon w-3.5 h-3.5"><path d="m6 9 6 6 6-6"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-up-icon w-3.5 h-3.5 hidden"><path d="m18 15-6-6-6 6"/></svg>
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+
+                    <a href="https://knowthyself-frontend-eight.vercel.app/home.html" target="_blank" rel="noopener noreferrer" class="button button-sm">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <span>Visit Live App</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="https://github.com/shubhra-1337/KnowThySelf_CE_Frontend" target="_blank" rel="noopener noreferrer" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            <span>Frontend Repo</span>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="https://github.com/shubhra-1337/KnowThySelf_CE_Backend" target="_blank" rel="noopener noreferrer" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            <span>Backend Repo</span>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- In-Place Expanded Details -->
+              <div id="project-knowthyself-details" class="hidden mt-6 pt-6 border-t border-[var(--border)] space-y-5 animate-fade-in">
+                <div class="flex items-center justify-between border-b border-[var(--border)] pb-3">
+                  <div class="flex items-center gap-2 text-xs font-mono-code text-[var(--accent)] font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>
+                    <span>Architecture, Testing &amp; Implementation Details</span>
+                  </div>
+                  <button type="button" data-project-toggle="knowthyself" class="text-xs font-mono-code text-[var(--text-secondary)] hover:text-[var(--text-primary)] cursor-pointer inline-flex items-center gap-1">
+                    <span>Close Details</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m18 15-6-6-6 6"/></svg>
+                  </button>
+                </div>
+
+                <div class="p-4 rounded-xl tactile-inset space-y-1.5">
+                  <span class="font-mono-code text-[11px] text-[var(--accent)] uppercase font-semibold block">Problem &amp; Practical Solution</span>
+                  <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
+                    Standard online personality quizzes often present rigid interfaces without actionable growth insights. KnowThySelf delivers an interactive, responsive questionnaire with live trait score breakdowns and personalized recommendations.
+                  </p>
+                </div>
+
+                <div class="space-y-2.5">
+                  <span class="font-mono-code text-[11px] text-[var(--text-dim)] uppercase tracking-wider block">Technical Architecture &amp; Key Deliverables</span>
+                  <ul class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Built all five frontend pages (home, login, test, dashboard, recommendations) for a personality assessment platform.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Built the questionnaire flow: slide-based cards, transitions between questions, and trait scoring with percentage calculations.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Built the results dashboard, including visual trait bars and written personality insights.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Designed the interface with responsive glassmorphism and bento-grid layouts with an interactive HTML5 Canvas background.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Connected the frontend to the backend for personality results and recommendations.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="pt-3 border-t border-[var(--border)] flex flex-wrap items-center justify-between gap-3 text-xs font-mono-code">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <a href="https://knowthyself-frontend-eight.vercel.app/home.html" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[var(--accent)] text-[#001011] font-bold inline-flex items-center gap-1 hover:opacity-90">
+                      <span>Open Live Application</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    </a>
+                    <a href="https://github.com/shubhra-1337/KnowThySelf_CE_Frontend" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors inline-flex items-center gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                      <span>Frontend Repo</span>
+                    </a>
+                  </div>
+                  <button type="button" data-project-toggle="knowthyself" class="text-[var(--accent)] hover:underline inline-flex items-center gap-1 font-semibold cursor-pointer py-1">
+                    <span>Hide Details ↑</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 4: HeatSafe AI -->
+            <article
+              id="project-heatsafe"
+              data-project-category="internship"
+              class="project-showcase-card scroll-reveal scroll-slide-right neumorphic-card-p2 group relative p-5 sm:p-7 md:p-8 transition-all duration-300 rounded-2xl hover:border-[var(--primary-2)]/50"
+            >
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+                <div class="lg:col-span-5 cursor-pointer" data-project-frame-toggle="heatsafe" title="Click to view details in place">
+                  <div class="tactile-display-frame overflow-hidden group-hover:border-[var(--accent)]/60 transition-all">
+                    <div class="flex items-center justify-between px-3 py-2 bg-[var(--bg-inset)] border-b border-[var(--border)] select-none">
+                      <div class="flex items-center gap-1.5">
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></div>
+                      </div>
+                      <div class="px-2.5 py-0.5 rounded-md bg-[var(--bg-elevated)] border border-[var(--border)] text-[10px] font-mono-code text-[var(--accent)] truncate max-w-[200px] flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--decorative)] animate-pulse shrink-0 shadow-[0_0_6px_var(--decorative)]"></span>
+                        <span class="truncate">github.com/SarthakMandhare34/Heat-safe</span>
+                      </div>
+                      <span class="text-[10px] font-mono-code text-[var(--text-dim)] font-medium">ID: 6302092</span>
+                    </div>
+
+                    <div class="relative aspect-[16/10] overflow-hidden bg-[var(--bg-inset)]">
+                      <img src="/images/projects/heatsafe.png" alt="HeatSafe AI preview" class="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.03]" />
+                      <div class="absolute bottom-2.5 left-2.5 z-10 bg-black/85 border border-[var(--decorative)] rounded-md px-2.5 py-0.5 font-mono-code text-[10px] font-bold text-[var(--decorative)] backdrop-blur-md shadow-sm">
+                        Lenovo LEAP, AICTE
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+                  <div>
+                    <span class="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold block mb-1">
+                      AICTE Virtual Internship · Lenovo LEAP
+                    </span>
+                    <h3 class="font-space font-bold text-xl sm:text-2xl md:text-3xl text-[var(--text-primary)] tracking-tight">
+                      HeatSafe AI
+                    </h3>
+                    <p class="font-inter text-xs sm:text-sm font-semibold text-[var(--text-secondary)] mt-0.5">
+                      HeatSafe AI — Climate Heatwave Safety Platform
+                    </p>
+                    <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mt-2.5 text-justified">
+                      An extreme-heat safety application created for the Lenovo LEAP NextGen Scholar Program covering heat-risk assessment, hydration planning, AI symptom checking, and emergency guidance. Codebase and Gemini prompt engineering templates are available on GitHub.
+                    </p>
+
+                    <div class="mt-3 p-3 rounded-xl tactile-inset space-y-1">
+                      <span class="font-mono-code text-[11px] font-semibold text-[var(--accent)] uppercase flex items-center gap-1.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                        My Contribution
+                      </span>
+                      <p class="font-inter text-xs text-[var(--text-secondary)] leading-relaxed text-justified">
+                        Internship contribution: Built the responsive React and TypeScript frontend with Vite and Tailwind CSS, engineered structured prompt workflows for Google Gemini API, tested edge cases for conflicting symptoms, and integrated safety checklists.
+                      </p>
+                    </div>
+
+                    <div class="mt-3.5 p-3 rounded-xl tactile-inset flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono-code">
+                      <div class="flex items-center gap-1.5 text-[var(--accent)] font-semibold truncate">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+                        <span class="truncate">AICTE Verified Certificate: 6302092</span>
+                      </div>
+                      <a href="/certificates/Lenovo_LEAP_Certificate_6302092.pdf" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline inline-flex items-center gap-1 font-bold shrink-0">
+                        <span>Open Certificate PDF ↗</span>
+                      </a>
+                    </div>
+
+                    <div class="mt-3.5 pt-2 flex flex-wrap gap-1.5">
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">React</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">TypeScript</span>
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Vite</span>
+                      <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Gemini API</span>
+                      <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1 font-mono-code text-[11px] font-medium">Tailwind CSS</span>
+                    </div>
+                  </div>
+
+                  <div class="pt-3.5 border-t border-[var(--border)] flex flex-wrap items-center gap-2 sm:gap-2.5">
+                    <button type="button" data-project-toggle="heatsafe" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <span class="toggle-label">Details</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down-icon w-3.5 h-3.5"><path d="m6 9 6 6 6-6"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-up-icon w-3.5 h-3.5 hidden"><path d="m18 15-6-6-6 6"/></svg>
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+
+                    <a href="https://github.com/SarthakMandhare34/Heat-safe" target="_blank" rel="noopener noreferrer" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                            <span>GitHub</span>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a href="/certificates/Lenovo_LEAP_Certificate_6302092.pdf" target="_blank" rel="noopener noreferrer" class="button button-sm button-secondary">
+                      <div class="button-outer">
+                        <div class="button-inner">
+                          <span class="flex items-center gap-1.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+                            <span>Certificate PDF</span>
+                          </span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- In-Place Expanded Details -->
+              <div id="project-heatsafe-details" class="hidden mt-6 pt-6 border-t border-[var(--border)] space-y-5 animate-fade-in">
+                <div class="flex items-center justify-between border-b border-[var(--border)] pb-3">
+                  <div class="flex items-center gap-2 text-xs font-mono-code text-[var(--accent)] font-semibold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>
+                    <span>Architecture, Testing &amp; Implementation Details</span>
+                  </div>
+                  <button type="button" data-project-toggle="heatsafe" class="text-xs font-mono-code text-[var(--text-secondary)] hover:text-[var(--text-primary)] cursor-pointer inline-flex items-center gap-1">
+                    <span>Close Details</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="m18 15-6-6-6 6"/></svg>
+                  </button>
+                </div>
+
+                <div class="p-4 rounded-xl tactile-inset space-y-1.5">
+                  <span class="font-mono-code text-[11px] text-[var(--accent)] uppercase font-semibold block">Problem &amp; Practical Solution</span>
+                  <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed text-justified">
+                    Severe summer heatwaves cause heatstroke and dehydration. HeatSafe AI turns local weather metrics into daily safety plans and early warning indicators for vulnerable groups.
+                  </p>
+                </div>
+
+                <div class="space-y-2.5">
+                  <span class="font-mono-code text-[11px] text-[var(--text-dim)] uppercase tracking-wider block">Technical Architecture &amp; Key Deliverables</span>
+                  <ul class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Built the React and TypeScript frontend (via Vite) for an extreme-heat safety app, covering heat-risk assessment, hydration planning, symptom checking, and emergency guidance.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Wrote prompts for the Gemini API to power the symptom-checking and safety-guidance features, then tested and adjusted them against edge cases such as conflicting symptoms and missing inputs.</span>
+                    </li>
+                    <li class="p-3 rounded-xl bg-[var(--bg-surface)] border border-[var(--border)] flex items-start gap-2.5 text-xs font-inter text-[var(--text-secondary)] leading-relaxed">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--accent)] shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                      <span class="text-justified">Integrated the AI-assisted components into the existing interface and fixed issues found during testing.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="pt-3 border-t border-[var(--border)] flex flex-wrap items-center justify-between gap-3 text-xs font-mono-code">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <a href="https://github.com/SarthakMandhare34/Heat-safe" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:border-[var(--accent)] transition-colors inline-flex items-center gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                      <span>View Source Code</span>
+                    </a>
+                  </div>
+                  <button type="button" data-project-toggle="heatsafe" class="text-[var(--accent)] hover:underline inline-flex items-center gap-1 font-semibold cursor-pointer py-1">
+                    <span>Hide Details ↑</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ SECTION: SKILLS ═══════════════ -->
+      <section
+        id="skills"
+        class="w-full bg-transparent py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
+      >
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="scroll-reveal scroll-scale-up mb-7 sm:mb-10 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full dual-primary-badge text-xs font-mono-code text-[var(--primary-2)] mb-3 font-semibold">
+              <span>Skills</span>
+            </div>
+            <h2 class="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
+              Skills &amp; Technologies
+            </h2>
+            <p class="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
+              Technologies and tools I use to build full-stack web applications.
+            </p>
+          </div>
+
+          <!-- 8 Skill Cards Grid (50:50 Dual-Primary Checkerboard) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
+            <!-- 1. Languages -->
+            <div class="skill-card scroll-reveal scroll-flip-up stagger-1 neumorphic-card p-4 sm:p-6 rounded-2xl flex flex-col justify-between hover:border-[var(--primary-2)] transition-all duration-300">
+              <div>
+                <div class="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-base sm:text-lg text-[var(--text-primary)] mb-2.5">Programming Languages</h3>
+              </div>
+              <div class="pt-3 border-t border-[var(--border)] flex flex-wrap gap-1.5 font-mono-code text-[11px] sm:text-[12px]">
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">TypeScript</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">JavaScript</span>
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">Python</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">SQL</span>
+              </div>
+            </div>
+
+            <!-- 2. Frontend -->
+            <div class="skill-card scroll-reveal scroll-flip-up stagger-2 neumorphic-card-p2 p-4 sm:p-6 rounded-2xl flex flex-col justify-between hover:border-[var(--primary-2)] transition-all duration-300">
+              <div>
+                <div class="w-10 h-10 rounded-xl tactile-icon-socket-p2 flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-base sm:text-lg text-[var(--text-primary)] mb-2.5">Frontend Development</h3>
+              </div>
+              <div class="pt-3 border-t border-[var(--border)] flex flex-wrap gap-1.5 font-mono-code text-[11px] sm:text-[12px]">
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">React.js</span>
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">HTML5</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">CSS3</span>
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">Responsive Design</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">UI/UX</span>
+              </div>
+            </div>
+
+            <!-- 3. Backend -->
+            <div class="skill-card scroll-reveal scroll-flip-up stagger-3 neumorphic-card p-4 sm:p-6 rounded-2xl flex flex-col justify-between hover:border-[var(--primary-2)] transition-all duration-300">
+              <div>
+                <div class="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-base sm:text-lg text-[var(--text-primary)] mb-2.5">Backend Development</h3>
+              </div>
+              <div class="pt-3 border-t border-[var(--border)] flex flex-wrap gap-1.5 font-mono-code text-[11px] sm:text-[12px]">
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">Node.js</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">Express.js</span>
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">REST APIs</span>
+              </div>
+            </div>
+
+            <!-- 4. Databases -->
+            <div class="skill-card scroll-reveal scroll-flip-up stagger-4 neumorphic-card-p2 p-4 sm:p-6 rounded-2xl flex flex-col justify-between hover:border-[var(--primary-2)] transition-all duration-300">
+              <div>
+                <div class="w-10 h-10 rounded-xl tactile-icon-socket-p2 flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-base sm:text-lg text-[var(--text-primary)] mb-2.5">Databases &amp; ORM</h3>
+              </div>
+              <div class="pt-3 border-t border-[var(--border)] flex flex-wrap gap-1.5 font-mono-code text-[11px] sm:text-[12px]">
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">MySQL</span>
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">MongoDB</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">Drizzle ORM</span>
+              </div>
+            </div>
+
+            <!-- 5. AI -->
+            <div class="skill-card scroll-reveal scroll-flip-up stagger-1 neumorphic-card p-4 sm:p-6 rounded-2xl flex flex-col justify-between hover:border-[var(--primary-2)] transition-all duration-300">
+              <div>
+                <div class="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-base sm:text-lg text-[var(--text-primary)] mb-2.5">AI Integration</h3>
+              </div>
+              <div class="pt-3 border-t border-[var(--border)] flex flex-wrap gap-1.5 font-mono-code text-[11px] sm:text-[12px]">
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">Google Gemini API</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">Prompt Engineering</span>
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">AI Integration</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">LLM Workflows</span>
+              </div>
+            </div>
+
+            <!-- 6. Testing -->
+            <div class="skill-card scroll-reveal scroll-flip-up stagger-2 neumorphic-card-p2 p-4 sm:p-6 rounded-2xl flex flex-col justify-between hover:border-[var(--primary-2)] transition-all duration-300">
+              <div>
+                <div class="w-10 h-10 rounded-xl tactile-icon-socket-p2 flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-base sm:text-lg text-[var(--text-primary)] mb-2.5">Testing</h3>
+              </div>
+              <div class="pt-3 border-t border-[var(--border)] flex flex-wrap gap-1.5 font-mono-code text-[11px] sm:text-[12px]">
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">Unit Testing</span>
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">Integration Testing</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">Test Mocking</span>
+              </div>
+            </div>
+
+            <!-- 7. Tools -->
+            <div class="skill-card scroll-reveal scroll-flip-up stagger-3 neumorphic-card p-4 sm:p-6 rounded-2xl flex flex-col justify-between hover:border-[var(--primary-2)] transition-all duration-300">
+              <div>
+                <div class="w-10 h-10 rounded-xl tactile-icon-socket flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-base sm:text-lg text-[var(--text-primary)] mb-2.5">Tools &amp; Deployment</h3>
+              </div>
+              <div class="pt-3 border-t border-[var(--border)] flex flex-wrap gap-1.5 font-mono-code text-[11px] sm:text-[12px]">
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">Git</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">GitHub</span>
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">npm</span>
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">Render</span>
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">Vercel</span>
+              </div>
+            </div>
+
+            <!-- 8. Auth -->
+            <div class="skill-card scroll-reveal scroll-flip-up stagger-4 neumorphic-card-p2 p-4 sm:p-6 rounded-2xl flex flex-col justify-between hover:border-[var(--primary-2)] transition-all duration-300">
+              <div>
+                <div class="w-10 h-10 rounded-xl tactile-icon-socket-p2 flex items-center justify-center text-[var(--primary-2)] shrink-0 mb-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <h3 class="font-display font-bold text-base sm:text-lg text-[var(--text-primary)] mb-2.5">Authentication</h3>
+              </div>
+              <div class="pt-3 border-t border-[var(--border)] flex flex-wrap gap-1.5 font-mono-code text-[11px] sm:text-[12px]">
+                <span class="tactile-chip-p2 text-[var(--primary-2)] px-2.5 py-1">OAuth 2.0</span>
+                <span class="tactile-chip text-[var(--text-primary)] px-2.5 py-1">Session-based Authentication</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ SECTION: EDUCATION & CERTIFICATIONS ═══════════════ -->
+      <section
+        id="education"
+        class="w-full bg-transparent py-14 sm:py-20 md:py-24 transition-colors duration-450 border-t border-[var(--border)] relative"
+      >
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="scroll-reveal scroll-slide-down mb-8 sm:mb-10 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full dual-primary-badge text-xs font-mono-code text-[var(--primary-2)] mb-3 font-semibold">
+              <span>Education</span>
+            </div>
+            <h2 class="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
+              Education &amp; Certifications
+            </h2>
+            <p class="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
+              My college degree and verified AICTE virtual internship certificates.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-7 items-start">
+            <!-- DEGREE (6 cols) -->
+            <div class="edu-feature-card scroll-reveal scroll-slide-left neumorphic-card p-5 sm:p-7 md:p-8 lg:col-span-6 space-y-5 rounded-2xl">
+              <div class="flex flex-wrap items-center gap-2 text-xs font-mono-code">
+                <span class="px-3 py-1 rounded-full border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--primary-2)] font-semibold">
+                  Higher Education
+                </span>
+                <span class="px-3 py-1 rounded-full border border-[var(--border)] text-[var(--text-secondary)]">
+                  Current Undergraduate
+                </span>
+              </div>
+
+              <div>
+                <p class="text-xs sm:text-sm font-mono-code text-[var(--text-dim)] uppercase tracking-wider mb-1">
+                  Keraleeya Samajam&apos;s Model College (Autonomous)
+                </p>
+                <h3 class="font-display font-bold text-xl sm:text-2xl text-[var(--text-primary)] tracking-tight">
+                  Bachelor of Science in Computer Science
+                </h3>
+                <p class="mt-2 text-xs sm:text-sm font-inter text-[var(--text-secondary)] flex items-center gap-2 flex-wrap">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-[var(--primary-2)] shrink-0"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                  <span>Expected Graduation: 2027 · Dombivli, Mumbai</span>
+                </p>
+              </div>
+
+              <div class="p-3.5 sm:p-4 rounded-xl tactile-inset grid grid-cols-2 gap-3 sm:gap-4">
+                <div>
+                  <span class="text-[10px] sm:text-[11px] font-mono-code text-[var(--text-dim)] uppercase block">Current Semester</span>
+                  <span class="font-mono-code font-bold text-base sm:text-xl text-[var(--text-primary)] mt-0.5 block truncate">6th Semester</span>
+                </div>
+                <div class="border-l border-[var(--border)] pl-3 sm:pl-4">
+                  <span class="text-[10px] sm:text-[11px] font-mono-code text-[var(--text-dim)] uppercase block">Verified CGPA</span>
+                  <span class="font-mono-code font-bold text-base sm:text-xl text-[var(--primary-2)] mt-0.5 block">6.95 <span class="text-xs text-[var(--text-dim)] font-normal">/ 10</span></span>
+                </div>
+              </div>
+
+              <div class="pt-3 border-t border-[var(--border)] flex items-center justify-between text-xs font-mono-code text-[var(--text-dim)]">
+                <span>Model College (TYCS)</span>
+                <span class="text-[var(--primary-2)] font-semibold">Computer Science</span>
+              </div>
+            </div>
+
+            <!-- PROGRAM CERTIFICATIONS (6 cols) -->
+            <div class="edu-feature-card scroll-reveal scroll-slide-right stagger-1 neumorphic-card-p2 p-5 sm:p-7 md:p-8 lg:col-span-6 space-y-4 rounded-2xl">
+              <div class="flex items-center justify-between border-b border-[var(--border)] pb-3.5">
+                <h3 class="font-display font-bold text-lg sm:text-xl text-[var(--text-primary)]">
+                  Program Certifications
+                </h3>
+                <span class="tactile-chip-p2 px-2.5 py-0.5 font-mono-code text-xs font-semibold">
+                  2 Issued
+                </span>
+              </div>
+
+              <div class="space-y-3.5">
+                <!-- CERT 1: IBM -->
+                <div class="p-3.5 sm:p-4 rounded-xl tactile-inset-p2 space-y-2 hover:border-[var(--primary-2)] transition-colors">
+                  <div class="flex items-center justify-between text-xs font-mono-code">
+                    <span class="font-bold text-[var(--text-primary)]">IBM SkillsBuild Virtual Internship</span>
+                    <span class="text-[var(--text-dim)]">June 2026 — July 2026</span>
+                  </div>
+                  <h4 class="font-space font-bold text-xs sm:text-sm text-[var(--primary-2)] break-words">
+                    AI Automation &amp; Intelligent Solutions — IBM SkillsBuild, AICTE
+                  </h4>
+                  <p class="text-xs font-inter text-[var(--text-secondary)] text-justified">
+                    BharatCares in association with AICTE and IBM SkillsBuild
+                  </p>
+                  <p class="text-xs font-inter text-[var(--text-secondary)] text-justified leading-relaxed pt-1">
+                    Completed a 6-week virtual internship on AI Automation &amp; Intelligent Solutions with IBM SkillsBuild in association with AICTE, building the LuminaHub educational diagnostic pre-grader.
+                  </p>
+                  <div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono-code border-t border-[var(--border)]">
+                    <div class="flex items-center gap-2">
+                      <span class="text-[var(--text-dim)]">ID:</span>
+                      <span class="text-[var(--accent)] font-bold">BHIBMAC04046</span>
+                      <button id="copy-ibm-cert-btn" type="button" class="p-1 hover:text-[var(--accent)] transition-colors cursor-pointer shrink-0" title="Copy Certificate ID">
+                        <svg id="copy-ibm-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                        <svg id="check-ibm-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-[var(--success)] hidden"><path d="M20 6 9 17l-5-5"/></svg>
+                      </button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <button type="button" data-open-cert="ibm" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors cursor-pointer text-xs">
+                        Preview
+                      </button>
+                      <a href="/certificates/IBM_SkillsBuild_Certificate_BHIBMAC04046.pdf" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline inline-flex items-center gap-1 font-semibold">
+                        <span>Open PDF</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CERT 2: Lenovo -->
+                <div class="p-3.5 sm:p-4 rounded-xl tactile-inset-p2 space-y-2 hover:border-[var(--primary-2)] transition-colors">
+                  <div class="flex items-center justify-between text-xs font-mono-code">
+                    <span class="font-bold text-[var(--text-primary)]">Lenovo LEAP Virtual Internship</span>
+                    <span class="text-[var(--text-dim)]">June 2026 — July 2026</span>
+                  </div>
+                  <h4 class="font-space font-bold text-xs sm:text-sm text-[var(--primary-2)] break-words">
+                    Generative AI &amp; Agentic Systems Engineering — Lenovo LEAP NextGen Scholar Program, AICTE
+                  </h4>
+                  <p class="text-xs font-inter text-[var(--text-secondary)] text-justified">
+                    Lenovo LEAP NextGen Scholar Program in association with AICTE &amp; BharatCares
+                  </p>
+                  <p class="text-xs font-inter text-[var(--text-secondary)] text-justified leading-relaxed pt-1">
+                    Completed a 6-week virtual internship on Generative AI &amp; Agentic Systems Engineering under the Lenovo LEAP NextGen Scholar Program in association with AICTE, developing the HeatSafe AI climate platform.
+                  </p>
+                  <div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono-code border-t border-[var(--border)]">
+                    <div class="flex items-center gap-2">
+                      <span class="text-[var(--text-dim)]">ID:</span>
+                      <span class="text-[var(--accent)] font-bold">6302092</span>
+                      <button id="copy-lenovo-cert-btn" type="button" class="p-1 hover:text-[var(--accent)] transition-colors cursor-pointer shrink-0" title="Copy Certificate ID">
+                        <svg id="copy-lenovo-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                        <svg id="check-lenovo-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-[var(--success)] hidden"><path d="M20 6 9 17l-5-5"/></svg>
+                      </button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <button type="button" data-open-cert="lenovo" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors cursor-pointer text-xs">
+                        Preview
+                      </button>
+                      <a href="/certificates/Lenovo_LEAP_Certificate_6302092.pdf" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] hover:underline inline-flex items-center gap-1 font-semibold">
+                        <span>Open PDF</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-3 border-t border-[var(--border)] text-xs font-mono-code text-[var(--success)] flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 shrink-0"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <span>AICTE Verified Virtual Internships</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ SECTION: CONTACT ═══════════════ -->
+      <section
+        id="contact"
+        class="w-full bg-transparent py-14 sm:py-20 md:py-28 transition-colors duration-450 border-t border-[var(--border)] relative"
+      >
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="contact-header scroll-reveal scroll-scale-up mb-7 sm:mb-12 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full dual-primary-badge text-xs font-mono-code text-[var(--primary-2)] mb-3 font-semibold">
+              <span>Contact</span>
+            </div>
+            <h2 class="font-display font-bold text-[clamp(26px,5.5vw,44px)] text-[var(--text-primary)] leading-[1.12] tracking-tight">
+              Get in Touch
+            </h2>
+            <p class="font-inter text-[13px] sm:text-[15px] md:text-[16px] text-[var(--text-secondary)] mt-1.5 leading-relaxed text-justified">
+              Feel free to reach out for developer roles, project inquiries, or to connect.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-7">
+            <!-- Email Card -->
+            <div class="contact-card scroll-reveal scroll-slide-left neumorphic-card p-4 sm:p-7 md:p-8 rounded-2xl flex flex-col justify-between space-y-5">
+              <div>
+                <div class="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
+                  <span class="font-mono-code text-xs text-[var(--primary-2)] uppercase font-semibold flex items-center gap-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-[var(--primary-2)] shrink-0"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+                    <span>Primary Channel · Within 24h</span>
+                  </span>
+                </div>
+
+                <span class="font-mono-code text-xs text-[var(--text-dim)] uppercase block">Direct Email</span>
+                <a href="mailto:sarthakmandhare34@gmail.com" class="font-display font-bold text-base sm:text-xl md:text-2xl text-[var(--text-primary)] hover:text-[var(--primary-2)] transition-colors mt-1 block break-all">
+                  sarthakmandhare34@gmail.com
+                </a>
+                <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-3 leading-relaxed text-justified">
+                  Best way to reach me for full-stack engineering roles and project opportunities.
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-[var(--border)] flex flex-wrap items-center gap-2.5 sm:gap-3">
+                <a href="mailto:sarthakmandhare34@gmail.com" class="button button-sm w-full sm:w-auto">
+                  <div class="button-outer">
+                    <div class="button-inner">
+                      <span class="flex items-center gap-1.5">
+                        <span>Send Email</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+
+                <button id="copy-email-btn" type="button" class="button button-sm button-secondary w-full sm:w-auto">
+                  <div class="button-outer">
+                    <div class="button-inner">
+                      <span class="flex items-center gap-1.5">
+                        <svg id="copy-email-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                        <svg id="check-email-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-[var(--success)] hidden"><path d="M20 6 9 17l-5-5"/></svg>
+                        <span id="copy-email-label">Copy Address</span>
+                      </span>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Phone & Location Card -->
+            <div class="contact-card scroll-reveal scroll-slide-right stagger-1 neumorphic-card-p2 p-4 sm:p-7 md:p-8 rounded-2xl flex flex-col justify-between space-y-5">
+              <div>
+                <div class="flex items-center justify-between border-b border-[var(--border)] pb-3.5 mb-4">
+                  <span class="font-mono-code text-xs text-[var(--primary-2)] uppercase font-semibold flex items-center gap-1.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-[var(--primary-2)] shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Dombivli, Mumbai</span>
+                  </span>
+                </div>
+
+                <span class="font-mono-code text-xs text-[var(--text-dim)] uppercase block">Mobile &amp; WhatsApp</span>
+                <a href="tel:+919326397599" class="font-display font-bold text-base sm:text-xl md:text-2xl text-[var(--text-primary)] hover:text-[var(--primary-2)] transition-colors mt-1 block font-mono-code break-words">
+                  +91 93263 97599
+                </a>
+                <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-3 leading-relaxed text-justified">
+                  Available for phone calls, WhatsApp messages, and role discussions.
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-[var(--border)] flex flex-wrap items-center gap-2.5 sm:gap-3">
+                <a href="tel:+919326397599" class="button button-sm w-full sm:w-auto">
+                  <div class="button-outer">
+                    <div class="button-inner">
+                      <span class="flex items-center gap-1.5">
+                        <span>Call Direct</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+
+                <button id="copy-phone-btn" type="button" class="button button-sm button-secondary w-full sm:w-auto">
+                  <div class="button-outer">
+                    <div class="button-inner">
+                      <span class="flex items-center gap-1.5">
+                        <svg id="copy-phone-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                        <svg id="check-phone-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-[var(--success)] hidden"><path d="M20 6 9 17l-5-5"/></svg>
+                        <span id="copy-phone-label">Copy Number</span>
+                      </span>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Curriculum Vitae Row -->
+          <div class="contact-card scroll-reveal scroll-slide-up stagger-2 mt-7 sm:mt-10 p-4 sm:p-7 md:p-8 rounded-2xl neumorphic-card flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6">
+            <div>
+              <span class="font-mono-code text-xs text-[var(--accent)] uppercase font-semibold block mb-1">
+                Curriculum Vitae
+              </span>
+              <h3 class="font-display font-bold text-lg sm:text-xl text-[var(--text-primary)]">
+                Sarthak Mangesh Mandhare · Resume
+              </h3>
+              <p class="font-inter text-xs sm:text-sm text-[var(--text-secondary)] mt-0.5 text-justified">
+                View or download my resume with verified internship certificates and project links.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 font-mono-code text-xs w-full lg:w-auto">
+              <button type="button" data-open-resume class="button button-sm w-full sm:w-auto">
+                <div class="button-outer">
+                  <div class="button-inner">
+                    <span class="flex items-center gap-1.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                      <span>Preview CV ↗</span>
+                    </span>
+                  </div>
+                </div>
+              </button>
+
+              <button id="contact-download-resume-btn" type="button" class="button button-sm button-secondary w-full sm:w-auto">
+                <div class="button-outer">
+                  <div class="button-inner">
+                    <span class="flex items-center gap-1.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                      <span>Download PDF ↓</span>
+                    </span>
+                  </div>
+                </div>
+              </button>
+
+              <a
+                href="https://github.com/SarthakMandhare34"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-2.5 rounded-xl border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors inline-flex items-center justify-center gap-1 flex-1 sm:flex-initial"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                <span>GitHub ↗</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/sarthak-mandhare-8a6730377"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-2.5 rounded-xl border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--accent)] hover:underline inline-flex items-center justify-center gap-1 font-semibold flex-1 sm:flex-initial"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                <span>LinkedIn ↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ──────────────── MINIMAL FROSTED GLASS FOOTER ──────────────── -->
+    <footer class="relative z-10 w-full border-t border-[var(--border)] bg-[var(--bg-surface)] backdrop-blur-xl py-8 pb-24 md:py-10 text-xs font-inter text-[var(--text-secondary)]">
+      <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+          <span class="font-space font-bold text-[var(--text-primary)]">Sarthak Mangesh Mandhare</span>
+          <span class="text-[var(--text-dim)]">·</span>
+          <span>2026</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-5 font-mono-code text-[11px]">
+          <a href="https://github.com/SarthakMandhare34" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--accent)] transition-colors py-1">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/sarthak-mandhare-8a6730377" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--accent)] transition-colors py-1">LinkedIn ↗</a>
+          <button type="button" data-open-resume class="text-[var(--accent)] hover:underline cursor-pointer py-1">Resume Preview ↗</button>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ──────────────── MOBILE BOTTOM TAB BAR ──────────────── -->
+    <nav
+      id="mobile-bottom-nav"
+      aria-label="Mobile Navigation"
+      class="md:hidden fixed bottom-0 left-0 w-full min-h-[56px] bg-[var(--bg-surface)] backdrop-blur-xl border-t border-[var(--border)] z-40 flex items-center justify-around px-1 pt-1 pb-[max(env(safe-area-inset-bottom,0px),6px)] shadow-[0_-4px_24px_rgba(0,0,0,0.25)]"
+    >
+      <a href="#home" data-mobile-tab="hero" class="flex flex-col items-center justify-center flex-1 py-1.5 transition-all duration-200 select-none cursor-pointer min-h-[44px] rounded-xl mx-0.5 text-[var(--accent)] font-semibold tactile-chip">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 sm:w-5 sm:h-5 mb-0.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span class="text-[10px] font-inter font-medium leading-none truncate max-w-full px-0.5">Home</span>
+      </a>
+      <a href="#about" data-mobile-tab="about" class="flex flex-col items-center justify-center flex-1 py-1.5 transition-all duration-200 select-none cursor-pointer min-h-[44px] rounded-xl mx-0.5 text-[var(--text-secondary)] hover:text-[var(--text-primary)] active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 sm:w-5 sm:h-5 mb-0.5"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span class="text-[10px] font-inter font-medium leading-none truncate max-w-full px-0.5">About</span>
+      </a>
+      <a href="#work" data-mobile-tab="work" class="flex flex-col items-center justify-center flex-1 py-1.5 transition-all duration-200 select-none cursor-pointer min-h-[44px] rounded-xl mx-0.5 text-[var(--text-secondary)] hover:text-[var(--text-primary)] active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 sm:w-5 sm:h-5 mb-0.5"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+        <span class="text-[10px] font-inter font-medium leading-none truncate max-w-full px-0.5">Projects</span>
+      </a>
+      <a href="#skills" data-mobile-tab="skills" class="flex flex-col items-center justify-center flex-1 py-1.5 transition-all duration-200 select-none cursor-pointer min-h-[44px] rounded-xl mx-0.5 text-[var(--text-secondary)] hover:text-[var(--text-primary)] active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 sm:w-5 sm:h-5 mb-0.5"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+        <span class="text-[10px] font-inter font-medium leading-none truncate max-w-full px-0.5">Skills</span>
+      </a>
+      <a href="#education" data-mobile-tab="education" class="flex flex-col items-center justify-center flex-1 py-1.5 transition-all duration-200 select-none cursor-pointer min-h-[44px] rounded-xl mx-0.5 text-[var(--text-secondary)] hover:text-[var(--text-primary)] active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 sm:w-5 sm:h-5 mb-0.5"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+        <span class="text-[10px] font-inter font-medium leading-none truncate max-w-full px-0.5">Education</span>
+      </a>
+      <a href="#contact" data-mobile-tab="contact" class="flex flex-col items-center justify-center flex-1 py-1.5 transition-all duration-200 select-none cursor-pointer min-h-[44px] rounded-xl mx-0.5 text-[var(--text-secondary)] hover:text-[var(--text-primary)] active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 sm:w-5 sm:h-5 mb-0.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span class="text-[10px] font-inter font-medium leading-none truncate max-w-full px-0.5">Contact</span>
+      </a>
+    </nav>
+
+    <!-- ──────────────── CERTIFICATE PREVIEW MODAL ──────────────── -->
+    <div id="certificate-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div id="cert-modal-backdrop" class="fixed inset-0 bg-black/75 backdrop-blur-sm opacity-0"></div>
+      <div id="cert-modal-dialog" class="relative w-full max-w-2xl neumorphic-card p-5 sm:p-6 space-y-4 opacity-0 z-10">
+        <div class="flex items-center justify-between border-b border-[var(--border)] pb-3">
+          <div class="flex items-center gap-2 text-xs font-mono-code text-[var(--accent)]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+            <span class="font-semibold"><span id="cert-modal-platform"></span> · <span id="cert-modal-id"></span></span>
+          </div>
+          <button type="button" data-close-cert class="p-1.5 rounded-lg hover:bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] cursor-pointer" aria-label="Close modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+
+        <div class="h-72 sm:h-96 w-full rounded-xl overflow-hidden tactile-inset">
+          <object id="cert-modal-object" data="" type="application/pdf" class="w-full h-full">
+            <div class="h-full flex flex-col items-center justify-center p-6 text-center text-xs text-[var(--text-secondary)] space-y-2">
+              <p>Document preview unavailable in your browser viewer.</p>
+              <a id="cert-modal-fallback-link" href="" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline font-semibold">
+                Open Certificate PDF in new tab ↗
+              </a>
+            </div>
+          </object>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono-code pt-1">
+          <span id="cert-modal-title" class="text-[var(--text-secondary)] truncate"></span>
+          <div class="flex items-center gap-2 shrink-0">
+            <a id="cert-modal-tab-link" href="" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[var(--accent)] text-[#001011] font-bold inline-flex items-center gap-1 hover:opacity-90">
+              <span>Open PDF in Tab</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </a>
+            <button type="button" data-close-cert class="px-3 py-1.5 rounded-lg border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] cursor-pointer">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ──────────────── RESUME PREVIEW MODAL ──────────────── -->
+    <div id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-title" class="hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 overflow-hidden">
+      <div id="resume-backdrop" class="fixed inset-0 bg-black/85 backdrop-blur-xl opacity-0"></div>
+
+      <div id="resume-dialog" class="relative w-full max-w-5xl h-[94vh] sm:h-[92vh] neumorphic-card p-3.5 sm:p-5 md:p-6 z-10 text-[var(--text-primary)] flex flex-col opacity-0 rounded-2xl">
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b border-[var(--border)] pb-3 mb-2.5 sm:mb-3 gap-2 sm:gap-4">
+          <div class="flex items-center gap-2 sm:gap-2.5 min-w-0">
+            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-[var(--accent-soft)] flex items-center justify-center text-[var(--accent)] shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 sm:w-4 sm:h-4"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            </div>
+            <div class="min-w-0">
+              <h2 id="resume-title" class="font-display text-sm sm:text-lg md:text-xl font-bold tracking-tight truncate">
+                Sarthak Mangesh Mandhare — Resume
+              </h2>
+              <p class="text-[10px] sm:text-xs text-[var(--text-secondary)] font-inter truncate">
+                Official PDF Document
+              </p>
+            </div>
+          </div>
+
+          <!-- Header Actions -->
+          <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            <a href="/Sarthak_Mandhare_Resume.pdf" target="_blank" rel="noopener noreferrer" class="button button-sm button-secondary" title="Open in new window">
+              <div class="button-outer">
+                <div class="button-inner">
+                  <span class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M15 3h6v6"/><path d="10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                    <span class="hidden sm:inline">Open Tab</span>
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <div class="hidden md:block">
+              <button id="resume-print-btn" type="button" class="button button-sm button-secondary" title="Print resume">
+                <div class="button-outer">
+                  <div class="button-inner">
+                    <span class="flex items-center gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+                      <span>Print</span>
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            <button id="resume-download-btn" type="button" class="button button-sm">
+              <div class="button-outer">
+                <div class="button-inner">
+                  <span id="resume-dl-idle" class="flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                    <span class="hidden sm:inline">Download</span>
+                  </span>
+                  <span id="resume-dl-loading" class="flex items-center gap-1 hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 animate-spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                    <span class="hidden sm:inline">Downloading...</span>
+                  </span>
+                  <span id="resume-dl-success" class="flex items-center gap-1 hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-[var(--success)]"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span class="hidden sm:inline">Downloaded!</span>
+                  </span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" data-close-resume class="neumorphic-btn p-1.5 text-[var(--text-primary)] cursor-pointer" aria-label="Close resume preview">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Embedded PDF Preview -->
+        <div class="relative flex-1 w-full rounded-xl sm:rounded-2xl overflow-hidden border border-[var(--border)] bg-[#2a2a2a] shadow-inner flex flex-col">
+          <object data="/Sarthak_Mandhare_Resume.pdf#toolbar=1&navpanes=0" type="application/pdf" class="w-full h-full flex-1">
+            <iframe src="/Sarthak_Mandhare_Resume.pdf#toolbar=1&navpanes=0" title="Sarthak Mandhare Resume PDF" class="w-full h-full border-0">
+              <div class="flex flex-col items-center justify-center h-full p-6 text-center">
+                <p class="text-sm text-[var(--text-secondary)] mb-4">Your browser does not support embedded PDF viewing.</p>
+                <a href="/Sarthak_Mandhare_Resume.pdf" target="_blank" rel="noopener noreferrer" class="neumorphic-btn bg-[var(--accent)] text-[var(--bg-base)] px-4 py-2 text-xs font-semibold inline-flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                  <span>Download or Open Resume PDF</span>
+                </a>
+              </div>
+            </iframe>
+          </object>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="mt-2.5 pt-2 border-t border-[var(--border)] flex items-center justify-between text-[11px] sm:text-xs text-[var(--text-dim)] font-mono-code">
+          <span class="truncate max-w-[200px] sm:max-w-none">Sarthak_Mangesh_Mandhare_Resume.pdf</span>
+          <button type="button" data-close-resume class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] underline cursor-pointer shrink-0 ml-2">
+            Close Viewer
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
